@@ -1,4 +1,4 @@
-import sunIconUrl from '@assets/Sun Icon_1756149342650.jpg';
+import sunIconUrl from '@assets/LIVE_BOLD_BLUE_GRAPHIC_1756152802849.jpg';
 
 interface SunLogoProps {
   className?: string;
