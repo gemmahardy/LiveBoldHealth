@@ -72,8 +72,8 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
           
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Adventure wellness and rejuvenation in stunning mountain landscapes" 
+              src="/attached_assets/LIVE_BOLD_BLUE_GRAPHIC_1756152212523.pdf" 
+              alt="Live Bold Health & Adventure Concierge graphic" 
               className="rounded-2xl shadow-2xl w-full"
               data-testid="hero-image"
             />
