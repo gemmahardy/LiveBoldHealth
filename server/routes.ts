@@ -104,7 +104,7 @@ function generateBotResponse(message: string): string {
   }
   
   if (lowerMessage.includes('adventure') || lowerMessage.includes('expedition') || lowerMessage.includes('retreat') || lowerMessage.includes('experience')) {
-    return "Wonderful! Our Maine adventure wellness escapes are designed for every fitness level and offer the perfect blend of gentle outdoor activities with restorative wellness programming. We feature Acadia Coastal Wellness Retreat ($3,200), Katahdin Nature Discovery ($2,800), Maine Lakes Region Paddle & Wellness ($3,600), and Down East Coastal Explorer ($4,200). All experiences welcome beginners and include expert guidance to ensure everyone feels comfortable and confident. Which Maine adventure speaks to you?";
+    return "Spectacular! Our Maine adventure wellness escapes are absolutely incredible with luxury amenities and thrilling activities! Experience the magical Acadia Coastal Wellness Retreat with sunrise cliff yoga and sea cave kayaking ($6,800), the epic Katahdin Climbing Expedition with helicopter tours and luxury glamping ($8,500), the amazing Lakes Region adventure with treasure hunting and seaplane flights ($7,200), or the spectacular Down East Coastal Explorer with private yacht charters and celebrity chef experiences ($9,400). Each adventure is packed with fun surprises, gourmet dining, and unforgettable memories! Which incredible Maine adventure excites you most?";
   }
   
   if (lowerMessage.includes('yes') || lowerMessage.includes('schedule') || lowerMessage.includes('book') || lowerMessage.includes('consultation')) {

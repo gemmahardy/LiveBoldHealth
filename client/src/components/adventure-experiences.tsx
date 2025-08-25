@@ -5,38 +5,38 @@ export function AdventureExperiences() {
     {
       id: "acadia-coastal-wellness",
       title: "Acadia Coastal Wellness Retreat",
-      description: "5-day gentle adventure combining scenic coastal walks, beginner-friendly kayaking in calm waters, and relaxing beach yoga sessions. Explore Acadia's famous carriage roads by bike or on foot at your own pace, enjoy guided tide pool discoveries, and participate in sunset meditation sessions. Perfect for all fitness levels with optional activities for those seeking more challenge.",
+      description: "5-day magical coastal adventure featuring sunrise yoga on Thunder Hole cliffs, private lobster boat excursions with Captain's storytelling, kayaking through hidden sea caves filled with seals, and evening bonfires with s'mores under the stars! Explore Acadia's famous carriage roads on luxury e-bikes, discover secret tide pools with marine biologists, hunt for sea glass on pristine beaches, and enjoy chef-prepared picnic lunches overlooking the Atlantic. Includes luxury spa treatments, wine tastings featuring Maine's finest, and a surprise lighthouse picnic dinner!",
       date: "Jun 12-17, 2025",
       image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-      price: "$3,200",
-      highlights: ["Scenic coastal walks", "Gentle kayaking adventures", "Beach yoga sessions", "All fitness levels welcome"]
+      price: "$6,800",
+      highlights: ["Sunrise yoga on cliffs", "Private lobster boat tours", "Sea cave kayaking", "Luxury spa treatments"]
     },
     {
       id: "katahdin-nature-discovery",
       title: "Katahdin Nature Discovery & Climbing Expedition", 
-      description: "6-day mountain adventure combining accessible hiking trails, wildlife viewing, and guided rock climbing experiences. Explore Baxter State Park's gentle paths with knowledgeable naturalists, enjoy picnic lunches by pristine lakes, and participate in beginner-friendly rock climbing instruction on Katahdin's granite faces. Professional climbing guides provide all equipment and safety training. Evening campfire talks and stargazing sessions complete this mountain retreat. All skill levels welcome for hiking, climbing instruction provided.",
+      description: "6-day epic mountain adventure featuring thrilling rock climbing on Katahdin's legendary granite walls, moose tracking expeditions with wildlife photographers, helicopter tours over endless wilderness, and campfire cooking competitions with local chefs! Climb to secret overlooks accessible only to adventurers, spot rare wildlife through professional telescopes, enjoy hot chocolate and Maine blueberry pancakes at sunrise, and celebrate your achievements with a gourmet BBQ feast. Includes luxury glamping pods, professional climbing gear, and a surprise zip-line adventure through the forest canopy!",
       date: "Jul 20-26, 2025",
       image: "https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-      price: "$4,800",
-      highlights: ["Easy mountain trails", "Guided rock climbing", "Professional instruction", "All equipment provided"]
+      price: "$8,500",
+      highlights: ["Rock climbing adventures", "Helicopter wilderness tours", "Moose tracking expeditions", "Luxury glamping pods"]
     },
     {
       id: "lakes-region-paddle",
       title: "Maine Lakes Region Paddle & Wellness",
-      description: "6-day relaxing water adventure exploring Maine's pristine lakes by canoe and kayak. Gentle paddling suitable for beginners, swimming in crystal-clear waters, lakeside yoga and meditation, and cozy evenings around the campfire. Stay in comfortable lakeside cabins with all amenities. Includes basic paddling instruction and all equipment.",
+      description: "6-day incredible water paradise featuring stand-up paddleboard yoga on mirror-calm lakes, treasure hunting for ancient Abenaki artifacts, midnight aurora watching from floating platforms, and friendly competition in canoe races with prizes! Swim in crystal-clear waters warmed by natural springs, enjoy floating breakfast trays delivered by kayak, participate in hilarious water games and splash contests, and gather around roaring bonfires for storytelling with local Maine legends. Includes luxury lakeside tree houses, gourmet campfire cuisine, and a surprise seaplane adventure to hidden lakes!",
       date: "Aug 5-11, 2025", 
       image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-      price: "$3,600",
-      highlights: ["Gentle lake paddling", "Swimming in pristine waters", "Lakeside yoga", "Comfortable cabin lodging"]
+      price: "$7,200",
+      highlights: ["Paddleboard yoga", "Treasure hunting adventures", "Luxury tree house lodging", "Seaplane to hidden lakes"]
     },
     {
       id: "downeast-coastal-explorer",
       title: "Down East Coastal Explorer",
-      description: "7-day leisurely exploration of Maine's rugged coastline featuring scenic drives, lighthouse visits, and easy coastal walks. Enjoy fresh lobster experiences, visit charming fishing villages, take gentle boat tours to see seals and seabirds, and participate in beginner-friendly sea kayaking. Comfortable accommodations and transportation provided throughout.",
+      description: "7-day spectacular coastal odyssey featuring private yacht charters to secret islands, hands-on lobster fishing with fourth-generation fishermen, gourmet clambakes on deserted beaches, and thrilling puffin watching expeditions to remote colonies! Explore historic lighthouses with exclusive after-hours access, participate in beach scavenger hunts for rare shells and sea glass, enjoy lobster roll making competitions with celebrity chefs, and dance under the stars at authentic Maine barn parties. Includes luxury coastal inns, private chef experiences, helicopter lighthouse tours, and a surprise whale watching adventure with marine biologists!",
       date: "Sep 15-22, 2025",
       image: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-      price: "$4,200",
-      highlights: ["Scenic lighthouse tours", "Gentle boat excursions", "Lobster dining experiences", "Easy coastal walks"]
+      price: "$9,400",
+      highlights: ["Private yacht charters", "Exclusive lighthouse access", "Celebrity chef experiences", "Whale watching expeditions"]
     }
   ];
 
