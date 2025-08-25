@@ -25,7 +25,7 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
             <SunLogo size="md" />
             <div>
               <h1 className="font-playfair font-bold text-2xl text-luxury-charcoal">LIVE BOLD</h1>
-              <p className="text-xs font-montserrat text-brand-copper uppercase tracking-wider">Concierge Health</p>
+              <p className="text-xs font-montserrat text-brand-copper uppercase tracking-wider">Health Concierge</p>
             </div>
           </div>
           
