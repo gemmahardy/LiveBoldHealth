@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { SunLogo } from "@/components/ui/sun-logo";
+import adventureCollageUrl from '@assets/Collage+sig+program+1384w_1756151724888.jpg';
 
 export function AdventureExperiences() {
   const experiences = [
@@ -111,8 +112,17 @@ export function AdventureExperiences() {
               className="luxury-card rounded-2xl overflow-hidden premium-hover transition-all duration-300"
               data-testid={`adventure-card-${experience.id}`}
             >
-              <div className="w-full h-48 bg-gradient-to-br from-brand-orange to-luxury-charcoal flex items-center justify-center">
-                <SunLogo size="lg" className="brightness-125" />
+              <div 
+                className="w-full h-48 flex items-center justify-center relative"
+                style={{
+                  backgroundImage: `url(${adventureCollageUrl})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                }}
+              >
+                <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                <SunLogo size="lg" className="brightness-125 relative z-10" />
               </div>
               
               <div className="p-6 space-y-4">
