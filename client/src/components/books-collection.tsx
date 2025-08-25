@@ -42,10 +42,10 @@ export function BooksCollection() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h3 className="font-playfair text-4xl font-bold text-luxury-charcoal mb-4">
-            Ultra-Premium Executive Library
+            Executive Wellness Library
           </h3>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Exclusive collection of elite health optimization masterworks, personally authored and curated for billionaire entrepreneurs and Fortune 500 CEOs.
+            Carefully curated collection of evidence-based health and performance books recommended by leading wellness experts and trusted by high-achieving executives worldwide.
           </p>
         </div>
         
@@ -103,10 +103,10 @@ export function BooksCollection() {
               <Gem className="h-8 w-8 text-white" />
             </div>
             <h4 className="font-playfair text-3xl font-bold" data-testid="bundle-title">
-              Complete Executive Wellness Library
+              Complete Wellness Library Collection
             </h4>
             <p className="text-xl text-gray-600" data-testid="bundle-description">
-              Get all three premium guides plus exclusive bonus content
+              Get all six bestselling wellness and performance books with free shipping and exclusive bonus materials
             </p>
             <div className="flex items-center justify-center space-x-4">
               <span className="text-2xl text-gray-500 line-through" data-testid="bundle-original-price">

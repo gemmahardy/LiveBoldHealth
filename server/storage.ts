@@ -57,36 +57,52 @@ export class MemStorage implements IStorage {
   private initializeBooks() {
     const defaultBooks: InsertBook[] = [
       {
-        title: "LIVE BOLD",
-        description: "Your Premium Guide to Executive Health Mastery and Longevity Optimization",
-        price: 49700, // $497.00
+        title: "The 4-Hour Body",
+        description: "An uncommon guide to rapid fat-loss, incredible sex, and becoming superhuman by Tim Ferriss",
+        price: 2995, // $29.95
         imageUrl: "/attached_assets/LIve%20Bold_1756148478586.jpeg",
         rating: 5,
-        reviewCount: 127
+        reviewCount: 2847
       },
       {
-        title: "The Executive Biohacker",
-        description: "Advanced Protocols for Peak Performance and Cellular Optimization",
-        price: 69700, // $697.00
+        title: "Atomic Habits",
+        description: "An easy & proven way to build good habits & break bad ones by James Clear",
+        price: 2699, // $26.99
         imageUrl: "https://images.unsplash.com/photo-1571019613914-85f342c6a11e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
-        reviewCount: 89
+        reviewCount: 45621
       },
       {
-        title: "Concierge Wellness Mastery",
-        description: "The Ultra-High-Net-Worth Guide to Health & Adventure Concierge Services",
-        price: 59700, // $597.00
+        title: "Lifespan: Why We Age",
+        description: "Revolutionary insights into aging and longevity from Harvard geneticist David Sinclair",
+        price: 3199, // $31.99
         imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
-        reviewCount: 94
+        reviewCount: 8934
       },
       {
-        title: "Executive Recovery Protocols",
-        description: "Luxury Stress Management and Regeneration for High-Performance Leaders",
-        price: 39700, // $397.00
+        title: "The Power of Now",
+        description: "A guide to spiritual enlightenment and mindful living by Eckhart Tolle",
+        price: 1895, // $18.95
         imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
-        reviewCount: 76
+        reviewCount: 12476
+      },
+      {
+        title: "Breath: The New Science",
+        description: "Revolutionary discoveries about the most essential bodily function by James Nestor",
+        price: 2799, // $27.99
+        imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        rating: 5,
+        reviewCount: 6832
+      },
+      {
+        title: "Tools of Titans",
+        description: "The tactics, routines, and habits of billionaires, icons, and world-class performers",
+        price: 3495, // $34.95
+        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        rating: 5,
+        reviewCount: 5294
       }
     ];
 
