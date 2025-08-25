@@ -106,7 +106,7 @@ export function BooksCollection() {
               Complete Wellness Library Collection
             </h4>
             <p className="text-xl text-gray-600" data-testid="bundle-description">
-              Get all nine wellness and performance books including Sunshine Mechtenberg's complete collection with free shipping and exclusive bonus materials
+              Get all three wellness and performance books from Sunshine Mechtenberg's complete collection with free shipping and exclusive bonus materials
             </p>
             <div className="flex items-center justify-center space-x-4">
               <span className="text-2xl text-gray-500 line-through" data-testid="bundle-original-price">

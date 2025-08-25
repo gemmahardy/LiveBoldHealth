@@ -65,14 +65,6 @@ export class MemStorage implements IStorage {
         reviewCount: 892
       },
       {
-        title: "How to 10x Your Energy Using the Power of Adventure",
-        description: "Discover how outdoor adventures can exponentially boost your vitality and life force by Sunshine Mechtenberg",
-        price: 2499, // $24.99
-        imageUrl: "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
-        rating: 5,
-        reviewCount: 634
-      },
-      {
         title: "The S.I.M.P.L.E. Rule",
         description: "A straightforward framework for sustainable wellness and peak performance by Sunshine Mechtenberg",
         price: 2199, // $21.99
@@ -81,52 +73,12 @@ export class MemStorage implements IStorage {
         reviewCount: 567
       },
       {
-        title: "6 Daily Habits That Will Change Your Energy",
-        description: "Simple yet powerful daily practices to revolutionize your vitality and focus by Sunshine Mechtenberg",
-        price: 1995, // $19.95
-        imageUrl: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
-        rating: 5,
-        reviewCount: 743
-      },
-      {
         title: "Feel Good & Shine On",
         description: "Your guide to radiant health, natural confidence, and authentic joy by Sunshine Mechtenberg",
         price: 2699, // $26.99
         imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 821
-      },
-      {
-        title: "The 5-Element Reset to Life a Living, Loving and Longevity",
-        description: "Ancient wisdom meets modern science for holistic wellness and longevity by Sunshine Mechtenberg",
-        price: 3295, // $32.95
-        imageUrl: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
-        rating: 5,
-        reviewCount: 459
-      },
-      {
-        title: "Atomic Habits",
-        description: "An easy & proven way to build good habits & break bad ones by James Clear",
-        price: 2699, // $26.99
-        imageUrl: "https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
-        rating: 5,
-        reviewCount: 45621
-      },
-      {
-        title: "The Power of Now",
-        description: "A guide to spiritual enlightenment and mindful living by Eckhart Tolle",
-        price: 1895, // $18.95
-        imageUrl: "https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
-        rating: 5,
-        reviewCount: 12476
-      },
-      {
-        title: "Tools of Titans",
-        description: "The tactics, routines, and habits of billionaires, icons, and world-class performers by Tim Ferriss",
-        price: 3495, // $34.95
-        imageUrl: "https://images.unsplash.com/photo-1473396413399-6717ef7c4093?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
-        rating: 5,
-        reviewCount: 5294
       }
     ];
 
