@@ -9,7 +9,7 @@ export function AdventureExperiences() {
       title: "Acadia Coastal Wellness Retreat",
       description: "5-day magical coastal adventure featuring sunrise yoga on Thunder Hole cliffs, private lobster boat excursions with Captain's storytelling, kayaking through hidden sea caves filled with seals, and evening bonfires with s'mores under the stars! Explore Acadia's famous carriage roads on luxury e-bikes, discover secret tide pools with marine biologists, hunt for sea glass on pristine beaches, and enjoy chef-prepared picnic lunches overlooking the Atlantic. Includes luxury spa treatments, wine tastings featuring Maine's finest, and a surprise lighthouse picnic dinner!",
       date: "Jun 12-17, 2025",
-      price: "$6,800",
+      price: "$9,500",
       highlights: ["Sunrise yoga on cliffs", "Private lobster boat tours", "Sea cave kayaking", "Luxury spa treatments"]
     },
     {
@@ -17,7 +17,7 @@ export function AdventureExperiences() {
       title: "Katahdin Nature Discovery & Climbing Expedition", 
       description: "6-day epic mountain adventure featuring thrilling rock climbing on Katahdin's legendary granite walls, moose tracking expeditions with wildlife photographers, helicopter tours over endless wilderness, and campfire cooking competitions with local chefs! Climb to secret overlooks accessible only to adventurers, spot rare wildlife through professional telescopes, enjoy hot chocolate and Maine blueberry pancakes at sunrise, and celebrate your achievements with a gourmet BBQ feast. Includes luxury glamping pods, professional climbing gear, and a surprise zip-line adventure through the forest canopy!",
       date: "Jul 20-26, 2025",
-      price: "$8,500",
+      price: "$12,500",
       highlights: ["Rock climbing adventures", "Helicopter wilderness tours", "Moose tracking expeditions", "Luxury glamping pods"]
     },
     {
@@ -26,7 +26,7 @@ export function AdventureExperiences() {
       description: "6-day incredible water paradise featuring stand-up paddleboard yoga on mirror-calm lakes, treasure hunting for ancient Abenaki artifacts, midnight aurora watching from floating platforms, and friendly competition in canoe races with prizes! Swim in crystal-clear waters warmed by natural springs, enjoy floating breakfast trays delivered by kayak, participate in hilarious water games and splash contests, and gather around roaring bonfires for storytelling with local Maine legends. Includes luxury lakeside tree houses, gourmet campfire cuisine, and a surprise seaplane adventure to hidden lakes!",
       date: "Aug 5-11, 2025", 
 
-      price: "$7,200",
+      price: "$10,800",
       highlights: ["Paddleboard yoga", "Treasure hunting adventures", "Luxury tree house lodging", "Seaplane to hidden lakes"]
     },
     {
@@ -34,7 +34,7 @@ export function AdventureExperiences() {
       title: "Down East Coastal Explorer",
       description: "7-day spectacular coastal odyssey featuring private yacht charters to secret islands, hands-on lobster fishing with fourth-generation fishermen, gourmet clambakes on deserted beaches, and thrilling puffin watching expeditions to remote colonies! Explore historic lighthouses with exclusive after-hours access, participate in beach scavenger hunts for rare shells and sea glass, enjoy lobster roll making competitions with celebrity chefs, and dance under the stars at authentic Maine barn parties. Includes luxury coastal inns, private chef experiences, helicopter lighthouse tours, and a surprise whale watching adventure with marine biologists!",
       date: "Sep 15-22, 2025",
-      price: "$9,400",
+      price: "$14,200",
       highlights: ["Private yacht charters", "Exclusive lighthouse access", "Celebrity chef experiences", "Whale watching expeditions"]
     },
     {
@@ -42,7 +42,7 @@ export function AdventureExperiences() {
       title: "Bali Soulshine Resort Adventure Escape",
       description: "10-day ultimate tropical paradise adventure at the exclusive Soulshine Resort! Experience sunrise yoga sessions overlooking emerald rice terraces, thrilling white-water rafting through Bali's jungle rivers, rock climbing on volcanic cliffs with ocean views, and paragliding over ancient temples and lush valleys. Enjoy private beach access with world-class surfing instruction, guided temple tours with spiritual ceremonies, traditional Balinese cooking classes with celebrity chefs, and healing spa treatments using sacred volcanic stones. Includes luxury villa accommodations, private helicopter tours over volcanoes, swimming with dolphins, and magical sunset dinners on pristine beaches!",
       date: "Oct 20-30, 2025",
-      price: "$14,800",
+      price: "$22,500",
       highlights: ["Exclusive Soulshine Resort", "Volcano helicopter tours", "Temple spiritual ceremonies", "Private beach villa access"]
     },
     {
@@ -50,7 +50,7 @@ export function AdventureExperiences() {
       title: "Appalachian Trail Autumn Spectacular",
       description: "8-day incredible leaf-peeping adventure along the legendary Appalachian Trail during peak fall foliage! Experience nature's most vibrant autumn canvas with private guided hikes through picture-perfect hillsides ablaze with color, luxury glamping under starlit skies, helicopter tours over endless fall landscapes, and gourmet campfire dining with celebrity chefs. Enjoy cozy mountain lodges with spa services, pumpkin patch visits with harvest festivals, wine tastings at scenic overlooks, and surprise hot air balloon rides over the colorful mountain ranges. All fitness levels welcome with custom hiking options!",
       date: "Oct 5-13, 2025",
-      price: "$8,900",
+      price: "$13,500",
       highlights: ["Peak fall foliage hiking", "Helicopter landscape tours", "Luxury mountain lodges", "Hot air balloon rides"]
     },
     {
@@ -59,7 +59,7 @@ export function AdventureExperiences() {
       description: "5-day heart-pounding white-water rafting adventure on Maine's wildest rivers including the Kennebec, Penobscot, and Dead Rivers! Experience controlled adrenaline thrills with expert guides, luxury riverside camps with gourmet meals, helicopter transfers between rapids, and evening wilderness spa treatments. Navigate Class V rapids by day, enjoy riverside wine tastings and storytelling around roaring campfires by night. Includes professional photography of your adventures, luxury gear, and a surprise zip-line finale over the river gorge!",
       date: "Jun 25-30, 2025",
 
-      price: "$6,500",
+      price: "$9,200",
       highlights: ["Class V rapids adventure", "Helicopter river transfers", "Luxury riverside camps", "Professional photography"]
     },
     {
@@ -67,7 +67,7 @@ export function AdventureExperiences() {
       title: "Colorado Rocky Mountain Snowmobile Safari",
       description: "7-day winter wonderland adventure snowmobiling through Colorado's spectacular Rocky Mountains! Explore 300+ miles of pristine trails around Grand Lake, race through snow-covered forests and ridges, enjoy luxury mountain chalets with hot tubs and gourmet dining, and experience breathtaking helicopter tours over snow-capped peaks. Includes professional snowmobile instruction, luxury winter gear, après-ski spa treatments, and magical evening sleigh rides with champagne under the stars!",
       date: "Jan 15-22, 2025",
-      price: "$9,800",
+      price: "$14,800",
       highlights: ["300+ miles of snow trails", "Luxury mountain chalets", "Helicopter peak tours", "Champagne sleigh rides"]
     },
     {
@@ -75,7 +75,7 @@ export function AdventureExperiences() {
       title: "West Virginia Paragliding Sky Adventure",
       description: "4-day ultimate aerial adventure featuring tandem paragliding over West Virginia's stunning landscapes! Soar like a bird above lush forests and winding rivers from Canaan Valley Resort State Park, enjoy luxury mountain resort accommodations, participate in sunrise balloon festivals, and experience professional flight training with world-class instructors. Includes gourmet mountain cuisine, spa treatments, helicopter tours for aerial photography, and a surprise nighttime paragliding experience with LED wings under the stars!",
       date: "May 10-14, 2025",
-      price: "$7,400",
+      price: "$11,200",
       highlights: ["Tandem paragliding flights", "Luxury mountain resort", "LED night paragliding", "Professional flight training"]
     },
     {
@@ -83,7 +83,7 @@ export function AdventureExperiences() {
       title: "Mount Whitney Ultimate Summit Challenge",
       description: "6-day epic conquest of Mount Whitney, the highest peak in the lower 48 states! Experience the ultimate bucket-list adventure with professional mountain guides, luxury base camp accommodations, helicopter support for gear transport, and gourmet high-altitude dining. Tackle the famous 99 Switchbacks, enjoy stunning Sierra Nevada vistas, crystal-clear alpine lakes, and celebrate your achievement with a champagne summit toast. Includes altitude training, luxury gear, spa recovery treatments, and a surprise sunrise hot air balloon ride over the Sierra range!",
       date: "Aug 20-26, 2025",
-      price: "$11,200",
+      price: "$16,800",
       highlights: ["Highest peak in lower 48", "Professional mountain guides", "Helicopter gear support", "Champagne summit celebration"]
     }
   ];
