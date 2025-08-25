@@ -72,7 +72,7 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
           
           <div className="relative">
             <img 
-              src="/attached_assets/LIVE_BOLD_BLUE_GRAPHIC_1756152212523.pdf" 
+              src="/attached_assets/LIVE_BOLD_BLUE_GRAPHIC_1756152514446.jpg" 
               alt="Live Bold Health & Adventure Concierge graphic" 
               className="rounded-2xl shadow-2xl w-full"
               data-testid="hero-image"
