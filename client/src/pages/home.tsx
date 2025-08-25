@@ -40,8 +40,6 @@ export default function Home() {
         
         <ServicesOverview />
         
-        <BooksCollection />
-        
         <HealthAssessment />
         
         <MembershipTiers />
@@ -49,6 +47,8 @@ export default function Home() {
         <AdventureExperiences />
         
         <Testimonials />
+        
+        <BooksCollection />
         
         <FinalCTA 
           onOpenConsultation={handleOpenConsultation}
