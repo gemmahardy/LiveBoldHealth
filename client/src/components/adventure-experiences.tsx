@@ -7,7 +7,7 @@ export function AdventureExperiences() {
       title: "Acadia Coastal Wellness Retreat",
       description: "5-day magical coastal adventure featuring sunrise yoga on Thunder Hole cliffs, private lobster boat excursions with Captain's storytelling, kayaking through hidden sea caves filled with seals, and evening bonfires with s'mores under the stars! Explore Acadia's famous carriage roads on luxury e-bikes, discover secret tide pools with marine biologists, hunt for sea glass on pristine beaches, and enjoy chef-prepared picnic lunches overlooking the Atlantic. Includes luxury spa treatments, wine tastings featuring Maine's finest, and a surprise lighthouse picnic dinner!",
       date: "Jun 12-17, 2025",
-      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "https://images.unsplash.com/photo-1506466010722-395aa2bef877?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$6,800",
       highlights: ["Sunrise yoga on cliffs", "Private lobster boat tours", "Sea cave kayaking", "Luxury spa treatments"]
     },
@@ -16,7 +16,7 @@ export function AdventureExperiences() {
       title: "Katahdin Nature Discovery & Climbing Expedition", 
       description: "6-day epic mountain adventure featuring thrilling rock climbing on Katahdin's legendary granite walls, moose tracking expeditions with wildlife photographers, helicopter tours over endless wilderness, and campfire cooking competitions with local chefs! Climb to secret overlooks accessible only to adventurers, spot rare wildlife through professional telescopes, enjoy hot chocolate and Maine blueberry pancakes at sunrise, and celebrate your achievements with a gourmet BBQ feast. Includes luxury glamping pods, professional climbing gear, and a surprise zip-line adventure through the forest canopy!",
       date: "Jul 20-26, 2025",
-      image: "https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$8,500",
       highlights: ["Rock climbing adventures", "Helicopter wilderness tours", "Moose tracking expeditions", "Luxury glamping pods"]
     },
@@ -25,7 +25,7 @@ export function AdventureExperiences() {
       title: "Maine Lakes Region Paddle & Wellness",
       description: "6-day incredible water paradise featuring stand-up paddleboard yoga on mirror-calm lakes, treasure hunting for ancient Abenaki artifacts, midnight aurora watching from floating platforms, and friendly competition in canoe races with prizes! Swim in crystal-clear waters warmed by natural springs, enjoy floating breakfast trays delivered by kayak, participate in hilarious water games and splash contests, and gather around roaring bonfires for storytelling with local Maine legends. Includes luxury lakeside tree houses, gourmet campfire cuisine, and a surprise seaplane adventure to hidden lakes!",
       date: "Aug 5-11, 2025", 
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$7,200",
       highlights: ["Paddleboard yoga", "Treasure hunting adventures", "Luxury tree house lodging", "Seaplane to hidden lakes"]
     },
@@ -34,7 +34,7 @@ export function AdventureExperiences() {
       title: "Down East Coastal Explorer",
       description: "7-day spectacular coastal odyssey featuring private yacht charters to secret islands, hands-on lobster fishing with fourth-generation fishermen, gourmet clambakes on deserted beaches, and thrilling puffin watching expeditions to remote colonies! Explore historic lighthouses with exclusive after-hours access, participate in beach scavenger hunts for rare shells and sea glass, enjoy lobster roll making competitions with celebrity chefs, and dance under the stars at authentic Maine barn parties. Includes luxury coastal inns, private chef experiences, helicopter lighthouse tours, and a surprise whale watching adventure with marine biologists!",
       date: "Sep 15-22, 2025",
-      image: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$9,400",
       highlights: ["Private yacht charters", "Exclusive lighthouse access", "Celebrity chef experiences", "Whale watching expeditions"]
     }
