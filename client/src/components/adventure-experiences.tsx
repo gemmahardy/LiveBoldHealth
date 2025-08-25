@@ -37,6 +37,15 @@ export function AdventureExperiences() {
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$9,400",
       highlights: ["Private yacht charters", "Exclusive lighthouse access", "Celebrity chef experiences", "Whale watching expeditions"]
+    },
+    {
+      id: "bali-soulshine-adventure",
+      title: "Bali Soulshine Resort Adventure Escape",
+      description: "10-day ultimate tropical paradise adventure at the exclusive Soulshine Resort! Experience sunrise yoga sessions overlooking emerald rice terraces, thrilling white-water rafting through Bali's jungle rivers, rock climbing on volcanic cliffs with ocean views, and paragliding over ancient temples and lush valleys. Enjoy private beach access with world-class surfing instruction, guided temple tours with spiritual ceremonies, traditional Balinese cooking classes with celebrity chefs, and healing spa treatments using sacred volcanic stones. Includes luxury villa accommodations, private helicopter tours over volcanoes, swimming with dolphins, and magical sunset dinners on pristine beaches!",
+      date: "Oct 20-30, 2025",
+      image: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      price: "$14,800",
+      highlights: ["Exclusive Soulshine Resort", "Volcano helicopter tours", "Temple spiritual ceremonies", "Private beach villa access"]
     }
   ];
 
