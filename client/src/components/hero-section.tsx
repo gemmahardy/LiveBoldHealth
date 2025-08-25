@@ -7,7 +7,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSectionProps) {
   return (
-    <section className="pt-32 pb-16 bg-gradient-to-b from-white to-luxury-gray">
+    <section className="pt-40 pb-16 bg-gradient-to-b from-white to-luxury-gray">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
