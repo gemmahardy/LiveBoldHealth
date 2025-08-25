@@ -54,6 +54,18 @@ export default function Home() {
         
         <MembershipTiers />
         
+        {/* Adventure Quote Section */}
+        <section className="py-16 bg-luxury-gray">
+          <div className="container mx-auto px-6">
+            <div className="text-center max-w-4xl mx-auto">
+              <p className="text-2xl sm:text-3xl font-playfair text-luxury-charcoal leading-relaxed italic">
+                "Adventure is a health tool. When you engage your body and mind in new ways, you unlock more than just strength and stamina — you ignite your energy, build resilience, and boost your ability to take on life with boldness and joy."
+              </p>
+              <p className="text-lg text-brand-orange font-semibold mt-6">— Sunshine</p>
+            </div>
+          </div>
+        </section>
+        
         <AdventureExperiences />
         
         <Testimonials />
