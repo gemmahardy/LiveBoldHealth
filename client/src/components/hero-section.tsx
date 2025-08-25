@@ -1,3 +1,5 @@
+import heroGraphic from '@assets/LIVE_BOLD_BLUE_GRAPHIC_1756152514446.jpg';
+
 interface HeroSectionProps {
   onOpenConsultation: () => void;
   onStartAssessment: () => void;
@@ -72,7 +74,7 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
           
           <div className="relative">
             <img 
-              src="/attached_assets/LIVE_BOLD_BLUE_GRAPHIC_1756152514446.jpg" 
+              src={heroGraphic} 
               alt="Live Bold Health & Adventure Concierge graphic" 
               className="rounded-2xl shadow-2xl w-full"
               data-testid="hero-image"
