@@ -19,8 +19,8 @@ export function ServicesOverview() {
     },
     {
       icon: Mountain,
-      title: "Exclusive Executive Adventures",
-      description: "Private island retreats, Alpine wellness symposiums, and invite-only experiences with fellow industry titans and thought leaders."
+      title: "World-Class Adventure Expeditions",
+      description: "Antarctic expeditions, African safaris, Alpine heli-skiing, and private island adventures. Each expedition combines extreme adventure with cutting-edge wellness protocols and billionaire networking."
     },
     {
       icon: Dna,

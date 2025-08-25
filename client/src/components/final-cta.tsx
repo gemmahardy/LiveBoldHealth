@@ -12,7 +12,10 @@ export function FinalCTA({ onOpenConsultation, onStartAssessment }: FinalCTAProp
             Ready to Master Your Ultimate Asset?
           </h3>
           <p className="text-xl opacity-90 leading-relaxed">
-            Join the ultra-exclusive circle of billionaire entrepreneurs and Fortune 500 CEOs who've unlocked peak performance, boundless energy, and extended healthspan through our bespoke concierge wellness programs.
+            Join the ultra-exclusive circle of billionaire entrepreneurs and Fortune 500 CEOs who've unlocked peak performance, boundless energy, and extended healthspan through our bespoke concierge wellness programs and world-class adventure expeditions.
+          </p>
+          <p className="text-lg opacity-80">
+            From Antarctic expeditions to private island retreats, combine cutting-edge wellness optimization with extraordinary adventures that push your limits and expand your horizons.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">

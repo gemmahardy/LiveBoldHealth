@@ -15,10 +15,10 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
                 <span className="text-transparent bg-clip-text bg-luxury-gradient"> Health Concierge</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                You've mastered markets, built empires, and created generational wealth. Now master the ultimate asset: your health and longevity.
+                You've mastered markets, built empires, and created generational wealth. Now master the ultimate asset: your health, longevity, and adventurous spirit.
               </p>
               <p className="text-lg font-medium text-luxury-charcoal">
-                Elite health optimization for executives who accept nothing less than excellence.
+                Elite health optimization and world-class adventure expeditions for executives who demand extraordinary experiences and peak performance.
               </p>
             </div>
             

@@ -38,6 +38,13 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
               Services
             </button>
             <button 
+              onClick={() => scrollToSection('adventures')}
+              className="text-luxury-charcoal hover:text-brand-orange transition-colors font-medium"
+              data-testid="nav-adventures"
+            >
+              Adventures
+            </button>
+            <button 
               onClick={() => scrollToSection('books')}
               className="text-luxury-charcoal hover:text-brand-orange transition-colors font-medium"
               data-testid="nav-books"
@@ -86,6 +93,13 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
                 data-testid="nav-services-mobile"
               >
                 Services
+              </button>
+              <button 
+                onClick={() => scrollToSection('adventures')}
+                className="text-left text-luxury-charcoal hover:text-brand-orange transition-colors font-medium"
+                data-testid="nav-adventures-mobile"
+              >
+                Adventures
               </button>
               <button 
                 onClick={() => scrollToSection('books')}

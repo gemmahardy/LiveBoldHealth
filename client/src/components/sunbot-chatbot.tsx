@@ -141,13 +141,22 @@ export function SunbotChatbot() {
             
             <div className="mt-3 flex flex-wrap gap-2">
               <Button
+                onClick={() => handleQuickAction("Tell me about adventure expeditions")}
+                variant="outline"
+                size="sm"
+                className="text-xs"
+                data-testid="quick-action-adventure"
+              >
+                Adventure Expeditions
+              </Button>
+              <Button
                 onClick={() => handleQuickAction("I want to increase my energy")}
                 variant="outline"
                 size="sm"
                 className="text-xs"
                 data-testid="quick-action-energy"
               >
-                Increase Energy
+                Energy Optimization
               </Button>
               <Button
                 onClick={() => handleQuickAction("I'm interested in executive coaching")}
@@ -156,7 +165,7 @@ export function SunbotChatbot() {
                 className="text-xs"
                 data-testid="quick-action-coaching"
               >
-                Executive Coaching
+                Elite Coaching
               </Button>
               <Button
                 onClick={() => handleQuickAction("Tell me about membership options")}
@@ -165,7 +174,7 @@ export function SunbotChatbot() {
                 className="text-xs"
                 data-testid="quick-action-membership"
               >
-                Membership Info
+                Membership Tiers
               </Button>
             </div>
           </div>
