@@ -118,6 +118,22 @@ export function Footer() {
               <li data-testid="contact-location">Beverly Hills, CA</li>
             </ul>
             
+            <div className="mt-6 space-y-3">
+              <h6 className="font-semibold text-brand-orange">Your Point of Contact</h6>
+              <div className="flex items-center space-x-3">
+                <img 
+                  src="/attached_assets/IMG_2514_1756148569389.jpg" 
+                  alt="Sunshine - Executive Wellness Consultant" 
+                  className="w-12 h-12 rounded-full object-cover border-2 border-brand-orange"
+                  data-testid="contact-sunshine-photo"
+                />
+                <div>
+                  <p className="font-medium text-white" data-testid="contact-sunshine-name">Sunshine</p>
+                  <p className="text-sm text-gray-400">Executive Wellness Consultant</p>
+                </div>
+              </div>
+            </div>
+            
             <div className="flex space-x-4 mt-6">
               <a href="#" className="text-gray-400 hover:text-brand-orange transition-colors" data-testid="social-linkedin">
                 <Linkedin className="h-5 w-5" />
