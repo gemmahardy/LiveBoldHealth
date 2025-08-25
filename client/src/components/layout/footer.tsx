@@ -1,5 +1,6 @@
 import { SunLogo } from "../ui/sun-logo";
 import { Linkedin, Instagram, Twitter } from "lucide-react";
+import sunshinePhoto from '@assets/IMG_2514_1756148569389.jpg';
 
 export function Footer() {
   const scrollToSection = (id: string) => {
@@ -122,7 +123,7 @@ export function Footer() {
               <h6 className="font-semibold text-brand-orange">Your Point of Contact</h6>
               <div className="flex items-center space-x-3">
                 <img 
-                  src="/attached_assets/IMG_2514_1756148569389.jpg" 
+                  src={sunshinePhoto}
                   alt="Sunshine - Executive Wellness Consultant" 
                   className="w-12 h-12 rounded-full object-cover border-2 border-brand-orange"
                   data-testid="contact-sunshine-photo"
