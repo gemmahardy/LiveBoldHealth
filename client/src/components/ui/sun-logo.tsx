@@ -18,6 +18,10 @@ export function SunLogo({ className = "", size = 'md' }: SunLogoProps) {
         src={sunIconUrl}
         alt="Live Bold Sun Logo" 
         className="w-full h-full object-contain filter brightness-110 contrast-110"
+        style={{
+          mixBlendMode: 'multiply',
+          filter: 'contrast(150%) brightness(120%) saturate(150%)'
+        }}
       />
     </div>
   );
