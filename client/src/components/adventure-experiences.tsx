@@ -3,40 +3,40 @@ import { ArrowRight } from "lucide-react";
 export function AdventureExperiences() {
   const experiences = [
     {
-      id: "katahdin-ultra-challenge",
-      title: "Katahdin Ultra-Endurance Challenge",
-      description: "7-day exclusive ultra-endurance expedition limited to 4 elite athletes. Conquer Mount Katahdin via the knife-edge trail, complete 100-mile wilderness ultra-marathon through Baxter State Park, and master cold-water endurance swimming in pristine mountain lakes. Includes survival skills training, altitude conditioning, and recovery protocols with performance nutritionists and elite trainers.",
-      date: "Jun 8-15, 2025",
+      id: "acadia-coastal-wellness",
+      title: "Acadia Coastal Wellness Retreat",
+      description: "5-day gentle adventure combining scenic coastal walks, beginner-friendly kayaking in calm waters, and relaxing beach yoga sessions. Explore Acadia's famous carriage roads by bike or on foot at your own pace, enjoy guided tide pool discoveries, and participate in sunset meditation sessions. Perfect for all fitness levels with optional activities for those seeking more challenge.",
+      date: "Jun 12-17, 2025",
+      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      price: "$3,200",
+      highlights: ["Scenic coastal walks", "Gentle kayaking adventures", "Beach yoga sessions", "All fitness levels welcome"]
+    },
+    {
+      id: "katahdin-nature-discovery",
+      title: "Katahdin Nature Discovery", 
+      description: "4-day accessible mountain experience featuring easy hiking trails, wildlife viewing, and nature photography workshops. Explore Baxter State Park's gentle paths with knowledgeable naturalists, enjoy picnic lunches by pristine lakes, and learn about Maine's ecosystem. Evening campfire talks and stargazing sessions complete this peaceful mountain retreat. No hiking experience required.",
+      date: "Jul 20-24, 2025",
       image: "https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-      price: "$18,500",
-      highlights: ["100-mile wilderness ultra-marathon", "Knife-edge trail summit", "Cold-water endurance training", "Elite performance coaching"]
+      price: "$2,800",
+      highlights: ["Easy mountain trails", "Wildlife viewing", "Photography workshops", "Evening stargazing"]
     },
     {
-      id: "acadia-rock-ice-masters",
-      title: "Acadia Rock & Ice Masters", 
-      description: "5-day intensive climbing expedition on Acadia's legendary sea cliffs and winter ice formations. Master technical multi-pitch routes with world-class climbing guides, tackle ice climbing on frozen waterfalls, and complete night ascents under the stars. Limited to 3 experienced climbers. Includes gear, rescue training, and luxury basecamp with recovery facilities.",
-      date: "Feb 12-17, 2025",
-      image: "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-      price: "$15,200",
-      highlights: ["Sea cliff multi-pitch climbing", "Ice waterfall ascents", "Night climbing challenges", "World-class guide instruction"]
+      id: "lakes-region-paddle",
+      title: "Maine Lakes Region Paddle & Wellness",
+      description: "6-day relaxing water adventure exploring Maine's pristine lakes by canoe and kayak. Gentle paddling suitable for beginners, swimming in crystal-clear waters, lakeside yoga and meditation, and cozy evenings around the campfire. Stay in comfortable lakeside cabins with all amenities. Includes basic paddling instruction and all equipment.",
+      date: "Aug 5-11, 2025", 
+      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      price: "$3,600",
+      highlights: ["Gentle lake paddling", "Swimming in pristine waters", "Lakeside yoga", "Comfortable cabin lodging"]
     },
     {
-      id: "allagash-wilderness-survival",
-      title: "Allagash Wilderness Survival Elite",
-      description: "10-day extreme wilderness survival course in Maine's most remote territory. Navigate 100+ miles through trackless forest using only primitive tools, build shelters in sub-zero conditions, hunt and forage for food, and complete solo survival challenges. Led by former Navy SEALs and primitive skills experts. Limited to 2 participants for ultimate exclusivity.",
-      date: "Oct 1-11, 2025", 
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-      price: "$22,000",
-      highlights: ["100-mile primitive navigation", "Solo survival challenges", "Navy SEAL instruction", "Sub-zero shelter building"]
-    },
-    {
-      id: "penobscot-adventure-race",
-      title: "Penobscot Ultra-Adventure Race",
-      description: "6-day multi-sport endurance competition through Maine's most challenging terrain. 200-mile journey combining sea kayaking through rough waters, mountain biking on technical trails, trail running through dense forest, and rock climbing challenges. Teams of 2 compete with professional adventure race support. Includes GPS tracking, emergency backup, and luxury recovery facilities.",
-      date: "Sep 18-24, 2025",
+      id: "downeast-coastal-explorer",
+      title: "Down East Coastal Explorer",
+      description: "7-day leisurely exploration of Maine's rugged coastline featuring scenic drives, lighthouse visits, and easy coastal walks. Enjoy fresh lobster experiences, visit charming fishing villages, take gentle boat tours to see seals and seabirds, and participate in beginner-friendly sea kayaking. Comfortable accommodations and transportation provided throughout.",
+      date: "Sep 15-22, 2025",
       image: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-      price: "$19,800",
-      highlights: ["200-mile multi-sport challenge", "Sea kayaking in rough waters", "Technical mountain biking", "Professional race support"]
+      price: "$4,200",
+      highlights: ["Scenic lighthouse tours", "Gentle boat excursions", "Lobster dining experiences", "Easy coastal walks"]
     }
   ];
 
@@ -50,10 +50,10 @@ export function AdventureExperiences() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h3 className="font-playfair text-4xl font-bold text-luxury-charcoal mb-4">
-            Ultra-Elite Endurance Adventures
+            Maine Adventure Wellness Escapes
           </h3>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            Push your limits through Maine's most extreme and exclusive endurance challenges. These ultra-demanding adventures are limited to 2-4 elite participants, combining world-class training with Maine's most challenging terrain. Only for those who seek the ultimate test of mental and physical endurance.
+            Discover Maine's natural beauty through accessible adventures designed for every fitness level. Each experience combines gentle outdoor activities with wellness programming, offering the perfect balance of adventure and relaxation. All skill levels welcome - our expert guides ensure everyone feels confident and included.
           </p>
         </div>
         

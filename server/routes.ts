@@ -104,7 +104,7 @@ function generateBotResponse(message: string): string {
   }
   
   if (lowerMessage.includes('adventure') || lowerMessage.includes('expedition') || lowerMessage.includes('retreat') || lowerMessage.includes('experience')) {
-    return "Exceptional! Our ultra-elite endurance adventures push the boundaries of human performance in Maine's most challenging terrain. We offer the Katahdin Ultra-Endurance Challenge ($18,500), Acadia Rock & Ice Masters ($15,200), Allagash Wilderness Survival Elite ($22,000), and Penobscot Ultra-Adventure Race ($19,800). Each experience is limited to 2-4 participants and led by world-class experts including former Navy SEALs. Which ultimate endurance challenge calls to you?";
+    return "Wonderful! Our Maine adventure wellness escapes are designed for every fitness level and offer the perfect blend of gentle outdoor activities with restorative wellness programming. We feature Acadia Coastal Wellness Retreat ($3,200), Katahdin Nature Discovery ($2,800), Maine Lakes Region Paddle & Wellness ($3,600), and Down East Coastal Explorer ($4,200). All experiences welcome beginners and include expert guidance to ensure everyone feels comfortable and confident. Which Maine adventure speaks to you?";
   }
   
   if (lowerMessage.includes('yes') || lowerMessage.includes('schedule') || lowerMessage.includes('book') || lowerMessage.includes('consultation')) {
