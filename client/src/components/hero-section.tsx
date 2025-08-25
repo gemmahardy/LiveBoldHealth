@@ -17,10 +17,10 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
                 <span className="text-transparent bg-clip-text bg-luxury-gradient"> Health & Adventure Concierge</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                You've mastered markets, built empires, and created generational wealth. Now master the ultimate asset: your health, longevity, and adventurous spirit.
+                Join the ultra-exclusive circle of high-net-worth executives who've unlocked peak performance, boundless energy, and extended healthspan through our bespoke concierge wellness programs and world-class adventure expeditions.
               </p>
               <p className="text-lg font-medium text-luxury-charcoal">
-                Elite health optimization and world-class adventure expeditions for executives who demand extraordinary experiences and peak performance.
+                From Maine coastal retreats to Bali paradise escapes, combine cutting-edge wellness optimization with extraordinary adventures that push your limits and expand your horizons.
               </p>
             </div>
             
@@ -37,7 +37,7 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
                 className="border-2 border-brand-orange text-brand-orange px-8 py-4 rounded-full font-semibold text-lg hover:bg-brand-orange hover:text-white transition-all"
                 data-testid="button-free-consultation"
               >
-                Free Consultation
+                Schedule Free Consultation
               </button>
             </div>
             
