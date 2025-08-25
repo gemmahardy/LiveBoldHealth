@@ -100,11 +100,11 @@ function generateBotResponse(message: string): string {
   }
   
   if (lowerMessage.includes('travel') || lowerMessage.includes('business') || lowerMessage.includes('executive')) {
-    return "Absolutely crucial for global executives! Our white-glove travel wellness service includes pre-travel optimization, jet lag elimination protocols, mobile IV therapy, and coordination with luxury wellness facilities worldwide. Plus, our adventure expeditions take you to extraordinary destinations like Antarctica, the Swiss Alps, and private islands. Would you like to discuss your travel wellness optimization or our exclusive adventure experiences?";
+    return "Absolutely crucial for global executives! Our white-glove travel wellness service includes pre-travel optimization, jet lag elimination protocols, mobile IV therapy, and coordination with luxury wellness facilities worldwide. Plus, our exclusive Maine adventure experiences offer incredible opportunities for renewal and rejuvenation closer to home. Would you like to discuss your travel wellness optimization or our unique Maine adventures?";
   }
   
   if (lowerMessage.includes('adventure') || lowerMessage.includes('expedition') || lowerMessage.includes('retreat') || lowerMessage.includes('experience')) {
-    return "Exceptional! Our ultra-exclusive adventure expeditions are designed for visionary leaders who seek extraordinary experiences. We offer Antarctic expeditions ($200K), Maldives private island optimization ($125K), Swiss Alps heli-skiing retreats ($75K), and African safari wellness experiences ($85K). Each expedition combines extreme adventure with cutting-edge biohacking and networking with fellow billionaires. Which destination calls to your adventurous spirit?";
+    return "Wonderful! Our exclusive Maine adventure experiences offer extraordinary opportunities for renewal and wellness. We feature historic lighthouse retreats ($8,500), private island glamping accessible only by seaplane ($12,000), wilderness lodge adventures with moose tracking ($7,200), and authentic Down East schooner sailing expeditions ($9,800). Each experience combines Maine's natural beauty with sophisticated wellness programming. Which Maine adventure speaks to you?";
   }
   
   if (lowerMessage.includes('yes') || lowerMessage.includes('schedule') || lowerMessage.includes('book') || lowerMessage.includes('consultation')) {
