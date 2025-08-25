@@ -88,9 +88,12 @@ export function AdventureExperiences() {
     }
   ];
 
-  const handleBookExperience = (experienceId: string) => {
-    console.log(`Booking experience: ${experienceId}`);
-    // Implementation for experience booking
+  const createEmailLink = (experienceTitle: string) => {
+    const email = 'sunshine@theenergylifestyle.com';
+    const subject = `Adventure Reservation Request - ${experienceTitle}`;
+    const body = 'Sunshine will let you know availability and book your adventure within 24 hours. Feel Good & Adventure On!';
+    
+    return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -154,14 +157,14 @@ export function AdventureExperiences() {
                   <span className="font-bold text-brand-orange text-sm" data-testid={`adventure-date-${experience.id}`}>
                     {experience.date}
                   </span>
-                  <button 
-                    onClick={() => handleBookExperience(experience.id)}
+                  <a 
+                    href={createEmailLink(experience.title)}
                     className="bg-luxury-gradient text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition-all flex items-center space-x-1"
                     data-testid={`button-book-adventure-${experience.id}`}
                   >
                     <span>Reserve Spot</span>
                     <ArrowRight className="h-3 w-3" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
