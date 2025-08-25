@@ -114,9 +114,9 @@ export function Footer() {
           <div>
             <h5 className="font-semibold text-lg mb-4">Contact</h5>
             <ul className="space-y-2 text-gray-400">
-              <li data-testid="contact-email">executive@livebold.com</li>
-              <li data-testid="contact-phone">+1 (555) 123-4567</li>
-              <li data-testid="contact-location">Beverly Hills, CA</li>
+              <li data-testid="contact-email">sunshine@liveboldhealth.com</li>
+              <li data-testid="contact-phone">(207) 944-5211</li>
+              <li data-testid="contact-location">Brunswick, Maine</li>
             </ul>
             
             <div className="mt-6 space-y-3">
