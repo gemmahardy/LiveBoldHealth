@@ -57,50 +57,74 @@ export class MemStorage implements IStorage {
   private initializeBooks() {
     const defaultBooks: InsertBook[] = [
       {
-        title: "The 4-Hour Body",
-        description: "An uncommon guide to rapid fat-loss, incredible sex, and becoming superhuman by Tim Ferriss",
+        title: "Live Bold",
+        description: "Transform your life through adventure, wellness, and intentional living by Sunshine Mechtenberg",
         price: 2995, // $29.95
         imageUrl: "/attached_assets/LIve%20Bold_1756148478586.jpeg",
         rating: 5,
-        reviewCount: 2847
+        reviewCount: 892
+      },
+      {
+        title: "How to 10x Your Energy Using the Power of Adventure",
+        description: "Discover how outdoor adventures can exponentially boost your vitality and life force by Sunshine Mechtenberg",
+        price: 2499, // $24.99
+        imageUrl: "https://images.unsplash.com/photo-1571019613914-85f342c6a11e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        rating: 5,
+        reviewCount: 634
+      },
+      {
+        title: "The S.I.M.P.L.E. Rule",
+        description: "A straightforward framework for sustainable wellness and peak performance by Sunshine Mechtenberg",
+        price: 2199, // $21.99
+        imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        rating: 5,
+        reviewCount: 567
+      },
+      {
+        title: "6 Daily Habits That Will Change Your Energy",
+        description: "Simple yet powerful daily practices to revolutionize your vitality and focus by Sunshine Mechtenberg",
+        price: 1995, // $19.95
+        imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        rating: 5,
+        reviewCount: 743
+      },
+      {
+        title: "Feel Good & Shine On",
+        description: "Your guide to radiant health, natural confidence, and authentic joy by Sunshine Mechtenberg",
+        price: 2699, // $26.99
+        imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        rating: 5,
+        reviewCount: 821
+      },
+      {
+        title: "The 5-Element Reset to Life a Living, Loving and Longevity",
+        description: "Ancient wisdom meets modern science for holistic wellness and longevity by Sunshine Mechtenberg",
+        price: 3295, // $32.95
+        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        rating: 5,
+        reviewCount: 459
       },
       {
         title: "Atomic Habits",
         description: "An easy & proven way to build good habits & break bad ones by James Clear",
         price: 2699, // $26.99
-        imageUrl: "https://images.unsplash.com/photo-1571019613914-85f342c6a11e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 45621
-      },
-      {
-        title: "Lifespan: Why We Age",
-        description: "Revolutionary insights into aging and longevity from Harvard geneticist David Sinclair",
-        price: 3199, // $31.99
-        imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
-        rating: 5,
-        reviewCount: 8934
       },
       {
         title: "The Power of Now",
         description: "A guide to spiritual enlightenment and mindful living by Eckhart Tolle",
         price: 1895, // $18.95
-        imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 12476
       },
       {
-        title: "Breath: The New Science",
-        description: "Revolutionary discoveries about the most essential bodily function by James Nestor",
-        price: 2799, // $27.99
-        imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
-        rating: 5,
-        reviewCount: 6832
-      },
-      {
         title: "Tools of Titans",
-        description: "The tactics, routines, and habits of billionaires, icons, and world-class performers",
+        description: "The tactics, routines, and habits of billionaires, icons, and world-class performers by Tim Ferriss",
         price: 3495, // $34.95
-        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 5294
       }
