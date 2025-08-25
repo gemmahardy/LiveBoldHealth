@@ -4,23 +4,23 @@ export function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      content: "In 30 years of building companies, this is the single best investment I've made. My energy at 60 surpasses what I had at 40. The concierge approach means I focus on what matters most while they handle every detail of my optimization.",
+      content: "I was skeptical about another wellness program, but the personalized approach here is different. My energy levels have improved significantly, and I sleep better than I have in years. Worth the investment for someone in a demanding leadership role.",
       author: "Michael Chen",
-      title: "Chairman & CEO, Chen Enterprises ($2.1B)",
+      title: "CEO, Manufacturing Company",
       avatar: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=60&h=60&fit=crop&crop=face"
     },
     {
       id: 2,
-      content: "The difference between standard executive health programs and Live Bold is like comparing commercial aviation to private jets. Every protocol is bespoke, every experience is world-class. This is health optimization for people who understand true luxury.",
+      content: "The coaching calls have been incredibly helpful in creating sustainable habits that actually fit my travel schedule. I've lost 15 pounds and my focus during long meetings has noticeably improved. My assistant even commented on my increased energy.",
       author: "Sarah Rodriguez", 
-      title: "Managing Partner, Blackstone Alternative Assets",
+      title: "Managing Director, Investment Fund",
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face"
     },
     {
       id: 3,
-      content: "After selling my company for $850M, I thought I had everything. But optimizing my health and longevity through Live Bold has given me the energy and clarity to build my next empire. The ROI is immeasurable.",
+      content: "The health assessment revealed some concerning trends I wasn't aware of. The customized meal plans are realistic for my lifestyle, and having direct text support means I can get guidance when I need it most. Solid program.",
       author: "James Wellington",
-      title: "Founder, Wellington Capital & Family Office",
+      title: "Private Equity Partner",
       avatar: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=60&h=60&fit=crop&crop=face"
     }
   ];
