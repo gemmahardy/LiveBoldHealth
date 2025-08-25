@@ -53,7 +53,7 @@ export function BooksCollection() {
             Executive Wellness Library
           </h3>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Transform your life with Sunshine Mechtenberg's complete collection - three powerful guides to adventure, wellness, and peak performance for high-achieving executives.
+            "Are you ready to feel unstoppable? Live Bold is your guide to experiencing the 10X Energy Effect — the surge of energy, vitality, and life satisfaction that comes from making adventure a mindset and a part of your everyday life."
           </p>
         </div>
         

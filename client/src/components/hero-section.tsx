@@ -17,7 +17,7 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
                 <span className="text-transparent bg-clip-text bg-luxury-gradient"> Health & Adventure Concierge</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Join the ultra-exclusive circle of high-net-worth executives who've unlocked peak performance, boundless energy, and extended healthspan through our bespoke concierge wellness programs and world-class adventure expeditions.
+                "This isn't about extreme sports or chasing danger. It's about shaking up your routine, saying yes to new experiences, and rediscovering the power, confidence, and clarity that already live inside you."
               </p>
               <p className="text-lg font-medium text-luxury-charcoal">
                 From Maine coastal retreats to Bali paradise escapes, combine cutting-edge wellness optimization with extraordinary adventures that push your limits and expand your horizons.

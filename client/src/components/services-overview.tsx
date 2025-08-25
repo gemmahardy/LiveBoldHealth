@@ -42,7 +42,7 @@ export function ServicesOverview() {
             What You'll Get
           </h3>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            I'm your Concierge Wellness Partner — designing, managing, and elevating every detail of your health, wellness, and adventure lifestyle.
+            "Adventure is a health tool. When you engage your body and mind in new ways, you unlock more than just strength and stamina — you ignite your energy, build resilience, and boost your ability to take on life with boldness and joy."
           </p>
         </div>
         

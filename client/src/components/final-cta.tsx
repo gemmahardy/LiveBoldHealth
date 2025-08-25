@@ -36,7 +36,7 @@ export function FinalCTA({ onOpenConsultation, onStartAssessment }: FinalCTAProp
           </div>
           
           <div className="pt-8 text-sm opacity-75">
-            <p>✨ With 20+ years of health leadership, I blend science + soul to give you more energy, freedom, and confidence than ever before.</p>
+            <p>"Let's go. Let's Live Bold." — Sunshine</p>
           </div>
         </div>
       </div>

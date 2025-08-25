@@ -104,7 +104,7 @@ export function AdventureExperiences() {
             Epic Adventure Wellness Escapes
           </h3>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            Discover incredible destinations from Maine's rugged coastlines to Colorado's snow-capped peaks, California's towering summits to Bali's tropical paradise. Each luxury adventure combines thrilling outdoor activities with world-class wellness programming, helicopter tours, gourmet dining, and unforgettable surprises. From accessible coastal retreats to challenging mountain expeditions - every adventure features expert guides, luxury accommodations, and experiences designed to create lifelong memories.
+            "Try something new — often. Adventure is the key to transforming ordinary days into extraordinary ones. It sparks your spirit, sharpens your focus, and fills your life with purpose and excitement."
           </p>
         </div>
         
