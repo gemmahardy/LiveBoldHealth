@@ -97,10 +97,10 @@ export function AdventureExperiences() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h3 className="font-playfair text-4xl font-bold text-luxury-charcoal mb-4">
-            Maine Adventure Wellness Escapes
+            Epic Adventure Wellness Escapes
           </h3>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            Discover Maine's natural beauty through accessible adventures designed for every fitness level. Each experience combines gentle outdoor activities with wellness programming, offering the perfect balance of adventure and relaxation. All skill levels welcome - our expert guides ensure everyone feels confident and included.
+            Discover incredible destinations from Maine's rugged coastlines to Colorado's snow-capped peaks, California's towering summits to Bali's tropical paradise. Each luxury adventure combines thrilling outdoor activities with world-class wellness programming, helicopter tours, gourmet dining, and unforgettable surprises. From accessible coastal retreats to challenging mountain expeditions - every adventure features expert guides, luxury accommodations, and experiences designed to create lifelong memories.
           </p>
         </div>
         
