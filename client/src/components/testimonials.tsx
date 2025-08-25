@@ -28,7 +28,7 @@ export function Testimonials() {
       content: "Between board meetings and travel, I barely had time to think about my health. The Bali retreat was exactly what I needed - came back refreshed and with practical strategies I can actually maintain. Already booked my next adventure.",
       author: "Amanda Foster",
       title: "Chief Financial Officer",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b93c?w=60&h=60&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
     },
     {
       id: 5,
