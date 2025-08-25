@@ -60,7 +60,7 @@ export class MemStorage implements IStorage {
         title: "LIVE BOLD",
         description: "Your Premium Guide to Executive Health Mastery and Longevity Optimization",
         price: 49700, // $497.00
-        imageUrl: "/attached_assets/LIve%20Bold_1756147659546.jpeg",
+        imageUrl: "/attached_assets/LIve%20Bold_1756148478586.jpeg",
         rating: 5,
         reviewCount: 127
       },
