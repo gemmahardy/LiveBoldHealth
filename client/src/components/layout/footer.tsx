@@ -11,7 +11,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="py-16 bg-luxury-charcoal text-white">
+    <footer className="py-16 bg-slate-700 text-white">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
