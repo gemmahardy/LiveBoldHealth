@@ -16,7 +16,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <SunLogo size="md" className="scale-75" />
+              <SunLogo size="md" />
               <div>
                 <h4 className="font-playfair font-bold text-xl">LIVE BOLD</h4>
                 <p className="text-xs font-montserrat text-brand-copper uppercase tracking-wider">Health Concierge</p>
