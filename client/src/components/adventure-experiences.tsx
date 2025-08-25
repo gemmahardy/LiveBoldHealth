@@ -7,7 +7,7 @@ export function AdventureExperiences() {
       title: "Swiss Alps Ultra-Longevity Symposium",
       description: "7-day exclusive retreat at a private Alpine estate. Advanced longevity protocols, hyperbaric chambers, heli-skiing adventures, and networking with fellow billionaire entrepreneurs. Limited to 12 executives. Includes private jet transport and Michelin-starred dining.",
       date: "Mar 15-22, 2025",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$75,000",
       highlights: ["Heli-skiing with Olympic instructors", "Private ice climbing", "Alpine wellness protocols", "Billionaire networking"]
     },
@@ -16,7 +16,7 @@ export function AdventureExperiences() {
       title: "Maldives Private Island Optimization", 
       description: "10-day bespoke wellness immersion on an exclusive private island. Personalized biohacking protocols, underwater adventures, world-class spa treatments, and private jet transport. Deep-sea diving, yacht excursions, and sunset helicopter tours.",
       date: "Jun 5-15, 2025",
-      image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$125,000",
       highlights: ["Private island access", "Luxury yacht adventures", "Underwater wellness pods", "Celebrity chef experiences"]
     },
@@ -25,7 +25,7 @@ export function AdventureExperiences() {
       title: "Aspen Executive Performance Summit",
       description: "5-day ultra-luxury experience combining altitude training, executive coaching, and networking with Fortune 100 CEOs. Includes private mountain adventures, helicopter skiing, exclusive lodge access, and performance optimization in extreme environments.",
       date: "Sep 10-15, 2025", 
-      image: "https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "https://images.unsplash.com/photo-1551524164-6cf2ac14c611?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$65,000",
       highlights: ["Helicopter mountain access", "Executive wilderness challenges", "Private lodge exclusivity", "Fortune 100 CEO networking"]
     },
@@ -34,7 +34,7 @@ export function AdventureExperiences() {
       title: "Napa Valley Regenerative Retreat",
       description: "6-day exclusive wellness experience at a private estate. Cutting-edge NAD+ therapies, stem cell consultations, private wine tastings with industry titans, and adventure activities including hot air ballooning and vineyard horseback expeditions.",
       date: "Nov 8-14, 2025",
-      image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$55,000",
       highlights: ["Hot air balloon adventures", "Vineyard horseback expeditions", "Private wine estate access", "Celebrity vintner experiences"]
     },
@@ -43,7 +43,7 @@ export function AdventureExperiences() {
       title: "Antarctic Extreme Wellness Expedition",
       description: "14-day ultimate adventure combining extreme environment training, ice swimming protocols, and luxury base camp living. Experience the world's most remote wellness destination with penguin colonies, ice cave exploration, and polar adventure activities.",
       date: "Jan 20 - Feb 3, 2025",
-      image: "https://images.unsplash.com/photo-1551524164-687a55dd1126?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "https://images.unsplash.com/photo-1560258018-c7db7645254e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$200,000",
       highlights: ["Polar expedition adventures", "Ice swimming mastery", "Luxury polar base camp", "Aurora australis viewing"]
     },
@@ -52,7 +52,7 @@ export function AdventureExperiences() {
       title: "African Safari Wellness Expedition",
       description: "8-day luxury safari combining wildlife adventures, traditional healing protocols, and executive networking. Stay in ultra-luxury tented camps, participate in conservation efforts, and experience ancient wellness traditions with modern biohacking.",
       date: "Aug 12-20, 2025",
-      image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$85,000",
       highlights: ["Big Five safari adventures", "Traditional healing ceremonies", "Conservation participation", "Luxury tented camp living"]
     }

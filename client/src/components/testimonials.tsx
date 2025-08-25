@@ -7,21 +7,21 @@ export function Testimonials() {
       content: "In 30 years of building companies, this is the single best investment I've made. My energy at 60 surpasses what I had at 40. The concierge approach means I focus on what matters most while they handle every detail of my optimization.",
       author: "Michael Chen",
       title: "Chairman & CEO, Chen Enterprises ($2.1B)",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=60&h=60&fit=crop&crop=face"
     },
     {
       id: 2,
       content: "The difference between standard executive health programs and Live Bold is like comparing commercial aviation to private jets. Every protocol is bespoke, every experience is world-class. This is health optimization for people who understand true luxury.",
       author: "Sarah Rodriguez", 
       title: "Managing Partner, Blackstone Alternative Assets",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b0e5?w=60&h=60&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face"
     },
     {
       id: 3,
       content: "After selling my company for $850M, I thought I had everything. But optimizing my health and longevity through Live Bold has given me the energy and clarity to build my next empire. The ROI is immeasurable.",
       author: "James Wellington",
       title: "Founder, Wellington Capital & Family Office",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=60&h=60&fit=crop&crop=face"
     }
   ];
 

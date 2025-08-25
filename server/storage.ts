@@ -68,7 +68,7 @@ export class MemStorage implements IStorage {
         title: "The Executive Biohacker",
         description: "Advanced Protocols for Peak Performance and Cellular Optimization",
         price: 69700, // $697.00
-        imageUrl: "https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1571019613914-85f342c6a11e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 89
       },
@@ -76,7 +76,7 @@ export class MemStorage implements IStorage {
         title: "Concierge Wellness Mastery",
         description: "The Ultra-High-Net-Worth Guide to Health Concierge Services",
         price: 59700, // $597.00
-        imageUrl: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 94
       },
@@ -84,7 +84,7 @@ export class MemStorage implements IStorage {
         title: "Executive Recovery Protocols",
         description: "Luxury Stress Management and Regeneration for High-Performance Leaders",
         price: 39700, // $397.00
-        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 76
       }

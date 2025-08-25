@@ -42,21 +42,21 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
             <div className="flex items-center space-x-6 pt-4">
               <div className="flex -space-x-2">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" 
+                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=50&h=50&fit=crop&crop=face" 
                   className="w-12 h-12 rounded-full border-2 border-white" 
-                  alt="Client testimonial"
+                  alt="Adventure client testimonial"
                   data-testid="testimonial-avatar-1"
                 />
                 <img 
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face" 
+                  src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=50&h=50&fit=crop&crop=face" 
                   className="w-12 h-12 rounded-full border-2 border-white" 
-                  alt="Client testimonial"
+                  alt="Adventure client testimonial"
                   data-testid="testimonial-avatar-2"
                 />
                 <img 
-                  src="https://images.unsplash.com/photo-1494790108755-2616b612b0e5?w=50&h=50&fit=crop&crop=face" 
+                  src="https://images.unsplash.com/photo-1552058544-f2b08422138a?w=50&h=50&fit=crop&crop=face" 
                   className="w-12 h-12 rounded-full border-2 border-white" 
-                  alt="Client testimonial"
+                  alt="Adventure client testimonial"
                   data-testid="testimonial-avatar-3"
                 />
               </div>
@@ -72,8 +72,8 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
           
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Executive wellness and longevity optimization" 
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+              alt="Adventure wellness and rejuvenation in stunning mountain landscapes" 
               className="rounded-2xl shadow-2xl w-full"
               data-testid="hero-image"
             />
