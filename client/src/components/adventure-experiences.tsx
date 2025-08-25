@@ -119,7 +119,7 @@ export function AdventureExperiences() {
                 className="w-full h-48 flex items-center justify-center relative"
                 style={{
                   backgroundImage: `url(${adventureCollageUrl})`,
-                  backgroundSize: 'cover',
+                  backgroundSize: 'contain',
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat'
                 }}
