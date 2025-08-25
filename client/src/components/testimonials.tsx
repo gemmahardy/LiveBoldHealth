@@ -53,7 +53,7 @@ export function Testimonials() {
     },
     {
       id: 8,
-      content: "What impressed me most was how they adapted everything to my crazy schedule. Late-night calls with Asia, early morning flights - they made it work. My stress levels are down and my team has noticed the difference in my leadership style.",
+      content: "What impressed me most was how they adapted everything to my crazy schedule. Late-night calls with Janine, early morning flights - they made it work. My stress levels are down and my team has noticed the difference in my leadership style.",
       author: "Jennifer Park",
       title: "Executive Director, Financial Services",
       avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=60&h=60&fit=crop&crop=face"
