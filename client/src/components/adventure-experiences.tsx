@@ -46,6 +46,51 @@ export function AdventureExperiences() {
       image: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$14,800",
       highlights: ["Exclusive Soulshine Resort", "Volcano helicopter tours", "Temple spiritual ceremonies", "Private beach villa access"]
+    },
+    {
+      id: "appalachian-trail-autumn",
+      title: "Appalachian Trail Autumn Spectacular",
+      description: "8-day incredible leaf-peeping adventure along the legendary Appalachian Trail during peak fall foliage! Experience nature's most vibrant autumn canvas with private guided hikes through picture-perfect hillsides ablaze with color, luxury glamping under starlit skies, helicopter tours over endless fall landscapes, and gourmet campfire dining with celebrity chefs. Enjoy cozy mountain lodges with spa services, pumpkin patch visits with harvest festivals, wine tastings at scenic overlooks, and surprise hot air balloon rides over the colorful mountain ranges. All fitness levels welcome with custom hiking options!",
+      date: "Oct 5-13, 2025",
+      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      price: "$8,900",
+      highlights: ["Peak fall foliage hiking", "Helicopter landscape tours", "Luxury mountain lodges", "Hot air balloon rides"]
+    },
+    {
+      id: "maine-whitewater-rapids",
+      title: "Maine White-Water Rapids Expedition",
+      description: "5-day heart-pounding white-water rafting adventure on Maine's wildest rivers including the Kennebec, Penobscot, and Dead Rivers! Experience controlled adrenaline thrills with expert guides, luxury riverside camps with gourmet meals, helicopter transfers between rapids, and evening wilderness spa treatments. Navigate Class V rapids by day, enjoy riverside wine tastings and storytelling around roaring campfires by night. Includes professional photography of your adventures, luxury gear, and a surprise zip-line finale over the river gorge!",
+      date: "Jun 25-30, 2025",
+      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      price: "$6,500",
+      highlights: ["Class V rapids adventure", "Helicopter river transfers", "Luxury riverside camps", "Professional photography"]
+    },
+    {
+      id: "colorado-snowmobile-rockies",
+      title: "Colorado Rocky Mountain Snowmobile Safari",
+      description: "7-day winter wonderland adventure snowmobiling through Colorado's spectacular Rocky Mountains! Explore 300+ miles of pristine trails around Grand Lake, race through snow-covered forests and ridges, enjoy luxury mountain chalets with hot tubs and gourmet dining, and experience breathtaking helicopter tours over snow-capped peaks. Includes professional snowmobile instruction, luxury winter gear, après-ski spa treatments, and magical evening sleigh rides with champagne under the stars!",
+      date: "Jan 15-22, 2025",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      price: "$9,800",
+      highlights: ["300+ miles of snow trails", "Luxury mountain chalets", "Helicopter peak tours", "Champagne sleigh rides"]
+    },
+    {
+      id: "west-virginia-paragliding",
+      title: "West Virginia Paragliding Sky Adventure",
+      description: "4-day ultimate aerial adventure featuring tandem paragliding over West Virginia's stunning landscapes! Soar like a bird above lush forests and winding rivers from Canaan Valley Resort State Park, enjoy luxury mountain resort accommodations, participate in sunrise balloon festivals, and experience professional flight training with world-class instructors. Includes gourmet mountain cuisine, spa treatments, helicopter tours for aerial photography, and a surprise nighttime paragliding experience with LED wings under the stars!",
+      date: "May 10-14, 2025",
+      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      price: "$7,400",
+      highlights: ["Tandem paragliding flights", "Luxury mountain resort", "LED night paragliding", "Professional flight training"]
+    },
+    {
+      id: "mount-whitney-summit",
+      title: "Mount Whitney Ultimate Summit Challenge",
+      description: "6-day epic conquest of Mount Whitney, the highest peak in the lower 48 states! Experience the ultimate bucket-list adventure with professional mountain guides, luxury base camp accommodations, helicopter support for gear transport, and gourmet high-altitude dining. Tackle the famous 99 Switchbacks, enjoy stunning Sierra Nevada vistas, crystal-clear alpine lakes, and celebrate your achievement with a champagne summit toast. Includes altitude training, luxury gear, spa recovery treatments, and a surprise sunrise hot air balloon ride over the Sierra range!",
+      date: "Aug 20-26, 2025",
+      image: "https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      price: "$11,200",
+      highlights: ["Highest peak in lower 48", "Professional mountain guides", "Helicopter gear support", "Champagne summit celebration"]
     }
   ];
 
