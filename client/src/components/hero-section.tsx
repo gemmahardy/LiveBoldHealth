@@ -12,7 +12,7 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
             <div className="space-y-4">
               <h2 className="font-playfair text-5xl lg:text-6xl font-bold text-luxury-charcoal leading-tight">
                 Your Ultra-Premium
-                <span className="text-transparent bg-clip-text bg-luxury-gradient"> Health Concierge</span>
+                <span className="text-transparent bg-clip-text bg-luxury-gradient"> Health & Adventure Concierge</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
                 You've mastered markets, built empires, and created generational wealth. Now master the ultimate asset: your health, longevity, and adventurous spirit.

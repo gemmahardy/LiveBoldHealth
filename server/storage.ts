@@ -74,7 +74,7 @@ export class MemStorage implements IStorage {
       },
       {
         title: "Concierge Wellness Mastery",
-        description: "The Ultra-High-Net-Worth Guide to Health Concierge Services",
+        description: "The Ultra-High-Net-Worth Guide to Health & Adventure Concierge Services",
         price: 59700, // $597.00
         imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
