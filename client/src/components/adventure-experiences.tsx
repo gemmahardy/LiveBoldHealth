@@ -13,12 +13,12 @@ export function AdventureExperiences() {
     },
     {
       id: "katahdin-nature-discovery",
-      title: "Katahdin Nature Discovery", 
-      description: "4-day accessible mountain experience featuring easy hiking trails, wildlife viewing, and nature photography workshops. Explore Baxter State Park's gentle paths with knowledgeable naturalists, enjoy picnic lunches by pristine lakes, and learn about Maine's ecosystem. Evening campfire talks and stargazing sessions complete this peaceful mountain retreat. No hiking experience required.",
-      date: "Jul 20-24, 2025",
+      title: "Katahdin Nature Discovery & Climbing Expedition", 
+      description: "6-day mountain adventure combining accessible hiking trails, wildlife viewing, and guided rock climbing experiences. Explore Baxter State Park's gentle paths with knowledgeable naturalists, enjoy picnic lunches by pristine lakes, and participate in beginner-friendly rock climbing instruction on Katahdin's granite faces. Professional climbing guides provide all equipment and safety training. Evening campfire talks and stargazing sessions complete this mountain retreat. All skill levels welcome for hiking, climbing instruction provided.",
+      date: "Jul 20-26, 2025",
       image: "https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-      price: "$2,800",
-      highlights: ["Easy mountain trails", "Wildlife viewing", "Photography workshops", "Evening stargazing"]
+      price: "$4,800",
+      highlights: ["Easy mountain trails", "Guided rock climbing", "Professional instruction", "All equipment provided"]
     },
     {
       id: "lakes-region-paddle",
