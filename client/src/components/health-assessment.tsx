@@ -286,6 +286,7 @@ export function HealthAssessment() {
                     </Button>
                     
                     <Button 
+                      onClick={() => window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank')}
                       className="border-2 border-brand-orange text-brand-orange px-8 py-4 rounded-full font-semibold text-lg hover:bg-brand-orange hover:text-white transition-all"
                       data-testid="button-book-consultation-assessment"
                     >

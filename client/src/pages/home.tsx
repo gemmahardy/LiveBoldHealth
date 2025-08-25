@@ -10,14 +10,12 @@ import { AdventureExperiences } from "@/components/adventure-experiences";
 import { Testimonials } from "@/components/testimonials";
 import { FinalCTA } from "@/components/final-cta";
 import { SunbotChatbot } from "@/components/sunbot-chatbot";
-import { ConsultationModal } from "@/components/consultation-modal";
 
 export default function Home() {
-  const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
   const [isAssessmentVisible, setIsAssessmentVisible] = useState(false);
 
   const handleOpenConsultation = () => {
-    setIsConsultationModalOpen(true);
+    window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank');
   };
 
   const handleStartAssessment = () => {
@@ -60,10 +58,6 @@ export default function Home() {
       
       <SunbotChatbot />
       
-      <ConsultationModal 
-        isOpen={isConsultationModalOpen}
-        onClose={() => setIsConsultationModalOpen(false)}
-      />
     </div>
   );
 }

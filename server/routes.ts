@@ -84,11 +84,11 @@ function generateBotResponse(message: string): string {
   const lowerMessage = message.toLowerCase();
   
   if (lowerMessage.includes('energy') || lowerMessage.includes('tired') || lowerMessage.includes('fatigue')) {
-    return "I completely understand the demands on ultra-high-net-worth executives like yourself. Our Elite Energy Mastery Program has transformed the vitality of Fortune 500 CEOs and billionaire entrepreneurs. We use cutting-edge protocols including NAD+ optimization, mitochondrial enhancement, and bespoke supplementation. Our clients typically see 40-60% energy improvements within 30 days. Shall I arrange a private consultation to discuss your personalized energy optimization strategy?";
+    return "I completely understand the demands on ultra-high-net-worth executives like yourself. Our Elite Energy Mastery Program has transformed the vitality of Fortune 500 CEOs and billionaire entrepreneurs. We use cutting-edge protocols including NAD+ optimization, mitochondrial enhancement, and bespoke supplementation. Our clients typically see 40-60% energy improvements within 30 days. Book your private consultation here: https://calendly.com/contact-sunryz/live-bold-consultation";
   }
   
   if (lowerMessage.includes('coaching') || lowerMessage.includes('1:1') || lowerMessage.includes('personal')) {
-    return "Exceptional choice! Our ultra-premium concierge coaching is exclusively for C-suite executives and UHNWIs who demand white-glove service. You'll have 24/7 access to our elite wellness team, priority booking at top longevity clinics, and personalized protocols designed around your demanding schedule. Our typical client has a net worth exceeding $100M. Would you like me to schedule a confidential consultation to discuss your bespoke wellness strategy?";
+    return "Exceptional choice! Our ultra-premium concierge coaching is exclusively for C-suite executives and UHNWIs who demand white-glove service. You'll have 24/7 access to our elite wellness team, priority booking at top longevity clinics, and personalized protocols designed around your demanding schedule. Our typical client has a net worth exceeding $100M. Schedule your confidential consultation here: https://calendly.com/contact-sunryz/live-bold-consultation";
   }
   
   if (lowerMessage.includes('membership') || lowerMessage.includes('tier') || lowerMessage.includes('price')) {
@@ -96,7 +96,7 @@ function generateBotResponse(message: string): string {
   }
   
   if (lowerMessage.includes('longevity') || lowerMessage.includes('biohacking') || lowerMessage.includes('optimize')) {
-    return "Brilliant focus! Longevity optimization is the ultimate investment for visionary leaders. We provide first access to breakthrough therapies, partnerships with world-renowned longevity clinics, stem cell treatments, and cutting-edge protocols used by tech billionaires and industry titans. Our approach has helped clients extend their healthspan by decades. Shall I arrange a private consultation to design your personalized longevity strategy?";
+    return "Brilliant focus! Longevity optimization is the ultimate investment for visionary leaders. We provide first access to breakthrough therapies, partnerships with world-renowned longevity clinics, stem cell treatments, and cutting-edge protocols used by tech billionaires and industry titans. Our approach has helped clients extend their healthspan by decades. Book your private consultation here: https://calendly.com/contact-sunryz/live-bold-consultation";
   }
   
   if (lowerMessage.includes('travel') || lowerMessage.includes('business') || lowerMessage.includes('executive')) {
@@ -108,11 +108,11 @@ function generateBotResponse(message: string): string {
   }
   
   if (lowerMessage.includes('yes') || lowerMessage.includes('schedule') || lowerMessage.includes('book') || lowerMessage.includes('consultation')) {
-    return "Excellent! I'm delighted to arrange your confidential consultation. This exclusive 45-minute session will be conducted by our founder, who has optimized the health of billionaire entrepreneurs and Fortune 500 CEOs for over 25 years. We'll design a preliminary strategy tailored to your specific goals and lifestyle demands. Would you prefer a morning session (9-11 AM), afternoon (1-3 PM), or evening (6-8 PM) this week?";
+    return "Excellent! I'm delighted to arrange your confidential consultation. This exclusive 45-minute session will be conducted by our founder, who has optimized the health of billionaire entrepreneurs and Fortune 500 CEOs for over 25 years. Please book your consultation directly here: https://calendly.com/contact-sunryz/live-bold-consultation";
   }
   
   if (lowerMessage.includes('morning') || lowerMessage.includes('afternoon') || lowerMessage.includes('evening')) {
-    return "Perfect! I've reserved your preferred time slot. To ensure we maximize the value of your consultation, please complete our Executive Health Assessment by clicking above. This confidential assessment helps us understand your current optimization level and goals. Our team will also conduct a preliminary lifestyle analysis before your call. Shall I send you the secure consultation booking link?";
+    return "Perfect! To ensure we maximize the value of your consultation, please complete our Executive Health Assessment above. This confidential assessment helps us understand your current optimization level and goals. You can book your consultation directly here: https://calendly.com/contact-sunryz/live-bold-consultation";
   }
   
   // Default responses for general inquiries
