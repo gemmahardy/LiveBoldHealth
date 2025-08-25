@@ -12,11 +12,11 @@ export function MembershipTiers() {
       icon: User,
       iconColor: "from-gray-400 to-gray-600",
       features: [
-        "Monthly 1:1 Coaching Calls — private sessions tailored to your health and lifestyle goals",
-        "Personalized Health Blueprint — biometrics, VO₂ max, metabolic testing, and a 90-day actionable plan",
-        "Custom Meal & Workout Plans — designed for your body, goals, and lifestyle, including travel adjustments",
-        "Basic Biometric Tracking — ongoing monitoring of core health markers for progress and accountability",
-        "Direct Text Support — priority access for questions, adjustments, and on-the-go guidance"
+        "Monthly 1:1 Coaching Calls",
+        "Personalized Health Blueprint",
+        "Custom Meal & Workout Plans",
+        "Basic Biometric Tracking",
+        "Direct Text Support"
       ],
       buttonStyle: "border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white",
       buttonText: "Get Started"
