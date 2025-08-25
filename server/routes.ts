@@ -104,7 +104,7 @@ function generateBotResponse(message: string): string {
   }
   
   if (lowerMessage.includes('adventure') || lowerMessage.includes('expedition') || lowerMessage.includes('retreat') || lowerMessage.includes('experience')) {
-    return "Wonderful! Our exclusive Maine adventure experiences offer extraordinary opportunities for renewal and wellness. We feature historic lighthouse retreats ($8,500), private island glamping accessible only by seaplane ($12,000), wilderness lodge adventures with moose tracking ($7,200), and authentic Down East schooner sailing expeditions ($9,800). Each experience combines Maine's natural beauty with sophisticated wellness programming. Which Maine adventure speaks to you?";
+    return "Exceptional! Our ultra-elite endurance adventures push the boundaries of human performance in Maine's most challenging terrain. We offer the Katahdin Ultra-Endurance Challenge ($18,500), Acadia Rock & Ice Masters ($15,200), Allagash Wilderness Survival Elite ($22,000), and Penobscot Ultra-Adventure Race ($19,800). Each experience is limited to 2-4 participants and led by world-class experts including former Navy SEALs. Which ultimate endurance challenge calls to you?";
   }
   
   if (lowerMessage.includes('yes') || lowerMessage.includes('schedule') || lowerMessage.includes('book') || lowerMessage.includes('consultation')) {

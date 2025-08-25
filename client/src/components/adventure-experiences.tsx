@@ -3,40 +3,40 @@ import { ArrowRight } from "lucide-react";
 export function AdventureExperiences() {
   const experiences = [
     {
-      id: "acadia-lighthouse",
-      title: "Acadia Lighthouse Wellness Retreat",
-      description: "5-day transformative experience at a restored 1800s lighthouse estate overlooking Frenchman Bay. Morning cliff-top yoga, sea kayaking through hidden coves, lobster boat excursions with local captains, and evening wellness sessions guided by oceanfront bonfires. Stay in the lighthouse keeper's luxury quarters with panoramic ocean views.",
-      date: "Jun 12-17, 2025",
-      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-      price: "$8,500",
-      highlights: ["Historic lighthouse accommodation", "Private lobster boat adventures", "Cliff-top meditation sessions", "Local captain storytelling"]
+      id: "katahdin-ultra-challenge",
+      title: "Katahdin Ultra-Endurance Challenge",
+      description: "7-day exclusive ultra-endurance expedition limited to 4 elite athletes. Conquer Mount Katahdin via the knife-edge trail, complete 100-mile wilderness ultra-marathon through Baxter State Park, and master cold-water endurance swimming in pristine mountain lakes. Includes survival skills training, altitude conditioning, and recovery protocols with performance nutritionists and elite trainers.",
+      date: "Jun 8-15, 2025",
+      image: "https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      price: "$18,500",
+      highlights: ["100-mile wilderness ultra-marathon", "Knife-edge trail summit", "Cold-water endurance training", "Elite performance coaching"]
     },
     {
-      id: "penobscot-glamping",
-      title: "Penobscot Bay Island Glamping", 
-      description: "4-day exclusive island escape accessible only by private seaplane. Luxury canvas pavilions on a secluded 15-acre island with world-class chef preparing fresh-caught seafood. Explore tide pools, go puffin watching, and experience the ultimate digital detox while still enjoying premium amenities and spa treatments.",
-      date: "Jul 20-24, 2025",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-      price: "$12,000",
-      highlights: ["Seaplane-only access", "Private island exclusivity", "Puffin colony adventures", "Chef-prepared seafood daily"]
+      id: "acadia-rock-ice-masters",
+      title: "Acadia Rock & Ice Masters", 
+      description: "5-day intensive climbing expedition on Acadia's legendary sea cliffs and winter ice formations. Master technical multi-pitch routes with world-class climbing guides, tackle ice climbing on frozen waterfalls, and complete night ascents under the stars. Limited to 3 experienced climbers. Includes gear, rescue training, and luxury basecamp with recovery facilities.",
+      date: "Feb 12-17, 2025",
+      image: "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      price: "$15,200",
+      highlights: ["Sea cliff multi-pitch climbing", "Ice waterfall ascents", "Night climbing challenges", "World-class guide instruction"]
     },
     {
-      id: "white-mountains-lodge",
-      title: "White Mountains Wilderness Lodge",
-      description: "6-day adventure at a luxury eco-lodge deep in Maine's western mountains. Experience moose tracking with wildlife biologists, fly fishing on pristine mountain lakes, guided night sky photography sessions, and forest bathing meditation. The lodge features sustainable luxury with solar power, farm-to-table dining, and handcrafted furnishings.",
-      date: "Sep 5-11, 2025", 
+      id: "allagash-wilderness-survival",
+      title: "Allagash Wilderness Survival Elite",
+      description: "10-day extreme wilderness survival course in Maine's most remote territory. Navigate 100+ miles through trackless forest using only primitive tools, build shelters in sub-zero conditions, hunt and forage for food, and complete solo survival challenges. Led by former Navy SEALs and primitive skills experts. Limited to 2 participants for ultimate exclusivity.",
+      date: "Oct 1-11, 2025", 
       image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-      price: "$7,200",
-      highlights: ["Moose tracking with biologists", "Pristine mountain lake fishing", "Astrophotography workshops", "Sustainable luxury living"]
+      price: "$22,000",
+      highlights: ["100-mile primitive navigation", "Solo survival challenges", "Navy SEAL instruction", "Sub-zero shelter building"]
     },
     {
-      id: "downeast-sailing",
-      title: "Down East Schooner Adventure",
-      description: "7-day sailing expedition aboard a restored 1920s wooden schooner along Maine's legendary Down East coast. Learn traditional sailing techniques, visit working fishing villages unchanged for generations, enjoy lobster bakes on remote beaches, and participate in marine conservation efforts. Experience Maine's maritime heritage while enjoying modern comfort and gourmet cuisine.",
-      date: "Aug 15-22, 2025",
+      id: "penobscot-adventure-race",
+      title: "Penobscot Ultra-Adventure Race",
+      description: "6-day multi-sport endurance competition through Maine's most challenging terrain. 200-mile journey combining sea kayaking through rough waters, mountain biking on technical trails, trail running through dense forest, and rock climbing challenges. Teams of 2 compete with professional adventure race support. Includes GPS tracking, emergency backup, and luxury recovery facilities.",
+      date: "Sep 18-24, 2025",
       image: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
-      price: "$9,800",
-      highlights: ["Historic wooden schooner", "Authentic fishing village visits", "Remote beach lobster bakes", "Marine conservation participation"]
+      price: "$19,800",
+      highlights: ["200-mile multi-sport challenge", "Sea kayaking in rough waters", "Technical mountain biking", "Professional race support"]
     }
   ];
 
@@ -50,10 +50,10 @@ export function AdventureExperiences() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h3 className="font-playfair text-4xl font-bold text-luxury-charcoal mb-4">
-            Exclusive Maine Adventure Experiences
+            Ultra-Elite Endurance Adventures
           </h3>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            Discover Maine's hidden treasures through carefully curated adventures that combine rugged natural beauty with sophisticated wellness experiences. Each journey is limited to 6-8 executives for an intimate, transformative experience.
+            Push your limits through Maine's most extreme and exclusive endurance challenges. These ultra-demanding adventures are limited to 2-4 elite participants, combining world-class training with Maine's most challenging terrain. Only for those who seek the ultimate test of mental and physical endurance.
           </p>
         </div>
         
