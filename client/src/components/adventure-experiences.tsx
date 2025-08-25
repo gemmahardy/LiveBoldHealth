@@ -100,15 +100,15 @@ export function AdventureExperiences() {
     <section id="adventures" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h3 className="font-playfair text-4xl font-bold text-luxury-charcoal mb-4">
+          <h3 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
             Epic Adventure Wellness Escapes
           </h3>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
             "Try something new — often. Adventure is the key to transforming ordinary days into extraordinary ones. It sparks your spirit, sharpens your focus, and fills your life with purpose and excitement."
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {experiences.map((experience) => (
             <div 
               key={experience.id}
@@ -129,11 +129,11 @@ export function AdventureExperiences() {
               </div>
               
               <div className="p-6 space-y-4">
-                <div className="flex items-center justify-between mb-2">
-                  <h4 className="font-playfair text-xl font-semibold" data-testid={`adventure-title-${experience.id}`}>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 space-y-2 sm:space-y-0">
+                  <h4 className="font-playfair text-lg sm:text-xl font-semibold" data-testid={`adventure-title-${experience.id}`}>
                     {experience.title}
                   </h4>
-                  <span className="text-2xl font-bold text-brand-orange" data-testid={`adventure-price-${experience.id}`}>
+                  <span className="text-xl sm:text-2xl font-bold text-brand-orange" data-testid={`adventure-price-${experience.id}`}>
                     {experience.price}
                   </span>
                 </div>
@@ -153,13 +153,13 @@ export function AdventureExperiences() {
                   </ul>
                 </div>
                 
-                <div className="flex items-center justify-between pt-2">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between pt-2 space-y-3 sm:space-y-0">
                   <span className="font-bold text-brand-orange text-sm" data-testid={`adventure-date-${experience.id}`}>
                     {experience.date}
                   </span>
                   <a 
                     href={createEmailLink(experience.title)}
-                    className="bg-luxury-gradient text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition-all flex items-center space-x-1"
+                    className="bg-luxury-gradient text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition-all flex items-center justify-center space-x-1 w-full sm:w-auto"
                     data-testid={`button-book-adventure-${experience.id}`}
                   >
                     <span>Reserve Spot</span>

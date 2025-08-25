@@ -220,15 +220,15 @@ export function HealthAssessment() {
                 </div>
                 
                 <div>
-                  <h4 className="font-playfair text-3xl font-bold mb-4" data-testid="assessment-results-title">
+                  <h4 className="font-playfair text-2xl sm:text-3xl font-bold mb-4" data-testid="assessment-results-title">
                     Your Personalized Health Profile
                   </h4>
-                  <p className="text-xl text-gray-600 mb-8">
+                  <p className="text-lg sm:text-xl text-gray-600 mb-8">
                     Based on your responses, here's your customized optimization strategy:
                   </p>
                 </div>
                 
-                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8">
                   <div className="bg-orange-50 rounded-xl p-6">
                     <h5 className="font-semibold text-lg mb-2">Priority Focus</h5>
                     <p className="text-gray-600" data-testid="assessment-primary-focus">

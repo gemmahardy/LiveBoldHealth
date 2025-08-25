@@ -64,15 +64,15 @@ export function Testimonials() {
     <section id="testimonials" className="py-20 bg-luxury-gray">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h3 className="font-playfair text-4xl font-bold text-luxury-charcoal mb-4">
+          <h3 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
             Trusted by Industry Leaders
           </h3>
-          <p className="text-xl text-gray-600">
+          <p className="text-lg sm:text-xl text-gray-600">
             What executives are saying about their transformation
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {testimonials.map((testimonial) => (
             <div 
               key={testimonial.id}

@@ -8,13 +8,13 @@ export function FinalCTA({ onOpenConsultation, onStartAssessment }: FinalCTAProp
     <section className="py-20 bg-luxury-gradient text-white">
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
-          <h3 className="font-playfair text-5xl font-bold leading-tight">
+          <h3 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
             Ready to Master Your Ultimate Asset?
           </h3>
-          <p className="text-xl opacity-90 leading-relaxed">
+          <p className="text-lg sm:text-xl opacity-90 leading-relaxed">
             Join the ultra-exclusive circle of billionaire entrepreneurs and Fortune 500 CEOs who've unlocked peak performance, boundless energy, and extended healthspan through our bespoke cutting-edge longevity and health concierge programs and world-class adventure expeditions.
           </p>
-          <p className="text-lg opacity-80">
+          <p className="text-base sm:text-lg opacity-80">
             From Antarctic expeditions to private island retreats, combine cutting-edge longevity and health optimization with extraordinary adventures that push your limits and expand your horizons.
           </p>
           

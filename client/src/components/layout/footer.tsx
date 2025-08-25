@@ -13,7 +13,7 @@ export function Footer() {
   return (
     <footer className="py-16 text-gray-800">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <SunLogo size="md" />
@@ -22,7 +22,7 @@ export function Footer() {
                 <p className="text-xs font-montserrat text-brand-copper uppercase tracking-wider">Health & Adventure Concierge</p>
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed">
               Your High-Performance Health & Adventure Concierge for executives who demand excellence in every aspect of life.
             </p>
           </div>

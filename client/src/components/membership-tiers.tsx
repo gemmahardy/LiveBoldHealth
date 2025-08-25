@@ -71,15 +71,15 @@ export function MembershipTiers() {
     <section id="membership" className="py-20 bg-luxury-gray">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h3 className="font-playfair text-4xl font-bold text-luxury-charcoal mb-4">
+          <h3 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
             Membership Tiers
           </h3>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Choose the level of concierge health support that matches your lifestyle and ambitions
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
           {tiers.map((tier) => {
             const IconComponent = tier.icon;
             return (
@@ -109,7 +109,7 @@ export function MembershipTiers() {
                   </div>
                   
                   <div className="space-y-2">
-                    <p className="text-4xl font-bold text-luxury-charcoal" data-testid={`tier-price-${tier.id}`}>
+                    <p className="text-2xl sm:text-4xl font-bold text-luxury-charcoal" data-testid={`tier-price-${tier.id}`}>
                       {tier.price}
                     </p>
                     <p className="text-gray-600" data-testid={`tier-period-${tier.id}`}>

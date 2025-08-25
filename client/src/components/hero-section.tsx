@@ -12,14 +12,14 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="font-playfair text-5xl lg:text-6xl font-bold text-luxury-charcoal leading-tight">
+              <h2 className="font-playfair text-3xl sm:text-4xl lg:text-6xl font-bold text-luxury-charcoal leading-tight">
                 Your Ultra-Premium
                 <span className="text-transparent bg-clip-text bg-luxury-gradient"> Health & Adventure Concierge</span>
               </h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
                 "This isn't about extreme sports or chasing danger. It's about shaking up your routine, saying yes to new experiences, and rediscovering the power, confidence, and clarity that already live inside you."
               </p>
-              <p className="text-lg font-medium text-luxury-charcoal">
+              <p className="text-base sm:text-lg font-medium text-luxury-charcoal">
                 From Maine coastal retreats to Bali paradise escapes, combine cutting-edge longevity and health optimization with extraordinary adventures that push your limits and expand your horizons.
               </p>
             </div>
@@ -41,7 +41,7 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
               </button>
             </div>
             
-            <div className="flex items-center space-x-6 pt-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 pt-4">
               <div className="flex -space-x-2">
                 <img 
                   src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=50&h=50&fit=crop&crop=face" 
@@ -80,17 +80,17 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
               data-testid="hero-image"
             />
             
-            <div className="absolute -bottom-8 -left-8 bg-white rounded-xl shadow-xl p-6 luxury-card">
+            <div className="absolute -bottom-4 -left-4 lg:-bottom-8 lg:-left-8 bg-white rounded-xl shadow-xl p-3 lg:p-6 luxury-card">
               <div className="text-center">
-                <p className="text-3xl font-bold text-brand-orange" data-testid="stat-experience">25+</p>
-                <p className="text-sm text-gray-600">Years Elite Practice</p>
+                <p className="text-xl lg:text-3xl font-bold text-brand-orange" data-testid="stat-experience">25+</p>
+                <p className="text-xs lg:text-sm text-gray-600">Years Elite Practice</p>
               </div>
             </div>
             
-            <div className="absolute -top-8 -right-8 bg-white rounded-xl shadow-xl p-6 luxury-card">
+            <div className="absolute -top-4 -right-4 lg:-top-8 lg:-right-8 bg-white rounded-xl shadow-xl p-3 lg:p-6 luxury-card">
               <div className="text-center">
-                <p className="text-3xl font-bold text-brand-orange" data-testid="stat-net-worth">$500M+</p>
-                <p className="text-sm text-gray-600">Combined Client Wealth</p>
+                <p className="text-xl lg:text-3xl font-bold text-brand-orange" data-testid="stat-net-worth">$500M+</p>
+                <p className="text-xs lg:text-sm text-gray-600">Combined Client Wealth</p>
               </div>
             </div>
           </div>
