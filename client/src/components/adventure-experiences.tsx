@@ -7,7 +7,7 @@ export function AdventureExperiences() {
       title: "Acadia Lighthouse Wellness Retreat",
       description: "5-day transformative experience at a restored 1800s lighthouse estate overlooking Frenchman Bay. Morning cliff-top yoga, sea kayaking through hidden coves, lobster boat excursions with local captains, and evening wellness sessions guided by oceanfront bonfires. Stay in the lighthouse keeper's luxury quarters with panoramic ocean views.",
       date: "Jun 12-17, 2025",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$8,500",
       highlights: ["Historic lighthouse accommodation", "Private lobster boat adventures", "Cliff-top meditation sessions", "Local captain storytelling"]
     },
@@ -16,7 +16,7 @@ export function AdventureExperiences() {
       title: "Penobscot Bay Island Glamping", 
       description: "4-day exclusive island escape accessible only by private seaplane. Luxury canvas pavilions on a secluded 15-acre island with world-class chef preparing fresh-caught seafood. Explore tide pools, go puffin watching, and experience the ultimate digital detox while still enjoying premium amenities and spa treatments.",
       date: "Jul 20-24, 2025",
-      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$12,000",
       highlights: ["Seaplane-only access", "Private island exclusivity", "Puffin colony adventures", "Chef-prepared seafood daily"]
     },
@@ -25,7 +25,7 @@ export function AdventureExperiences() {
       title: "White Mountains Wilderness Lodge",
       description: "6-day adventure at a luxury eco-lodge deep in Maine's western mountains. Experience moose tracking with wildlife biologists, fly fishing on pristine mountain lakes, guided night sky photography sessions, and forest bathing meditation. The lodge features sustainable luxury with solar power, farm-to-table dining, and handcrafted furnishings.",
       date: "Sep 5-11, 2025", 
-      image: "https://images.unsplash.com/photo-1551524164-6cf2ac14c611?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$7,200",
       highlights: ["Moose tracking with biologists", "Pristine mountain lake fishing", "Astrophotography workshops", "Sustainable luxury living"]
     },
@@ -34,7 +34,7 @@ export function AdventureExperiences() {
       title: "Down East Schooner Adventure",
       description: "7-day sailing expedition aboard a restored 1920s wooden schooner along Maine's legendary Down East coast. Learn traditional sailing techniques, visit working fishing villages unchanged for generations, enjoy lobster bakes on remote beaches, and participate in marine conservation efforts. Experience Maine's maritime heritage while enjoying modern comfort and gourmet cuisine.",
       date: "Aug 15-22, 2025",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       price: "$9,800",
       highlights: ["Historic wooden schooner", "Authentic fishing village visits", "Remote beach lobster bakes", "Marine conservation participation"]
     }
