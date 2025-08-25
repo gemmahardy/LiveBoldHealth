@@ -19,8 +19,8 @@ export function ServicesOverview() {
     },
     {
       icon: Mountain,
-      title: "World-Class Adventure Expeditions",
-      description: "Antarctic expeditions, African safaris, Alpine heli-skiing, and private island adventures. Each expedition combines extreme adventure with cutting-edge wellness protocols and billionaire networking."
+      title: "World-Class Adventure Expeditions", 
+      description: "Maine coastal retreats, Bali tropical escapes, Appalachian Trail autumn spectaculars, Colorado snowmobile safaris, West Virginia paragliding adventures, and Mount Whitney summit challenges. Each expedition combines thrilling outdoor activities with luxury accommodations and personalized wellness protocols."
     },
     {
       icon: Dna,
