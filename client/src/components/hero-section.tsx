@@ -20,7 +20,7 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
                 "This isn't about extreme sports or chasing danger. It's about shaking up your routine, saying yes to new experiences, and rediscovering the power, confidence, and clarity that already live inside you."
               </p>
               <p className="text-base sm:text-lg font-medium text-luxury-charcoal">
-                From Maine coastal retreats to Bali paradise escapes, combine cutting-edge longevity and health optimization with extraordinary adventures that push your limits and expand your horizons.
+                Indulge in a concierge-level journey that fuses health optimization with exclusive adventure — from Maine's private coastal retreats to Bali's most luxurious escapes — delivering unmatched vitality, energy, and longevity in style.
               </p>
             </div>
             
