@@ -68,7 +68,7 @@ export class MemStorage implements IStorage {
         title: "How to 10x Your Energy Using the Power of Adventure",
         description: "Discover how outdoor adventures can exponentially boost your vitality and life force by Sunshine Mechtenberg",
         price: 2499, // $24.99
-        imageUrl: "https://images.unsplash.com/photo-1571019613914-85f342c6a11e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 634
       },
@@ -76,7 +76,7 @@ export class MemStorage implements IStorage {
         title: "The S.I.M.P.L.E. Rule",
         description: "A straightforward framework for sustainable wellness and peak performance by Sunshine Mechtenberg",
         price: 2199, // $21.99
-        imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 567
       },
@@ -84,7 +84,7 @@ export class MemStorage implements IStorage {
         title: "6 Daily Habits That Will Change Your Energy",
         description: "Simple yet powerful daily practices to revolutionize your vitality and focus by Sunshine Mechtenberg",
         price: 1995, // $19.95
-        imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 743
       },
@@ -92,7 +92,7 @@ export class MemStorage implements IStorage {
         title: "Feel Good & Shine On",
         description: "Your guide to radiant health, natural confidence, and authentic joy by Sunshine Mechtenberg",
         price: 2699, // $26.99
-        imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 821
       },
@@ -100,7 +100,7 @@ export class MemStorage implements IStorage {
         title: "The 5-Element Reset to Life a Living, Loving and Longevity",
         description: "Ancient wisdom meets modern science for holistic wellness and longevity by Sunshine Mechtenberg",
         price: 3295, // $32.95
-        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 459
       },
@@ -108,7 +108,7 @@ export class MemStorage implements IStorage {
         title: "Atomic Habits",
         description: "An easy & proven way to build good habits & break bad ones by James Clear",
         price: 2699, // $26.99
-        imageUrl: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 45621
       },
@@ -116,7 +116,7 @@ export class MemStorage implements IStorage {
         title: "The Power of Now",
         description: "A guide to spiritual enlightenment and mindful living by Eckhart Tolle",
         price: 1895, // $18.95
-        imageUrl: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 12476
       },
@@ -124,7 +124,7 @@ export class MemStorage implements IStorage {
         title: "Tools of Titans",
         description: "The tactics, routines, and habits of billionaires, icons, and world-class performers by Tim Ferriss",
         price: 3495, // $34.95
-        imageUrl: "https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
+        imageUrl: "https://images.unsplash.com/photo-1473396413399-6717ef7c4093?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600",
         rating: 5,
         reviewCount: 5294
       }
