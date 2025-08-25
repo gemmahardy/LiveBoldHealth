@@ -44,18 +44,18 @@ export function MembershipTiers() {
     {
       id: "founders",
       name: "Founders Circle",
-      description: "Ultra-premium all-inclusive with luxury retreats and unlimited access",
+      description: "Ultra-premium, all-inclusive membership with luxury retreats and unlimited access",
       price: "$100,000",
       period: "per year", 
       icon: Gem,
       iconColor: "from-yellow-400 to-yellow-600",
       features: [
-        "Unlimited coaching & support",
-        "Luxury wellness retreats (4/year)",
-        "Executive peer networking",
-        "Cutting-edge biohacking access",
-        "White-glove travel coordination",
-        "Family health optimization"
+        "Unlimited Coaching & Support",
+        "Luxury Wellness Retreats",
+        "Personalized Longevity Plan",
+        "Cutting-Edge Biohacking Access",
+        "White-Glove Travel Coordination",
+        "Family Health Optimization"
       ],
       buttonStyle: "border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-500 hover:text-white",
       buttonText: "Apply Now"
