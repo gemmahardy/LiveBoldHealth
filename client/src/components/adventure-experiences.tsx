@@ -89,7 +89,7 @@ export function AdventureExperiences() {
   ];
 
   const createEmailLink = (experienceTitle: string) => {
-    const email = 'sunshine@theenergylifestyle.com';
+    const email = 'sunshine@liveboldhealth.com';
     const subject = `Adventure Reservation Request - ${experienceTitle}`;
     const body = 'Sunshine will let you know availability and book your adventure within 24 hours. Feel Good & Adventure On!';
     
