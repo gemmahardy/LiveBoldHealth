@@ -16,9 +16,6 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
                 Your Ultra-Premium
                 <span className="text-transparent bg-clip-text bg-luxury-gradient"> Health & Adventure Concierge</span>
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                "This isn't about extreme sports or chasing danger. It's about shaking up your routine, saying yes to new experiences, and rediscovering the power, confidence, and clarity that already live inside you."
-              </p>
               <p className="text-base sm:text-lg font-medium text-luxury-charcoal">
                 Indulge in a concierge-level journey that fuses health optimization with exclusive adventure — from Maine's private coastal retreats to Bali's most luxurious escapes — delivering unmatched vitality, energy, and longevity in style.
               </p>

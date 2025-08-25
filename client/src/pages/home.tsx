@@ -36,6 +36,18 @@ export default function Home() {
           onStartAssessment={handleStartAssessment}
         />
         
+        {/* Inspirational Quote Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="text-center max-w-4xl mx-auto">
+              <p className="text-2xl sm:text-3xl font-playfair text-luxury-charcoal leading-relaxed italic">
+                "This isn't about extreme sports or chasing danger. It's about shaking up your routine, saying yes to new experiences, and rediscovering the power, confidence, and clarity that already live inside you."
+              </p>
+              <p className="text-lg text-brand-orange font-semibold mt-6">— Sunshine</p>
+            </div>
+          </div>
+        </section>
+        
         <ServicesOverview />
         
         <HealthAssessment />
