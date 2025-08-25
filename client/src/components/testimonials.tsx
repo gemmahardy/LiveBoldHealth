@@ -22,6 +22,41 @@ export function Testimonials() {
       author: "James Wellington",
       title: "Private Equity Partner",
       avatar: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=60&h=60&fit=crop&crop=face"
+    },
+    {
+      id: 4,
+      content: "Between board meetings and travel, I barely had time to think about my health. The Bali retreat was exactly what I needed - came back refreshed and with practical strategies I can actually maintain. Already booked my next adventure.",
+      author: "Amanda Foster",
+      title: "Chief Financial Officer",
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b93c?w=60&h=60&fit=crop&crop=face"
+    },
+    {
+      id: 5,
+      content: "My doctor was impressed with my latest blood work results after just three months in the program. The biometric tracking helped identify issues early, and the meal delivery service saves me hours each week. Money well spent.",
+      author: "David Kim",
+      title: "Senior Vice President, Technology",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face"
+    },
+    {
+      id: 6,
+      content: "I've tried personal trainers and nutritionists before, but this is different. The concierge approach means everything is coordinated - from meal prep to workout scheduling. Finally, a wellness program that respects my time constraints.",
+      author: "Lisa Thompson",
+      title: "Regional Director, Consulting Firm",
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=60&h=60&fit=crop&crop=face"
+    },
+    {
+      id: 7,
+      content: "The mountain climbing expedition pushed me out of my comfort zone in the best way. I'm 52 and in better shape now than I was in my 30s. The program doesn't just focus on physical health - it's transformed my entire mindset.",
+      author: "Robert Martinez",
+      title: "General Manager, Hospitality Group",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=face"
+    },
+    {
+      id: 8,
+      content: "What impressed me most was how they adapted everything to my crazy schedule. Late-night calls with Asia, early morning flights - they made it work. My stress levels are down and my team has noticed the difference in my leadership style.",
+      author: "Jennifer Park",
+      title: "Executive Director, Financial Services",
+      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=60&h=60&fit=crop&crop=face"
     }
   ];
 
