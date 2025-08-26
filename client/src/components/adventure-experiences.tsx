@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { SunLogo } from "@/components/ui/sun-logo";
 import adventureCollageUrl from '@assets/Collage+sig+program+1384w_1756151724888.jpg';
+import acadiaBackgroundUrl from '@assets/1_1756217719810.jpg';
 
 export function AdventureExperiences() {
   const experiences = [
@@ -118,7 +119,7 @@ export function AdventureExperiences() {
               <div 
                 className="w-full h-64 flex items-center justify-center relative"
                 style={{
-                  backgroundImage: `url(${adventureCollageUrl})`,
+                  backgroundImage: `url(${experience.id === 'acadia-coastal-wellness' ? acadiaBackgroundUrl : adventureCollageUrl})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat'
