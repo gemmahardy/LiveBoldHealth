@@ -10,6 +10,7 @@ import appalachianBackgroundUrl from '@assets/5_1756218558661.jpg';
 import whitewaterBackgroundUrl from '@assets/whitewater rafting_1756218758297.jpg';
 import coloradoBackgroundUrl from '@assets/snowmobiling_1756218891377.jpg';
 import paraglidingBackgroundUrl from '@assets/paragliding_1756219243898.jpg';
+import whitneyBackgroundUrl from '@assets/10_1756219286808.jpg';
 
 export function AdventureExperiences() {
   const experiences = [
@@ -137,6 +138,7 @@ export function AdventureExperiences() {
                     experience.id === 'maine-whitewater-rapids' ? whitewaterBackgroundUrl :
                     experience.id === 'colorado-snowmobile-rockies' ? coloradoBackgroundUrl :
                     experience.id === 'west-virginia-paragliding' ? paraglidingBackgroundUrl :
+                    experience.id === 'mount-whitney-summit' ? whitneyBackgroundUrl :
                     adventureCollageUrl
                   })`,
                   backgroundSize: 'cover',
