@@ -16,7 +16,7 @@ export function SunbotChatbot() {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       type: 'bot',
-      content: "Welcome! I'm SunBot, your exclusive wellness concierge for ultra-high-net-worth executives. I help Fortune 500 CEOs and billionaire entrepreneurs optimize their most valuable asset - their health and longevity. What specific wellness goals would you like to achieve?",
+      content: "Hi there! 👋 I'm SunBot, your friendly wellness companion. Whether you're a busy professional, entrepreneur, or someone ready to prioritize your health and adventures, I'm here to help you discover your path to feeling amazing! What brings you here today?",
       timestamp: new Date()
     }
   ]);
@@ -141,40 +141,40 @@ export function SunbotChatbot() {
             
             <div className="mt-3 flex flex-wrap gap-2">
               <Button
-                onClick={() => handleQuickAction("Tell me about adventure expeditions")}
-                variant="outline"
-                size="sm"
-                className="text-xs"
-                data-testid="quick-action-adventure"
-              >
-                Adventure Expeditions
-              </Button>
-              <Button
-                onClick={() => handleQuickAction("I want to increase my energy")}
+                onClick={() => handleQuickAction("I want to feel more energetic")}
                 variant="outline"
                 size="sm"
                 className="text-xs"
                 data-testid="quick-action-energy"
               >
-                Energy Optimization
+                More Energy
               </Button>
               <Button
-                onClick={() => handleQuickAction("I'm interested in executive coaching")}
+                onClick={() => handleQuickAction("Tell me about adventures")}
                 variant="outline"
                 size="sm"
                 className="text-xs"
-                data-testid="quick-action-coaching"
+                data-testid="quick-action-adventure"
               >
-                Elite Coaching
+                Adventures
               </Button>
               <Button
-                onClick={() => handleQuickAction("Tell me about membership options")}
+                onClick={() => handleQuickAction("I need wellness support")}
                 variant="outline"
                 size="sm"
                 className="text-xs"
-                data-testid="quick-action-membership"
+                data-testid="quick-action-wellness"
               >
-                Membership Tiers
+                Wellness Support
+              </Button>
+              <Button
+                onClick={() => window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank')}
+                variant="outline"
+                size="sm"
+                className="text-xs bg-brand-orange text-white hover:bg-orange-600"
+                data-testid="quick-action-consultation"
+              >
+                📅 Book Consultation
               </Button>
             </div>
           </div>

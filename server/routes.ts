@@ -84,42 +84,47 @@ function generateBotResponse(message: string): string {
   const lowerMessage = message.toLowerCase();
   
   if (lowerMessage.includes('energy') || lowerMessage.includes('tired') || lowerMessage.includes('fatigue')) {
-    return "I completely understand the demands on ultra-high-net-worth executives like yourself. Our Elite Energy Mastery Program has transformed the vitality of Fortune 500 CEOs and billionaire entrepreneurs. We use cutting-edge protocols including NAD+ optimization, mitochondrial enhancement, and bespoke supplementation. Our clients typically see 40-60% energy improvements within 30 days. Book your private consultation here: https://calendly.com/contact-sunryz/live-bold-consultation";
+    return "I hear you! Low energy can really impact everything you want to do. 🌟 Many of our clients have found incredible results with our personalized wellness approach - combining adventure experiences, advanced health testing like VO2 Max, and lifestyle optimization. What does your ideal energy level look like? I'd love to connect you with Sunshine for a free consultation to explore what's possible for you! 📅";
   }
   
-  if (lowerMessage.includes('coaching') || lowerMessage.includes('1:1') || lowerMessage.includes('personal')) {
-    return "Exceptional choice! Our ultra-premium concierge coaching is exclusively for C-suite executives and UHNWIs who demand white-glove service. You'll have 24/7 access to our elite wellness team, priority booking at top longevity clinics, and personalized protocols designed around your demanding schedule. Our typical client has a net worth exceeding $100M. Schedule your confidential consultation here: https://calendly.com/contact-sunryz/live-bold-consultation";
+  if (lowerMessage.includes('coaching') || lowerMessage.includes('wellness') || lowerMessage.includes('support') || lowerMessage.includes('help')) {
+    return "That's wonderful that you're prioritizing your wellness! 🎯 Our personalized concierge approach means you get support tailored exactly to your lifestyle and goals. Whether you're a busy professional or someone ready to make big changes, we meet you where you are. What's your biggest wellness challenge right now? A consultation with Sunshine could give you clarity on the perfect path forward! 💪";
   }
   
-  if (lowerMessage.includes('membership') || lowerMessage.includes('tier') || lowerMessage.includes('price')) {
-    return "We offer three ultra-exclusive membership tiers for discerning executives: Essential Concierge ($5,000/month), VIP Concierge ($10,000/month), and our flagship Founders Circle ($100,000/year) - which includes private island retreats, priority access to breakthrough therapies, and networking with fellow industry titans. Our Founders Circle is limited to 50 members globally. Which level of exclusivity interests you?";
+  if (lowerMessage.includes('membership') || lowerMessage.includes('tier') || lowerMessage.includes('price') || lowerMessage.includes('cost')) {
+    return "Great question! We offer flexible membership options designed to fit different lifestyles and goals - from Essential Concierge ($5k/month) to VIP Concierge ($10k/month) to our comprehensive Founders Circle ($100k/year). But here's the thing - the best fit depends on your unique situation and goals! 🎯 Would you like to schedule a free consultation to explore which approach would work best for you?";
   }
   
-  if (lowerMessage.includes('longevity') || lowerMessage.includes('biohacking') || lowerMessage.includes('optimize')) {
-    return "Brilliant focus! Longevity optimization is the ultimate investment for visionary leaders. We provide first access to breakthrough therapies, partnerships with world-renowned longevity clinics, stem cell treatments, and cutting-edge protocols used by tech billionaires and industry titans. Our approach has helped clients extend their healthspan by decades. Book your private consultation here: https://calendly.com/contact-sunryz/live-bold-consultation";
+  if (lowerMessage.includes('longevity') || lowerMessage.includes('biohacking') || lowerMessage.includes('optimize') || lowerMessage.includes('health')) {
+    return "I love that you're thinking about long-term health! 🧬 That's such a smart investment in yourself. We combine cutting-edge approaches like VO2 Max testing, RMR analysis, and personalized protocols with the power of adventure and lifestyle optimization. Everyone's journey is different though - what's driving your interest in health optimization? Let's set up a consultation to explore what would work best for your goals! 🚀";
   }
   
-  if (lowerMessage.includes('travel') || lowerMessage.includes('business') || lowerMessage.includes('executive')) {
-    return "Absolutely crucial for global executives! Our white-glove travel wellness service includes pre-travel optimization, jet lag elimination protocols, mobile IV therapy, and coordination with luxury wellness facilities worldwide. Plus, our exclusive Maine adventure experiences offer incredible opportunities for renewal and rejuvenation closer to home. Would you like to discuss your travel wellness optimization or our unique Maine adventures?";
+  if (lowerMessage.includes('adventure') || lowerMessage.includes('expedition') || lowerMessage.includes('retreat') || lowerMessage.includes('experience') || lowerMessage.includes('travel')) {
+    return "How exciting! 🏔️ Our adventure experiences are truly special - from Maine coastal retreats to Bali escapes, mountain climbing to paragliding! Each combines thrilling activities with wellness optimization. Adventure isn't just fun - it's actually a powerful health tool that builds resilience, energy, and joy! ✨ What kind of adventure speaks to you? I'd love to help you find the perfect experience during a consultation with Sunshine!";
   }
   
-  if (lowerMessage.includes('adventure') || lowerMessage.includes('expedition') || lowerMessage.includes('retreat') || lowerMessage.includes('experience')) {
-    return "Spectacular! Our adventure wellness escapes span incredible destinations with luxury amenities and thrilling activities! Choose from Maine adventures like Acadia Coastal ($6,800), Katahdin Climbing ($8,500), Lakes Region Paddle ($7,200), Down East Coastal Explorer ($9,400), or Maine White-Water Rapids ($6,500). Experience national treasures like the Appalachian Trail Autumn Spectacular ($8,900), Colorado Rocky Mountain Snowmobile Safari ($9,800), West Virginia Paragliding Sky Adventure ($7,400), or Mount Whitney Ultimate Summit Challenge ($11,200). Or escape to our ultimate Bali Soulshine Resort Adventure ($14,800)! Each adventure features helicopter tours, luxury accommodations, gourmet dining, and unforgettable surprises! Which incredible destination calls to you?";
+  if (lowerMessage.includes('yes') || lowerMessage.includes('schedule') || lowerMessage.includes('book') || lowerMessage.includes('consultation') || lowerMessage.includes('interested')) {
+    return "Fantastic! 🎉 I'm so excited for you to connect with Sunshine. She has this amazing ability to help people see what's truly possible for their health and life. This free consultation will give you clarity on your goals and the perfect path forward. Ready to book? Here's the link: https://calendly.com/contact-sunryz/live-bold-consultation ✨";
   }
   
-  if (lowerMessage.includes('yes') || lowerMessage.includes('schedule') || lowerMessage.includes('book') || lowerMessage.includes('consultation')) {
-    return "Excellent! I'm delighted to arrange your confidential consultation. This exclusive 45-minute session will be conducted by our founder, who has optimized the health of billionaire entrepreneurs and Fortune 500 CEOs for over 25 years. Please book your consultation directly here: https://calendly.com/contact-sunryz/live-bold-consultation";
+  if (lowerMessage.includes('morning') || lowerMessage.includes('afternoon') || lowerMessage.includes('evening') || lowerMessage.includes('time')) {
+    return "Perfect timing question! ⏰ Sunshine has flexible scheduling to work with your schedule. Before you book, it might be helpful to take our quick Health Assessment above - it helps make your consultation even more valuable! Ready when you are: https://calendly.com/contact-sunryz/live-bold-consultation 📅";
   }
   
-  if (lowerMessage.includes('morning') || lowerMessage.includes('afternoon') || lowerMessage.includes('evening')) {
-    return "Perfect! To ensure we maximize the value of your consultation, please complete our Executive Health Assessment above. This confidential assessment helps us understand your current optimization level and goals. You can book your consultation directly here: https://calendly.com/contact-sunryz/live-bold-consultation";
+  if (lowerMessage.includes('goals') || lowerMessage.includes('want') || lowerMessage.includes('hope') || lowerMessage.includes('dream')) {
+    return "I love talking about goals! 🎯 What you want matters so much. Whether it's having more energy for your family, feeling confident in your body, tackling new adventures, or just feeling amazing every day - there's a path to get there. What would success look like for you? A consultation could help map out exactly how to achieve it! 💫";
   }
   
-  // Default responses for general inquiries
+  if (lowerMessage.includes('busy') || lowerMessage.includes('time') || lowerMessage.includes('schedule')) {
+    return "I totally get it - life can be so demanding! ⏰ That's exactly why our concierge approach works so well. We handle the details and create systems that fit your real life, not some perfect world. Many clients are amazed at how achievable wellness becomes with the right support. What if taking care of yourself could actually give you more time and energy for everything else? Let's explore that in a consultation! 🌟";
+  }
+  
+  // Default responses with more questions and encouragement
   const responses = [
-    "Welcome! I'm SunBot, your exclusive wellness concierge for ultra-high-net-worth executives. I help CEOs, entrepreneurs, and industry leaders optimize their most valuable asset - their health and longevity. What specific wellness goals are you looking to achieve?",
-    "I specialize in connecting visionary leaders with bespoke health optimization strategies. Are you interested in energy mastery, longevity protocols, performance enhancement, or perhaps our exclusive executive retreat experiences?",
-    "As a wellness concierge for Fortune 500 CEOs and billionaire entrepreneurs, I understand the unique demands on your time and performance. What's your primary focus - executive health optimization, cutting-edge longevity access, or our ultra-premium concierge services?"
+    "I'm here to help you feel amazing! 🌟 Whether you're looking to boost energy, try new adventures, or optimize your health, there's definitely a path forward. What's your biggest wellness goal right now?",
+    "That's great that you're here! 💪 Everyone's wellness journey is unique. Are you looking to feel more energetic, explore health optimization, or maybe try some incredible adventure experiences?",
+    "How wonderful that you're prioritizing yourself! ✨ What would feeling your absolute best look like to you? More energy? Better health? Amazing adventures? I'd love to help you explore what's possible!",
+    "I'm excited to help you on your wellness journey! 🎯 What brings you here today? Are you looking to optimize your health, boost your energy, or maybe explore some incredible adventure experiences?"
   ];
   
   return responses[Math.floor(Math.random() * responses.length)];
