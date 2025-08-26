@@ -11,7 +11,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="py-16 text-gray-800">
+    <footer className="py-16 bg-gray-800 text-white">
       <div className="container mx-auto px-6">
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           <div className="space-y-4">
@@ -22,7 +22,7 @@ export function Footer() {
                 <p className="text-xs font-montserrat text-brand-copper uppercase tracking-wider">Health & Adventure Concierge</p>
               </div>
             </div>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Your High-Performance Health & Adventure Concierge for executives who demand excellence in every aspect of life.
             </p>
           </div>
@@ -113,7 +113,7 @@ export function Footer() {
           
           <div>
             <h5 className="font-semibold text-lg mb-4">Contact</h5>
-            <ul className="space-y-2 text-gray-600">
+            <ul className="space-y-2 text-gray-300">
               <li data-testid="contact-email">sunshine@liveboldhealth.com</li>
               <li data-testid="contact-phone">(207) 944-5211</li>
               <li data-testid="contact-location">Brunswick, Maine</li>
@@ -129,28 +129,28 @@ export function Footer() {
                   data-testid="contact-sunshine-photo"
                 />
                 <div>
-                  <p className="font-medium text-gray-800" data-testid="contact-sunshine-name">Sunshine</p>
-                  <p className="text-sm text-gray-600">Executive Wellness Consultant</p>
+                  <p className="font-medium text-white" data-testid="contact-sunshine-name">Sunshine</p>
+                  <p className="text-sm text-gray-300">Executive Wellness Consultant</p>
                 </div>
               </div>
             </div>
             
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-gray-600 hover:text-brand-orange transition-colors" data-testid="social-linkedin">
+              <a href="#" className="text-gray-300 hover:text-brand-orange transition-colors" data-testid="social-linkedin">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-600 hover:text-brand-orange transition-colors" data-testid="social-instagram">
+              <a href="#" className="text-gray-300 hover:text-brand-orange transition-colors" data-testid="social-instagram">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-600 hover:text-brand-orange transition-colors" data-testid="social-twitter">
+              <a href="#" className="text-gray-300 hover:text-brand-orange transition-colors" data-testid="social-twitter">
                 <Twitter className="h-5 w-5" />
               </a>
             </div>
           </div>
         </div>
         
-        <div className="border-t border-gray-300 mt-12 pt-8 text-center text-gray-600">
-          <p>&copy; 2024 Live Bold Health & Adventure Concierge. All rights reserved.</p>
+        <div className="border-t border-gray-600 mt-12 pt-8 text-center text-gray-300">
+          <p>&copy; 2025 Live Bold Health & Adventure Concierge. All rights reserved.</p>
         </div>
       </div>
     </footer>
