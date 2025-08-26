@@ -8,6 +8,7 @@ import downeastBackgroundUrl from '@assets/6_1756218241556.jpg';
 import baliBackgroundUrl from '@assets/Bali_1756218507042.jpg';
 import appalachianBackgroundUrl from '@assets/5_1756218558661.jpg';
 import whitewaterBackgroundUrl from '@assets/whitewater rafting_1756218758297.jpg';
+import coloradoBackgroundUrl from '@assets/snowmobiling_1756218891377.jpg';
 
 export function AdventureExperiences() {
   const experiences = [
@@ -133,6 +134,7 @@ export function AdventureExperiences() {
                     experience.id === 'bali-soulshine-adventure' ? baliBackgroundUrl :
                     experience.id === 'appalachian-trail-autumn' ? appalachianBackgroundUrl :
                     experience.id === 'maine-whitewater-rapids' ? whitewaterBackgroundUrl :
+                    experience.id === 'colorado-snowmobile-rockies' ? coloradoBackgroundUrl :
                     adventureCollageUrl
                   })`,
                   backgroundSize: 'cover',
