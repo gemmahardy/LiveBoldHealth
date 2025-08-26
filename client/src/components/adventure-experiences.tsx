@@ -101,7 +101,7 @@ export function AdventureExperiences() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
-            Ultra-Luxury Adventure Wellness Vacations in Maine
+            Ultra-Luxury Adventure Wellness Vacations
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
             Experience elite adventure travel that transforms your fitness, wellness, and longevity. Our luxury vacation experiences in Maine and beyond spark your spirit, sharpen your focus, and fill your life with purpose and excitement.
