@@ -119,6 +119,10 @@ function generateBotResponse(message: string): string {
     return "I totally get it - life can be so demanding! ⏰ That's exactly why our concierge approach works so well. We handle the details and create systems that fit your real life, not some perfect world. Many clients are amazed at how achievable wellness becomes with the right support. What if taking care of yourself could actually give you more time and energy for everything else? Let's explore that in a consultation! 🌟";
   }
   
+  if (lowerMessage.includes('sunshine') || lowerMessage.includes('who is sunshine') || lowerMessage.includes('about sunshine')) {
+    return "👋 **Who is Sunshine?**\n\nI'm your Executive Concierge for health, wellness, and adventure. With over 25 years of expertise in health optimization, performance coaching, and executive consulting, I specialize in helping busy professionals and entrepreneurs live happier, healthier, and longer lives.\n\n• Author of Live Bold! and Feel Good & Shine On®\n• CEO & Founder of The Energy Lifestyle Company™\n• Creator of the Feel Good & Adventure On® Method — combining adventure, longevity science, and data-driven biometrics\n• Global Speaker & Consultant for health, wellness, and sustainable living\n• Background in executive leadership & startup consulting, guiding companies and individuals toward scalable success\n• Passionate ultra-runner, paddleboarder, and adventurer living on the Maine coast\n\nAs your concierge, I deliver personalized strategies, advanced biometrics, and curated adventure experiences designed to elevate energy, expand resilience, and unlock longevity — so you can perform at your highest level in business and life. ✨";
+  }
+  
   // Default responses with more questions and encouragement
   const responses = [
     "I'm here to help you feel amazing! 🌟 Whether you're looking to boost energy, try new adventures, or optimize your health, there's definitely a path forward. What's your biggest wellness goal right now?",
