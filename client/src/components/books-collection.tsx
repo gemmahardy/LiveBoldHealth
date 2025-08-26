@@ -42,13 +42,6 @@ export function BooksCollection() {
     <section id="books" className="py-20 bg-luxury-gray">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="mb-8">
-            <img 
-              src={threeBooksImageUrl}
-              alt="Complete book collection: Live Bold, The S.I.M.P.L.E. Rule, and Feel Good & Shine On"
-              className="mx-auto max-w-2xl w-full h-auto"
-            />
-          </div>
           <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
             Live Bold Elite Wellness Library - Perfect Life Collection
           </h2>
