@@ -5,6 +5,7 @@ import acadiaBackgroundUrl from '@assets/1_1756217719810.jpg';
 import katahdinBackgroundUrl from '@assets/katahdin_1756218115256.jpg';
 import lakesRegionBackgroundUrl from '@assets/2_1756218177238.jpg';
 import downeastBackgroundUrl from '@assets/6_1756218241556.jpg';
+import baliBackgroundUrl from '@assets/Bali_1756218507042.jpg';
 
 export function AdventureExperiences() {
   const experiences = [
@@ -127,6 +128,7 @@ export function AdventureExperiences() {
                     experience.id === 'katahdin-nature-discovery' ? katahdinBackgroundUrl :
                     experience.id === 'lakes-region-paddle' ? lakesRegionBackgroundUrl :
                     experience.id === 'downeast-coastal-explorer' ? downeastBackgroundUrl :
+                    experience.id === 'bali-soulshine-adventure' ? baliBackgroundUrl :
                     adventureCollageUrl
                   })`,
                   backgroundSize: 'cover',
