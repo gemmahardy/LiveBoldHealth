@@ -100,11 +100,11 @@ export function AdventureExperiences() {
     <section id="adventures" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h3 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
-            Epic Adventure Wellness Escapes
-          </h3>
+          <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
+            Ultra-Luxury Adventure Wellness Vacations in Maine
+          </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-            "Try something new — often. Adventure is the key to transforming ordinary days into extraordinary ones. It sparks your spirit, sharpens your focus, and fills your life with purpose and excitement."
+            Experience elite adventure travel that transforms your fitness, wellness, and longevity. Our luxury vacation experiences in Maine and beyond spark your spirit, sharpen your focus, and fill your life with purpose and excitement.
           </p>
         </div>
         

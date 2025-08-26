@@ -64,11 +64,11 @@ export function Testimonials() {
     <section id="testimonials" className="py-20 bg-luxury-gray">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h3 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
-            Trusted by Industry Leaders
-          </h3>
+          <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
+            Trusted by Elite Fortune 500 CEOs & Industry Leaders
+          </h2>
           <p className="text-lg sm:text-xl text-gray-600">
-            What executives are saying about their transformation
+            What ultra-successful executives are saying about their longevity, health, and lifestyle transformation with our elite wellness concierge
           </p>
         </div>
         

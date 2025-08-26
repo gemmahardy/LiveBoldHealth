@@ -8,14 +8,14 @@ export function FinalCTA({ onOpenConsultation, onStartAssessment }: FinalCTAProp
     <section className="py-20 bg-luxury-gradient text-white">
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
-          <h3 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-            Ready to Master Your Ultimate Asset?
-          </h3>
+          <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            Ready to 10X Your Longevity & Live Bold?
+          </h2>
           <p className="text-lg sm:text-xl opacity-90 leading-relaxed">
-            Join the ultra-exclusive circle of billionaire entrepreneurs and Fortune 500 CEOs who've unlocked peak performance, boundless energy, and extended healthspan through our bespoke cutting-edge longevity and health concierge programs and world-class adventure expeditions.
+            Join the ultra-exclusive circle of elite entrepreneurs and Fortune 500 CEOs who've unlocked peak fitness, boundless energy, and extended longevity through our ultra-luxury cutting-edge health concierge programs and world-class adventure vacations in Maine.
           </p>
           <p className="text-base sm:text-lg opacity-80">
-            From Antarctic expeditions to private island retreats, combine cutting-edge longevity and health optimization with extraordinary adventures that push your limits and expand your horizons.
+            From Maine's coastal luxury retreats to international adventure experiences, combine cutting-edge longevity optimization with extraordinary wellness adventures. Feel good, live longer, aspire to the perfect elite lifestyle.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">

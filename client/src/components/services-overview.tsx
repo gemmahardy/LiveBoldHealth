@@ -4,33 +4,33 @@ export function ServicesOverview() {
   const services = [
     {
       icon: Heart,
-      title: "Executive Health Mastery",
-      description: "Comprehensive biometric analysis, VO₂ max optimization, and bespoke longevity protocols designed for C-suite performance demands."
+      title: "Elite Health & Longevity Mastery",
+      description: "Comprehensive VO2 Max testing, RMR testing, advanced biometric analysis, and bespoke cutting-edge longevity protocols designed for ultra-luxury lifestyle optimization. Feel good, live longer with Maine's premier wellness concierge."
     },
     {
       icon: User,
-      title: "Ultra-Premium Concierge Coaching", 
-      description: "Dedicated health concierge with 24/7 availability, weekly optimization calls, and unlimited access to our elite wellness team."
+      title: "Ultra-Luxury Concierge Coaching", 
+      description: "Dedicated elite health concierge with 24/7 availability, weekly longevity optimization calls, and unlimited access to our ultra-premium wellness team. Aspire to the perfect life with personalized fitness and lifestyle guidance."
     },
     {
       icon: Utensils,
       title: "White-Glove Wellness Management",
-      description: "Fully managed nutrition, fitness, and recovery protocols. Custom meal delivery, private trainer coordination, and travel optimization."
+      description: "Fully managed nutrition, fitness, and recovery protocols for elite lifestyle optimization. Custom meal delivery, private trainer coordination, and luxury travel wellness optimization. 10X your health and vitality."
     },
     {
       icon: Mountain,
-      title: "World-Class Adventure Expeditions", 
-      description: "Maine coastal retreats, Bali tropical escapes, Appalachian Trail autumn spectaculars, Colorado snowmobile safaris, West Virginia paragliding adventures, and Mount Whitney summit challenges. Each expedition combines thrilling outdoor activities with luxury accommodations and personalized wellness protocols."
+      title: "World-Class Adventure Vacation Experiences", 
+      description: "Maine coastal luxury retreats, Bali tropical escapes, Appalachian Trail autumn spectaculars, Colorado snowmobile safaris, West Virginia paragliding adventures, and Mount Whitney summit challenges. Each ultra-luxury adventure vacation combines thrilling outdoor experiences with cutting-edge wellness protocols and elite lifestyle optimization."
     },
     {
       icon: Dna,
-      title: "Cutting-Edge Longevity Access",
-      description: "First access to breakthrough therapies, stem cell treatments, NAD+ optimization, and partnerships with world-renowned longevity clinics."
+      title: "Cutting-Edge Longevity & Health Access",
+      description: "First access to breakthrough longevity therapies, stem cell treatments, NAD+ optimization, and partnerships with world-renowned health and wellness clinics. Elite fitness and lifestyle optimization for those who want to live longer."
     },
     {
       icon: Shield,
-      title: "Platinum-Level Priority Access",
-      description: "Skip-the-line medical appointments, private clinic access, emergency wellness support, and exclusive events with industry leaders."
+      title: "Platinum-Level Elite Priority Access",
+      description: "Skip-the-line medical appointments, private clinic access, emergency wellness support, and exclusive events with industry leaders. Ultra-luxury concierge service for the perfect elite lifestyle experience."
     }
   ];
 
@@ -38,11 +38,11 @@ export function ServicesOverview() {
     <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h3 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
-            What You'll Get
-          </h3>
+          <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
+            Elite Longevity & Wellness Services
+          </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Your concierge wellness partner — designing, managing, and elevating every detail of your health, wellness, and adventure lifestyle.
+            Your ultra-luxury wellness concierge partner — designing, managing, and elevating every detail of your health, fitness, longevity, and adventure lifestyle for the perfect life experience.
           </p>
         </div>
         

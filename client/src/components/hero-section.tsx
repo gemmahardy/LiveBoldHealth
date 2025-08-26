@@ -12,12 +12,12 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="font-playfair text-3xl sm:text-4xl lg:text-6xl font-bold text-luxury-charcoal leading-tight">
-                Your Ultra-Premium
-                <span className="text-transparent bg-clip-text bg-luxury-gradient"> Health & Adventure Concierge</span>
-              </h2>
+              <h1 className="font-playfair text-3xl sm:text-4xl lg:text-6xl font-bold text-luxury-charcoal leading-tight">
+                Live Bold: Ultra-Luxury 
+                <span className="text-transparent bg-clip-text bg-luxury-gradient"> Longevity & Wellness Concierge</span>
+              </h1>
               <p className="text-base sm:text-lg font-medium text-luxury-charcoal">
-                Indulge in a concierge-level journey that fuses health optimization with exclusive adventure — from Maine's private coastal retreats to Bali's most luxurious escapes — delivering unmatched vitality, energy, and longevity in style.
+                10X your health, fitness, and longevity with Maine's elite wellness concierge. Experience cutting-edge VO2 Max testing, RMR testing, luxury adventure travel, and the perfect lifestyle optimization. Feel good, live longer, aspire to excellence.
               </p>
             </div>
             

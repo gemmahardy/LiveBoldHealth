@@ -71,11 +71,11 @@ export function MembershipTiers() {
     <section id="membership" className="py-20 bg-luxury-gray">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h3 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
-            Membership Tiers
-          </h3>
+          <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
+            Elite Longevity & Wellness Membership Tiers
+          </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the level of concierge health support that matches your lifestyle and ambitions
+            Choose the level of ultra-luxury concierge health and longevity support that matches your elite lifestyle and ambitious wellness goals. Feel good, live longer, aspire to the perfect life.
           </p>
         </div>
         
