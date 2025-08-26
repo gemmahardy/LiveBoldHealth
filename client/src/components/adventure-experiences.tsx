@@ -42,10 +42,10 @@ export function AdventureExperiences() {
     {
       id: "downeast-coastal-explorer",
       title: "Down East Coastal Explorer",
-      description: "7-day spectacular coastal odyssey featuring private yacht charters to secret islands, hands-on lobster fishing with fourth-generation fishermen, gourmet clambakes on deserted beaches, and thrilling puffin watching expeditions to remote colonies! Explore historic lighthouses with exclusive after-hours access, participate in beach scavenger hunts for rare shells and sea glass, enjoy lobster roll making competitions with celebrity chefs, and dance under the stars at authentic Maine barn parties. Includes luxury coastal inns, private chef experiences, helicopter lighthouse tours, and a surprise whale watching adventure with marine biologists!",
+      description: "7-day spectacular coastal odyssey featuring private yacht charters to secret islands, hands-on lobster fishing with fourth-generation fishermen, gourmet clambakes on deserted beaches, and thrilling puffin watching expeditions to remote colonies! Explore historic lighthouses with exclusive after-hours access and private guided tours, participate in beach scavenger hunts for rare shells and sea glass, enjoy lobster roll making competitions with celebrity chefs, and dance under the stars at authentic Maine barn parties. Includes luxury coastal inns, private chef experiences, exclusive lighthouse tours with keepers, and a surprise whale watching adventure with marine biologists!",
       date: "Sep 15-22, 2025",
       price: "$14,200",
-      highlights: ["Private yacht charters", "Exclusive lighthouse access", "Celebrity chef experiences", "Whale watching expeditions"]
+      highlights: ["Private yacht charters", "Exclusive lighthouse tours", "Celebrity chef experiences", "Whale watching expeditions"]
     },
     {
       id: "bali-soulshine-adventure",
