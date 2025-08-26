@@ -10,6 +10,7 @@ import { AdventureExperiences } from "@/components/adventure-experiences";
 import { Testimonials } from "@/components/testimonials";
 import { FinalCTA } from "@/components/final-cta";
 import { SunbotChatbot } from "@/components/sunbot-chatbot";
+import { WellnessCollage } from "@/components/wellness-collage";
 
 export default function Home() {
   const [isAssessmentVisible, setIsAssessmentVisible] = useState(false);
@@ -47,6 +48,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+        
+        <WellnessCollage />
         
         <ServicesOverview />
         
