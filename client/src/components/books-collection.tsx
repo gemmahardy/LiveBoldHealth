@@ -65,10 +65,10 @@ export function BooksCollection() {
               <Gem className="h-8 w-8 text-white" />
             </div>
             <h4 className="font-playfair text-3xl font-bold" data-testid="bundle-title">
-              Sunshine Mechtenberg's Complete Collection
+              Sunshine's Complete Collection
             </h4>
             <p className="text-xl text-gray-600" data-testid="bundle-description">
-              Transform your life with all three transformational wellness books - Live Bold, The S.I.M.P.L.E. Rule, and Feel Good & Shine On. Includes free shipping, exclusive bonus materials, and personal implementation guides.
+              Transform your life with all three transformational wellness eBooks - Live Bold, The S.I.M.P.L.E. Rule, and Feel Good & Shine On. Includes free shipping, exclusive bonus materials, and personal implementation guides.
             </p>
             <div className="flex items-center justify-center space-x-4">
               <span className="text-2xl text-gray-500 line-through" data-testid="bundle-original-price">
