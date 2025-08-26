@@ -3,6 +3,7 @@ import { SunLogo } from "@/components/ui/sun-logo";
 import adventureCollageUrl from '@assets/Collage+sig+program+1384w_1756151724888.jpg';
 import acadiaBackgroundUrl from '@assets/1_1756217719810.jpg';
 import katahdinBackgroundUrl from '@assets/katahdin_1756218115256.jpg';
+import lakesRegionBackgroundUrl from '@assets/2_1756218177238.jpg';
 
 export function AdventureExperiences() {
   const experiences = [
@@ -123,6 +124,7 @@ export function AdventureExperiences() {
                   backgroundImage: `url(${
                     experience.id === 'acadia-coastal-wellness' ? acadiaBackgroundUrl :
                     experience.id === 'katahdin-nature-discovery' ? katahdinBackgroundUrl :
+                    experience.id === 'lakes-region-paddle' ? lakesRegionBackgroundUrl :
                     adventureCollageUrl
                   })`,
                   backgroundSize: 'cover',
