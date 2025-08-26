@@ -1,5 +1,5 @@
 import { SunLogo } from "../ui/sun-logo";
-import { Linkedin, Instagram, Twitter } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import sunshinePhoto from '@assets/IMG_2514_1756148569389.jpg';
 
 export function Footer() {
@@ -138,12 +138,6 @@ export function Footer() {
             <div className="flex space-x-4 mt-6">
               <a href="#" className="text-gray-300 hover:text-brand-orange transition-colors" data-testid="social-linkedin">
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-brand-orange transition-colors" data-testid="social-instagram">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-brand-orange transition-colors" data-testid="social-twitter">
-                <Twitter className="h-5 w-5" />
               </a>
             </div>
           </div>
