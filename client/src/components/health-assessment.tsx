@@ -316,7 +316,7 @@ export function HealthAssessment() {
               Health & Longevity Assessment - VO2 Max & RMR Testing
             </h2>
             <p className="text-xl text-gray-600">
-              Discover your personalized path to 10X longevity, peak fitness performance, and optimal wellness with advanced VO2 Max testing and RMR testing in Maine.
+              Discover your personalized path to 10X longevity, peak fitness performance, and optimal wellness with advanced VO2 Max testing and RMR testing.
             </p>
           </div>
           
