@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { SunLogo } from "@/components/ui/sun-logo";
 import adventureCollageUrl from '@assets/Collage+sig+program+1384w_1756151724888.jpg';
 import acadiaBackgroundUrl from '@assets/1_1756217719810.jpg';
-import katahdinBackgroundUrl from '@assets/7_1756217890441.jpg';
+import katahdinBackgroundUrl from '@assets/katahdin_1756218115256.jpg';
 
 export function AdventureExperiences() {
   const experiences = [
