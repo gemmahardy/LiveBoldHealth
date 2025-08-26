@@ -188,7 +188,7 @@ export function HealthAssessment() {
 
   const handleSubmitAssessment = async () => {
     if (!email) {
-      alert("Please enter your email to receive your personalized results.");
+      alert("Please enter your email to continue.");
       return;
     }
 
@@ -199,7 +199,7 @@ export function HealthAssessment() {
           answers,
           results: assessmentResults
         });
-        alert("Assessment saved! We'll send your detailed results to your email.");
+        alert("Perfect! Your assessment is complete. Sunshine will review your personalized results with you during your consultation.");
       } catch (error) {
         alert("Failed to save assessment. Please try again.");
       }
@@ -264,7 +264,7 @@ export function HealthAssessment() {
                 <div className="space-y-4">
                   <input
                     type="email"
-                    placeholder="Enter your email for detailed results"
+                    placeholder="Enter your email to continue"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-brand-orange"
@@ -272,17 +272,22 @@ export function HealthAssessment() {
                   />
                   
                   <p className="text-lg font-medium text-luxury-charcoal">
-                    Ready to get your complete personalized health blueprint?
+                    Ready to review your personalized results with Sunshine?
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button 
-                      onClick={handleSubmitAssessment}
+                      onClick={() => {
+                        handleSubmitAssessment();
+                        setTimeout(() => {
+                          window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank');
+                        }, 1500);
+                      }}
                       className="bg-luxury-gradient text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all"
                       disabled={assessmentMutation.isPending}
                       data-testid="button-save-assessment"
                     >
-                      {assessmentMutation.isPending ? "Saving..." : "Save My Results"}
+                      {assessmentMutation.isPending ? "Saving..." : "Complete & Book Consultation"}
                     </Button>
                     
                     <Button 
@@ -290,7 +295,7 @@ export function HealthAssessment() {
                       className="border-2 border-brand-orange text-brand-orange px-8 py-4 rounded-full font-semibold text-lg hover:bg-brand-orange hover:text-white transition-all"
                       data-testid="button-book-consultation-assessment"
                     >
-                      Book Free Consultation
+                      Book Consultation Now
                     </Button>
                   </div>
                 </div>
