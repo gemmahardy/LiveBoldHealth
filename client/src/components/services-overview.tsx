@@ -30,7 +30,7 @@ export function ServicesOverview() {
     {
       icon: Shield,
       title: "Platinum-Level Elite Priority Access",
-      description: "Skip-the-line medical appointments, private clinic access, emergency wellness support, and exclusive events with industry leaders. Ultra-luxury concierge service for the perfect elite lifestyle experience."
+      description: "Priority scheduling for all wellness services, exclusive access to luxury events, emergency wellness support, and direct connection to industry leaders. Ultra-luxury concierge service for the perfect elite lifestyle experience."
     }
   ];
 
