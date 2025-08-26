@@ -308,7 +308,7 @@ export function HealthAssessment() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-playfair text-4xl font-bold text-luxury-charcoal mb-4">
-              Elite Health & Longevity Assessment - VO2 Max & RMR Testing
+              Health & Longevity Assessment - VO2 Max & RMR Testing
             </h2>
             <p className="text-xl text-gray-600">
               Discover your personalized path to 10X longevity, peak fitness performance, and optimal wellness with advanced VO2 Max testing and RMR testing in Maine.
