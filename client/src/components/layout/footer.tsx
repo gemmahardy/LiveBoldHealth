@@ -149,7 +149,12 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-gray-600 mt-12 pt-8 text-center text-gray-300">
+        <div className="border-t border-gray-600 mt-12 pt-8 space-y-6 text-center text-gray-300">
+          <div className="bg-gray-700 rounded-lg p-6 text-left">
+            <p className="text-gray-200 leading-relaxed">
+              <span className="font-semibold text-brand-orange">Not in Maine? No problem.</span> We bring the concierge experience to you — whether by traveling directly to your location or coordinating with trusted local providers for biometrics, meal planning, and fitness coaching. Every detail is personalized for your success. Take the first step today and schedule your private consultation.
+            </p>
+          </div>
           <p>&copy; 2025 Live Bold Health & Adventure Concierge. All rights reserved.</p>
         </div>
       </div>
