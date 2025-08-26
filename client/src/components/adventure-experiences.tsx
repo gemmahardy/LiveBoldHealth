@@ -33,11 +33,11 @@ export function AdventureExperiences() {
     {
       id: "lakes-region-paddle",
       title: "Maine Lakes Region Paddle & Wellness",
-      description: "6-day incredible water paradise featuring stand-up paddleboard yoga on mirror-calm lakes, treasure hunting for ancient Abenaki artifacts, midnight aurora watching from floating platforms, and friendly competition in canoe races with prizes! Swim in crystal-clear waters warmed by natural springs, enjoy floating breakfast trays delivered by kayak, participate in hilarious water games and splash contests, and gather around roaring bonfires for storytelling with local Maine legends. Includes luxury lakeside tree houses, gourmet campfire cuisine, and a surprise seaplane adventure to hidden lakes!",
+      description: "6-day incredible water paradise featuring stand-up paddleboard yoga on mirror-calm lakes, guided lake fishing expeditions for trophy bass and trout, early morning loon watching with wildlife photographers, and friendly competition in canoe races with prizes! Swim in crystal-clear pristine waters, spot magnificent wildlife including eagles, otters, and majestic loons calling across the lake, participate in sunset paddleboard adventures, and gather around roaring bonfires for storytelling with local Maine legends. Includes luxury lakeside cabins with private docks, gourmet campfire cuisine, and a surprise seaplane adventure to hidden lakes!",
       date: "Aug 5-11, 2025", 
 
       price: "$10,800",
-      highlights: ["Paddleboard yoga", "Treasure hunting adventures", "Luxury tree house lodging", "Seaplane to hidden lakes"]
+      highlights: ["Paddleboard yoga", "Lake fishing expeditions", "Loon & wildlife watching", "Luxury lakeside cabins"]
     },
     {
       id: "downeast-coastal-explorer",
