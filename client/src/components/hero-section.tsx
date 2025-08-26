@@ -60,10 +60,10 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
                 />
               </div>
               <div className="text-sm">
-                <p className="font-medium text-luxury-charcoal" data-testid="text-trusted-by">Trusted by Fortune 500 CEOs & UHNWIs</p>
+                <p className="font-medium text-luxury-charcoal" data-testid="text-trusted-by">Trusted by High-Performance Executives & Leaders</p>
                 <div className="flex text-brand-orange">
                   <span className="text-yellow-400">★★★★★</span>
-                  <span className="ml-2 text-gray-600" data-testid="text-rating">Exclusive clientele only</span>
+                  <span className="ml-2 text-gray-600" data-testid="text-rating">Premium wellness partners</span>
                 </div>
               </div>
             </div>
