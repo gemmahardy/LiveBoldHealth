@@ -151,9 +151,23 @@ export function Footer() {
         
         <div className="border-t border-gray-600 mt-12 pt-8 space-y-6 text-center text-gray-300">
           <div className="bg-gray-700 rounded-lg p-6 text-left">
-            <p className="text-gray-200 leading-relaxed">
+            <p className="text-gray-200 leading-relaxed mb-4">
               <span className="font-semibold text-brand-orange">Not in Maine? No problem.</span> We bring the concierge experience to you — whether by traveling directly to your location or coordinating with trusted local providers for biometrics, meal planning, and fitness coaching. Every detail is personalized for your success. Take the first step today and schedule your private consultation.
             </p>
+            <div className="flex justify-center">
+              <a 
+                href="https://calendly.com/contact-sunryz/live-bold-consultation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-luxury-gradient text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all flex items-center space-x-2"
+                data-testid="button-footer-consultation"
+              >
+                <span>Schedule Your Private Consultation</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
           </div>
           <p>&copy; 2025 Live Bold Health & Adventure Concierge. All rights reserved.</p>
         </div>
