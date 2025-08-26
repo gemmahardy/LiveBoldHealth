@@ -82,6 +82,7 @@ export function BooksCollection() {
               </span>
             </div>
             <Button 
+              onClick={() => window.open('https://www.theenergylifestyle.com/shop', '_blank')}
               className="bg-luxury-gradient text-white px-12 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all"
               data-testid="button-purchase-bundle"
             >
