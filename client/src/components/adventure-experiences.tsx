@@ -24,8 +24,8 @@ export function AdventureExperiences() {
     },
     {
       id: "katahdin-nature-discovery",
-      title: "Katahdin Nature Discovery & Climbing Expedition", 
-      description: "6-day epic mountain adventure featuring thrilling rock climbing on Katahdin's legendary granite walls, moose tracking expeditions with wildlife photographers, helicopter tours over endless wilderness, and campfire cooking competitions with local chefs! Climb to secret overlooks accessible only to adventurers, spot rare wildlife through professional telescopes, enjoy hot chocolate and Maine blueberry pancakes at sunrise, and celebrate your achievements with a gourmet BBQ feast. Includes luxury glamping pods, professional climbing gear, and a surprise zip-line adventure through the forest canopy!",
+      title: "Maine Mountains Nature Discovery & Climbing Expedition", 
+      description: "6-day epic mountain adventure featuring thrilling rock climbing on Maine's legendary granite walls, moose tracking expeditions with wildlife photographers, helicopter tours over endless wilderness, and campfire cooking competitions with local chefs! Climb to secret overlooks accessible only to adventurers, spot rare wildlife through professional telescopes, enjoy hot chocolate and Maine blueberry pancakes at sunrise, and celebrate your achievements with a gourmet BBQ feast. Includes luxury glamping pods, professional climbing gear, and a surprise zip-line adventure through the forest canopy!",
       date: "Jul 20-26, 2025",
       price: "$12,500",
       highlights: ["Rock climbing adventures", "Helicopter wilderness tours", "Moose tracking expeditions", "Luxury glamping pods"]
