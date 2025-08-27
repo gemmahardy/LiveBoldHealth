@@ -229,19 +229,19 @@ export function HealthAssessment() {
                 </div>
                 
                 <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8">
-                  <div className="bg-orange-50 rounded-xl p-6">
+                  <div className="bg-blue-50 rounded-xl p-6">
                     <h5 className="font-semibold text-lg mb-2">Priority Focus</h5>
                     <p className="text-gray-600" data-testid="assessment-primary-focus">
                       {assessmentResults.primaryFocus}
                     </p>
                   </div>
-                  <div className="bg-orange-50 rounded-xl p-6">
+                  <div className="bg-blue-50 rounded-xl p-6">
                     <h5 className="font-semibold text-lg mb-2">Recommended Plan</h5>
                     <p className="text-gray-600" data-testid="assessment-recommended-plan">
                       {assessmentResults.recommendedPlan}
                     </p>
                   </div>
-                  <div className="bg-orange-50 rounded-xl p-6">
+                  <div className="bg-blue-50 rounded-xl p-6">
                     <h5 className="font-semibold text-lg mb-2">Timeline</h5>
                     <p className="text-gray-600" data-testid="assessment-timeline">
                       {assessmentResults.timeline}
@@ -254,7 +254,7 @@ export function HealthAssessment() {
                   <ul className="space-y-2 text-left text-gray-600">
                     {assessmentResults.insights.map((insight, index) => (
                       <li key={index} className="flex items-start space-x-2" data-testid={`assessment-insight-${index}`}>
-                        <span className="text-brand-orange mt-1">•</span>
+                        <span className="text-brand-blue mt-1">•</span>
                         <span>{insight}</span>
                       </li>
                     ))}
@@ -267,7 +267,7 @@ export function HealthAssessment() {
                     placeholder="Enter your email to continue"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-brand-orange"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:border-brand-blue"
                     data-testid="input-assessment-email"
                   />
                   
@@ -292,7 +292,7 @@ export function HealthAssessment() {
                     
                     <Button 
                       onClick={() => window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank')}
-                      className="border-2 border-brand-orange text-brand-orange px-8 py-4 rounded-full font-semibold text-lg hover:bg-brand-orange hover:text-white transition-all"
+                      className="border-2 border-brand-blue text-brand-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-brand-blue hover:text-white transition-all"
                       data-testid="button-book-consultation-assessment"
                     >
                       Book Consultation Now
@@ -323,7 +323,7 @@ export function HealthAssessment() {
           <div className="luxury-card rounded-2xl p-8">
             <div className="space-y-8">
               <div className="flex items-center justify-between mb-8">
-                <span className="text-sm font-semibold text-brand-copper" data-testid="assessment-progress-text">
+                <span className="text-sm font-semibold text-brand-slate" data-testid="assessment-progress-text">
                   QUESTION {currentQuestion + 1} OF {questions.length}
                 </span>
                 <div className="w-64 bg-gray-200 rounded-full h-2">
@@ -346,11 +346,11 @@ export function HealthAssessment() {
                     <button
                       key={option.value}
                       onClick={() => handleAnswer(option.value)}
-                      className="text-left p-6 border-2 border-gray-200 rounded-xl hover:border-brand-orange hover:bg-orange-50 transition-all"
+                      className="text-left p-6 border-2 border-gray-200 rounded-xl hover:border-brand-blue hover:bg-blue-50 transition-all"
                       data-testid={`assessment-option-${index}`}
                     >
                       <div className="flex items-center space-x-4">
-                        <IconComponent className="h-6 w-6 text-brand-orange" />
+                        <IconComponent className="h-6 w-6 text-brand-blue" />
                         <div>
                           <p className="font-semibold text-lg">{option.title}</p>
                           <p className="text-gray-600">{option.description}</p>

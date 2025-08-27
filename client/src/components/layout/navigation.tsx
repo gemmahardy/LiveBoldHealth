@@ -25,42 +25,42 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
             <SunLogo size="lg" />
             <div>
               <h1 className="font-playfair font-bold text-2xl text-luxury-charcoal">LIVE BOLD</h1>
-              <p className="text-xs font-montserrat text-brand-copper uppercase tracking-wider">Health & Adventure Concierge</p>
+              <p className="text-xs font-montserrat text-brand-slate uppercase tracking-wider">Health & Adventure Concierge</p>
             </div>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-luxury-charcoal hover:text-brand-orange transition-colors font-medium"
+              className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
               data-testid="nav-services"
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('adventures')}
-              className="text-luxury-charcoal hover:text-brand-orange transition-colors font-medium"
+              className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
               data-testid="nav-adventures"
             >
               Adventures
             </button>
             <button 
               onClick={() => scrollToSection('books')}
-              className="text-luxury-charcoal hover:text-brand-orange transition-colors font-medium"
+              className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
               data-testid="nav-books"
             >
               Books
             </button>
             <button 
               onClick={() => scrollToSection('assessment')}
-              className="text-luxury-charcoal hover:text-brand-orange transition-colors font-medium"
+              className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
               data-testid="nav-assessment"
             >
               Assessment
             </button>
             <button 
               onClick={() => scrollToSection('membership')}
-              className="text-luxury-charcoal hover:text-brand-orange transition-colors font-medium"
+              className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
               data-testid="nav-membership"
             >
               Membership
@@ -89,35 +89,35 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
             <div className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('services')}
-                className="text-left text-luxury-charcoal hover:text-brand-orange transition-colors font-medium"
+                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
                 data-testid="nav-services-mobile"
               >
                 Services
               </button>
               <button 
                 onClick={() => scrollToSection('adventures')}
-                className="text-left text-luxury-charcoal hover:text-brand-orange transition-colors font-medium"
+                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
                 data-testid="nav-adventures-mobile"
               >
                 Adventures
               </button>
               <button 
                 onClick={() => scrollToSection('books')}
-                className="text-left text-luxury-charcoal hover:text-brand-orange transition-colors font-medium"
+                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
                 data-testid="nav-books-mobile"
               >
                 Books
               </button>
               <button 
                 onClick={() => scrollToSection('assessment')}
-                className="text-left text-luxury-charcoal hover:text-brand-orange transition-colors font-medium"
+                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
                 data-testid="nav-assessment-mobile"
               >
                 Assessment
               </button>
               <button 
                 onClick={() => scrollToSection('membership')}
-                className="text-left text-luxury-charcoal hover:text-brand-orange transition-colors font-medium"
+                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
                 data-testid="nav-membership-mobile"
               >
                 Membership

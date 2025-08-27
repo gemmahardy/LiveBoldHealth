@@ -33,7 +33,7 @@ export function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('services')}
-                  className="hover:text-brand-orange transition-colors text-left"
+                  className="hover:text-brand-blue transition-colors text-left"
                   data-testid="footer-health-optimization"
                 >
                   Health Optimization
@@ -42,7 +42,7 @@ export function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('services')}
-                  className="hover:text-brand-orange transition-colors text-left"
+                  className="hover:text-brand-blue transition-colors text-left"
                   data-testid="footer-concierge-coaching"
                 >
                   Concierge Coaching
@@ -51,7 +51,7 @@ export function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('adventures')}
-                  className="hover:text-brand-orange transition-colors text-left"
+                  className="hover:text-brand-blue transition-colors text-left"
                   data-testid="footer-adventure-experiences"
                 >
                   Adventure Experiences
@@ -60,7 +60,7 @@ export function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('services')}
-                  className="hover:text-brand-orange transition-colors text-left"
+                  className="hover:text-brand-blue transition-colors text-left"
                   data-testid="footer-biohacking-access"
                 >
                   Biohacking Access
@@ -75,7 +75,7 @@ export function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('books')}
-                  className="hover:text-brand-orange transition-colors text-left"
+                  className="hover:text-brand-blue transition-colors text-left"
                   data-testid="footer-premium-books"
                 >
                   Premium Books
@@ -84,7 +84,7 @@ export function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('assessment')}
-                  className="hover:text-brand-orange transition-colors text-left"
+                  className="hover:text-brand-blue transition-colors text-left"
                   data-testid="footer-health-assessment"
                 >
                   Health Assessment
@@ -93,7 +93,7 @@ export function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('membership')}
-                  className="hover:text-brand-orange transition-colors text-left"
+                  className="hover:text-brand-blue transition-colors text-left"
                   data-testid="footer-membership-tiers"
                 >
                   Membership Tiers
@@ -102,7 +102,7 @@ export function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection('testimonials')}
-                  className="hover:text-brand-orange transition-colors text-left"
+                  className="hover:text-brand-blue transition-colors text-left"
                   data-testid="footer-success-stories"
                 >
                   Success Stories
@@ -120,12 +120,12 @@ export function Footer() {
             </ul>
             
             <div className="mt-6 space-y-3">
-              <h6 className="font-semibold text-brand-orange">Your Point of Contact</h6>
+              <h6 className="font-semibold text-brand-blue">Your Point of Contact</h6>
               <div className="flex items-center space-x-3">
                 <img 
                   src={sunshinePhoto}
                   alt="Sunshine - Executive Wellness Consultant" 
-                  className="w-12 h-12 rounded-full object-cover border-2 border-brand-orange"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-brand-blue"
                   data-testid="contact-sunshine-photo"
                 />
                 <div>
@@ -136,7 +136,7 @@ export function Footer() {
             </div>
             
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-gray-300 hover:text-brand-orange transition-colors" data-testid="social-linkedin">
+              <a href="#" className="text-gray-300 hover:text-brand-blue transition-colors" data-testid="social-linkedin">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -146,7 +146,7 @@ export function Footer() {
         <div className="border-t border-gray-600 mt-12 pt-8 space-y-6 text-center text-gray-300">
           <div className="bg-gray-700 rounded-lg p-6 text-left">
             <p className="text-gray-200 leading-relaxed mb-4">
-              <span className="font-semibold text-brand-orange">Not in Maine? No problem.</span> We bring the concierge experience to you — whether by traveling directly to your location or coordinating with trusted local providers for biometrics, meal planning, and fitness coaching. Every detail is personalized for your success. Take the first step today and schedule your private consultation.
+              <span className="font-semibold text-brand-blue">Not in Maine? No problem.</span> We bring the concierge experience to you — whether by traveling directly to your location or coordinating with trusted local providers for biometrics, meal planning, and fitness coaching. Every detail is personalized for your success. Take the first step today and schedule your private consultation.
             </p>
             <div className="flex justify-center">
               <a 

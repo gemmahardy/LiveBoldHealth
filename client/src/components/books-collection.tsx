@@ -67,10 +67,10 @@ export function BooksCollection() {
               <span className="text-2xl text-gray-500 line-through" data-testid="bundle-original-price">
                 {formatPrice(bundlePrice)}
               </span>
-              <span className="text-4xl font-bold text-brand-orange" data-testid="bundle-final-price">
+              <span className="text-4xl font-bold text-brand-blue" data-testid="bundle-final-price">
                 {formatPrice(bundleFinalPrice)}
               </span>
-              <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold" data-testid="bundle-savings">
+              <span className="bg-brand-blue text-white px-3 py-1 rounded-full text-sm font-semibold" data-testid="bundle-savings">
                 Save {formatPrice(bundleDiscount)}
               </span>
             </div>

@@ -155,7 +155,7 @@ export function AdventureExperiences() {
                   <h4 className="font-playfair text-lg sm:text-xl font-semibold" data-testid={`adventure-title-${experience.id}`}>
                     {experience.title}
                   </h4>
-                  <span className="text-xl sm:text-2xl font-bold text-brand-orange" data-testid={`adventure-price-${experience.id}`}>
+                  <span className="text-xl sm:text-2xl font-bold text-brand-blue" data-testid={`adventure-price-${experience.id}`}>
                     {experience.price}
                   </span>
                 </div>
@@ -168,7 +168,7 @@ export function AdventureExperiences() {
                   <ul className="text-xs text-gray-600 space-y-1">
                     {experience.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-center space-x-2" data-testid={`adventure-highlight-${experience.id}-${index}`}>
-                        <span className="w-1 h-1 bg-brand-orange rounded-full"></span>
+                        <span className="w-1 h-1 bg-brand-blue rounded-full"></span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -176,7 +176,7 @@ export function AdventureExperiences() {
                 </div>
                 
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between pt-2 space-y-3 sm:space-y-0">
-                  <span className="font-bold text-brand-orange text-sm" data-testid={`adventure-date-${experience.id}`}>
+                  <span className="font-bold text-brand-blue text-sm" data-testid={`adventure-date-${experience.id}`}>
                     {experience.date}
                   </span>
                   <a 

@@ -21,14 +21,14 @@ export function FinalCTA({ onOpenConsultation, onStartAssessment }: FinalCTAProp
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
             <button 
               onClick={onOpenConsultation}
-              className="bg-white text-brand-orange px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all"
+              className="bg-white text-brand-blue px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all"
               data-testid="button-schedule-consultation-final"
             >
               Schedule Free Consultation
             </button>
             <button 
               onClick={onStartAssessment}
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-brand-orange transition-all"
+              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-brand-blue transition-all"
               data-testid="button-take-assessment-final"
             >
               Take Health Assessment

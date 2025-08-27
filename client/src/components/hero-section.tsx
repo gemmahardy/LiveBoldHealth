@@ -31,7 +31,7 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
               </button>
               <button 
                 onClick={onOpenConsultation}
-                className="border-2 border-brand-orange text-brand-orange px-8 py-4 rounded-full font-semibold text-lg hover:bg-brand-orange hover:text-white transition-all"
+                className="border-2 border-brand-blue text-brand-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-brand-blue hover:text-white transition-all"
                 data-testid="button-free-consultation"
               >
                 Schedule Free Consultation
@@ -61,7 +61,7 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
               </div>
               <div className="text-sm">
                 <p className="font-medium text-luxury-charcoal" data-testid="text-trusted-by">Trusted by High-Performance Executives & Leaders</p>
-                <div className="flex text-brand-orange">
+                <div className="flex text-brand-blue">
                   <span className="text-yellow-400">★★★★★</span>
                   <span className="ml-2 text-gray-600" data-testid="text-rating">Premium wellness partners</span>
                 </div>

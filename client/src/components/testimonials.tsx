@@ -79,7 +79,7 @@ export function Testimonials() {
               className="luxury-card rounded-2xl p-8"
               data-testid={`testimonial-card-${testimonial.id}`}
             >
-              <div className="flex text-brand-orange mb-4">
+              <div className="flex text-brand-blue mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-current" />
                 ))}

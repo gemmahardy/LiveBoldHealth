@@ -102,7 +102,7 @@ export function SunbotChatbot() {
               <div 
                 key={index}
                 className={`${message.type === 'user' 
-                  ? 'bg-brand-orange text-white rounded-xl p-3 max-w-xs ml-auto' 
+                  ? 'bg-brand-blue text-white rounded-xl p-3 max-w-xs ml-auto' 
                   : 'bg-gray-100 rounded-xl p-3 max-w-xs'
                 }`}
                 data-testid={`chat-message-${index}`}
@@ -126,7 +126,7 @@ export function SunbotChatbot() {
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Type your message..."
-                className="flex-1 px-3 py-2 border rounded-full focus:outline-none focus:border-brand-orange text-sm"
+                className="flex-1 px-3 py-2 border rounded-full focus:outline-none focus:border-brand-blue text-sm"
                 data-testid="input-chat-message"
               />
               <button 
@@ -171,7 +171,7 @@ export function SunbotChatbot() {
                 onClick={() => window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank')}
                 variant="outline"
                 size="sm"
-                className="text-xs bg-brand-orange text-white hover:bg-orange-600"
+                className="text-xs bg-brand-blue text-white hover:bg-blue-600"
                 data-testid="quick-action-consultation"
               >
                 📅 Book Consultation

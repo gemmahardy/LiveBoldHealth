@@ -44,7 +44,7 @@ export default function Home() {
               <p className="text-2xl sm:text-3xl font-playfair text-luxury-charcoal leading-relaxed italic">
                 "This isn't about chasing extremes. It's about mastering your health and lifestyle with the power of adventure, advanced biometrics, and a personalized concierge plan — unlocking the vitality, confidence, and clarity to live at your highest level."
               </p>
-              <p className="text-lg text-brand-orange font-semibold mt-6">— Sunshine</p>
+              <p className="text-lg text-brand-blue font-semibold mt-6">— Sunshine</p>
             </div>
           </div>
         </section>
@@ -64,7 +64,7 @@ export default function Home() {
               <p className="text-2xl sm:text-3xl font-playfair text-luxury-charcoal leading-relaxed italic">
                 "Adventure is a health tool. When you engage your body and mind in new ways, you unlock more than just strength and stamina — you ignite your energy, build resilience, and boost your ability to take on life with boldness and joy."
               </p>
-              <p className="text-lg text-brand-orange font-semibold mt-6">— Sunshine</p>
+              <p className="text-lg text-brand-blue font-semibold mt-6">— Sunshine</p>
             </div>
           </div>
         </section>

@@ -18,7 +18,7 @@ export function MembershipTiers() {
         "Basic Biometric Tracking",
         "Direct Text Support"
       ],
-      buttonStyle: "border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white",
+      buttonStyle: "border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white",
       buttonText: "Get Started"
     },
     {
@@ -85,11 +85,11 @@ export function MembershipTiers() {
             return (
               <div 
                 key={tier.id}
-                className={`luxury-card rounded-2xl p-8 premium-hover transition-all duration-300 relative overflow-hidden ${tier.popular ? 'ring-2 ring-brand-orange' : ''}`}
+                className={`luxury-card rounded-2xl p-8 premium-hover transition-all duration-300 relative overflow-hidden ${tier.popular ? 'ring-2 ring-brand-blue' : ''}`}
                 data-testid={`membership-tier-${tier.id}`}
               >
                 {tier.popular && (
-                  <div className="absolute -top-2 -right-2 bg-brand-orange text-white px-6 py-2 rounded-bl-xl font-semibold text-sm">
+                  <div className="absolute -top-2 -right-2 bg-brand-blue text-white px-6 py-2 rounded-bl-xl font-semibold text-sm">
                     MOST POPULAR
                   </div>
                 )}

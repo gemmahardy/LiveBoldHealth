@@ -230,7 +230,7 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
               id="privacy-consent"
               checked={privacyConsent}
               onChange={(e) => setPrivacyConsent(e.target.checked)}
-              className="w-4 h-4 text-brand-orange"
+              className="w-4 h-4 text-brand-blue"
               data-testid="checkbox-privacy-consent"
             />
             <Label htmlFor="privacy-consent" className="text-sm text-gray-600">
