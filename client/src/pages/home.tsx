@@ -53,9 +53,9 @@ export default function Home() {
         
         <ServicesOverview />
         
-        <HealthAssessment />
-        
         <MembershipTiers />
+        
+        <HealthAssessment />
         
         {/* Adventure Quote Section */}
         <section className="py-16 bg-luxury-gray">
