@@ -2,65 +2,29 @@ import { User, Crown, Gem, Check } from "lucide-react";
 import { Button } from "./ui/button";
 
 export function MembershipTiers() {
-  const tiers = [
-    {
-      id: "essential",
-      name: "Essential Concierge",
-      description: "Perfect for getting started with personalized health optimization",
-      price: "$5,000",
-      period: "per month",
-      icon: User,
-      iconColor: "from-gray-400 to-gray-600",
-      features: [
-        "Monthly 1:1 Coaching Calls",
-        "Personalized Health Blueprint",
-        "Custom Meal & Workout Plans",
-        "Basic Biometric Tracking",
-        "Direct Text Support"
-      ],
-      buttonStyle: "border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white",
-      buttonText: "Get Started"
-    },
-    {
-      id: "vip",
-      name: "VIP Concierge",
-      description: "Complete health optimization with priority access and adventures",
-      price: "$10,000", 
-      period: "per month",
-      icon: Crown,
-      iconColor: "bg-luxury-gradient",
-      popular: true,
-      features: [
-        "Weekly 1:1 coaching + priority access",
-        "Advanced biometric optimization",
-        "Travel wellness protocols", 
-        "Monthly adventure experiences",
-        "24/7 concierge support",
-        "Exclusive longevity clinic access"
-      ],
-      buttonStyle: "bg-luxury-gradient text-white hover:shadow-xl",
-      buttonText: "Join VIP"
-    },
-    {
-      id: "founders",
-      name: "Founders Circle",
-      description: "Ultra-premium, all-inclusive membership with luxury retreats and unlimited access",
-      price: "$100,000",
-      period: "per year", 
-      icon: Gem,
-      iconColor: "from-yellow-400 to-yellow-600",
-      features: [
-        "Unlimited Coaching & Support",
-        "Luxury Wellness Retreats",
-        "Personalized Longevity Plan",
-        "Cutting-Edge Biohacking Access",
-        "White-Glove Travel Coordination",
-        "Family Health Optimization"
-      ],
-      buttonStyle: "border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-500 hover:text-white",
-      buttonText: "Apply Now"
-    }
-  ];
+  const membership = {
+    id: "live-bold-community",
+    name: "Live Bold Community Membership",
+    description: "Exclusive yearly membership for health & wellness access and adventure retreats",
+    price: "$2,500",
+    period: "per person/year",
+    additionalPrice: "$500",
+    additionalPeriod: "per additional family member/year",
+    icon: Crown,
+    iconColor: "bg-luxury-gradient",
+    features: [
+      "VO2 Max Testing & Advanced Biometrics",
+      "Adventure Retreat Access",
+      "Concierge Educational Information",
+      "Personalized Fitness Planning",
+      "Custom Meal Planning",
+      "Health & Wellness Community Access",
+      "Priority Adventure Booking",
+      "Annual Health Assessment"
+    ],
+    buttonStyle: "bg-luxury-gradient text-white hover:shadow-xl",
+    buttonText: "Join Community"
+  };
 
   const handleSelectMembership = (tierId: string) => {
     console.log(`Selected membership tier: ${tierId}`);
@@ -72,71 +36,74 @@ export function MembershipTiers() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
-            Elite Longevity & Wellness Membership Tiers
+            Live Bold Community Membership
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the level of ultra-luxury concierge health and longevity support that matches your elite lifestyle and ambitious wellness goals. Feel good, live longer, aspire to the perfect life.
+            Join our exclusive community for health & wellness access, adventure retreats, concierge services, and personalized fitness & meal planning. Experience the Live Bold lifestyle with VO2 max testing and premium wellness support.
           </p>
         </div>
         
-        <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
-          {tiers.map((tier) => {
-            const IconComponent = tier.icon;
-            return (
-              <div 
-                key={tier.id}
-                className={`luxury-card rounded-2xl p-8 premium-hover transition-all duration-300 relative overflow-hidden ${tier.popular ? 'ring-2 ring-brand-blue' : ''}`}
-                data-testid={`membership-tier-${tier.id}`}
-              >
-                {tier.popular && (
-                  <div className="absolute -top-2 -right-2 bg-brand-blue text-white px-6 py-2 rounded-bl-xl font-semibold text-sm">
-                    MOST POPULAR
-                  </div>
-                )}
+        <div className="max-w-2xl mx-auto">
+          <div 
+            className="luxury-card rounded-2xl p-8 premium-hover transition-all duration-300 relative overflow-hidden ring-2 ring-brand-blue"
+            data-testid={`membership-tier-${membership.id}`}
+          >
+            <div className="absolute -top-2 -right-2 bg-brand-blue text-white px-6 py-2 rounded-bl-xl font-semibold text-sm">
+              EXCLUSIVE COMMUNITY
+            </div>
+            
+            <div className="text-center space-y-6">
+              <div className={`w-20 h-20 ${membership.iconColor} rounded-full flex items-center justify-center mx-auto`}>
+                <membership.icon className="h-8 w-8 text-white" />
+              </div>
+              
+              <div>
+                <h4 className="font-playfair text-3xl font-bold mb-2" data-testid={`tier-name-${membership.id}`}>
+                  {membership.name}
+                </h4>
+                <p className="text-gray-600 mb-6 text-lg" data-testid={`tier-description-${membership.id}`}>
+                  {membership.description}
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <p className="text-3xl sm:text-5xl font-bold text-luxury-charcoal" data-testid={`tier-price-${membership.id}`}>
+                    {membership.price}
+                  </p>
+                  <p className="text-gray-600" data-testid={`tier-period-${membership.id}`}>
+                    {membership.period}
+                  </p>
+                </div>
                 
-                <div className="text-center space-y-6">
-                  <div className={`w-16 h-16 ${tier.iconColor} rounded-full flex items-center justify-center mx-auto`}>
-                    <IconComponent className="h-6 w-6 text-white" />
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-playfair text-2xl font-bold mb-2" data-testid={`tier-name-${tier.id}`}>
-                      {tier.name}
-                    </h4>
-                    <p className="text-gray-600 mb-6" data-testid={`tier-description-${tier.id}`}>
-                      {tier.description}
-                    </p>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <p className="text-2xl sm:text-4xl font-bold text-luxury-charcoal" data-testid={`tier-price-${tier.id}`}>
-                      {tier.price}
-                    </p>
-                    <p className="text-gray-600" data-testid={`tier-period-${tier.id}`}>
-                      {tier.period}
-                    </p>
-                  </div>
-                  
-                  <ul className="space-y-4 text-left">
-                    {tier.features.map((feature, index) => (
-                      <li key={index} className="flex items-start space-x-3" data-testid={`tier-feature-${tier.id}-${index}`}>
-                        <Check className="h-5 w-5 text-brand-orange mt-0.5 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Button 
-                    onClick={() => handleSelectMembership(tier.id)}
-                    className={`w-full py-3 rounded-xl font-semibold transition-all ${tier.buttonStyle}`}
-                    data-testid={`button-select-tier-${tier.id}`}
-                  >
-                    {tier.buttonText}
-                  </Button>
+                <div className="bg-blue-50 rounded-xl p-4">
+                  <p className="text-xl font-bold text-brand-blue">
+                    {membership.additionalPrice}
+                  </p>
+                  <p className="text-gray-600 text-sm">
+                    {membership.additionalPeriod}
+                  </p>
                 </div>
               </div>
-            );
-          })}
+              
+              <ul className="space-y-4 text-left">
+                {membership.features.map((feature, index) => (
+                  <li key={index} className="flex items-start space-x-3" data-testid={`tier-feature-${membership.id}-${index}`}>
+                    <Check className="h-5 w-5 text-brand-blue mt-0.5 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <Button
+                onClick={() => handleSelectMembership(membership.id)}
+                className={`w-full py-4 px-8 rounded-full font-semibold text-lg transition-all ${membership.buttonStyle}`}
+                data-testid={`button-select-tier-${membership.id}`}
+              >
+                {membership.buttonText}
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
