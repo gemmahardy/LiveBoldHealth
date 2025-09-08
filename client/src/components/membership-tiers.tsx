@@ -26,9 +26,9 @@ export function MembershipTiers() {
     buttonText: "Join Community"
   };
 
-  const handleSelectMembership = (tierId: string) => {
-    console.log(`Selected membership tier: ${tierId}`);
-    // Implementation for membership selection
+  const handleJoinCommunity = () => {
+    // Open Calendly in a new tab for meet and greet consultation
+    window.open('https://calendly.com/your-calendly-link/meet-and-greet', '_blank');
   };
 
   return (
@@ -96,9 +96,9 @@ export function MembershipTiers() {
               </ul>
               
               <Button
-                onClick={() => handleSelectMembership(membership.id)}
+                onClick={handleJoinCommunity}
                 className={`w-full py-4 px-8 rounded-full font-semibold text-lg transition-all ${membership.buttonStyle}`}
-                data-testid={`button-select-tier-${membership.id}`}
+                data-testid={`button-join-community`}
               >
                 {membership.buttonText}
               </Button>
