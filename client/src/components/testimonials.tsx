@@ -4,7 +4,7 @@ export function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      content: "I was skeptical about another wellness program, but the personalized approach here is different. My energy levels have improved significantly, and I sleep better than I have in years. Worth the investment for someone in a demanding leadership role.",
+      content: "The Live Bold community has transformed our family's approach to health. The VO2 Max testing revealed insights we never knew, and the adventure retreats have become our favorite family bonding time. My energy is through the roof and my kids love the active lifestyle we've built together.",
       author: "Michael Chen",
       title: "CEO, Manufacturing Company",
       avatar: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=60&h=60&fit=crop&crop=face"
@@ -18,7 +18,7 @@ export function Testimonials() {
     },
     {
       id: 3,
-      content: "The health assessment revealed some concerning trends I wasn't aware of. The customized meal plans are realistic for my lifestyle, and having direct text support means I can get guidance when I need it most. Solid program.",
+      content: "Joining the Live Bold community was the best decision for our family's health journey. The adventure retreats combined with personalized coaching have created lasting memories while dramatically improving our fitness. My wife and I both feel 10 years younger.",
       author: "James Wellington",
       title: "Private Equity Partner",
       avatar: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=60&h=60&fit=crop&crop=face"
@@ -32,7 +32,7 @@ export function Testimonials() {
     },
     {
       id: 5,
-      content: "My doctor was impressed with my latest blood work results after just three months in the program. The biometric tracking helped identify issues early, and the meal delivery service saves me hours each week. Money well spent.",
+      content: "The VO2 Max testing and health optimization combined with Maine's coastal adventures created the perfect balance for our busy family. Our kids are more active, we're eating better, and we've made lifelong friends in the community. This program gets results.",
       author: "David Kim",
       title: "Senior Vice President, Technology",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face"
@@ -65,10 +65,10 @@ export function Testimonials() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
-            Trusted by Elite Fortune 500 CEOs & Industry Leaders
+            Families & Executives Living Their Boldest Lives
           </h2>
           <p className="text-lg sm:text-xl text-gray-600">
-            What ultra-successful executives are saying about their longevity, health, and lifestyle transformation with our elite wellness concierge
+            What our community members are saying about their health adventure journey with VO2 Max testing, coaching, and luxury retreat experiences
           </p>
         </div>
         
