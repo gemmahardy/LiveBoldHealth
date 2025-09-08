@@ -145,6 +145,18 @@ export function Footer() {
               </div>
             </div>
             
+            <div className="mt-6 space-y-3">
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-luxury-gradient rounded-full flex items-center justify-center">
+                  <span className="text-white font-semibold text-lg">J</span>
+                </div>
+                <div>
+                  <p className="font-medium text-white">Janine Herrick</p>
+                  <p className="text-sm text-gray-300">Lead Concierge and Health Coach</p>
+                </div>
+              </div>
+            </div>
+            
             <div className="flex space-x-4 mt-6">
               <a href="#" className="text-gray-300 hover:text-brand-blue transition-colors" data-testid="social-linkedin">
                 <Linkedin className="h-5 w-5" />
