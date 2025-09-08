@@ -24,8 +24,8 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
           <div className="flex items-center space-x-3">
             <SunLogo size="lg" />
             <div>
-              <h1 className="font-playfair font-bold text-2xl text-luxury-charcoal">LIVE BOLD</h1>
-              <p className="text-xs font-montserrat text-brand-slate uppercase tracking-wider">Health & Adventure Concierge</p>
+              <h1 className="font-playfair font-bold text-xl text-luxury-charcoal">A Live Bold Health</h1>
+              <p className="text-xs font-montserrat text-brand-slate uppercase tracking-wider">Adventure Concierge</p>
             </div>
           </div>
           
