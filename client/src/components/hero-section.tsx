@@ -17,7 +17,7 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
                 <span className="text-transparent bg-clip-text bg-luxury-gradient"> Adventure Concierge</span>
               </h1>
               <p className="text-base sm:text-lg font-medium text-luxury-charcoal">
-                Elevate your lifestyle with the Live Bold Health & Adventure Concierge. As a yearly member, you'll gain access to advanced VO₂ Max testing, personalized fitness and meal planning, concierge coaching, and luxury adventure retreats that unite health optimization with unforgettable experiences. Designed for busy families and executives, our program delivers total wellness and lifestyle transformation — blending science, adventure, and concierge-level support. Join an exclusive community committed to living bolder, healthier, and longer lives.
+                Elevate your lifestyle with the Live Bold Health Adventure Concierge. As a yearly member, you'll gain access to advanced <strong className="text-brand-blue">VO₂ Max testing</strong>, <strong className="text-brand-blue">personalized fitness and meal planning</strong>, <strong className="text-brand-blue">concierge coaching</strong>, and <strong className="text-brand-blue">luxury adventure retreats</strong> that unite health optimization with unforgettable experiences. Designed for busy families and executives, our program delivers <strong className="text-brand-blue">total wellness and lifestyle transformation</strong> — blending science, adventure, and concierge-level support. Join an exclusive community committed to living bolder, healthier, and longer lives.
               </p>
             </div>
             
