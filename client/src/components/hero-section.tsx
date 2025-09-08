@@ -13,11 +13,11 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="font-playfair text-3xl sm:text-4xl lg:text-6xl font-bold text-luxury-charcoal leading-tight">
-                Live Bold: Ultra-Luxury 
-                <span className="text-transparent bg-clip-text bg-luxury-gradient"> Longevity & Wellness Concierge</span>
+                A Live Bold Health 
+                <span className="text-transparent bg-clip-text bg-luxury-gradient"> Adventure Concierge</span>
               </h1>
               <p className="text-base sm:text-lg font-medium text-luxury-charcoal">
-                10X your health, fitness, and longevity with Maine's elite wellness concierge. Experience cutting-edge VO2 Max testing, RMR testing, luxury adventure travel, and the perfect lifestyle optimization. Feel good, live longer, aspire to excellence.
+                Join our exclusive community for health & wellness access, adventure retreats, and personalized concierge services. Experience VO2 Max testing, fitness & meal planning, and premium wellness support for just $2,500/year per person.
               </p>
             </div>
             

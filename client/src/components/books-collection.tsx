@@ -43,7 +43,7 @@ export function BooksCollection() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
-            Live Bold Elite Wellness Library - Perfect Life Collection
+            A Live Bold Health Adventure Collection - Perfect Life Library
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             "Are you ready to feel unstoppable? Live Bold is your guide to experiencing the 10X Energy Effect — the surge of longevity, vitality, and life satisfaction that comes from making adventure a lifestyle. Aspire to the perfect life."

@@ -9,13 +9,13 @@ export function FinalCTA({ onOpenConsultation, onStartAssessment }: FinalCTAProp
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-            Ready to 10X Your Longevity & Live Bold?
+            Ready to Join A Live Bold Health Adventure Community?
           </h2>
           <p className="text-lg sm:text-xl opacity-90 leading-relaxed">
-            Join the ultra-exclusive circle of elite entrepreneurs and Fortune 500 CEOs who've unlocked peak fitness, boundless energy, and extended longevity through our ultra-luxury cutting-edge health concierge programs and world-class adventure vacations in Maine.
+            Join our exclusive community for just $2,500/year per person ($500 for additional family members) and access VO2 max testing, adventure retreats, concierge services, and personalized fitness & meal planning.
           </p>
           <p className="text-base sm:text-lg opacity-80">
-            From Maine's coastal luxury retreats to international adventure experiences, combine cutting-edge longevity optimization with extraordinary wellness adventures. Feel good, live longer, aspire to the perfect elite lifestyle.
+            Experience Maine's coastal retreats, international adventures, and cutting-edge wellness optimization. Live boldly with our comprehensive health & adventure concierge community.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">

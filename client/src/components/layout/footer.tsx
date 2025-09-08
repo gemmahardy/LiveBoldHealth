@@ -18,12 +18,12 @@ export function Footer() {
             <div className="flex items-center space-x-3">
               <SunLogo size="md" />
               <div>
-                <h4 className="font-playfair font-bold text-xl">LIVE BOLD</h4>
-                <p className="text-xs font-montserrat text-brand-copper uppercase tracking-wider">Health & Adventure Concierge</p>
+                <h4 className="font-playfair font-bold text-lg">A Live Bold Health</h4>
+                <p className="text-xs font-montserrat text-brand-slate uppercase tracking-wider">Adventure Concierge</p>
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Your High-Performance Health & Adventure Concierge for executives who demand excellence in every aspect of life.
+              Your exclusive health & adventure concierge community with VO2 max testing, retreats, and personalized wellness support.
             </p>
           </div>
           
