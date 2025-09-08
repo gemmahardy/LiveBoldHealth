@@ -28,7 +28,7 @@ export function Testimonials() {
       content: "Between board meetings and travel, I barely had time to think about my health. The Live Bold community has been transformative for my wellness journey. I'm especially looking forward to the Bali Retreat next year - it's exactly what I need to reset and recharge while building lasting healthy habits.",
       author: "Amanda Foster",
       title: "Chief Financial Officer",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=60&h=60&fit=crop&crop=face"
     },
     {
       id: 5,
