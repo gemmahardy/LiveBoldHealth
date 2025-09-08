@@ -4,33 +4,33 @@ export function ServicesOverview() {
   const services = [
     {
       icon: Heart,
-      title: "Elite Health & Longevity Mastery",
-      description: "Comprehensive VO2 Max testing, RMR testing, advanced biometric analysis, and bespoke cutting-edge longevity protocols designed for ultra-luxury lifestyle optimization. Feel good, live longer with Maine's premier wellness concierge."
+      title: "Advanced VO₂ Max Testing",
+      description: "Comprehensive fitness assessments and biometric analysis to optimize your health and performance. Understand your body's unique needs and track improvements over time."
     },
     {
       icon: User,
-      title: "Ultra-Luxury Concierge Coaching", 
-      description: "Dedicated elite health concierge with 24/7 availability, weekly longevity optimization calls, and unlimited access to our ultra-premium wellness team. Aspire to the perfect life with personalized fitness and lifestyle guidance."
+      title: "Personalized Coaching", 
+      description: "One-on-one guidance tailored to your lifestyle and goals. Get expert support for sustainable habit formation and wellness optimization."
     },
     {
       icon: Utensils,
-      title: "White-Glove Wellness Management",
-      description: "Fully managed nutrition, fitness, and recovery protocols for elite lifestyle optimization. Custom meal delivery, private trainer coordination, and luxury travel wellness optimization. 10X your health and vitality."
+      title: "Custom Fitness & Meal Planning",
+      description: "Personalized workout routines and nutrition plans designed for busy families and professionals. Practical, sustainable approaches that fit your schedule."
     },
     {
       icon: Mountain,
-      title: "World-Class Adventure Vacation Experiences", 
-      description: "Maine coastal luxury retreats, Bali tropical escapes, Appalachian Trail autumn spectaculars, Colorado snowmobile safaris, West Virginia paragliding adventures, and Mount Whitney summit challenges. Each ultra-luxury adventure vacation combines thrilling outdoor experiences with cutting-edge wellness protocols and elite lifestyle optimization."
+      title: "Adventure Retreat Experiences", 
+      description: "Maine coastal retreats, mountain adventures, and international experiences that combine health optimization with unforgettable family memories and community connections."
     },
     {
       icon: Dna,
-      title: "Cutting-Edge Longevity & Health Access",
-      description: "First access to breakthrough longevity therapies, stem cell treatments, NAD+ optimization, and partnerships with world-renowned health and wellness clinics. Elite fitness and lifestyle optimization for those who want to live longer."
+      title: "Health Community Access",
+      description: "Connect with like-minded families and professionals committed to living boldly. Share experiences, get support, and build lasting friendships through health and adventure."
     },
     {
       icon: Shield,
-      title: "Platinum-Level Elite Priority Access",
-      description: "Priority scheduling for all wellness services, exclusive access to luxury events, emergency wellness support, and direct connection to industry leaders. Ultra-luxury concierge service for the perfect elite lifestyle experience."
+      title: "Concierge Support Services",
+      description: "Educational resources, priority booking for retreats, and ongoing wellness guidance to help you and your family maintain your health adventure lifestyle year-round."
     }
   ];
 
@@ -42,7 +42,7 @@ export function ServicesOverview() {
             Elite Longevity & Wellness Services
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Your ultra-luxury wellness concierge partner — designing, managing, and elevating every detail of your health, fitness, longevity, and adventure lifestyle for the perfect life experience.
+            Your health adventure concierge partner — supporting your family's wellness journey with personalized coaching, advanced testing, adventure experiences, and community connections.
           </p>
         </div>
         
