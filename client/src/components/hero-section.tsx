@@ -13,7 +13,7 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="font-playfair text-3xl sm:text-4xl lg:text-6xl font-bold text-luxury-charcoal leading-tight">
-                A Live Bold Health 
+                <span className="text-transparent bg-clip-text bg-luxury-gradient">Live Bold</span> Health 
                 <span className="text-transparent bg-clip-text bg-luxury-gradient"> Adventure Concierge</span>
               </h1>
               <p className="text-base sm:text-lg font-medium text-luxury-charcoal">

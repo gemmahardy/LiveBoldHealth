@@ -18,7 +18,7 @@ export function Footer() {
             <div className="flex items-center space-x-3">
               <SunLogo size="md" />
               <div>
-                <h4 className="font-playfair font-bold text-lg">A Live Bold Health</h4>
+                <h4 className="font-playfair font-bold text-lg"><span className="text-brand-blue">Live Bold</span> Health</h4>
                 <p className="text-xs font-montserrat text-brand-slate uppercase tracking-wider">Adventure Concierge</p>
               </div>
             </div>
