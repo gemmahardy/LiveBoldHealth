@@ -17,7 +17,7 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
                 <span className="text-transparent bg-clip-text bg-luxury-gradient"> Adventure Concierge</span>
               </h1>
               <p className="text-base sm:text-lg font-medium text-luxury-charcoal">
-                Join our exclusive community for health & wellness access, adventure retreats, and personalized concierge services. Experience VO2 Max testing, fitness & meal planning, and premium wellness support for just $2,500/year per person.
+                Transform your family's lifestyle with our exclusive health and adventure concierge community. Access world-class VO2 Max testing, personalized fitness and meal planning, luxury adventure retreats, and comprehensive wellness support designed for busy families who prioritize optimal health and unforgettable experiences. Join thousands of families living their boldest, healthiest lives together.
               </p>
             </div>
             
