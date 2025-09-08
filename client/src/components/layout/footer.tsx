@@ -185,7 +185,7 @@ export function Footer() {
               </a>
             </div>
           </div>
-          <p>&copy; 2025 Live Bold Health & Adventure Concierge. All rights reserved.</p>
+          <p>&copy; 2025 Live Bold Health Adventure Concierge. All rights reserved.</p>
         </div>
       </div>
       
