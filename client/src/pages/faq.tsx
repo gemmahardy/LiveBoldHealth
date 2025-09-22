@@ -108,6 +108,41 @@ export default function FAQ() {
       id: "about-founder",
       question: "What else should I know about Live Bold?",
       answer: "Live Bold is founded by Sunshine Mechtenberg, who brings 25+ years of health, wellness, and adventure experience. She combines her passion for healthy living and transformative travel to create life-changing experiences for members and guests."
+    },
+    {
+      id: "vo2-max-testing",
+      question: "What is VO₂ Max testing and why do I need it?",
+      answer: "VO₂ Max testing measures your body's maximum oxygen uptake — the gold standard for cardiovascular fitness and endurance. It helps us create a precise, personalized training plan so you can build energy and longevity efficiently."
+    },
+    {
+      id: "rmr-testing",
+      question: "What is RMR testing and why is it important?",
+      answer: "RMR (Resting Metabolic Rate) testing measures how many calories your body burns at rest. This allows us to accurately design your nutrition plan for weight management, energy, and optimal health outcomes."
+    },
+    {
+      id: "testing-membership",
+      question: "Are VO₂ Max and RMR tests included in my membership?",
+      answer: "Yes, both VO₂ Max and RMR testing are included for members. For non-members, testing can be arranged as an add-on service."
+    },
+    {
+      id: "meal-plan-creation",
+      question: "How are my meal plans created?",
+      answer: "Our team creates fully personalized meal plans based on your VO₂ Max, RMR, health goals, and preferences. We work with chefs, nutritionists, and local providers to ensure your meals are both delicious and aligned with your wellness objectives."
+    },
+    {
+      id: "trip-meals",
+      question: "Will my meals be provided during my trip?",
+      answer: "Yes, all meals are included. Depending on your adventure, meals may be catered on-site or arranged at hand-selected restaurants."
+    },
+    {
+      id: "health-plans",
+      question: "What are personalized health plans?",
+      answer: "Beyond meal plans, we build a comprehensive health plan tailored to your data and goals. This may include fitness programming, recovery protocols, supplement guidance, and lifestyle recommendations to help you maintain progress long after your trip."
+    },
+    {
+      id: "health-plan-membership",
+      question: "Do I need to be a member to receive a health plan?",
+      answer: "No. Non-members can request a health plan as part of their trip package. However, members receive ongoing coaching and plan updates throughout the year."
     }
   ];
 
