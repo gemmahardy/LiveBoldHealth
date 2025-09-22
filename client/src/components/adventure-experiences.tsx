@@ -183,18 +183,32 @@ export function AdventureExperiences() {
                   </ul>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between pt-2 space-y-3 sm:space-y-0">
+                <div className="flex flex-col pt-2 space-y-3">
                   <span className="font-bold text-brand-blue text-sm" data-testid={`adventure-date-${experience.id}`}>
                     {experience.date}
                   </span>
-                  <a 
-                    href={createEmailLink(experience.title)}
-                    className="bg-luxury-gradient text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition-all flex items-center justify-center space-x-1 w-full sm:w-auto"
-                    data-testid={`button-book-adventure-${experience.id}`}
-                  >
-                    <span>Reserve Spot</span>
-                    <ArrowRight className="h-3 w-3" />
-                  </a>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    {experience.id !== "create-your-own-adventure" && (
+                      <a 
+                        href="https://www.theenergylifestyle.com/shop"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition-all flex items-center justify-center space-x-1 w-full sm:w-auto"
+                        data-testid={`button-buy-now-${experience.id}`}
+                      >
+                        <span>Buy Now</span>
+                        <ArrowRight className="h-3 w-3" />
+                      </a>
+                    )}
+                    <a 
+                      href={createEmailLink(experience.title)}
+                      className="bg-luxury-gradient text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition-all flex items-center justify-center space-x-1 w-full sm:w-auto"
+                      data-testid={`button-book-adventure-${experience.id}`}
+                    >
+                      <span>Reserve Spot</span>
+                      <ArrowRight className="h-3 w-3" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
