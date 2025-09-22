@@ -75,13 +75,12 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
             >
               Membership
             </button>
-            <Link href="/faq">
-              <button 
-                className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
-                data-testid="nav-faq"
-              >
-                FAQ
-              </button>
+            <Link 
+              href="/faq"
+              className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
+              data-testid="nav-faq"
+            >
+              FAQ
             </Link>
             <button 
               onClick={onOpenConsultation}
@@ -140,14 +139,13 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
               >
                 Membership
               </button>
-              <Link href="/faq">
-                <button 
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium w-full"
-                  data-testid="nav-faq-mobile"
-                >
-                  FAQ
-                </button>
+              <Link 
+                href="/faq"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium w-full block"
+                data-testid="nav-faq-mobile"
+              >
+                FAQ
               </Link>
               <button 
                 onClick={onOpenConsultation}
