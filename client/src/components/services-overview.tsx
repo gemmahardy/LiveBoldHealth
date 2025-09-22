@@ -19,8 +19,8 @@ export function ServicesOverview() {
     },
     {
       icon: Mountain,
-      title: "Adventure Retreat Experiences", 
-      description: "Maine coastal retreats, mountain adventures, and international experiences that combine health optimization with unforgettable family memories and community connections."
+      title: "Health Adventure Vacation Planning", 
+      description: "Custom wellness travel experiences from Maine coastal retreats to international wellness vacations. Expert concierge planning that combines health optimization with unforgettable adventure travel for families and executives."
     },
     {
       icon: Dna,
@@ -29,8 +29,8 @@ export function ServicesOverview() {
     },
     {
       icon: Shield,
-      title: "Concierge Support Services",
-      description: "Educational resources, priority booking for retreats, and ongoing wellness guidance to help you and your family maintain your health adventure lifestyle year-round."
+      title: "Premium Wellness Travel Concierge",
+      description: "Full-service health vacation planning, priority booking for wellness retreats, and year-round support to help busy executives and families maintain their transformative health adventure lifestyle."
     }
   ];
 
@@ -39,10 +39,10 @@ export function ServicesOverview() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-luxury-charcoal mb-4">
-            Elite Longevity & Wellness Services
+            Health Adventure Vacation Concierge Services
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Your health adventure concierge partner — supporting your family's wellness journey with personalized coaching, advanced testing, adventure experiences, and community connections.
+            Your premier <strong>wellness travel concierge</strong> specializing in health adventure vacations, VO2 max testing retreats, and personalized wellness experiences for executives and families seeking transformative travel.
           </p>
         </div>
         

@@ -18,7 +18,7 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
               </h1>
               
               <p className="text-lg sm:text-xl font-medium text-luxury-charcoal leading-relaxed">
-                Where luxury wellness meets extraordinary experiences. Transform your health through science-backed testing, personalized coaching, and unforgettable adventure vacations.
+                Premier <strong>health adventure vacation concierge</strong> combining luxury wellness travel with science-backed VO2 max testing, personalized coaching, and transformative wellness retreats for busy executives and families worldwide.
               </p>
 
               {/* Standout Call-to-Action Box */}
@@ -29,7 +29,7 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
                       🌟 Book Your Health Adventure Vacation! 🌟
                     </h2>
                     <p className="text-lg opacity-90">
-                      Epic wellness retreats that reset your body, energize your mind, and strengthen your spirit
+                      Transformative wellness travel experiences combining adventure vacations with health optimization - designed for busy executives and families
                     </p>
                     <p className="text-sm opacity-75 mt-2">
                       Click to learn more and schedule your consultation →
