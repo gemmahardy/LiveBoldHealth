@@ -15,6 +15,14 @@ import whitneyBackgroundUrl from '@assets/10_1756219286808.jpg';
 export function AdventureExperiences() {
   const experiences = [
     {
+      id: "create-your-own-adventure",
+      title: "Create Your Own Health Adventure",
+      description: "Whether you crave pure relaxation or high-intensity challenges, Live Bold designs custom wellness adventures that fit your goals. From private sunrise yoga on a secluded beach to climbing breathtaking peaks with expert guides, every detail is handled for you — luxury accommodations, nutrition, fitness, and recovery. Your Lead Concierge will work directly with you before, during, and after your trip and will be on site to ensure everything runs flawlessly. All you have to do is show up, immerse yourself, and get healthy. Live Bold. Live Healthy.",
+      date: "Available Year-Round | Fully Customizable",
+      price: "Custom Pricing",
+      highlights: ["Fully customizable experience", "Lead Concierge on-site support", "Luxury accommodations included", "Custom nutrition & fitness plans"]
+    },
+    {
       id: "acadia-coastal-wellness",
       title: "Acadia Coastal Wellness Retreat",
       description: "5-day magical coastal adventure featuring sunrise yoga on coastal cliffs, private lobster boat excursions with Captain's storytelling, kayaking through hidden sea caves filled with seals, and evening bonfires with s'mores under the stars! Explore Acadia's famous carriage roads on luxury e-bikes, discover secret tide pools with marine biologists, hunt for sea glass on pristine beaches, and enjoy chef-prepared picnic lunches overlooking the Atlantic. Includes luxury spa treatments, wine tastings featuring Maine's finest, and a surprise lighthouse picnic dinner! Every adventure is a full-body reset — fueling your mind, body, and spirit through daily movement, vibrant real food, and exhilarating experiences that supercharge your health, ignite your energy, and keep you thriving until the next epic journey.",
