@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/layout/navigation";
 import { Footer } from "@/components/layout/footer";
-import { SeoHead } from "@/components/seo-head";
+import { SEOHead } from "@/components/seo-head";
 import {
   Accordion,
   AccordionContent,
@@ -113,7 +113,7 @@ export default function FAQ() {
 
   return (
     <>
-      <SeoHead
+      <SEOHead
         title="Frequently Asked Questions - Live Bold Health Adventure Concierge"
         description="Get answers to your questions about Live Bold Health's adventure vacations, membership benefits, pricing, and luxury health experiences. Learn about our concierge services, payment plans, and custom adventure options."
         keywords="FAQ, health vacation questions, adventure travel FAQ, Live Bold Health, membership benefits, vacation pricing, travel insurance, concierge services"
