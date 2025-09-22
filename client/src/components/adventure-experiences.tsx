@@ -91,10 +91,10 @@ export function AdventureExperiences() {
     {
       id: "west-virginia-paragliding",
       title: "New Hampshire Paragliding Sky Adventure",
-      description: "4-day ultimate aerial adventure featuring tandem paragliding over New Hampshire's stunning landscapes! Soar like a bird above lush forests and winding rivers from the White Mountains, enjoy luxury mountain resort accommodations, participate in sunrise balloon festivals, and experience professional flight training with world-class instructors. Includes gourmet mountain cuisine, spa treatments, scenic chairlift rides for aerial photography, and a surprise nighttime paragliding experience with LED wings under the stars! Every adventure is a full-body reset — fueling your mind, body, and spirit through daily movement, vibrant real food, and exhilarating experiences that supercharge your health, ignite your energy, and keep you thriving until the next epic journey.",
+      description: "4-day ultimate aerial adventure featuring tandem paragliding over New Hampshire's stunning landscapes! Soar like a bird above lush forests and winding rivers from the White Mountains, enjoy luxury mountain resort accommodations, and experience professional flight training with world-class instructors. Learn to hang glide with expert guidance and experience thrilling zip line adventures through the mountain canopy. Includes gourmet mountain cuisine, spa treatments, scenic chairlift rides for aerial photography! Every adventure is a full-body reset — fueling your mind, body, and spirit through daily movement, vibrant real food, and exhilarating experiences that supercharge your health, ignite your energy, and keep you thriving until the next epic journey.",
       date: "May 10-14, 2026 | Private Adventure Dates Available",
       price: "$11,200",
-      highlights: ["Tandem paragliding flights", "Luxury mountain resort", "LED night paragliding", "Professional flight training"]
+      highlights: ["Tandem paragliding flights", "Luxury mountain resort", "Learn to hang glide", "Professional flight training"]
     },
     {
       id: "mount-whitney-summit",
