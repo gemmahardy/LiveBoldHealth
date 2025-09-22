@@ -91,7 +91,7 @@ export default function BookAdventure() {
             />
             <div className="absolute inset-0 bg-black bg-opacity-20 rounded-2xl"></div>
             <div className="absolute top-6 left-6 bg-white rounded-xl px-4 py-2 shadow-lg">
-              <p className="font-bold text-luxury-charcoal">Starting at $9,200</p>
+              <p className="font-bold text-luxury-charcoal">Starting at $4,200</p>
               <p className="text-sm text-gray-600">All-inclusive adventures</p>
             </div>
           </div>
