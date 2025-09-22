@@ -8,24 +8,44 @@ export default function BookAdventure() {
     window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank', 'noopener,noreferrer');
   };
 
-  const pageStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Book Health Adventure Vacation | Wellness Travel Booking",
-    "description": "Book your transformative health adventure vacation with expert concierge planning. Custom wellness retreats, VO2 max testing vacations, and adventure travel experiences for busy executives and families.",
-    "url": "https://liveboldhealth.com/book-adventure",
-    "mainEntity": {
-      "@type": "Service",
-      "name": "Health Adventure Vacation Booking",
-      "description": "Personalized health adventure vacation planning with concierge services, combining wellness retreats, adventure travel, and health optimization experiences.",
-      "provider": {
-        "@type": "TravelAgency",
-        "name": "Live Bold Health Adventure Concierge"
-      },
-      "areaServed": "Worldwide",
-      "serviceType": "Health Tourism Planning"
+  const pageStructuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Book Health Adventure Vacation | Wellness Travel Booking",
+      "description": "Book your transformative health adventure vacation with expert concierge planning. Custom wellness retreats, VO2 max testing vacations, and adventure travel experiences for busy executives and families.",
+      "url": "https://liveboldhealth.com/book-adventure",
+      "mainEntity": {
+        "@type": "Service",
+        "name": "Health Adventure Vacation Booking",
+        "description": "Personalized health adventure vacation planning with concierge services, combining wellness retreats, adventure travel, and health optimization experiences.",
+        "provider": {
+          "@type": "TravelAgency",
+          "name": "Live Bold Health Adventure Concierge"
+        },
+        "areaServed": "Worldwide",
+        "serviceType": "Health Tourism Planning"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://liveboldhealth.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Book Health Adventure Vacation",
+          "item": "https://liveboldhealth.com/book-adventure"
+        }
+      ]
     }
-  };
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-luxury-gray">
@@ -34,6 +54,7 @@ export default function BookAdventure() {
         description="Book your transformative health adventure vacation with expert concierge planning. Custom wellness retreats, VO2 max testing vacations, and adventure travel experiences for busy executives and families worldwide."
         keywords="book health adventure vacation, wellness travel booking, health retreat planning, adventure vacation booking, VO2 max testing vacation, executive health retreats, family wellness travel, health tourism booking, wellness vacation planning, adventure travel concierge"
         canonicalUrl="https://liveboldhealth.com/book-adventure"
+        ogUrl="https://liveboldhealth.com/book-adventure"
         structuredData={pageStructuredData}
       />
       {/* Header */}

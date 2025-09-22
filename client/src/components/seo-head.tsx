@@ -6,6 +6,7 @@ interface SEOHeadProps {
   keywords?: string;
   canonicalUrl?: string;
   ogImage?: string;
+  ogUrl?: string;
   structuredData?: object;
 }
 
@@ -15,6 +16,7 @@ export function SEOHead({
   keywords, 
   canonicalUrl,
   ogImage = "https://liveboldhealth.com/og-image.jpg",
+  ogUrl,
   structuredData 
 }: SEOHeadProps) {
   useEffect(() => {
@@ -74,6 +76,60 @@ export function SEOHead({
       ogDescMeta.setAttribute('content', description);
       if (!document.querySelector('meta[property="og:description"]')) {
         document.head.appendChild(ogDescMeta);
+      }
+    }
+
+    // Update Open Graph URL
+    const finalOgUrl = ogUrl || canonicalUrl;
+    if (finalOgUrl) {
+      const ogUrlMeta = document.querySelector('meta[property="og:url"]') || 
+                       document.createElement('meta');
+      ogUrlMeta.setAttribute('property', 'og:url');
+      ogUrlMeta.setAttribute('content', finalOgUrl);
+      if (!document.querySelector('meta[property="og:url"]')) {
+        document.head.appendChild(ogUrlMeta);
+      }
+    }
+
+    // Update Open Graph Image
+    if (ogImage) {
+      const ogImageMeta = document.querySelector('meta[property="og:image"]') || 
+                         document.createElement('meta');
+      ogImageMeta.setAttribute('property', 'og:image');
+      ogImageMeta.setAttribute('content', ogImage);
+      if (!document.querySelector('meta[property="og:image"]')) {
+        document.head.appendChild(ogImageMeta);
+      }
+    }
+
+    // Update Twitter Card Image and Title
+    if (title) {
+      const twitterTitleMeta = document.querySelector('meta[property="twitter:title"]') || 
+                              document.createElement('meta');
+      twitterTitleMeta.setAttribute('property', 'twitter:title');
+      twitterTitleMeta.setAttribute('content', title);
+      if (!document.querySelector('meta[property="twitter:title"]')) {
+        document.head.appendChild(twitterTitleMeta);
+      }
+    }
+
+    if (description) {
+      const twitterDescMeta = document.querySelector('meta[property="twitter:description"]') || 
+                             document.createElement('meta');
+      twitterDescMeta.setAttribute('property', 'twitter:description');
+      twitterDescMeta.setAttribute('content', description);
+      if (!document.querySelector('meta[property="twitter:description"]')) {
+        document.head.appendChild(twitterDescMeta);
+      }
+    }
+
+    if (ogImage) {
+      const twitterImageMeta = document.querySelector('meta[property="twitter:image"]') || 
+                              document.createElement('meta');
+      twitterImageMeta.setAttribute('property', 'twitter:image');
+      twitterImageMeta.setAttribute('content', ogImage);
+      if (!document.querySelector('meta[property="twitter:image"]')) {
+        document.head.appendChild(twitterImageMeta);
       }
     }
 
