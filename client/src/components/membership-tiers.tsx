@@ -28,7 +28,7 @@ export function MembershipTiers() {
 
   const handleJoinCommunity = () => {
     // Open Calendly in a new tab for Live Bold consultation
-    window.open('https://calendly.com/contact-sunryz/live-bold-consultation?month=2026-09', '_blank');
+    window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank', 'noopener,noreferrer');
   };
 
   return (

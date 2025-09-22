@@ -4,7 +4,7 @@ import adventureCollageUrl from '@assets/Collage+sig+program+1384w_1756151724888
 
 export default function BookAdventure() {
   const handleBookNow = () => {
-    window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank');
+    window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -104,6 +104,9 @@ export default function BookAdventure() {
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
             Schedule your consultation with Sunshine to discuss your perfect health adventure vacation. We'll design a personalized experience that fits your goals, schedule, and dreams.
+          </p>
+          <p className="text-sm text-gray-500 mb-8 max-w-2xl mx-auto bg-blue-50 rounded-lg p-4">
+            <strong>Note:</strong> Adventure vacations are booked separately from your $2,500/year Live Bold Community Membership, which provides ongoing concierge services, VO2 max testing, and wellness support.
           </p>
 
           {/* Process Steps */}
