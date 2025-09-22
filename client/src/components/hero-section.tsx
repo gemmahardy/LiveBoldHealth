@@ -84,12 +84,6 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
               </div>
             </div>
             
-            <div className="absolute -top-4 -right-4 lg:-top-8 lg:-right-8 bg-white rounded-xl shadow-xl p-3 lg:p-6 luxury-card">
-              <div className="text-center">
-                <p className="text-xl lg:text-3xl font-bold text-brand-orange" data-testid="stat-net-worth">$500M+</p>
-                <p className="text-xs lg:text-sm text-gray-600">Combined Client Wealth</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
