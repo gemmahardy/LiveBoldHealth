@@ -85,7 +85,7 @@ export function AdventureExperiences() {
       title: "Maine Winter Snowmobile Safari",
       description: "7-day winter wonderland adventure snowmobiling through Maine's spectacular wilderness! Explore 300+ miles of pristine trails through the North Woods, race through snow-covered forests and frozen lakes, enjoy luxury mountain lodges with hot tubs and gourmet dining, and experience the authentic Maine winter wilderness. Includes professional snowmobile instruction, luxury winter gear, après-ski spa treatments, relaxing sauna sessions, and magical evening sleigh rides with champagne under the stars! Every adventure is a full-body reset — fueling your mind, body, and spirit through daily movement, vibrant real food, and exhilarating experiences that supercharge your health, ignite your energy, and keep you thriving until the next epic journey.",
       date: "Jan 15-22, 2026 | Private Adventure Dates Available",
-      price: "$14,800",
+      price: "$8,400",
       highlights: ["300+ miles of snow trails", "Luxury mountain lodges", "Relaxing sauna sessions", "Champagne sleigh rides"]
     },
     {
