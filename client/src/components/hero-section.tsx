@@ -22,16 +22,21 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
               </p>
 
               {/* Standout Call-to-Action Box */}
-              <div className="bg-luxury-gradient text-white p-6 rounded-2xl shadow-xl border-2 border-brand-blue">
-                <div className="text-center">
-                  <h2 className="text-2xl sm:text-3xl font-bold font-playfair mb-2">
-                    🌟 Book Your Health Adventure Vacation! 🌟
-                  </h2>
-                  <p className="text-lg opacity-90">
-                    Epic wellness retreats that reset your body, energize your mind, and strengthen your spirit
-                  </p>
+              <a href="/book-adventure" className="block">
+                <div className="bg-luxury-gradient text-white p-6 rounded-2xl shadow-xl border-2 border-brand-blue hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                  <div className="text-center">
+                    <h2 className="text-2xl sm:text-3xl font-bold font-playfair mb-2">
+                      🌟 Book Your Health Adventure Vacation! 🌟
+                    </h2>
+                    <p className="text-lg opacity-90">
+                      Epic wellness retreats that reset your body, energize your mind, and strengthen your spirit
+                    </p>
+                    <p className="text-sm opacity-75 mt-2">
+                      Click to learn more and schedule your consultation →
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </a>
 
               {/* Clear Service Offerings */}
               <div className="space-y-4">
