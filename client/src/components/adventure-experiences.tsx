@@ -92,7 +92,7 @@ export function AdventureExperiences() {
       id: "mount-whitney-summit",
       title: "Mount Whitney Ultimate Summit Challenge",
       description: "6-day epic conquest of Mount Whitney, the highest peak in the lower 48 states! Experience the ultimate bucket-list adventure with professional mountain guides, luxury base camp accommodations, professional porter support for gear transport, and gourmet high-altitude dining. Tackle the famous 99 Switchbacks, enjoy stunning Sierra Nevada vistas, crystal-clear alpine lakes, and celebrate your achievement with a champagne summit toast. Includes altitude training, luxury gear, spa recovery treatments, and a surprise sunrise hot air balloon ride over the Sierra range! Every adventure is a full-body reset — fueling your mind, body, and spirit through daily movement, vibrant real food, and exhilarating experiences that supercharge your health, ignite your energy, and keep you thriving until the next epic journey.",
-      date: "Aug 20-26, 2026 | Private Adventure Dates Available",
+      date: "Aug 20-26, 2027 | Private Adventure Dates Available",
       price: "$16,800",
       highlights: ["Highest peak in lower 48", "Professional mountain guides", "Helicopter gear support", "Champagne summit celebration"]
     }
