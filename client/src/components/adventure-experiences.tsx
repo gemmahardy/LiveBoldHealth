@@ -82,11 +82,11 @@ export function AdventureExperiences() {
     },
     {
       id: "colorado-snowmobile-rockies",
-      title: "Colorado Rocky Mountain Snowmobile Safari",
-      description: "7-day winter wonderland adventure snowmobiling through Colorado's spectacular Rocky Mountains! Explore 300+ miles of pristine trails around Grand Lake, race through snow-covered forests and ridges, enjoy luxury mountain chalets with hot tubs and gourmet dining, and experience breathtaking scenic gondola rides over snow-capped peaks. Includes professional snowmobile instruction, luxury winter gear, après-ski spa treatments, and magical evening sleigh rides with champagne under the stars! Every adventure is a full-body reset — fueling your mind, body, and spirit through daily movement, vibrant real food, and exhilarating experiences that supercharge your health, ignite your energy, and keep you thriving until the next epic journey.",
+      title: "Maine Winter Snowmobile Safari",
+      description: "7-day winter wonderland adventure snowmobiling through Maine's spectacular wilderness! Explore 300+ miles of pristine trails through the North Woods, race through snow-covered forests and frozen lakes, enjoy luxury mountain lodges with hot tubs and gourmet dining, and experience the authentic Maine winter wilderness. Includes professional snowmobile instruction, luxury winter gear, après-ski spa treatments, relaxing sauna sessions, and magical evening sleigh rides with champagne under the stars! Every adventure is a full-body reset — fueling your mind, body, and spirit through daily movement, vibrant real food, and exhilarating experiences that supercharge your health, ignite your energy, and keep you thriving until the next epic journey.",
       date: "Jan 15-22, 2026 | Private Adventure Dates Available",
       price: "$14,800",
-      highlights: ["300+ miles of snow trails", "Luxury mountain chalets", "Helicopter peak tours", "Champagne sleigh rides"]
+      highlights: ["300+ miles of snow trails", "Luxury mountain lodges", "Relaxing sauna sessions", "Champagne sleigh rides"]
     },
     {
       id: "west-virginia-paragliding",
