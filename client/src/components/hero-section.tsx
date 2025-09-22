@@ -19,6 +19,9 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
               <p className="text-base sm:text-lg font-medium text-luxury-charcoal">
                 Where luxury wellness meets extraordinary experiences. A yearly membership gives you access to <strong className="text-brand-blue">VO₂ Max testing</strong>, <strong className="text-brand-blue">personalized fitness and nutrition plans</strong>, <strong className="text-brand-blue">concierge coaching</strong>, and <strong className="text-brand-blue">luxury adventure retreats</strong> that combine cutting-edge health optimization with active travel. Each health adventure is designed to reset your body, energize your mind, and strengthen your spirit through daily movement, real food, and unforgettable journeys. Perfect for busy families and executives, this is <strong className="text-brand-blue">total lifestyle transformation</strong> — helping you live healthier, longer, and bolder.
               </p>
+              <p className="text-lg sm:text-xl font-bold text-brand-blue">
+                Book your Health Adventure Vacation with us!
+              </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
