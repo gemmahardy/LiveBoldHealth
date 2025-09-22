@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useLocation } from "wouter";
 import { SunLogo } from "../ui/sun-logo";
 import { Menu, X } from "lucide-react";
 
@@ -8,6 +9,7 @@ interface NavigationProps {
 
 export function Navigation({ onOpenConsultation }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -15,6 +17,14 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMobileMenuOpen(false);
+  };
+
+  const handleNavigation = (sectionId: string) => {
+    if (location === '/') {
+      scrollToSection(sectionId);
+    } else {
+      window.location.href = `/#${sectionId}`;
+    }
   };
 
   return (
@@ -31,40 +41,48 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
           
           <div className="hidden md:flex items-center space-x-8">
             <button 
-              onClick={() => scrollToSection('services')}
+              onClick={() => handleNavigation('services')}
               className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
               data-testid="nav-services"
             >
               Services
             </button>
             <button 
-              onClick={() => scrollToSection('adventures')}
+              onClick={() => handleNavigation('adventures')}
               className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
               data-testid="nav-adventures"
             >
               Adventures
             </button>
             <button 
-              onClick={() => scrollToSection('books')}
+              onClick={() => handleNavigation('books')}
               className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
               data-testid="nav-books"
             >
               Books
             </button>
             <button 
-              onClick={() => scrollToSection('assessment')}
+              onClick={() => handleNavigation('assessment')}
               className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
               data-testid="nav-assessment"
             >
               Assessment
             </button>
             <button 
-              onClick={() => scrollToSection('membership')}
+              onClick={() => handleNavigation('membership')}
               className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
               data-testid="nav-membership"
             >
               Membership
             </button>
+            <Link href="/faq">
+              <button 
+                className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
+                data-testid="nav-faq"
+              >
+                FAQ
+              </button>
+            </Link>
             <button 
               onClick={onOpenConsultation}
               className="bg-luxury-gradient text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all"
@@ -88,40 +106,49 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
           <div className="md:hidden mt-4 py-4 border-t">
             <div className="flex flex-col space-y-4">
               <button 
-                onClick={() => scrollToSection('services')}
+                onClick={() => handleNavigation('services')}
                 className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
                 data-testid="nav-services-mobile"
               >
                 Services
               </button>
               <button 
-                onClick={() => scrollToSection('adventures')}
+                onClick={() => handleNavigation('adventures')}
                 className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
                 data-testid="nav-adventures-mobile"
               >
                 Adventures
               </button>
               <button 
-                onClick={() => scrollToSection('books')}
+                onClick={() => handleNavigation('books')}
                 className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
                 data-testid="nav-books-mobile"
               >
                 Books
               </button>
               <button 
-                onClick={() => scrollToSection('assessment')}
+                onClick={() => handleNavigation('assessment')}
                 className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
                 data-testid="nav-assessment-mobile"
               >
                 Assessment
               </button>
               <button 
-                onClick={() => scrollToSection('membership')}
+                onClick={() => handleNavigation('membership')}
                 className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
                 data-testid="nav-membership-mobile"
               >
                 Membership
               </button>
+              <Link href="/faq">
+                <button 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium w-full"
+                  data-testid="nav-faq-mobile"
+                >
+                  FAQ
+                </button>
+              </Link>
               <button 
                 onClick={onOpenConsultation}
                 className="bg-luxury-gradient text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all text-center"
