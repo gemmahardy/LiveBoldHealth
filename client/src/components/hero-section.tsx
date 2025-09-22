@@ -11,17 +11,53 @@ export function HeroSection({ onOpenConsultation, onStartAssessment }: HeroSecti
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <div className="space-y-4">
+            <div className="space-y-6">
               <h1 className="font-playfair text-3xl sm:text-4xl lg:text-6xl font-bold text-luxury-charcoal leading-tight">
                 <span className="text-transparent bg-clip-text bg-luxury-gradient">Live Bold</span> Health 
                 <span className="text-transparent bg-clip-text bg-luxury-gradient"> Adventure Concierge</span>
               </h1>
-              <p className="text-base sm:text-lg font-medium text-luxury-charcoal">
-                Where luxury wellness meets extraordinary experiences. A yearly membership gives you access to <strong className="text-brand-blue">VO₂ Max testing</strong>, <strong className="text-brand-blue">personalized fitness and nutrition plans</strong>, <strong className="text-brand-blue">concierge coaching</strong>, and <strong className="text-brand-blue">luxury adventure retreats</strong> that combine cutting-edge health optimization with active travel. Each health adventure is designed to reset your body, energize your mind, and strengthen your spirit through daily movement, real food, and unforgettable journeys. Perfect for busy families and executives, this is <strong className="text-brand-blue">total lifestyle transformation</strong> — helping you live healthier, longer, and bolder.
+              
+              <p className="text-lg sm:text-xl font-medium text-luxury-charcoal leading-relaxed">
+                Where luxury wellness meets extraordinary experiences. Transform your health through science-backed testing, personalized coaching, and unforgettable adventure vacations.
               </p>
-              <p className="text-lg sm:text-xl font-bold text-brand-blue">
-                Book your Health Adventure Vacation with us!
-              </p>
+
+              {/* Standout Call-to-Action Box */}
+              <div className="bg-luxury-gradient text-white p-6 rounded-2xl shadow-xl border-2 border-brand-blue">
+                <div className="text-center">
+                  <h2 className="text-2xl sm:text-3xl font-bold font-playfair mb-2">
+                    🌟 Book Your Health Adventure Vacation! 🌟
+                  </h2>
+                  <p className="text-lg opacity-90">
+                    Epic wellness retreats that reset your body, energize your mind, and strengthen your spirit
+                  </p>
+                </div>
+              </div>
+
+              {/* Clear Service Offerings */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-luxury-charcoal">Your Yearly Membership Includes:</h3>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  <div className="flex items-center space-x-3 bg-blue-50 p-3 rounded-lg">
+                    <div className="w-2 h-2 bg-brand-blue rounded-full"></div>
+                    <span className="font-semibold text-brand-blue">VO₂ Max Testing</span>
+                  </div>
+                  <div className="flex items-center space-x-3 bg-blue-50 p-3 rounded-lg">
+                    <div className="w-2 h-2 bg-brand-blue rounded-full"></div>
+                    <span className="font-semibold text-brand-blue">Adventure Retreats</span>
+                  </div>
+                  <div className="flex items-center space-x-3 bg-blue-50 p-3 rounded-lg">
+                    <div className="w-2 h-2 bg-brand-blue rounded-full"></div>
+                    <span className="font-semibold text-brand-blue">Personalized Coaching</span>
+                  </div>
+                  <div className="flex items-center space-x-3 bg-blue-50 p-3 rounded-lg">
+                    <div className="w-2 h-2 bg-brand-blue rounded-full"></div>
+                    <span className="font-semibold text-brand-blue">Custom Meal Plans</span>
+                  </div>
+                </div>
+                <p className="text-luxury-charcoal font-medium">
+                  Perfect for busy families and executives seeking <strong className="text-brand-blue">total lifestyle transformation</strong> — helping you live healthier, longer, and bolder.
+                </p>
+              </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
