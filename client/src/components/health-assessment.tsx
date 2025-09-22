@@ -319,7 +319,7 @@ export function HealthAssessment() {
               Discover your personalized path to 10X longevity, peak fitness performance, and optimal wellness with advanced VO2 Max testing and RMR testing.
             </p>
             <blockquote className="text-lg font-medium text-brand-blue italic mt-4 border-l-4 border-brand-blue pl-4">
-              "Knowing your VO2 Max is the greatest predictor of lifespan" — Peter Attia
+              "Knowing your VO2 Max is the greatest predictor of lifespan" — Dr. Peter Attia
             </blockquote>
           </div>
           
