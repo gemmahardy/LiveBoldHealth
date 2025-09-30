@@ -7,6 +7,7 @@ import janinePhoto from '@assets/Janine Pic_1759274688615.jpg';
 
 export function Footer() {
   const [isSunshineBioOpen, setIsSunshineBioOpen] = useState(false);
+  const [isJanineBioOpen, setIsJanineBioOpen] = useState(false);
   
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -155,7 +156,13 @@ export function Footer() {
                   data-testid="contact-janine-photo"
                 />
                 <div>
-                  <p className="font-medium text-white">Janine Herrick</p>
+                  <button 
+                    onClick={() => setIsJanineBioOpen(true)}
+                    className="font-medium text-white hover:text-brand-blue transition-colors cursor-pointer text-left" 
+                    data-testid="contact-janine-name"
+                  >
+                    Janine Herrick
+                  </button>
                   <p className="text-sm text-gray-300">Lead Concierge and Health Coach</p>
                 </div>
               </div>
@@ -241,6 +248,47 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="bg-white text-brand-blue px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all inline-block"
                 onClick={() => setIsSunshineBioOpen(false)}
+              >
+                Schedule Your Personal Consultation
+              </a>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+      
+      {/* Janine Bio Modal */}
+      <Dialog open={isJanineBioOpen} onOpenChange={setIsJanineBioOpen}>
+        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="flex items-center space-x-4 mb-4">
+              <img 
+                src={janinePhoto}
+                alt="Janine Herrick" 
+                className="w-16 h-16 rounded-full object-cover border-2 border-brand-blue"
+              />
+              <div>
+                <h3 className="text-2xl font-playfair font-bold text-luxury-charcoal">Janine Herrick</h3>
+                <p className="text-brand-blue font-medium">Lead Concierge and Health Coach</p>
+              </div>
+            </DialogTitle>
+          </DialogHeader>
+          
+          <div className="space-y-4 text-gray-700">
+            <div>
+              <p className="text-lg font-semibold text-luxury-charcoal mb-2">👋 <strong>Meet Janine</strong></p>
+              <p className="leading-relaxed">
+                Janine Herrick lives for Adventure, loves life and feeling good. Janine is a lifer when it comes to eating well, exercising, and fueling her mind and body with love and energy. She has over 20 years experience coaching clients and making their goals a reality.
+              </p>
+            </div>
+            
+            <div className="bg-luxury-gradient text-white rounded-lg p-4 text-center">
+              <p className="font-semibold mb-3">✨ <strong>Ready to work with our team?</strong></p>
+              <a 
+                href="https://calendly.com/contact-sunryz/live-bold-consultation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-brand-blue px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all inline-block"
+                onClick={() => setIsJanineBioOpen(false)}
               >
                 Schedule Your Personal Consultation
               </a>
