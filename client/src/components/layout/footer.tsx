@@ -3,6 +3,7 @@ import { SunLogo } from "../ui/sun-logo";
 import { Linkedin, X } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/dialog";
 import sunshinePhoto from '@assets/IMG_2514_1756148569389.jpg';
+import janinePhoto from '@assets/Janine Pic_1759274688615.jpg';
 
 export function Footer() {
   const [isSunshineBioOpen, setIsSunshineBioOpen] = useState(false);
@@ -147,9 +148,12 @@ export function Footer() {
             
             <div className="mt-6 space-y-3">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-luxury-gradient rounded-full flex items-center justify-center">
-                  <span className="text-white font-semibold text-lg">J</span>
-                </div>
+                <img 
+                  src={janinePhoto}
+                  alt="Janine Herrick - Lead Concierge and Health Coach" 
+                  className="w-12 h-12 rounded-full object-cover border-2 border-brand-blue"
+                  data-testid="contact-janine-photo"
+                />
                 <div>
                   <p className="font-medium text-white">Janine Herrick</p>
                   <p className="text-sm text-gray-300">Lead Concierge and Health Coach</p>
