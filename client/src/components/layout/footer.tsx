@@ -152,7 +152,7 @@ export function Footer() {
                 <img 
                   src={janinePhoto}
                   alt="Janine Herrick - Lead Concierge and Health Coach" 
-                  className="w-12 h-12 rounded-full object-cover border-2 border-brand-blue"
+                  className="w-12 h-12 rounded-full object-cover object-top border-2 border-brand-blue"
                   data-testid="contact-janine-photo"
                 />
                 <div>
@@ -264,7 +264,7 @@ export function Footer() {
               <img 
                 src={janinePhoto}
                 alt="Janine Herrick" 
-                className="w-16 h-16 rounded-full object-cover border-2 border-brand-blue"
+                className="w-16 h-16 rounded-full object-cover object-top border-2 border-brand-blue"
               />
               <div>
                 <h3 className="text-2xl font-playfair font-bold text-luxury-charcoal">Janine Herrick</h3>
