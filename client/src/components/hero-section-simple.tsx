@@ -37,7 +37,7 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
     { 
       number: 4, 
       title: "Personal Plan", 
-      description: "Receive your daily Live Bold Blueprint",
+      description: "Receive your wellness Live Bold Blueprint",
       icon: FileText,
       gradient: "from-yellow-500 to-orange-500"
     },
