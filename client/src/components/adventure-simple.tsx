@@ -1,4 +1,4 @@
-import { Mountain, Waves, Snowflake, Compass, Calendar } from "lucide-react";
+import { Mountain, Waves, Snowflake, Compass, Calendar, Bike, Ship, TreePine, Wind } from "lucide-react";
 import { Button } from "./ui/button";
 import { SunLogo } from "./ui/sun-logo";
 
@@ -9,28 +9,76 @@ interface AdventureSimpleProps {
 export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
   const exampleRetreats = [
     {
-      title: "Maine Coastal Adventure",
-      description: "Kayaking, hiking, and wellness retreat on the coast",
-      price: "$8,400",
-      dates: "Multiple dates available",
+      title: "Acadia Coastal Wellness Retreat",
+      description: "Sunrise yoga, lobster boat tours, and sea cave kayaking",
+      price: "$10,500",
+      dates: "Jun 12-17, 2026",
       icon: Waves,
-      testId: "retreat-maine"
+      testId: "retreat-acadia"
     },
     {
-      title: "New Hampshire Mountain Experience",
-      description: "Paragliding, hang gliding, and mountain adventures",
-      price: "$11,200",
-      dates: "Spring & Summer 2025",
+      title: "Maine Mountains Climbing Expedition",
+      description: "Rock climbing, moose tracking, and wilderness adventures",
+      price: "$12,500",
+      dates: "Jul 20-26, 2026",
       icon: Mountain,
-      testId: "retreat-newhampshire"
+      testId: "retreat-mountains"
     },
     {
-      title: "Bali Wellness Escape",
-      description: "Luxury wellness retreat with cultural immersion",
-      price: "$15,000",
+      title: "Maine Lakes Paddle & Wellness",
+      description: "Paddleboard yoga, lake fishing, and wildlife watching",
+      price: "$10,800",
+      dates: "Aug 5-11, 2026",
+      icon: Bike,
+      testId: "retreat-lakes"
+    },
+    {
+      title: "Down East Coastal Explorer",
+      description: "Private yacht charters, lobster fishing, puffin watching",
+      price: "$14,200",
+      dates: "Sep 10-17, 2026",
+      icon: Ship,
+      testId: "retreat-coastal"
+    },
+    {
+      title: "Bali Soulshine Adventure Escape",
+      description: "Yoga, white-water rafting, and rock climbing paradise",
+      price: "$22,500",
       dates: "Year-round availability",
       icon: Compass,
       testId: "retreat-bali"
+    },
+    {
+      title: "Appalachian Trail Autumn Spectacular",
+      description: "Guided hikes and luxury glamping through fall foliage",
+      price: "$13,500",
+      dates: "Oct 1-8, 2026",
+      icon: TreePine,
+      testId: "retreat-appalachian"
+    },
+    {
+      title: "Maine White-Water Rapids",
+      description: "Thrilling white-water rafting adventure",
+      price: "$9,200",
+      dates: "Multiple dates available",
+      icon: Waves,
+      testId: "retreat-whitewater"
+    },
+    {
+      title: "Maine Winter Snowmobile Safari",
+      description: "Snowmobiling adventure through the North Woods",
+      price: "$8,400",
+      dates: "Jan-Mar 2026",
+      icon: Snowflake,
+      testId: "retreat-snowmobile"
+    },
+    {
+      title: "New Hampshire Paragliding Sky Adventure",
+      description: "Tandem paragliding and aerial mountain adventures",
+      price: "$11,200",
+      dates: "Spring & Summer 2026",
+      icon: Wind,
+      testId: "retreat-paragliding"
     }
   ];
 
@@ -88,7 +136,7 @@ export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
             Featured Retreat Examples
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {exampleRetreats.map((retreat) => {
               const IconComponent = retreat.icon;
               return (
