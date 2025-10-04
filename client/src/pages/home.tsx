@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/footer";
 import { HeroSection } from "@/components/hero-section-simple";
 import { MembershipTiersSimple } from "@/components/membership-tiers-simple";
 import { AdventureSimple } from "@/components/adventure-simple";
+import { Testimonials } from "@/components/testimonials";
 import { ContactForm } from "@/components/contact-form";
 import { FAQSimple } from "@/components/faq-simple";
 import { SunbotChatbot } from "@/components/sunbot-chatbot";
@@ -42,6 +43,8 @@ export default function Home() {
           <div id="adventures">
             <AdventureSimple bookingUrl={bookingUrl} />
           </div>
+          
+          <Testimonials />
           
           <ContactForm />
           
