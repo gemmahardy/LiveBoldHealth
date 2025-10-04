@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertConsultationSchema, insertAssessmentSchema } from "@shared/schema";
 import { z } from "zod";
+import { getUncachableResendClient } from "./resend-client";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   
@@ -43,6 +44,56 @@ export async function registerRoutes(app: Express): Promise<Server> {
       } else {
         res.status(500).json({ message: "Failed to create assessment" });
       }
+    }
+  });
+
+  // Track button clicks and send notification email
+  app.post("/api/track-click", async (req, res) => {
+    try {
+      const { buttonName } = req.body;
+      
+      if (!buttonName) {
+        return res.status(400).json({ message: "Button name is required" });
+      }
+
+      // Send email notification
+      try {
+        const { client, fromEmail } = await getUncachableResendClient();
+        
+        const timestamp = new Date().toLocaleString('en-US', { 
+          timeZone: 'America/New_York',
+          dateStyle: 'full',
+          timeStyle: 'long'
+        });
+
+        await client.emails.send({
+          from: fromEmail,
+          to: 'sunshine@liveboldhealth.com',
+          subject: `🎯 New Click: ${buttonName}`,
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+              <h2 style="color: #1e40af; margin-bottom: 20px;">New Button Click Notification</h2>
+              
+              <div style="background-color: #f3f4f6; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                <p style="margin: 10px 0;"><strong>Button:</strong> ${buttonName}</p>
+                <p style="margin: 10px 0;"><strong>Time:</strong> ${timestamp}</p>
+                <p style="margin: 10px 0;"><strong>Action:</strong> User clicked to visit Calendly</p>
+              </div>
+              
+              <p style="color: #6b7280; font-size: 14px;">
+                This notification was sent automatically when someone clicked "${buttonName}" on your Live Bold Health website.
+              </p>
+            </div>
+          `
+        });
+      } catch (emailError) {
+        console.error('Failed to send notification email:', emailError);
+        // Don't fail the request if email fails
+      }
+
+      res.json({ success: true });
+    } catch (error) {
+      res.status(500).json({ message: "Failed to track click" });
     }
   });
 
