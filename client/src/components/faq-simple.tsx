@@ -40,6 +40,10 @@ export function FAQSimple() {
     {
       question: "Do I need to be a member to book an adventure?",
       answer: "No, membership is not required to book an adventure. However, membership provides significant discounts on adventures plus comprehensive health optimization services to help you prepare for and maximize your experience."
+    },
+    {
+      question: "Can't I just book this trip myself?",
+      answer: "You could — but it wouldn't be a Live Bold Health experience. Our concierge team curates every detail for you — from luxury accommodations to adventure logistics — ensuring your trip aligns perfectly with your personalized health and wellness blueprint. We leverage exclusive partnerships, provide on-site concierge support, and design every experience around your goals, abilities, and desired outcomes. All you have to do is show up, recharge, and thrive."
     }
   ];
 
