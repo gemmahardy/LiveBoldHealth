@@ -18,7 +18,7 @@ Live Bold Health is a premium wellness concierge platform designed exclusively f
 Featured retreats include Maine Coastal Adventure ($8,400), New Hampshire Mountain Experience ($11,200), and Bali Wellness Escape ($15,000). All adventures can be customized from relaxation-focused to high-intensity experiences.
 
 ## Platform Features
-The platform includes consultation booking, membership selection, adventure planning, contact form, comprehensive FAQ section, and an AI-powered chatbot assistant called SunBot.
+The platform includes consultation booking, health & longevity assessment quiz (VO₂ Max & RMR testing), membership selection, adventure planning, contact form, comprehensive FAQ section, and an AI-powered chatbot assistant called SunBot.
 
 # User Preferences
 
@@ -38,6 +38,7 @@ The application uses Drizzle ORM configured for PostgreSQL with a schema-first a
 ## Component Architecture
 The frontend has been simplified with a streamlined component structure:
 - **Hero Section**: 6-step journey display with two primary CTAs (Schedule Consultation, See Membership)
+- **Health Assessment**: Interactive 3-question quiz featuring VO₂ Max & RMR testing with Dr. Peter Attia quote and Sunshine's adventure philosophy quote, generates personalized recommendations based on Community Membership + A La Carte services
 - **Membership Section**: Two-column layout showing Community Membership alongside a scrollable Monthly A La Carte Menu with 14 premium add-on services
 - **Adventure Section**: "Create Your Own Adventure" block with 10 featured retreat examples
 - **Contact Form**: Basic name/email/message form using mailto functionality

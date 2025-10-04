@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { Button } from "./ui/button";
+import { SunLogo } from "./ui/sun-logo";
 import { BarChart3, Zap, Heart, Trophy, Activity } from "lucide-react";
 
 interface AssessmentAnswer {
@@ -152,33 +153,33 @@ export function HealthAssessment() {
     const experience = assessmentAnswers.find(a => a.questionId === "experience-level")?.answer || "beginner";
 
     let primaryFocus = "Energy & Vitality";
-    let recommendedPlan = "VIP Concierge";
+    let recommendedPlan = "Community Membership + Private Coaching";
     let timeline = "90-Day Protocol";
 
     switch (primaryGoal) {
       case "longevity":
         primaryFocus = "Longevity Optimization";
-        recommendedPlan = "Founders Circle";
+        recommendedPlan = "Community Membership + Elite Longevity Lab";
         timeline = "6-Month Program";
         break;
       case "performance":
         primaryFocus = "Mental Performance";
-        recommendedPlan = "VIP Concierge";
+        recommendedPlan = "Community Membership + Performance Tracking";
         timeline = "90-Day Protocol";
         break;
       case "recovery":
         primaryFocus = "Stress & Recovery";
-        recommendedPlan = "Essential Concierge";
+        recommendedPlan = "Community Membership + Recovery Suite";
         timeline = "60-Day Protocol";
         break;
     }
 
     if (experience === "expert" || experience === "advanced") {
-      recommendedPlan = "Founders Circle";
+      recommendedPlan = "Community Membership + Executive Performance";
     }
 
     const insights = [
-      `Based on your focus on ${primaryFocus.toLowerCase()}, we recommend starting with advanced diagnostics.`,
+      `Based on your focus on ${primaryFocus.toLowerCase()}, we recommend starting with VO₂ Max & RMR testing.`,
       `Your ${challenge} challenges suggest personalized protocols will be most effective.`,
       `With your ${experience} experience level, we can accelerate your optimization journey.`
     ];
@@ -210,8 +211,13 @@ export function HealthAssessment() {
 
   if (showResults && assessmentResults) {
     return (
-      <section id="assessment" className="py-20 bg-white">
-        <div className="container mx-auto px-6">
+      <section id="assessment" className="py-12 sm:py-16 md:py-20 bg-white relative overflow-hidden">
+        {/* Decorative Background */}
+        <div className="absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/4 w-[700px] sm:w-[850px] h-[700px] sm:h-[850px] opacity-35 -rotate-12">
+          <SunLogo className="w-full h-full text-brand-blue" />
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="luxury-card rounded-2xl p-8">
               <div className="text-center space-y-8">
@@ -308,61 +314,78 @@ export function HealthAssessment() {
   }
 
   return (
-    <section id="assessment" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="assessment" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-white via-blue-50/20 to-luxury-gray relative overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[800px] sm:w-[950px] h-[800px] sm:h-[950px] opacity-38 rotate-12">
+        <SunLogo className="w-full h-full text-brand-gold" />
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl font-bold text-luxury-charcoal mb-4">
-              Health & Longevity Assessment - VO2 Max & RMR Testing
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-luxury-charcoal mb-3 sm:mb-4 px-2">
+              Health & Longevity Assessment
             </h2>
-            <p className="text-xl text-gray-600">
-              Discover your personalized path to 10X longevity, peak fitness performance, and optimal wellness with advanced VO2 Max testing and RMR testing.
+            <p className="text-lg sm:text-xl md:text-2xl font-semibold text-brand-blue mb-3 sm:mb-4 px-2">
+              VO₂ Max & RMR Testing
             </p>
-            <blockquote className="text-lg font-medium text-brand-blue italic mt-4 border-l-4 border-brand-blue pl-4">
-              "Knowing your VO2 Max is the greatest predictor of lifespan" — Dr. Peter Attia
+            <p className="text-base sm:text-lg md:text-xl text-brand-slate max-w-3xl mx-auto px-4">
+              Discover your personalized path to 10X longevity, peak fitness performance, and optimal wellness with advanced VO₂ Max testing and RMR testing.
+            </p>
+            <blockquote className="text-sm sm:text-base md:text-lg font-medium text-brand-blue italic mt-6 border-l-4 border-brand-blue pl-4 max-w-3xl mx-auto mx-4">
+              "Knowing your VO₂ Max is the greatest predictor of lifespan" — Dr. Peter Attia
             </blockquote>
           </div>
           
-          <div className="luxury-card rounded-2xl p-8">
-            <div className="space-y-8">
-              <div className="flex items-center justify-between mb-8">
-                <span className="text-sm font-semibold text-brand-slate" data-testid="assessment-progress-text">
+          <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-brand-blue/10">
+            <div className="space-y-6 sm:space-y-8">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6 sm:mb-8">
+                <span className="text-xs sm:text-sm font-semibold text-brand-slate" data-testid="assessment-progress-text">
                   QUESTION {currentQuestion + 1} OF {questions.length}
                 </span>
-                <div className="w-64 bg-gray-200 rounded-full h-2">
+                <div className="w-full sm:w-64 bg-gray-200 rounded-full h-2">
                   <div 
-                    className="bg-luxury-gradient h-2 rounded-full transition-all duration-300" 
+                    className="bg-gradient-to-r from-blue-600 to-yellow-500 h-2 rounded-full transition-all duration-300" 
                     style={{ width: `${progressPercentage}%` }}
                     data-testid="assessment-progress-bar"
                   ></div>
                 </div>
               </div>
               
-              <h4 className="font-playfair text-2xl font-semibold mb-8" data-testid="assessment-question-title">
+              <h4 className="font-playfair text-xl sm:text-2xl font-semibold mb-6 sm:mb-8 px-2" data-testid="assessment-question-title">
                 {questions[currentQuestion].title}
               </h4>
               
-              <div className="grid gap-4">
+              <div className="grid gap-3 sm:gap-4">
                 {questions[currentQuestion].options.map((option, index) => {
                   const IconComponent = option.icon;
                   return (
                     <button
                       key={option.value}
                       onClick={() => handleAnswer(option.value)}
-                      className="text-left p-6 border-2 border-gray-200 rounded-xl hover:border-brand-blue hover:bg-blue-50 transition-all"
+                      className="text-left p-4 sm:p-6 border-2 border-gray-200 rounded-xl hover:border-brand-blue hover:bg-blue-50 transition-all active:scale-[0.98]"
                       data-testid={`assessment-option-${index}`}
                     >
-                      <div className="flex items-center space-x-4">
-                        <IconComponent className="h-6 w-6 text-brand-blue" />
+                      <div className="flex items-start sm:items-center gap-3 sm:gap-4">
+                        <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-brand-blue flex-shrink-0 mt-0.5 sm:mt-0" />
                         <div>
-                          <p className="font-semibold text-lg">{option.title}</p>
-                          <p className="text-gray-600">{option.description}</p>
+                          <p className="font-semibold text-base sm:text-lg text-luxury-charcoal">{option.title}</p>
+                          <p className="text-sm sm:text-base text-brand-slate mt-1">{option.description}</p>
                         </div>
                       </div>
                     </button>
                   );
                 })}
               </div>
+              
+              {currentQuestion === 0 && (
+                <div className="mt-6 sm:mt-8 pt-6 border-t border-gray-200">
+                  <blockquote className="text-sm sm:text-base italic text-brand-slate border-l-4 border-brand-gold pl-4">
+                    "Adventure is a health tool. When you engage your body and mind in new ways, you unlock more than just strength and stamina — you ignite your energy, build resilience, and boost your ability to take on life with boldness and joy."
+                    <span className="block mt-2 not-italic font-semibold text-luxury-charcoal text-sm sm:text-base">— Sunshine</span>
+                  </blockquote>
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/layout/navigation";
 import { Footer } from "@/components/layout/footer";
 import { HeroSection } from "@/components/hero-section-simple";
+import { HealthAssessment } from "@/components/health-assessment";
 import { MembershipTiersSimple } from "@/components/membership-tiers-simple";
 import { AdventureSimple } from "@/components/adventure-simple";
 import { Testimonials } from "@/components/testimonials";
@@ -35,6 +36,10 @@ export default function Home() {
             onOpenConsultation={handleOpenConsultation}
             bookingUrl={bookingUrl}
           />
+          
+          <div id="assessment">
+            <HealthAssessment />
+          </div>
           
           <div id="membership">
             <MembershipTiersSimple bookingUrl={bookingUrl} />
