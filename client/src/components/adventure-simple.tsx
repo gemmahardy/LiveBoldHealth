@@ -28,7 +28,7 @@ export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
       title: "Maine Lakes Paddle & Wellness",
       description: "Paddleboard yoga, lake fishing, and wildlife watching",
       price: "$10,800",
-      dates: "Aug 5-11, 2026",
+      dates: "Sep 10-17, 2026",
       icon: Bike,
       testId: "retreat-lakes"
     },
@@ -36,7 +36,7 @@ export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
       title: "Down East Coastal Explorer",
       description: "Private yacht charters, lobster fishing, puffin watching",
       price: "$14,200",
-      dates: "Sep 10-17, 2026",
+      dates: "Aug 5-11, 2026",
       icon: Ship,
       testId: "retreat-coastal"
     },
