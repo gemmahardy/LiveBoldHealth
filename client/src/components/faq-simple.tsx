@@ -44,6 +44,10 @@ export function FAQSimple() {
     {
       question: "Can't I just book this trip myself?",
       answer: "You could — but it wouldn't be a Live Bold Health experience. Our concierge team curates every detail for you — from luxury accommodations to adventure logistics — ensuring your trip aligns perfectly with your personalized health and wellness blueprint. We leverage exclusive partnerships, provide on-site concierge support, and design every experience around your goals, abilities, and desired outcomes. All you have to do is show up, recharge, and thrive."
+    },
+    {
+      question: "Do you provide transportation from the airport to the retreat site?",
+      answer: "Yes! Your personal concierge will meet you upon arrival and handle all on-site transportation throughout your adventure. If you prefer to have your own vehicle, we're happy to assist with private car or rental arrangements. Please note that airfare, train, or bus travel to your destination is not included in the adventure price — but once you arrive, all you have to do is relax, explore, and adventure on."
     }
   ];
 
