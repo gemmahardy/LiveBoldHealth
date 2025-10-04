@@ -5,15 +5,24 @@ export function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      text: "Adventure client testimonial"
+      title: "The All-in-One Longevity Plan I Didn't Know I Needed.",
+      text: "I've tried personal trainers, nutritionists, and countless wellness programs — but nothing compares to Live Bold. This all-in-one longevity plan made everything simple, enjoyable, and effective. My concierge handled every detail, and now I'm stronger, leaner, and more energized than ever.",
+      author: "Michael R.",
+      role: "CEO & Adventurer"
     },
     {
       id: 2,
-      text: "Adventure client testimonial"
+      title: "I Never Thought My Health Would Peak Like This.",
+      text: "Since joining Live Bold, I've lost weight, gained muscle, and have more energy than I did in my twenties. The personalized plan and biometrics gave me clarity, and the adventures reignited my confidence. It's the perfect balance of science, coaching, and fun.",
+      author: "Jennifer P.",
+      role: "Entrepreneur & Mother of Two"
     },
     {
       id: 3,
-      text: "Adventure client testimonial"
+      title: "Adventure Meets Wellness — Stress-Free and Life-Changing.",
+      text: "I love being outdoors, and this concierge service aligns perfectly with my lifestyle. Every trip is an adventure designed around my health goals — no stress, just movement, nature, and total rejuvenation. Live Bold turned wellness into something I genuinely look forward to.",
+      author: "David K.",
+      role: "Tech Executive"
     }
   ];
 
@@ -59,9 +68,22 @@ export function Testimonials() {
                 ))}
               </div>
               
-              <p className="text-sm sm:text-base text-brand-slate leading-relaxed text-center italic">
+              <h3 className="text-base sm:text-lg font-semibold text-luxury-charcoal mb-4 text-center">
+                "{testimonial.title}"
+              </h3>
+              
+              <p className="text-sm sm:text-base text-brand-slate leading-relaxed mb-6 text-center">
                 "{testimonial.text}"
               </p>
+              
+              <div className="text-center">
+                <p className="font-semibold text-luxury-charcoal">
+                  — {testimonial.author}
+                </p>
+                <p className="text-sm text-brand-slate">
+                  {testimonial.role}
+                </p>
+              </div>
             </div>
           ))}
         </div>
