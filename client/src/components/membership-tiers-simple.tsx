@@ -43,7 +43,7 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
         "30% Off All Luxury Retreats",
         "Quarterly Performance Optimization Reports"
       ],
-      cta: "Apply Now",
+      cta: "Join Now",
       highlight: true,
       testId: "tier-essential"
     }
