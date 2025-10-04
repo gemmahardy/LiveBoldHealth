@@ -213,7 +213,7 @@ export function HealthAssessment() {
     return (
       <section id="assessment" className="py-12 sm:py-16 md:py-20 bg-white relative overflow-hidden">
         {/* Decorative Background */}
-        <div className="absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/4 w-[700px] sm:w-[850px] h-[700px] sm:h-[850px] opacity-35 -rotate-12">
+        <div className="absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/4 w-[700px] sm:w-[850px] h-[700px] sm:h-[850px] opacity-[0.06] -rotate-12">
           <SunLogo className="w-full h-full text-brand-blue" />
         </div>
         
@@ -316,7 +316,7 @@ export function HealthAssessment() {
   return (
     <section id="assessment" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-white via-blue-50/20 to-luxury-gray relative overflow-hidden">
       {/* Decorative Background */}
-      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[800px] sm:w-[950px] h-[800px] sm:h-[950px] opacity-38 rotate-12">
+      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[800px] sm:w-[950px] h-[800px] sm:h-[950px] opacity-[0.08] rotate-12">
         <SunLogo className="w-full h-full text-brand-gold" />
       </div>
       

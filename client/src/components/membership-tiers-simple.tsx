@@ -118,7 +118,7 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
     <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-luxury-gray via-white to-blue-50/30 relative overflow-hidden">
       {/* Decorative Background */}
       {/* Large watermark behind membership cards */}
-      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[750px] sm:w-[900px] h-[750px] sm:h-[900px] opacity-40 -rotate-6">
+      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[750px] sm:w-[900px] h-[750px] sm:h-[900px] opacity-[0.08] -rotate-6">
         <SunLogo className="w-full h-full text-brand-gold" />
       </div>
       

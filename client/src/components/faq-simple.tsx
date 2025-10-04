@@ -59,7 +59,7 @@ export function FAQSimple() {
     <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-luxury-gray via-blue-50/20 to-white relative overflow-hidden">
       {/* Decorative Background */}
       {/* Offset watermark behind FAQ */}
-      <div className="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-1/4 w-[750px] sm:w-[900px] h-[750px] sm:h-[900px] opacity-42 rotate-8">
+      <div className="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-1/4 w-[750px] sm:w-[900px] h-[750px] sm:h-[900px] opacity-[0.07] rotate-8">
         <SunLogo className="w-full h-full text-brand-gold" />
       </div>
       

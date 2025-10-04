@@ -58,7 +58,7 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Large centered watermark behind headline */}
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[700px] sm:w-[850px] h-[700px] sm:h-[850px] opacity-35 rotate-12">
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[700px] sm:w-[850px] h-[700px] sm:h-[850px] opacity-[0.08] rotate-12">
           <SunLogo className="w-full h-full text-brand-blue" />
         </div>
       </div>
