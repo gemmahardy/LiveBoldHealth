@@ -1,6 +1,7 @@
 import { Check, Star, Crown, Users } from "lucide-react";
 import { Button } from "./ui/button";
 import { SunLogo } from "./ui/sun-logo";
+import { trackClick } from "@/lib/trackClick";
 
 interface MembershipTiersProps {
   bookingUrl: string;
@@ -143,7 +144,10 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
                 </ul>
 
                 <Button
-                  onClick={() => window.open(bookingUrl, '_blank', 'noopener,noreferrer')}
+                  onClick={async () => {
+                    await trackClick(`Join Now - ${tier.name}`);
+                    window.open(bookingUrl, '_blank', 'noopener,noreferrer');
+                  }}
                   className={`w-full py-4 sm:py-5 md:py-6 text-base sm:text-lg font-semibold rounded-full transition-all active:scale-95 ${
                     tier.highlight
                       ? 'bg-white text-brand-blue hover:bg-gray-100'

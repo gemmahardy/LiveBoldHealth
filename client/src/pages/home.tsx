@@ -7,12 +7,14 @@ import { ContactForm } from "@/components/contact-form";
 import { FAQSimple } from "@/components/faq-simple";
 import { SunbotChatbot } from "@/components/sunbot-chatbot";
 import { SEOHead } from "@/components/seo-head";
+import { trackClick } from "@/lib/trackClick";
 
 export default function Home() {
   const bookingUrl = import.meta.env.PUBLIC_BOOKING_URL || 'https://calendly.com/contact-sunryz/live-bold-consultation';
   const assessmentUrl = '/assessment';
 
-  const handleOpenConsultation = () => {
+  const handleOpenConsultation = async () => {
+    await trackClick('Book Consultation');
     window.open(bookingUrl, '_blank', 'noopener,noreferrer');
   };
 

@@ -1,6 +1,7 @@
 import { Mountain, Waves, Snowflake, Compass, Calendar, Bike, Ship, TreePine, Wind } from "lucide-react";
 import { Button } from "./ui/button";
 import { SunLogo } from "./ui/sun-logo";
+import { trackClick } from "@/lib/trackClick";
 
 interface AdventureSimpleProps {
   bookingUrl: string;
@@ -128,7 +129,10 @@ export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
                 From relaxation-focused wellness retreats to high-intensity adventure experiences, we design custom journeys that match your goals and energy level. Every adventure includes health optimization, personalized coaching, and unforgettable experiences.
               </p>
               <Button
-                onClick={() => window.open(bookingUrl, '_blank', 'noopener,noreferrer')}
+                onClick={async () => {
+                  await trackClick('Start Planning');
+                  window.open(bookingUrl, '_blank', 'noopener,noreferrer');
+                }}
                 className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:shadow-xl transition-all rounded-full hover:from-blue-700 hover:to-blue-600 active:scale-95 w-full sm:w-auto"
                 data-testid="button-start-planning"
               >
@@ -182,7 +186,10 @@ export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
                   </div>
                   
                   <Button
-                    onClick={() => window.open(bookingUrl, '_blank', 'noopener,noreferrer')}
+                    onClick={async () => {
+                      await trackClick(`Reserve Spot - ${retreat.title}`);
+                      window.open(bookingUrl, '_blank', 'noopener,noreferrer');
+                    }}
                     variant="outline"
                     className="w-full border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition-all rounded-full"
                     data-testid={`button-${retreat.testId}`}
