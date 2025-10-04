@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, Calendar, MessageSquare, Users, Activity, FileText, Headphones, Plane } from "lucide-react";
+import { ArrowRight, Calendar, MessageSquare, Users, Activity, FileText, Headphones, Plane, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { SunLogo } from "./ui/sun-logo";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
@@ -95,6 +95,11 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                   className="relative group"
                   data-testid={`step-${step.number}`}
                 >
+                  {/* Special pulsing ring for step 4 */}
+                  {step.number === 4 && (
+                    <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 rounded-xl sm:rounded-2xl opacity-75 blur-sm animate-pulse"></div>
+                  )}
+                  
                   {/* Connecting Arrow - only show between steps on larger screens */}
                   {index < sixSteps.length - 1 && index % 3 !== 2 && (
                     <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-0">
@@ -103,7 +108,7 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                   )}
                   
                   <div 
-                    className={`bg-gradient-to-br ${step.gradient} rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg sm:shadow-2xl md:hover:shadow-3xl transition-all duration-300 md:hover:scale-105 active:scale-95 relative overflow-hidden ${step.number === 4 ? 'cursor-pointer' : ''}`}
+                    className={`bg-gradient-to-br ${step.gradient} rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg sm:shadow-2xl md:hover:shadow-3xl transition-all duration-300 md:hover:scale-105 active:scale-95 relative overflow-hidden ${step.number === 4 ? 'cursor-pointer ring-2 ring-white' : ''}`}
                     onClick={() => step.number === 4 && setIsBlueprintOpen(true)}
                   >
                     {/* Decorative Elements */}
@@ -133,7 +138,10 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                         {step.description}
                       </p>
                       {step.number === 4 && (
-                        <p className="text-white/80 text-xs mt-2 italic">Click to see example →</p>
+                        <div className="mt-4 inline-flex items-center space-x-2 bg-white/30 backdrop-blur-sm px-4 py-2 rounded-full border-2 border-white/50 shadow-lg animate-pulse">
+                          <Sparkles className="w-4 h-4 text-white" />
+                          <span className="text-white font-bold text-sm">Click to see example →</span>
+                        </div>
                       )}
                     </div>
                     
