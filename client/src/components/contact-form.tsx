@@ -28,7 +28,7 @@ export function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      const contactEmail = import.meta.env.PUBLIC_EMAIL || 'contact@liveboldhealth.com';
+      const contactEmail = import.meta.env.PUBLIC_EMAIL || 'sunshine@liveboldhealth.com';
       const subject = `Live Bold Contact: ${name}`;
       const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
       
