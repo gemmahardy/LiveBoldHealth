@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, MessageSquare, Users, Activity, FileText, Headphones, Plane } from "lucide-react";
 import { Button } from "./ui/button";
 import { SunLogo } from "./ui/sun-logo";
 
@@ -9,12 +9,48 @@ interface HeroSectionProps {
 
 export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps) {
   const sixSteps = [
-    { number: 1, title: "Book Consult", description: "Schedule your free consultation" },
-    { number: 2, title: "Join Membership", description: "Choose your membership tier" },
-    { number: 3, title: "VO₂ Max + RMR", description: "Get baseline performance testing" },
-    { number: 4, title: "Personal Plan", description: "Receive your custom health blueprint" },
-    { number: 5, title: "Activate Coaching", description: "Begin concierge-managed support" },
-    { number: 6, title: "Book Adventure", description: "Experience transformative travel" }
+    { 
+      number: 1, 
+      title: "Book Consult", 
+      description: "Schedule your free consultation",
+      icon: MessageSquare,
+      gradient: "from-blue-500 to-blue-600"
+    },
+    { 
+      number: 2, 
+      title: "Join Membership", 
+      description: "Choose your membership tier",
+      icon: Users,
+      gradient: "from-yellow-400 to-yellow-500"
+    },
+    { 
+      number: 3, 
+      title: "VO₂ Max + RMR", 
+      description: "Get baseline performance testing",
+      icon: Activity,
+      gradient: "from-blue-600 to-purple-600"
+    },
+    { 
+      number: 4, 
+      title: "Personal Plan", 
+      description: "Receive your custom health blueprint",
+      icon: FileText,
+      gradient: "from-yellow-500 to-orange-500"
+    },
+    { 
+      number: 5, 
+      title: "Activate Coaching", 
+      description: "Begin concierge-managed support",
+      icon: Headphones,
+      gradient: "from-purple-600 to-blue-500"
+    },
+    { 
+      number: 6, 
+      title: "Book Adventure", 
+      description: "Experience transformative travel",
+      icon: Plane,
+      gradient: "from-orange-500 to-yellow-400"
+    }
   ];
 
   return (
@@ -49,36 +85,66 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto mb-12">
-          <h2 className="text-2xl sm:text-3xl font-playfair font-bold text-center text-luxury-charcoal mb-8">
+        <div className="max-w-6xl mx-auto mb-16">
+          <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-center text-luxury-charcoal mb-12">
             Your Journey in 6 Steps
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sixSteps.map((step) => (
-              <div 
-                key={step.number}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-brand-blue/30 relative overflow-hidden group"
-                data-testid={`step-${step.number}`}
-              >
-                {/* Background sun logo on hover */}
-                <div className="absolute -bottom-6 -right-6 w-24 h-24 opacity-0 group-hover:opacity-5 transition-opacity duration-300">
-                  <SunLogo className="w-full h-full text-brand-blue" />
-                </div>
-                
-                <div className="flex items-center gap-4 mb-3 relative z-10">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 via-blue-400 to-yellow-400 flex items-center justify-center shadow-md">
-                    <span className="text-white font-bold text-lg">{step.number}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+            {sixSteps.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <div 
+                  key={step.number}
+                  className="relative group"
+                  data-testid={`step-${step.number}`}
+                >
+                  {/* Connecting Arrow - only show between steps on larger screens */}
+                  {index < sixSteps.length - 1 && index % 3 !== 2 && (
+                    <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-0">
+                      <ArrowRight className="w-6 h-6 text-brand-gold opacity-40" />
+                    </div>
+                  )}
+                  
+                  <div 
+                    className={`bg-gradient-to-br ${step.gradient} rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-110 hover:-translate-y-2 relative overflow-hidden`}
+                  >
+                    {/* Decorative Elements */}
+                    <div className="absolute -top-10 -right-10 w-40 h-40 opacity-10">
+                      <SunLogo className="w-full h-full text-white" />
+                    </div>
+                    <div className="absolute -bottom-8 -left-8 w-32 h-32 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                      <SunLogo className="w-full h-full text-white" />
+                    </div>
+                    
+                    <div className="relative z-10">
+                      {/* Large Number Badge */}
+                      <div className="flex items-center justify-between mb-6">
+                        <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg border-2 border-white/30">
+                          <span className="text-white font-bold text-2xl">{step.number}</span>
+                        </div>
+                        <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                          <Icon className="w-7 h-7 text-white" />
+                        </div>
+                      </div>
+                      
+                      {/* Content */}
+                      <h3 className="text-xl font-bold text-white mb-3 font-playfair">
+                        {step.title}
+                      </h3>
+                      <p className="text-white/90 text-sm leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
+                    
+                    {/* Shine Effect on Hover */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent transform -skew-x-12"></div>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-semibold text-luxury-charcoal">
-                    {step.title}
-                  </h3>
                 </div>
-                <p className="text-brand-slate text-sm relative z-10">
-                  {step.description}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
