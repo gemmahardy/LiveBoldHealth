@@ -34,85 +34,78 @@ export function Footer() {
           </div>
           
           <div>
-            <h5 className="font-semibold text-lg mb-4">Services</h5>
+            <h5 className="font-semibold text-lg mb-4">Quick Links</h5>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <button 
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => scrollToSection('membership')}
                   className="hover:text-brand-blue transition-colors text-left"
-                  data-testid="footer-health-optimization"
+                  data-testid="footer-membership"
                 >
-                  Health Optimization
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('services')}
-                  className="hover:text-brand-blue transition-colors text-left"
-                  data-testid="footer-concierge-coaching"
-                >
-                  Concierge Coaching
+                  Membership
                 </button>
               </li>
               <li>
                 <button 
                   onClick={() => scrollToSection('adventures')}
                   className="hover:text-brand-blue transition-colors text-left"
-                  data-testid="footer-adventure-experiences"
+                  data-testid="footer-adventures"
                 >
-                  Adventure Experiences
+                  Adventures
                 </button>
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => scrollToSection('faq')}
                   className="hover:text-brand-blue transition-colors text-left"
-                  data-testid="footer-biohacking-access"
+                  data-testid="footer-faq"
                 >
-                  Biohacking Access
+                  FAQ
                 </button>
+              </li>
+              <li>
+                <a 
+                  href="mailto:sunshine@liveboldhealth.com"
+                  className="hover:text-brand-blue transition-colors"
+                  data-testid="footer-contact"
+                >
+                  Contact Us
+                </a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h5 className="font-semibold text-lg mb-4">Resources</h5>
+            <h5 className="font-semibold text-lg mb-4">About</h5>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <button 
-                  onClick={() => scrollToSection('books')}
+                  onClick={() => setIsSunshineBioOpen(true)}
                   className="hover:text-brand-blue transition-colors text-left"
-                  data-testid="footer-premium-books"
+                  data-testid="footer-sunshine-bio"
                 >
-                  Premium Books
+                  Meet Sunshine
                 </button>
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('assessment')}
+                  onClick={() => setIsJanineBioOpen(true)}
                   className="hover:text-brand-blue transition-colors text-left"
-                  data-testid="footer-health-assessment"
+                  data-testid="footer-janine-bio"
                 >
-                  Health Assessment
+                  Meet Janine
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('membership')}
-                  className="hover:text-brand-blue transition-colors text-left"
-                  data-testid="footer-membership-tiers"
+                <a 
+                  href="https://calendly.com/contact-sunryz/live-bold-consultation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand-blue transition-colors"
+                  data-testid="footer-schedule"
                 >
-                  Membership Tiers
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('testimonials')}
-                  className="hover:text-brand-blue transition-colors text-left"
-                  data-testid="footer-success-stories"
-                >
-                  Success Stories
-                </button>
+                  Schedule Consultation
+                </a>
               </li>
             </ul>
           </div>
@@ -169,7 +162,14 @@ export function Footer() {
             </div>
             
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-gray-300 hover:text-brand-blue transition-colors" data-testid="social-linkedin">
+              <a 
+                href="https://www.linkedin.com/in/sunshinemechtenberg/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-brand-blue transition-colors" 
+                data-testid="social-linkedin"
+                aria-label="Connect on LinkedIn"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
