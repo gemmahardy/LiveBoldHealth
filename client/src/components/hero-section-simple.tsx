@@ -81,78 +81,143 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-center text-luxury-charcoal mb-6 sm:mb-8 md:mb-12 px-2">
+        <div className="max-w-7xl mx-auto mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-center text-luxury-charcoal mb-4 px-2">
             Your Journey in 6 Steps
           </h2>
+          <p className="text-center text-brand-slate text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
+            A clear, transformative path to optimal health and longevity
+          </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 relative">
-            {sixSteps.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <div 
-                  key={step.number}
-                  className="relative group"
-                  data-testid={`step-${step.number}`}
-                >
-                  {/* Special pulsing ring for step 4 */}
-                  {step.number === 4 && (
-                    <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 rounded-xl sm:rounded-2xl opacity-75 blur-sm animate-pulse"></div>
-                  )}
-                  
-                  {/* Connecting Arrow - only show between steps on larger screens */}
-                  {index < sixSteps.length - 1 && index % 3 !== 2 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-0">
-                      <ArrowRight className="w-6 h-6 text-brand-gold opacity-40" />
-                    </div>
-                  )}
-                  
+          {/* Vertical Timeline Design */}
+          <div className="relative max-w-5xl mx-auto">
+            {/* Central Timeline Line */}
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-blue via-brand-gold to-brand-blue transform -translate-x-1/2"></div>
+            
+            <div className="space-y-8 sm:space-y-12">
+              {sixSteps.map((step, index) => {
+                const Icon = step.icon;
+                const isEven = index % 2 === 0;
+                const isStep4 = step.number === 4;
+                
+                return (
                   <div 
-                    className={`bg-gradient-to-br ${step.gradient} rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg sm:shadow-2xl md:hover:shadow-3xl transition-all duration-300 md:hover:scale-105 active:scale-95 relative overflow-hidden ${step.number === 4 ? 'cursor-pointer ring-2 ring-white' : ''}`}
-                    onClick={() => step.number === 4 && setIsBlueprintOpen(true)}
+                    key={step.number}
+                    className="relative"
+                    data-testid={`step-${step.number}`}
                   >
-                    {/* Decorative Elements */}
-                    <div className="absolute -top-10 -right-10 w-32 sm:w-40 h-32 sm:h-40 opacity-10">
-                      <SunLogo className="w-full h-full text-white" />
-                    </div>
-                    <div className="absolute -bottom-8 -left-8 w-24 sm:w-32 h-24 sm:h-32 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
-                      <SunLogo className="w-full h-full text-white" />
-                    </div>
-                    
-                    <div className="relative z-10">
-                      {/* Large Number Badge */}
-                      <div className="flex items-center justify-between mb-4 sm:mb-6">
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg border-2 border-white/30">
-                          <span className="text-white font-bold text-lg sm:text-xl md:text-2xl">{step.number}</span>
-                        </div>
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                          <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
+                    {/* Desktop Layout - Alternating */}
+                    <div className={`hidden lg:flex items-center ${isEven ? 'flex-row' : 'flex-row-reverse'} gap-8`}>
+                      {/* Content Card */}
+                      <div className="flex-1">
+                        <div 
+                          className={`
+                            group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl 
+                            transition-all duration-500 overflow-hidden border-2
+                            ${isStep4 ? 'border-brand-gold cursor-pointer hover:scale-105 ring-4 ring-brand-gold/20 animate-pulse' : 'border-gray-100 hover:border-brand-blue/30'}
+                            ${isEven ? 'ml-auto' : 'mr-auto'}
+                          `}
+                          style={{ maxWidth: '500px' }}
+                          onClick={() => isStep4 && setIsBlueprintOpen(true)}
+                        >
+                          {/* Step Number Badge - Outside card */}
+                          <div className={`absolute ${isEven ? '-right-6' : '-left-6'} top-8 z-20`}>
+                            <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${step.gradient} flex items-center justify-center shadow-2xl border-4 border-white`}>
+                              <span className="text-white font-bold text-2xl">{step.number}</span>
+                            </div>
+                          </div>
+                          
+                          {/* Card Content */}
+                          <div className="p-6 sm:p-8">
+                            <div className="flex items-start justify-between mb-4">
+                              <div className="flex-1">
+                                <h3 className="text-2xl font-bold text-luxury-charcoal mb-2 font-playfair">
+                                  {step.title}
+                                </h3>
+                                <p className="text-brand-slate text-base leading-relaxed">
+                                  {step.description}
+                                </p>
+                              </div>
+                              <div className={`ml-4 w-14 h-14 rounded-xl bg-gradient-to-br ${step.gradient} flex items-center justify-center flex-shrink-0`}>
+                                <Icon className="w-7 h-7 text-white" />
+                              </div>
+                            </div>
+                            
+                            {isStep4 && (
+                              <div className="mt-4 inline-flex items-center space-x-2 bg-gradient-to-r from-brand-gold/10 to-orange-500/10 px-5 py-3 rounded-full border-2 border-brand-gold/30">
+                                <Sparkles className="w-5 h-5 text-brand-gold" />
+                                <span className="text-luxury-charcoal font-bold text-sm">Click to see example →</span>
+                              </div>
+                            )}
+                          </div>
+                          
+                          {/* Hover Effect */}
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                         </div>
                       </div>
                       
-                      {/* Content */}
-                      <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 font-playfair">
-                        {step.title}
-                      </h3>
-                      <p className="text-white/90 text-sm leading-relaxed">
-                        {step.description}
-                      </p>
-                      {step.number === 4 && (
-                        <div className="mt-4 inline-flex items-center space-x-2 bg-white/30 backdrop-blur-sm px-4 py-2 rounded-full border-2 border-white/50 shadow-lg animate-pulse">
-                          <Sparkles className="w-4 h-4 text-white" />
-                          <span className="text-white font-bold text-sm">Click to see example →</span>
+                      {/* Spacer for other side */}
+                      <div className="flex-1"></div>
+                    </div>
+                    
+                    {/* Mobile & Tablet Layout */}
+                    <div className="lg:hidden px-4">
+                      <div 
+                        className={`
+                          group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl 
+                          transition-all duration-500 overflow-hidden border-2
+                          ${isStep4 ? 'border-brand-gold cursor-pointer hover:scale-105 ring-4 ring-brand-gold/20' : 'border-gray-100'}
+                        `}
+                        onClick={() => isStep4 && setIsBlueprintOpen(true)}
+                      >
+                        {/* Step Number Badge */}
+                        <div className="absolute -top-4 -left-4 z-20">
+                          <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${step.gradient} flex items-center justify-center shadow-2xl border-4 border-white`}>
+                            <span className="text-white font-bold text-xl">{step.number}</span>
+                          </div>
+                        </div>
+                        
+                        {/* Card Content */}
+                        <div className="p-6 pt-8">
+                          <div className="flex items-start justify-between mb-3">
+                            <div className="flex-1 pr-4">
+                              <h3 className="text-xl font-bold text-luxury-charcoal mb-2 font-playfair">
+                                {step.title}
+                              </h3>
+                              <p className="text-brand-slate text-sm leading-relaxed">
+                                {step.description}
+                              </p>
+                            </div>
+                            <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${step.gradient} flex items-center justify-center flex-shrink-0`}>
+                              <Icon className="w-6 h-6 text-white" />
+                            </div>
+                          </div>
+                          
+                          {isStep4 && (
+                            <div className="mt-4 inline-flex items-center space-x-2 bg-gradient-to-r from-brand-gold/10 to-orange-500/10 px-4 py-2.5 rounded-full border-2 border-brand-gold/30 animate-pulse">
+                              <Sparkles className="w-4 h-4 text-brand-gold" />
+                              <span className="text-luxury-charcoal font-bold text-xs">Click to see example →</span>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      
+                      {/* Connection Line for Mobile */}
+                      {index < sixSteps.length - 1 && (
+                        <div className="flex justify-center py-4">
+                          <div className="w-0.5 h-8 bg-gradient-to-b from-brand-blue to-brand-gold"></div>
                         </div>
                       )}
                     </div>
                     
-                    {/* Shine Effect on Hover */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent transform -skew-x-12"></div>
+                    {/* Center Connection Dot for Desktop */}
+                    <div className="hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                      <div className={`w-5 h-5 rounded-full bg-gradient-to-br ${step.gradient} border-4 border-white shadow-lg`}></div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
 
