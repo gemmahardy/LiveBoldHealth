@@ -109,7 +109,7 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
     {
       emoji: "💎",
       name: "Master Membership",
-      price: "$10,000+/mo",
+      price: "$5,000+/mo",
       description: "Custom integrated yearly plan"
     }
   ];

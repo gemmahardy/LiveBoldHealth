@@ -12,7 +12,7 @@ Live Bold Health is a premium wellness concierge platform designed exclusively f
 
 ## Membership Structure
 - **Community Membership**: $2,500/year + $500 per additional family member - Perfect for individuals and families beginning their bold transformation. Includes VO₂ Max testing, personalized health plan, custom meal guidance, fitness programming, and 20% discount on adventures.
-- **Monthly A La Carte Menu**: Premium add-on services that can be mixed and matched to build a custom concierge experience. Services range from $250/month (weekly meal menus) to $10,000+/month (master membership), including private coaching, meal delivery, wellness concierge, performance tracking, adventure planning, recovery suites, movement coaching, longevity testing, and executive programs.
+- **Monthly A La Carte Menu**: Premium add-on services that can be mixed and matched to build a custom concierge experience. Services range from $250/month (weekly meal menus) to $5,000+/month (master membership), including private coaching, meal delivery, wellness concierge, performance tracking, adventure planning, recovery suites, movement coaching, longevity testing, and executive programs.
 
 ## Adventure Experiences
 Featured retreats include Maine Coastal Adventure ($8,400), New Hampshire Mountain Experience ($11,200), and Bali Wellness Escape ($15,000). All adventures can be customized from relaxation-focused to high-intensity experiences.
