@@ -221,20 +221,20 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-3 mb-6 max-h-[400px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
+            <div className="grid grid-cols-1 gap-2 sm:gap-3 mb-6">
               {aLaCarteServices.map((service, index) => (
                 <div 
                   key={index} 
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 hover:bg-white/20 transition-all border border-white/20"
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 hover:bg-white/20 transition-all border border-white/20"
                   data-testid={`alacarte-${index}`}
                 >
-                  <div className="flex items-start gap-3">
-                    <div className="text-2xl flex-shrink-0">
+                  <div className="flex items-start gap-2 sm:gap-3">
+                    <div className="text-xl sm:text-2xl flex-shrink-0">
                       {service.emoji}
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-start justify-between gap-2 mb-1">
-                        <h4 className="text-sm font-semibold text-white">
+                        <h4 className="text-xs sm:text-sm font-semibold text-white">
                           {service.name}
                         </h4>
                         <span className="text-xs font-bold text-yellow-300 whitespace-nowrap">
