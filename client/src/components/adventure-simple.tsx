@@ -79,6 +79,14 @@ export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
       dates: "Spring & Summer 2026",
       icon: Wind,
       testId: "retreat-paragliding"
+    },
+    {
+      title: "Hut to Hut Trail Running & Mountain Biking",
+      description: "Adventure in Western Maine",
+      price: "$5,400",
+      dates: "Multiple dates",
+      icon: Bike,
+      testId: "retreat-huttohut"
     }
   ];
 
