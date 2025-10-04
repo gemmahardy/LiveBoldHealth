@@ -640,8 +640,42 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
               </div>
             </div>
 
+            <div className="bg-gradient-to-br from-blue-50 to-yellow-50/30 rounded-xl p-4 sm:p-6 border-2 border-brand-blue">
+              <h4 className="text-base sm:text-lg font-bold text-luxury-charcoal mb-3">Premium Add-On Service</h4>
+              <div className="bg-white rounded-lg p-4 sm:p-5 shadow-md">
+                <div className="flex items-start justify-between mb-2">
+                  <div className="flex-1">
+                    <h5 className="font-bold text-luxury-charcoal text-base sm:text-lg">Private Fitness Coaching</h5>
+                    <p className="text-sm text-gray-600 mt-1">One-on-one personalized training session with our expert fitness coach</p>
+                  </div>
+                  <div className="ml-4">
+                    <div className="text-2xl sm:text-3xl font-bold text-brand-blue">$500</div>
+                    <div className="text-xs text-gray-500 text-right">per session</div>
+                  </div>
+                </div>
+                <ul className="mt-3 space-y-1.5 text-sm text-gray-700">
+                  <li className="flex items-start space-x-2">
+                    <span className="text-brand-blue font-bold mt-0.5">✓</span>
+                    <span>60-minute private session</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-brand-blue font-bold mt-0.5">✓</span>
+                    <span>Customized workout programming</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-brand-blue font-bold mt-0.5">✓</span>
+                    <span>Form correction & technique optimization</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <span className="text-brand-blue font-bold mt-0.5">✓</span>
+                    <span>Performance tracking & progress metrics</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
             <div className="bg-yellow-50 rounded-xl p-4 sm:p-6 border-2 border-yellow-200">
-              <h4 className="text-base sm:text-lg font-bold text-luxury-charcoal mb-2">What's Included</h4>
+              <h4 className="text-base sm:text-lg font-bold text-luxury-charcoal mb-2">What's Included in Coaching Packages</h4>
               <ul className="grid sm:grid-cols-2 gap-2 text-sm sm:text-base text-gray-700">
                 <li>• Weekly 1-on-1 coaching calls</li>
                 <li>• Custom meal plans & recipes</li>
