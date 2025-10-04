@@ -29,7 +29,7 @@ export function Testimonials() {
   return (
     <section className="py-12 sm:py-16 md:py-20 bg-white relative overflow-hidden">
       {/* Decorative Background */}
-      <div className="absolute top-10 left-10 w-48 sm:w-64 h-48 sm:h-64 opacity-5">
+      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[600px] sm:w-[800px] h-[600px] sm:h-[800px] opacity-10">
         <SunLogo className="w-full h-full text-brand-blue" />
       </div>
       

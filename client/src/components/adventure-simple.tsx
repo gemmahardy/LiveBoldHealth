@@ -94,10 +94,10 @@ export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
   return (
     <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-50/30 via-white to-luxury-gray relative overflow-hidden">
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-1/4 w-64 sm:w-96 h-64 sm:h-96 opacity-5">
+      <div className="absolute top-1/4 left-0 w-96 sm:w-[500px] h-96 sm:h-[500px] opacity-20">
         <SunLogo className="w-full h-full text-brand-blue" />
       </div>
-      <div className="absolute -bottom-20 -right-20 w-48 sm:w-80 h-48 sm:h-80 opacity-10">
+      <div className="absolute bottom-1/4 right-0 w-80 sm:w-[450px] h-80 sm:h-[450px] opacity-15">
         <SunLogo className="w-full h-full text-brand-gold" />
       </div>
       

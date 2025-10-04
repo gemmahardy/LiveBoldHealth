@@ -57,14 +57,11 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
     <section className="relative pt-20 sm:pt-24 md:pt-32 pb-12 sm:pb-16 md:pb-20 overflow-hidden bg-white">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-64 sm:w-96 h-64 sm:h-96 opacity-10">
+        <div className="absolute top-1/4 right-0 w-96 sm:w-[500px] h-96 sm:h-[500px] opacity-20">
           <SunLogo className="w-full h-full text-brand-blue" />
         </div>
-        <div className="absolute top-1/2 -left-20 w-48 sm:w-72 h-48 sm:h-72 opacity-5">
+        <div className="absolute bottom-1/4 left-0 w-80 sm:w-[450px] h-80 sm:h-[450px] opacity-15">
           <SunLogo className="w-full h-full text-brand-gold" />
-        </div>
-        <div className="absolute -bottom-10 right-1/3 w-32 sm:w-48 h-32 sm:h-48 opacity-10">
-          <SunLogo className="w-full h-full text-brand-blue" />
         </div>
       </div>
       

@@ -58,10 +58,10 @@ export function FAQSimple() {
   return (
     <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-luxury-gray via-blue-50/20 to-white relative overflow-hidden">
       {/* Decorative Background */}
-      <div className="absolute top-0 right-1/4 w-48 sm:w-72 h-48 sm:h-72 opacity-5">
+      <div className="absolute top-1/2 -translate-y-1/2 right-0 w-96 sm:w-[500px] h-96 sm:h-[500px] opacity-15">
         <SunLogo className="w-full h-full text-brand-blue" />
       </div>
-      <div className="absolute bottom-0 left-1/3 w-40 sm:w-56 h-40 sm:h-56 opacity-5">
+      <div className="absolute top-1/2 -translate-y-1/2 left-0 w-80 sm:w-[450px] h-80 sm:h-[450px] opacity-12">
         <SunLogo className="w-full h-full text-brand-gold" />
       </div>
       
