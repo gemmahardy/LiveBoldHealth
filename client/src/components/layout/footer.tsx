@@ -287,14 +287,31 @@ export function Footer() {
           
           <div className="space-y-4 text-gray-700">
             <div>
-              <p className="text-lg font-semibold text-luxury-charcoal mb-2">👋 <strong>Meet Janine</strong></p>
+              <p className="text-lg font-semibold text-luxury-charcoal mb-2">👋 <strong>Meet Janine Herrick</strong></p>
               <p className="leading-relaxed">
-                Janine Herrick lives for Adventure, loves life and feeling good. Janine is a lifer when it comes to eating well, exercising, and fueling her mind and body with love and energy. She has over 20 years experience coaching clients and making their goals a reality.
+                Janine Herrick lives for adventure, loves life, and embodies the feel good energy that defines the Live Bold lifestyle. A lifelong wellness advocate, Janine is passionate about helping others discover their healthiest, happiest selves through movement, nutrition, and mindset.
+              </p>
+              <p className="leading-relaxed mt-3">
+                With over 20 years of experience coaching clients, Janine has guided hundreds toward transforming their goals into reality. She's a biotech and wellness professional with a unique ability to blend science, strategy, and soul — empowering people to take control of their health with clarity and confidence.
               </p>
             </div>
             
+            <div className="bg-blue-50 rounded-lg p-4">
+              <ul className="space-y-2 text-sm">
+                <li>• Background in Biotechnology & Life Sciences</li>
+                <li>• Certified Health & Wellness Coach specializing in lifestyle transformation and metabolic health</li>
+                <li>• Expert in VO₂ Max testing, nutrition strategy, and performance coaching</li>
+                <li>• Co-Creator of the Live Bold Health Blueprint, integrating biometrics with adventure-based wellness</li>
+                <li>• Passionate about healthy living, functional fitness, and fueling the body with love and energy</li>
+              </ul>
+            </div>
+            
+            <p className="leading-relaxed">
+              As your concierge, Janine delivers science-backed guidance with a personal touch — creating sustainable, results-driven plans that help you live boldly, feel energized, and thrive in every adventure.
+            </p>
+            
             <div className="bg-luxury-gradient text-white rounded-lg p-4 text-center">
-              <p className="font-semibold mb-3">✨ <strong>Ready to work with our team?</strong></p>
+              <p className="font-semibold mb-3">✨ <strong>Ready to begin your wellness journey with Janine?</strong></p>
               <a 
                 href="https://calendly.com/contact-sunryz/live-bold-consultation"
                 target="_blank"
@@ -302,7 +319,7 @@ export function Footer() {
                 className="bg-white text-brand-blue px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all inline-block"
                 onClick={() => setIsJanineBioOpen(false)}
               >
-                Schedule Your Personal Consultation
+                Schedule Your Consultation Today
               </a>
             </div>
           </div>
