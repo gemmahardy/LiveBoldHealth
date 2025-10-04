@@ -1,6 +1,25 @@
 # Overview
 
-Live Bold is a premium wellness concierge platform designed exclusively for high-performance executives. The application combines health optimization services, educational resources, personalized assessments, and luxury wellness experiences. The platform offers tiered membership programs, curated adventure experiences, consultation booking, and an AI-powered chatbot assistant called SunBot. The system emphasizes luxury branding with a focus on personalized, concierge-level health services for busy executives who demand excellence in their wellness journey.
+Live Bold Health is a premium wellness concierge platform designed exclusively for high-performance executives and busy families seeking health and adventure lifestyle transformation. The application has been streamlined to provide a clear, direct path to wellness through VO₂ Max testing, personalized coaching, fitness/meal planning, and transformative adventure retreats.
+
+## Simplified User Journey (6 Steps)
+1. **Book Consult** - Schedule free consultation
+2. **Join Membership** - Choose membership tier (Community, Essential Concierge, or VIP Concierge)
+3. **VO₂ Max + RMR** - Get baseline performance testing
+4. **Personal Plan** - Receive custom health blueprint
+5. **Activate Coaching** - Begin concierge-managed support
+6. **Book Adventure** - Experience transformative travel
+
+## Membership Tiers
+- **Community Membership**: $2,500/year + $500 per additional family member
+- **Essential Concierge**: $5,000/month with dedicated concierge and 30% adventure discounts
+- **VIP Concierge**: $10,000/month with 24/7 access, unlimited coaching, and 50% adventure discounts
+
+## Adventure Experiences
+Featured retreats include Maine Coastal Adventure ($8,400), New Hampshire Mountain Experience ($11,200), and Bali Wellness Escape ($15,000). All adventures can be customized from relaxation-focused to high-intensity experiences.
+
+## Platform Features
+The platform includes consultation booking, membership selection, adventure planning, contact form, comprehensive FAQ section, and an AI-powered chatbot assistant called SunBot.
 
 # User Preferences
 
@@ -18,7 +37,14 @@ The server implements a REST API using Express.js with TypeScript. The applicati
 The application uses Drizzle ORM configured for PostgreSQL with a schema-first approach. Database tables include users, books, consultations, assessments, and chat sessions with proper relationships and constraints. The storage layer implements an interface-based design allowing for different storage backends. Currently using in-memory storage for development, but the PostgreSQL schema is ready for production deployment.
 
 ## Component Architecture
-The frontend follows a hierarchical component structure with shared UI components, page-level components, and feature-specific modules. Components are organized into layout, ui, and feature directories. The application implements a comprehensive design system with reusable components for forms, dialogs, navigation, and data display. Custom components include a sun logo, chatbot interface, assessment wizard, and membership tier displays.
+The frontend has been simplified with a streamlined component structure:
+- **Hero Section**: 6-step journey display with two primary CTAs (Schedule Consultation, See Membership)
+- **Membership Tiers**: Simple 3-tier pricing display with feature lists
+- **Adventure Section**: "Create Your Own Adventure" block with example retreat cards
+- **Contact Form**: Basic name/email/message form using mailto functionality
+- **FAQ Section**: Accordion-style FAQ covering pricing, insurance, testing, and membership
+- **Navigation**: Simplified to 4 main links (Consultation, Membership, Adventures, FAQ) plus consultation button
+- **Shared Components**: Sun logo, chatbot interface (SunBot), footer with team bios
 
 ## API Design
 RESTful API endpoints handle core business operations including book retrieval, consultation booking, assessment creation, and chatbot interactions. The API uses Zod for request validation and implements proper error handling with structured responses. Endpoints are designed to support the frontend's query patterns and provide clear separation between different functional areas.
