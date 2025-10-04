@@ -10,9 +10,9 @@ Live Bold Health is a premium wellness concierge platform designed exclusively f
 5. **Activate Coaching** - Begin concierge-managed support
 6. **Book Adventure** - Experience transformative travel
 
-## Membership Tiers
-- **Community Membership**: $2,500/year + $500 per additional family member - Perfect for individuals and families beginning their bold transformation
-- **Essential Concierge** (Most Popular): $5,000/month - For driven leaders who want hands-on health management and measurable results, includes dedicated personal health concierge and 30% off all luxury retreats
+## Membership Structure
+- **Community Membership**: $2,500/year + $500 per additional family member - Perfect for individuals and families beginning their bold transformation. Includes VO₂ Max testing, personalized health plan, custom meal guidance, fitness programming, and 20% discount on adventures.
+- **Monthly A La Carte Menu**: Premium add-on services that can be mixed and matched to build a custom concierge experience. Services range from $250/month (weekly meal menus) to $10,000+/month (master membership), including private coaching, meal delivery, wellness concierge, performance tracking, adventure planning, recovery suites, movement coaching, longevity testing, and executive programs.
 
 ## Adventure Experiences
 Featured retreats include Maine Coastal Adventure ($8,400), New Hampshire Mountain Experience ($11,200), and Bali Wellness Escape ($15,000). All adventures can be customized from relaxation-focused to high-intensity experiences.
@@ -38,15 +38,16 @@ The application uses Drizzle ORM configured for PostgreSQL with a schema-first a
 ## Component Architecture
 The frontend has been simplified with a streamlined component structure:
 - **Hero Section**: 6-step journey display with two primary CTAs (Schedule Consultation, See Membership)
-- **Membership Tiers**: Simple 3-tier pricing display with feature lists
-- **Adventure Section**: "Create Your Own Adventure" block with example retreat cards
+- **Membership Section**: Two-column layout showing Community Membership alongside a scrollable Monthly A La Carte Menu with 14 premium add-on services
+- **Adventure Section**: "Create Your Own Adventure" block with 10 featured retreat examples
 - **Contact Form**: Basic name/email/message form using mailto functionality
-- **FAQ Section**: Accordion-style FAQ covering pricing, insurance, testing, and membership
+- **FAQ Section**: Accordion-style FAQ covering pricing, insurance, testing, membership, and concierge value
 - **Navigation**: Simplified to 4 main links (Consultation, Membership, Adventures, FAQ) plus consultation button
 - **Shared Components**: Sun logo, chatbot interface (SunBot), footer with team bios
+- **Email Notifications**: Automated click tracking sends email alerts to sunshine@liveboldhealth.com when users click consultation/booking buttons
 
 ## API Design
-RESTful API endpoints handle core business operations including book retrieval, consultation booking, assessment creation, and chatbot interactions. The API uses Zod for request validation and implements proper error handling with structured responses. Endpoints are designed to support the frontend's query patterns and provide clear separation between different functional areas.
+RESTful API endpoints handle core business operations including book retrieval, consultation booking, assessment creation, chatbot interactions, and click tracking for email notifications. The API uses Zod for request validation and implements proper error handling with structured responses. Endpoints are designed to support the frontend's query patterns and provide clear separation between different functional areas. The /api/track-click endpoint integrates with Resend to send automated email notifications when users interact with booking buttons.
 
 ## Authentication and Authorization
 The application includes user management schemas and session handling infrastructure through connect-pg-simple, though specific authentication implementation details are prepared but not fully activated in the current codebase.
@@ -81,5 +82,6 @@ The application includes user management schemas and session handling infrastruc
 - **nanoid**: Unique ID generation
 - **Replit integration**: Development environment optimization with cartographer and runtime error overlay
 
-## Chatbot and AI
+## Communication Services
+- **Resend**: Transactional email service for automated click tracking notifications
 - **Custom chatbot implementation**: SunBot wellness concierge with session management and contextual responses
