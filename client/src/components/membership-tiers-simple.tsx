@@ -10,17 +10,18 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
   const tiers = [
     {
       name: "Community Membership",
+      emoji: "☀️",
       icon: Users,
       price: "$2,500",
-      period: "/year",
-      description: "Perfect for families and individuals seeking health transformation",
+      period: "/ year",
+      additionalPrice: "+$500 / additional family member",
+      description: "Perfect for individuals and families beginning their bold transformation.",
       features: [
-        "VO₂ Max & RMR Testing",
-        "Personalized Health Plan",
-        "Meal Planning & Nutrition Guidance",
-        "Fitness Programming",
-        "20% Off Adventure Retreats",
-        "Additional Family Member: +$500/year"
+        "VO₂ Max & RMR Baseline Testing",
+        "Personalized Health & Longevity Plan",
+        "Custom Meal & Nutrition Guidance",
+        "Tailored Fitness Programming",
+        "20% Member Discount on Adventure Retreats"
       ],
       cta: "Join Now",
       highlight: false,
@@ -28,42 +29,23 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
     },
     {
       name: "Essential Concierge",
+      emoji: "🌟",
       icon: Star,
       price: "$5,000",
-      period: "/month",
-      description: "Full-service concierge health management for busy executives",
+      period: "/ month",
+      description: "Our most popular option for driven leaders who want hands-on health management and measurable results.",
       features: [
-        "Everything in Community",
-        "Dedicated Health Concierge",
-        "Monthly VO₂ Max Tracking",
-        "Weekly Coaching Sessions",
-        "Priority Adventure Booking",
-        "30% Off All Retreats",
-        "Quarterly Performance Reviews"
+        "Everything in Community Membership",
+        "Dedicated Personal Health Concierge",
+        "Monthly VO₂ Max Tracking & Progress Reviews",
+        "Weekly 1:1 Coaching & Accountability",
+        "Priority Adventure Booking Access",
+        "30% Off All Luxury Retreats",
+        "Quarterly Performance Optimization Reports"
       ],
       cta: "Apply Now",
       highlight: true,
       testId: "tier-essential"
-    },
-    {
-      name: "VIP Concierge",
-      icon: Crown,
-      price: "$10,000",
-      period: "/month",
-      description: "Ultimate white-glove health and longevity optimization",
-      features: [
-        "Everything in Essential",
-        "24/7 Concierge Access",
-        "Bi-weekly Testing & Analysis",
-        "Daily Check-ins & Support",
-        "Unlimited Coaching Sessions",
-        "50% Off All Adventures",
-        "Custom Adventure Planning",
-        "Executive Longevity Program"
-      ],
-      cta: "Apply Now",
-      highlight: false,
-      testId: "tier-vip"
     }
   ];
 
@@ -83,11 +65,11 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
             Choose Your Membership
           </h2>
           <p className="text-xl text-brand-slate max-w-3xl mx-auto">
-            Select the level of support that fits your lifestyle and health goals
+            Select the level of concierge support that matches your lifestyle, ambition, and health goals.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {tiers.map((tier) => {
             const IconComponent = tier.icon;
             return (
@@ -112,35 +94,38 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
                 )}
 
                 <div className="text-center mb-6">
-                  <div className="flex justify-center mb-4">
-                    <div className={`w-16 h-16 rounded-full flex items-center justify-center ${
-                      tier.highlight ? 'bg-white/20' : 'bg-brand-blue/10'
-                    }`}>
-                      <IconComponent className={`w-8 h-8 ${tier.highlight ? 'text-white' : 'text-brand-blue'}`} />
-                    </div>
+                  <div className="text-5xl mb-4">
+                    {tier.emoji}
                   </div>
                   
-                  <h3 className={`text-2xl font-playfair font-bold mb-2 ${
+                  <h3 className={`text-2xl font-playfair font-bold mb-3 ${
                     tier.highlight ? 'text-white' : 'text-luxury-charcoal'
                   }`}>
                     {tier.name}
                   </h3>
                   
-                  <p className={`text-sm mb-4 ${
+                  <p className={`text-base mb-6 leading-relaxed ${
                     tier.highlight ? 'text-white/90' : 'text-brand-slate'
                   }`}>
                     {tier.description}
                   </p>
                   
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className={`text-4xl font-bold ${
-                      tier.highlight ? 'text-white' : 'text-luxury-charcoal'
-                    }`}>
-                      {tier.price}
-                    </span>
-                    <span className={tier.highlight ? 'text-white/80' : 'text-brand-slate'}>
-                      {tier.period}
-                    </span>
+                  <div className="mb-2">
+                    <div className="flex items-baseline justify-center gap-1">
+                      <span className={`text-4xl font-bold ${
+                        tier.highlight ? 'text-white' : 'text-luxury-charcoal'
+                      }`}>
+                        {tier.price}
+                      </span>
+                      <span className={`text-lg ${tier.highlight ? 'text-white/80' : 'text-brand-slate'}`}>
+                        {tier.period}
+                      </span>
+                    </div>
+                    {tier.additionalPrice && (
+                      <p className={`text-sm mt-1 ${tier.highlight ? 'text-white/70' : 'text-brand-slate'}`}>
+                        {tier.additionalPrice}
+                      </p>
+                    )}
                   </div>
                 </div>
 

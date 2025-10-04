@@ -11,9 +11,8 @@ Live Bold Health is a premium wellness concierge platform designed exclusively f
 6. **Book Adventure** - Experience transformative travel
 
 ## Membership Tiers
-- **Community Membership**: $2,500/year + $500 per additional family member
-- **Essential Concierge**: $5,000/month with dedicated concierge and 30% adventure discounts
-- **VIP Concierge**: $10,000/month with 24/7 access, unlimited coaching, and 50% adventure discounts
+- **Community Membership**: $2,500/year + $500 per additional family member - Perfect for individuals and families beginning their bold transformation
+- **Essential Concierge** (Most Popular): $5,000/month - For driven leaders who want hands-on health management and measurable results, includes dedicated personal health concierge and 30% off all luxury retreats
 
 ## Adventure Experiences
 Featured retreats include Maine Coastal Adventure ($8,400), New Hampshire Mountain Experience ($11,200), and Bali Wellness Escape ($15,000). All adventures can be customized from relaxation-focused to high-intensity experiences.
