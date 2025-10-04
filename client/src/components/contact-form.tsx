@@ -54,38 +54,38 @@ export function ContactForm() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-white via-luxury-gray to-blue-50/20 relative overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-white via-luxury-gray to-blue-50/20 relative overflow-hidden">
       {/* Decorative Background */}
-      <div className="absolute top-1/2 right-0 w-64 h-64 opacity-5">
+      <div className="absolute top-1/2 right-0 w-48 sm:w-64 h-48 sm:h-64 opacity-5">
         <SunLogo className="w-full h-full text-brand-blue" />
       </div>
-      <div className="absolute bottom-0 left-0 w-48 h-48 opacity-5">
+      <div className="absolute bottom-0 left-0 w-32 sm:w-48 h-32 sm:h-48 opacity-5">
         <SunLogo className="w-full h-full text-brand-gold" />
       </div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
-            <div className="inline-flex w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 via-blue-400 to-yellow-400 items-center justify-center mb-4 shadow-lg">
-              <Mail className="w-10 h-10 text-white" />
+          <div className="text-center mb-6 sm:mb-8 md:mb-10">
+            <div className="inline-flex w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-blue-500 via-blue-400 to-yellow-400 items-center justify-center mb-3 sm:mb-4 shadow-lg">
+              <Mail className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-luxury-charcoal mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-luxury-charcoal mb-3 sm:mb-4 px-2">
               Get in Touch
             </h2>
-            <p className="text-xl text-brand-slate">
+            <p className="text-base sm:text-lg md:text-xl text-brand-slate px-4">
               Have questions? Share your health goals and we'll reach out to help you get started.
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6 bg-white rounded-2xl p-8 shadow-xl border-2 border-brand-blue/10 relative overflow-hidden">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-xl border-2 border-brand-blue/10 relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute -bottom-10 -right-10 w-40 h-40 opacity-5">
               <SunLogo className="w-full h-full text-brand-gold" />
             </div>
             
-            <div className="relative z-10 space-y-6">
+            <div className="relative z-10 space-y-4 sm:space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-luxury-charcoal mb-2">
+                <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-luxury-charcoal mb-1 sm:mb-2">
                   Your Name
                 </label>
                 <Input
@@ -94,14 +94,14 @@ export function ContactForm() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="John Smith"
-                  className="w-full border-brand-blue/20 focus:border-brand-blue"
+                  className="w-full border-brand-blue/20 focus:border-brand-blue text-base"
                   data-testid="input-name"
                   required
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-luxury-charcoal mb-2">
+                <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-luxury-charcoal mb-1 sm:mb-2">
                   Email Address
                 </label>
                 <Input
@@ -110,14 +110,14 @@ export function ContactForm() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="john@example.com"
-                  className="w-full border-brand-blue/20 focus:border-brand-blue"
+                  className="w-full border-brand-blue/20 focus:border-brand-blue text-base"
                   data-testid="input-email"
                   required
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-luxury-charcoal mb-2">
+                <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-luxury-charcoal mb-1 sm:mb-2">
                   Message or Health Goals
                 </label>
                 <Textarea
@@ -126,7 +126,7 @@ export function ContactForm() {
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Tell us about your health goals or questions..."
                   rows={6}
-                  className="w-full border-brand-blue/20 focus:border-brand-blue"
+                  className="w-full border-brand-blue/20 focus:border-brand-blue resize-none text-base"
                   data-testid="input-message"
                   required
                 />
@@ -135,10 +135,10 @@ export function ContactForm() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white py-6 text-lg font-semibold hover:shadow-xl transition-all rounded-full hover:from-blue-700 hover:to-blue-600"
+                className="w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white py-4 sm:py-5 md:py-6 text-base sm:text-lg font-semibold hover:shadow-xl transition-all rounded-full hover:from-blue-700 hover:to-blue-600 active:scale-95"
                 data-testid="button-submit-contact"
               >
-                <Send className="mr-2 h-5 w-5" />
+                <Send className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </div>

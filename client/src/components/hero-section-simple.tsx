@@ -54,16 +54,16 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
   ];
 
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden bg-white">
+    <section className="relative pt-20 sm:pt-24 md:pt-32 pb-12 sm:pb-16 md:pb-20 overflow-hidden bg-white">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-96 h-96 opacity-10">
+        <div className="absolute -top-20 -right-20 w-64 sm:w-96 h-64 sm:h-96 opacity-10">
           <SunLogo className="w-full h-full text-brand-blue" />
         </div>
-        <div className="absolute top-1/2 -left-20 w-72 h-72 opacity-5">
+        <div className="absolute top-1/2 -left-20 w-48 sm:w-72 h-48 sm:h-72 opacity-5">
           <SunLogo className="w-full h-full text-brand-gold" />
         </div>
-        <div className="absolute -bottom-10 right-1/3 w-48 h-48 opacity-10">
+        <div className="absolute -bottom-10 right-1/3 w-32 sm:w-48 h-32 sm:h-48 opacity-10">
           <SunLogo className="w-full h-full text-brand-blue" />
         </div>
       </div>
@@ -71,23 +71,23 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-white to-yellow-50/30 pointer-events-none"></div>
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-5xl mx-auto text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-bold text-luxury-charcoal mb-6 leading-tight">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="max-w-5xl mx-auto text-center mb-8 sm:mb-12 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-luxury-charcoal mb-4 sm:mb-6 leading-tight px-2">
             Concierge Health & Longevity, Elevated by Adventure
           </h1>
           
-          <p className="text-xl sm:text-2xl text-brand-slate mb-8 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-brand-slate mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto px-2">
             Master your health with VO₂ Max testing, personalized coaching, and transformative wellness adventures for busy executives and families.
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-center text-luxury-charcoal mb-12">
+        <div className="max-w-6xl mx-auto mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-center text-luxury-charcoal mb-6 sm:mb-8 md:mb-12 px-2">
             Your Journey in 6 Steps
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 relative">
             {sixSteps.map((step, index) => {
               const Icon = step.icon;
               return (
@@ -104,29 +104,29 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                   )}
                   
                   <div 
-                    className={`bg-gradient-to-br ${step.gradient} rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-110 hover:-translate-y-2 relative overflow-hidden`}
+                    className={`bg-gradient-to-br ${step.gradient} rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg sm:shadow-2xl md:hover:shadow-3xl transition-all duration-300 md:hover:scale-105 active:scale-95 relative overflow-hidden`}
                   >
                     {/* Decorative Elements */}
-                    <div className="absolute -top-10 -right-10 w-40 h-40 opacity-10">
+                    <div className="absolute -top-10 -right-10 w-32 sm:w-40 h-32 sm:h-40 opacity-10">
                       <SunLogo className="w-full h-full text-white" />
                     </div>
-                    <div className="absolute -bottom-8 -left-8 w-32 h-32 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                    <div className="absolute -bottom-8 -left-8 w-24 sm:w-32 h-24 sm:h-32 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
                       <SunLogo className="w-full h-full text-white" />
                     </div>
                     
                     <div className="relative z-10">
                       {/* Large Number Badge */}
-                      <div className="flex items-center justify-between mb-6">
-                        <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg border-2 border-white/30">
-                          <span className="text-white font-bold text-2xl">{step.number}</span>
+                      <div className="flex items-center justify-between mb-4 sm:mb-6">
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg border-2 border-white/30">
+                          <span className="text-white font-bold text-lg sm:text-xl md:text-2xl">{step.number}</span>
                         </div>
-                        <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                          <Icon className="w-7 h-7 text-white" />
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                          <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                         </div>
                       </div>
                       
                       {/* Content */}
-                      <h3 className="text-xl font-bold text-white mb-3 font-playfair">
+                      <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 font-playfair">
                         {step.title}
                       </h3>
                       <p className="text-white/90 text-sm leading-relaxed">
@@ -145,14 +145,14 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center max-w-2xl mx-auto px-4">
           <Button
             onClick={onOpenConsultation}
-            className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-6 text-lg font-semibold hover:shadow-xl transition-all rounded-full w-full sm:w-auto hover:from-blue-700 hover:to-blue-600"
+            className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 sm:px-8 py-5 sm:py-5 md:py-6 text-base sm:text-lg font-semibold hover:shadow-xl transition-all rounded-full w-full sm:w-auto hover:from-blue-700 hover:to-blue-600 active:scale-95 min-h-[48px]"
             data-testid="button-schedule-consultation"
           >
-            <Calendar className="mr-2 h-5 w-5" />
-            Schedule Free Consultation
+            <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+            <span className="whitespace-nowrap">Schedule Free Consultation</span>
           </Button>
           
           <Button
@@ -161,11 +161,11 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
               element?.scrollIntoView({ behavior: 'smooth' });
             }}
             variant="outline"
-            className="border-2 border-brand-blue text-brand-blue px-8 py-6 text-lg font-semibold hover:bg-brand-blue hover:text-white transition-all rounded-full w-full sm:w-auto"
+            className="border-2 border-brand-blue text-brand-blue px-6 sm:px-8 py-5 sm:py-5 md:py-6 text-base sm:text-lg font-semibold hover:bg-brand-blue hover:text-white transition-all rounded-full w-full sm:w-auto active:scale-95 min-h-[48px]"
             data-testid="button-see-membership"
           >
-            See Membership Options
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <span className="whitespace-nowrap">See Membership Options</span>
+            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
           </Button>
         </div>
       </div>

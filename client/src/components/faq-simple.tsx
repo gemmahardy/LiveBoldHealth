@@ -44,30 +44,30 @@ export function FAQSimple() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-luxury-gray via-blue-50/20 to-white relative overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-luxury-gray via-blue-50/20 to-white relative overflow-hidden">
       {/* Decorative Background */}
-      <div className="absolute top-0 right-1/4 w-72 h-72 opacity-5">
+      <div className="absolute top-0 right-1/4 w-48 sm:w-72 h-48 sm:h-72 opacity-5">
         <SunLogo className="w-full h-full text-brand-blue" />
       </div>
-      <div className="absolute bottom-0 left-1/3 w-56 h-56 opacity-5">
+      <div className="absolute bottom-0 left-1/3 w-40 sm:w-56 h-40 sm:h-56 opacity-5">
         <SunLogo className="w-full h-full text-brand-gold" />
       </div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 via-blue-400 to-yellow-400 items-center justify-center mb-4 shadow-lg">
-              <HelpCircle className="w-10 h-10 text-white" />
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <div className="inline-flex w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-blue-500 via-blue-400 to-yellow-400 items-center justify-center mb-3 sm:mb-4 shadow-lg">
+              <HelpCircle className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-luxury-charcoal mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-luxury-charcoal mb-3 sm:mb-4 px-2">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-brand-slate">
+            <p className="text-base sm:text-lg md:text-xl text-brand-slate px-4">
               Quick answers to common questions about our services
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-2xl border-2 border-brand-blue/10 relative overflow-hidden">
+          <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-xl sm:shadow-2xl border-2 border-brand-blue/10 relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute -top-10 -right-10 w-48 h-48 opacity-5">
               <SunLogo className="w-full h-full text-brand-gold" />
@@ -77,13 +77,13 @@ export function FAQSimple() {
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
                   <AccordionTrigger 
-                    className="text-left text-lg font-semibold text-luxury-charcoal hover:text-brand-blue"
+                    className="text-left text-base sm:text-lg font-semibold text-luxury-charcoal hover:text-brand-blue py-4"
                     data-testid={`faq-question-${index}`}
                   >
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent 
-                    className="text-brand-slate leading-relaxed"
+                    className="text-sm sm:text-base text-brand-slate leading-relaxed"
                     data-testid={`faq-answer-${index}`}
                   >
                     {faq.answer}

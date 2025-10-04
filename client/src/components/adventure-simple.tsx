@@ -35,48 +35,48 @@ export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50/30 via-white to-luxury-gray relative overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-50/30 via-white to-luxury-gray relative overflow-hidden">
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 opacity-5">
+      <div className="absolute top-0 left-1/4 w-64 sm:w-96 h-64 sm:h-96 opacity-5">
         <SunLogo className="w-full h-full text-brand-blue" />
       </div>
-      <div className="absolute -bottom-20 -right-20 w-80 h-80 opacity-10">
+      <div className="absolute -bottom-20 -right-20 w-48 sm:w-80 h-48 sm:h-80 opacity-10">
         <SunLogo className="w-full h-full text-brand-gold" />
       </div>
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-luxury-charcoal mb-4">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-luxury-charcoal mb-3 sm:mb-4 px-2">
             Adventure Experiences
           </h2>
-          <p className="text-xl text-brand-slate max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-brand-slate max-w-3xl mx-auto px-4">
             Transform your health through extraordinary experiences
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto mb-12">
-          <div className="bg-white rounded-2xl p-8 shadow-2xl border-2 border-brand-blue/10 relative overflow-hidden">
+        <div className="max-w-5xl mx-auto mb-8 sm:mb-10 md:mb-12">
+          <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl sm:shadow-2xl border-2 border-brand-blue/10 relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute -top-10 -right-10 w-48 h-48 opacity-5">
               <SunLogo className="w-full h-full text-brand-gold" />
             </div>
             
-            <div className="text-center mb-6 relative z-10">
-              <div className="inline-flex w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 via-blue-400 to-yellow-400 items-center justify-center mb-4 shadow-lg">
-                <Compass className="w-10 h-10 text-white" />
+            <div className="text-center mb-4 sm:mb-6 relative z-10">
+              <div className="inline-flex w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-blue-500 via-blue-400 to-yellow-400 items-center justify-center mb-3 sm:mb-4 shadow-lg">
+                <Compass className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
               </div>
-              <h3 className="text-2xl font-playfair font-bold text-luxury-charcoal mb-3">
+              <h3 className="text-xl sm:text-2xl font-playfair font-bold text-luxury-charcoal mb-2 sm:mb-3 px-2">
                 Create Your Own Adventure
               </h3>
-              <p className="text-lg text-brand-slate max-w-2xl mx-auto mb-6">
+              <p className="text-sm sm:text-base md:text-lg text-brand-slate max-w-2xl mx-auto mb-4 sm:mb-6 px-4">
                 From relaxation-focused wellness retreats to high-intensity adventure experiences, we design custom journeys that match your goals and energy level. Every adventure includes health optimization, personalized coaching, and unforgettable experiences.
               </p>
               <Button
                 onClick={() => window.open(bookingUrl, '_blank', 'noopener,noreferrer')}
-                className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-4 text-lg font-semibold hover:shadow-xl transition-all rounded-full hover:from-blue-700 hover:to-blue-600"
+                className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:shadow-xl transition-all rounded-full hover:from-blue-700 hover:to-blue-600 active:scale-95 w-full sm:w-auto"
                 data-testid="button-start-planning"
               >
-                <Calendar className="mr-2 h-5 w-5" />
+                <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Start Planning
               </Button>
             </div>
@@ -84,17 +84,17 @@ export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-2xl font-playfair font-bold text-center text-luxury-charcoal mb-8">
+          <h3 className="text-xl sm:text-2xl font-playfair font-bold text-center text-luxury-charcoal mb-6 sm:mb-8 px-2">
             Featured Retreat Examples
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {exampleRetreats.map((retreat) => {
               const IconComponent = retreat.icon;
               return (
                 <div
                   key={retreat.title}
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-brand-gold/50 relative overflow-hidden group"
+                  className="bg-white rounded-lg sm:rounded-xl p-5 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 md:hover:scale-105 active:scale-95 border-2 border-transparent hover:border-brand-gold/50 relative overflow-hidden group"
                   data-testid={retreat.testId}
                 >
                   {/* Background decoration */}
