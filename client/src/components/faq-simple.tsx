@@ -48,6 +48,10 @@ export function FAQSimple() {
     {
       question: "Do you provide transportation from the airport to the retreat site?",
       answer: "Yes! Your personal concierge will meet you upon arrival and handle all on-site transportation throughout your adventure. If you prefer to have your own vehicle, we're happy to assist with private car or rental arrangements. Please note that airfare, train, or bus travel to your destination is not included in the adventure price — but once you arrive, all you have to do is relax, explore, and adventure on."
+    },
+    {
+      question: "How many people are on each adventure, and can I book a private trip?",
+      answer: "Each Live Bold adventure is intentionally kept small — with a maximum of six participants — to ensure a personalized and immersive experience. Yes, we can absolutely customize a private adventure based on your health blueprint, goals, and desired level of activity. Pricing will vary depending on the location and type of retreat, and we also offer special discounts for couples, families, and groups booking together."
     }
   ];
 
