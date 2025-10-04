@@ -195,14 +195,14 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
           </div>
 
           {/* A La Carte Menu */}
-          <div className="relative rounded-xl sm:rounded-2xl p-6 sm:p-8 bg-luxury-gradient text-white shadow-xl sm:shadow-2xl border-2 sm:border-4 border-brand-gold">
+          <div className="relative rounded-xl sm:rounded-2xl p-6 sm:p-8 bg-white shadow-xl sm:shadow-2xl border-2 sm:border-4 border-brand-gold">
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-luxury-charcoal px-6 py-1 rounded-full text-sm font-bold shadow-lg">
               ⭐ BUILD YOUR OWN
             </div>
 
             {/* Background Logo */}
             <div className="absolute bottom-0 right-0 w-32 h-32 opacity-5 overflow-hidden">
-              <SunLogo className="w-full h-full text-white" />
+              <SunLogo className="w-full h-full text-brand-gold" />
             </div>
 
             <div className="text-center mb-6">
@@ -210,11 +210,11 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
                 🌟
               </div>
               
-              <h3 className="text-xl sm:text-2xl font-playfair font-bold mb-2 sm:mb-3 text-white">
+              <h3 className="text-xl sm:text-2xl font-playfair font-bold mb-2 sm:mb-3 text-luxury-charcoal">
                 Monthly A La Carte Menu
               </h3>
               
-              <p className="text-sm sm:text-base mb-4 leading-relaxed text-white/90">
+              <p className="text-sm sm:text-base mb-4 leading-relaxed text-brand-slate">
                 Enhance your membership with premium add-ons. Mix, match, or upgrade as your goals evolve.
               </p>
             </div>
@@ -223,7 +223,7 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
               {aLaCarteServices.map((service, index) => (
                 <div 
                   key={index} 
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 hover:bg-white/20 transition-all border border-white/20"
+                  className="bg-gradient-to-br from-blue-50 to-yellow-50/30 rounded-lg p-2 sm:p-3 hover:from-blue-100 hover:to-yellow-100/40 transition-all border border-brand-gold/20"
                   data-testid={`alacarte-${index}`}
                 >
                   <div className="flex items-start gap-2 sm:gap-3">
@@ -232,14 +232,14 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-start justify-between gap-2 mb-1">
-                        <h4 className="text-xs sm:text-sm font-semibold text-white">
+                        <h4 className="text-xs sm:text-sm font-semibold text-luxury-charcoal">
                           {service.name}
                         </h4>
-                        <span className="text-xs font-bold text-yellow-300 whitespace-nowrap">
+                        <span className="text-xs font-bold text-brand-blue whitespace-nowrap">
                           {service.price}
                         </span>
                       </div>
-                      <p className="text-xs text-white/80 leading-relaxed">
+                      <p className="text-xs text-brand-slate leading-relaxed">
                         {service.description}
                       </p>
                     </div>
@@ -253,7 +253,7 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
                 await trackClick('Join Now - A La Carte Menu');
                 window.open(bookingUrl, '_blank', 'noopener,noreferrer');
               }}
-              className="w-full py-4 sm:py-5 md:py-6 text-base sm:text-lg font-semibold rounded-full transition-all active:scale-95 bg-white text-brand-blue hover:bg-gray-100"
+              className="w-full py-4 sm:py-5 md:py-6 text-base sm:text-lg font-semibold rounded-full transition-all active:scale-95 bg-luxury-gradient text-white hover:shadow-lg"
               data-testid="button-tier-alacarte"
             >
               Book Consultation
