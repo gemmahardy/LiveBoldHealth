@@ -41,11 +41,18 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
           
           <div className="hidden md:flex items-center space-x-8">
             <button 
-              onClick={() => handleNavigation('services')}
+              onClick={onOpenConsultation}
               className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
-              data-testid="nav-services"
+              data-testid="nav-consultation"
             >
-              Services
+              Consultation
+            </button>
+            <button 
+              onClick={() => handleNavigation('membership')}
+              className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
+              data-testid="nav-membership"
+            >
+              Membership
             </button>
             <button 
               onClick={() => handleNavigation('adventures')}
@@ -55,33 +62,12 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
               Adventures
             </button>
             <button 
-              onClick={() => handleNavigation('books')}
-              className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
-              data-testid="nav-books"
-            >
-              Books
-            </button>
-            <button 
-              onClick={() => handleNavigation('assessment')}
-              className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
-              data-testid="nav-assessment"
-            >
-              Assessment
-            </button>
-            <button 
-              onClick={() => handleNavigation('membership')}
-              className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
-              data-testid="nav-membership"
-            >
-              Membership
-            </button>
-            <Link 
-              href="/faq"
+              onClick={() => handleNavigation('faq')}
               className="text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
               data-testid="nav-faq"
             >
               FAQ
-            </Link>
+            </button>
             <button 
               onClick={onOpenConsultation}
               className="bg-luxury-gradient text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all"
@@ -105,11 +91,21 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
           <div className="md:hidden mt-4 py-4 border-t">
             <div className="flex flex-col space-y-4">
               <button 
-                onClick={() => handleNavigation('services')}
+                onClick={() => {
+                  onOpenConsultation();
+                  setIsMobileMenuOpen(false);
+                }}
                 className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
-                data-testid="nav-services-mobile"
+                data-testid="nav-consultation-mobile"
               >
-                Services
+                Consultation
+              </button>
+              <button 
+                onClick={() => handleNavigation('membership')}
+                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
+                data-testid="nav-membership-mobile"
+              >
+                Membership
               </button>
               <button 
                 onClick={() => handleNavigation('adventures')}
@@ -119,36 +115,17 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
                 Adventures
               </button>
               <button 
-                onClick={() => handleNavigation('books')}
+                onClick={() => handleNavigation('faq')}
                 className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
-                data-testid="nav-books-mobile"
-              >
-                Books
-              </button>
-              <button 
-                onClick={() => handleNavigation('assessment')}
-                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
-                data-testid="nav-assessment-mobile"
-              >
-                Assessment
-              </button>
-              <button 
-                onClick={() => handleNavigation('membership')}
-                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
-                data-testid="nav-membership-mobile"
-              >
-                Membership
-              </button>
-              <Link 
-                href="/faq"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium w-full block"
                 data-testid="nav-faq-mobile"
               >
                 FAQ
-              </Link>
+              </button>
               <button 
-                onClick={onOpenConsultation}
+                onClick={() => {
+                  onOpenConsultation();
+                  setIsMobileMenuOpen(false);
+                }}
                 className="bg-luxury-gradient text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all text-center"
                 data-testid="button-consultation-mobile"
               >
