@@ -74,10 +74,7 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto text-center mb-16">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-bold text-luxury-charcoal mb-6 leading-tight">
-            Concierge Health & Longevity,
-            <span className="block mt-2 bg-gradient-to-r from-brand-blue via-blue-400 to-yellow-500 bg-clip-text text-transparent">
-              Elevated by Adventure
-            </span>
+            Concierge Health & Longevity, Elevated by Adventure
           </h1>
           
           <p className="text-xl sm:text-2xl text-brand-slate mb-8 leading-relaxed max-w-3xl mx-auto">
