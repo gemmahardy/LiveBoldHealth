@@ -107,18 +107,19 @@ export function Footer() {
                   Schedule Consultation
                 </a>
               </li>
-              <li>
-                <a 
-                  href="https://www.energylifestyle.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-brand-blue transition-colors"
-                  data-testid="footer-book-now"
-                >
-                  Book Now - Payment
-                </a>
-              </li>
             </ul>
+            
+            <div className="mt-6">
+              <a 
+                href="https://www.theenergylifestyle.com/shop"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-luxury-charcoal px-6 py-3 rounded-full font-bold hover:shadow-lg transition-all text-center hover:from-yellow-500 hover:to-yellow-600"
+                data-testid="footer-book-now"
+              >
+                💳 Book Now - Payment
+              </a>
+            </div>
           </div>
           
           <div>
