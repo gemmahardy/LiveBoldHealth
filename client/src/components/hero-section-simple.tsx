@@ -114,7 +114,7 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                           className={`
                             group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl 
                             transition-all duration-500 overflow-hidden border-2
-                            ${isStep4 ? 'border-brand-gold cursor-pointer hover:scale-105 ring-4 ring-brand-gold/20 animate-pulse' : 'border-gray-100 hover:border-brand-blue/30'}
+                            ${isStep4 ? 'border-yellow-500 cursor-pointer hover:scale-105 ring-4 ring-yellow-400/20 animate-pulse' : 'border-gray-100 hover:border-brand-blue/30'}
                             ${isEven ? 'ml-auto' : 'mr-auto'}
                           `}
                           style={{ maxWidth: '500px' }}
@@ -144,8 +144,11 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                             </div>
                             
                             {isStep4 && (
-                              <div className="mt-4 inline-flex items-center space-x-2 bg-gradient-to-r from-brand-gold/10 to-orange-500/10 px-5 py-3 rounded-full border-2 border-brand-gold/30">
-                                <Sparkles className="w-5 h-5 text-brand-gold" />
+                              <div 
+                                className="mt-4 inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 px-5 py-3 rounded-full border-2 border-yellow-500"
+                                data-testid="badge-blueprint-example-desktop"
+                              >
+                                <Sparkles className="w-5 h-5 text-yellow-600" />
                                 <span className="text-luxury-charcoal font-bold text-sm">Click to see example →</span>
                               </div>
                             )}
@@ -161,42 +164,45 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                     </div>
                     
                     {/* Mobile & Tablet Layout */}
-                    <div className="lg:hidden px-4">
+                    <div className="lg:hidden px-3 sm:px-4">
                       <div 
                         className={`
-                          group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl 
-                          transition-all duration-500 overflow-hidden border-2
-                          ${isStep4 ? 'border-brand-gold cursor-pointer hover:scale-105 ring-4 ring-brand-gold/20' : 'border-gray-100'}
+                          group relative bg-white rounded-2xl shadow-xl active:shadow-2xl
+                          transition-all duration-300 overflow-hidden border-2
+                          ${isStep4 ? 'border-yellow-500 cursor-pointer active:scale-98 ring-4 ring-yellow-400/20' : 'border-gray-100 active:border-brand-blue/30'}
                         `}
                         onClick={() => isStep4 && setIsBlueprintOpen(true)}
                       >
                         {/* Step Number Badge */}
                         <div className="absolute -top-4 -left-4 z-20">
-                          <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${step.gradient} flex items-center justify-center shadow-2xl border-4 border-white`}>
-                            <span className="text-white font-bold text-xl">{step.number}</span>
+                          <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br ${step.gradient} flex items-center justify-center shadow-2xl border-4 border-white`}>
+                            <span className="text-white font-bold text-xl sm:text-2xl">{step.number}</span>
                           </div>
                         </div>
                         
                         {/* Card Content */}
-                        <div className="p-6 pt-8">
-                          <div className="flex items-start justify-between mb-3">
-                            <div className="flex-1 pr-4">
-                              <h3 className="text-xl font-bold text-luxury-charcoal mb-2 font-playfair">
+                        <div className="p-5 sm:p-6 pt-8 sm:pt-10">
+                          <div className="flex items-start justify-between mb-3 sm:mb-4">
+                            <div className="flex-1 pr-3 sm:pr-4">
+                              <h3 className="text-xl sm:text-2xl font-bold text-luxury-charcoal mb-2 font-playfair leading-tight">
                                 {step.title}
                               </h3>
-                              <p className="text-brand-slate text-sm leading-relaxed">
+                              <p className="text-brand-slate text-sm sm:text-base leading-relaxed">
                                 {step.description}
                               </p>
                             </div>
-                            <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${step.gradient} flex items-center justify-center flex-shrink-0`}>
-                              <Icon className="w-6 h-6 text-white" />
+                            <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br ${step.gradient} flex items-center justify-center flex-shrink-0`}>
+                              <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                             </div>
                           </div>
                           
                           {isStep4 && (
-                            <div className="mt-4 inline-flex items-center space-x-2 bg-gradient-to-r from-brand-gold/10 to-orange-500/10 px-4 py-2.5 rounded-full border-2 border-brand-gold/30 animate-pulse">
-                              <Sparkles className="w-4 h-4 text-brand-gold" />
-                              <span className="text-luxury-charcoal font-bold text-xs">Click to see example →</span>
+                            <div 
+                              className="mt-4 inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-400/30 to-orange-500/30 px-4 sm:px-5 py-3 sm:py-3.5 rounded-full border-2 border-yellow-500 shadow-md animate-pulse active:scale-95 transition-transform"
+                              data-testid="badge-blueprint-example-mobile"
+                            >
+                              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-600 flex-shrink-0" />
+                              <span className="text-luxury-charcoal font-bold text-sm sm:text-base whitespace-nowrap">Tap to see example →</span>
                             </div>
                           )}
                         </div>
@@ -204,8 +210,8 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                       
                       {/* Connection Line for Mobile */}
                       {index < sixSteps.length - 1 && (
-                        <div className="flex justify-center py-4">
-                          <div className="w-0.5 h-8 bg-gradient-to-b from-brand-blue to-brand-gold"></div>
+                        <div className="flex justify-center py-4 sm:py-6">
+                          <div className="w-1 h-8 sm:h-10 bg-gradient-to-b from-brand-blue to-brand-gold rounded-full"></div>
                         </div>
                       )}
                     </div>
@@ -248,44 +254,44 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
 
       {/* Sample Blueprint Dialog */}
       <Dialog open={isBlueprintOpen} onOpenChange={setIsBlueprintOpen}>
-        <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto">
+        <DialogContent className="max-w-4xl max-h-[90vh] sm:max-h-[85vh] overflow-y-auto mx-3 sm:mx-auto">
           <DialogHeader>
-            <DialogTitle className="text-2xl sm:text-3xl font-playfair font-bold text-luxury-charcoal mb-4">
+            <DialogTitle className="text-xl sm:text-2xl md:text-3xl font-playfair font-bold text-luxury-charcoal mb-3 sm:mb-4 leading-tight">
               Sample Live Bold Blueprint
             </DialogTitle>
-            <p className="text-brand-slate text-base">
+            <p className="text-brand-slate text-sm sm:text-base">
               30-Day Endurance, Recovery & Longevity Plan
             </p>
-            <p className="text-sm text-gray-600 italic mt-2">
+            <p className="text-xs sm:text-sm text-gray-600 italic mt-2">
               This sample report shows what new clients can expect when they receive their personalized health optimization plan. Each plan is data-driven, tailored, and built around sustainable practices.
             </p>
           </DialogHeader>
           
-          <div className="space-y-6 mt-4">
+          <div className="space-y-5 sm:space-y-6 mt-3 sm:mt-4">
             {/* Health & Performance Summary */}
             <div>
-              <h3 className="text-xl font-bold text-luxury-charcoal mb-3">Health & Performance Summary</h3>
-              <p className="text-gray-600">Your assessment highlights both strengths and growth opportunities for optimal results.</p>
+              <h3 className="text-lg sm:text-xl font-bold text-luxury-charcoal mb-2 sm:mb-3">Health & Performance Summary</h3>
+              <p className="text-sm sm:text-base text-gray-600">Your assessment highlights both strengths and growth opportunities for optimal results.</p>
             </div>
 
             {/* Longevity Insights */}
-            <div className="bg-gradient-to-br from-blue-50 to-yellow-50/30 rounded-xl p-6">
-              <h4 className="text-lg font-bold text-luxury-charcoal mb-4">Longevity Insights - Example Client Results</h4>
-              <div className="grid grid-cols-3 gap-4 text-center">
+            <div className="bg-gradient-to-br from-blue-50 to-yellow-50/30 rounded-xl p-4 sm:p-6">
+              <h4 className="text-base sm:text-lg font-bold text-luxury-charcoal mb-3 sm:mb-4">Longevity Insights - Example Client Results</h4>
+              <div className="grid grid-cols-3 gap-3 sm:gap-4 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-brand-blue">54</div>
-                  <div className="text-sm text-gray-600">Chronological Age</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-brand-blue">54</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Chronological Age</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-brand-blue">42</div>
-                  <div className="text-sm text-gray-600">Metabolic Age</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-brand-blue">42</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Metabolic Age</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-green-600">12 Years</div>
-                  <div className="text-sm text-gray-600">Younger!</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-green-600">12 Years</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Younger!</div>
                 </div>
               </div>
-              <p className="text-sm text-gray-600 mt-3 text-center">
+              <p className="text-xs sm:text-sm text-gray-600 mt-3 text-center">
                 This suggests strong cardiovascular health, efficient oxygen use, and reduced long-term disease risk.
               </p>
             </div>
@@ -399,9 +405,9 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
             </div>
 
             {/* CTA */}
-            <div className="bg-luxury-gradient text-white rounded-xl p-6 text-center">
-              <h4 className="font-bold text-xl mb-2">Ready for Your Personalized Plan?</h4>
-              <p className="text-sm text-white/90 mb-4">
+            <div className="bg-luxury-gradient text-white rounded-xl p-5 sm:p-6 text-center">
+              <h4 className="font-bold text-lg sm:text-xl mb-2">Ready for Your Personalized Plan?</h4>
+              <p className="text-xs sm:text-sm text-white/90 mb-4 leading-relaxed">
                 ✨ This sample is only a preview. Each client report is tailored with precise data, making your program unique to your body, goals, and lifestyle.
               </p>
               <Button
@@ -409,7 +415,8 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                   setIsBlueprintOpen(false);
                   window.open(bookingUrl, '_blank', 'noopener,noreferrer');
                 }}
-                className="bg-white text-brand-blue px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all"
+                className="bg-white text-brand-blue px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:shadow-lg transition-all text-sm sm:text-base w-full sm:w-auto min-h-[48px]"
+                data-testid="button-book-from-modal"
               >
                 Book Your Free Consultation
               </Button>
