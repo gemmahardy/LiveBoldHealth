@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, Calendar, MessageSquare, Users, Activity, FileText, Headphones, Plane, Sparkles } from "lucide-react";
+import { ArrowRight, Calendar, MessageSquare, Users, Activity, FileText, Headphones, Plane, Sparkles, ExternalLink, Info } from "lucide-react";
 import { Button } from "./ui/button";
 import { SunLogo } from "./ui/sun-logo";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
@@ -11,6 +11,31 @@ interface HeroSectionProps {
 
 export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps) {
   const [isBlueprintOpen, setIsBlueprintOpen] = useState(false);
+  const [isStep3ModalOpen, setIsStep3ModalOpen] = useState(false);
+  const [isStep5ModalOpen, setIsStep5ModalOpen] = useState(false);
+  
+  const handleStepClick = (stepNumber: number) => {
+    switch (stepNumber) {
+      case 1:
+        onOpenConsultation();
+        break;
+      case 2:
+        document.getElementById('membership')?.scrollIntoView({ behavior: 'smooth' });
+        break;
+      case 3:
+        setIsStep3ModalOpen(true);
+        break;
+      case 4:
+        setIsBlueprintOpen(true);
+        break;
+      case 5:
+        setIsStep5ModalOpen(true);
+        break;
+      case 6:
+        document.getElementById('adventures')?.scrollIntoView({ behavior: 'smooth' });
+        break;
+    }
+  };
   
   const sixSteps = [
     { 
@@ -18,42 +43,54 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
       title: "Book Consult", 
       description: "Schedule your free consultation",
       icon: MessageSquare,
-      gradient: "from-blue-500 to-blue-600"
+      gradient: "from-blue-500 to-blue-600",
+      actionType: "cta" as const,
+      actionText: "Book Now"
     },
     { 
       number: 2, 
       title: "Join Membership", 
       description: "Choose your membership tier",
       icon: Users,
-      gradient: "from-yellow-400 to-yellow-500"
+      gradient: "from-yellow-400 to-yellow-500",
+      actionType: "cta" as const,
+      actionText: "See Options"
     },
     { 
       number: 3, 
       title: "VO₂ Max + RMR", 
       description: "Get baseline performance testing",
       icon: Activity,
-      gradient: "from-blue-600 to-purple-600"
+      gradient: "from-blue-600 to-purple-600",
+      actionType: "info" as const,
+      actionText: "Learn More"
     },
     { 
       number: 4, 
       title: "Personal Plan", 
       description: "Receive your wellness Live Bold Blueprint",
       icon: FileText,
-      gradient: "from-yellow-500 to-orange-500"
+      gradient: "from-yellow-500 to-orange-500",
+      actionType: "info" as const,
+      actionText: "See Example"
     },
     { 
       number: 5, 
       title: "Activate Coaching", 
       description: "Begin concierge-managed support",
       icon: Headphones,
-      gradient: "from-purple-600 to-blue-500"
+      gradient: "from-purple-600 to-blue-500",
+      actionType: "info" as const,
+      actionText: "Learn More"
     },
     { 
       number: 6, 
       title: "Book Adventure", 
       description: "Experience transformative travel",
       icon: Plane,
-      gradient: "from-orange-500 to-yellow-400"
+      gradient: "from-orange-500 to-yellow-400",
+      actionType: "cta" as const,
+      actionText: "View Adventures"
     }
   ];
 
@@ -113,12 +150,12 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                         <div 
                           className={`
                             group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl 
-                            transition-all duration-500 overflow-hidden border-2
-                            ${isStep4 ? 'border-yellow-500 cursor-pointer hover:scale-105 ring-4 ring-yellow-400/20 animate-pulse' : 'border-gray-100 hover:border-brand-blue/30'}
+                            transition-all duration-500 overflow-hidden border-2 cursor-pointer hover:scale-105
+                            ${isStep4 ? 'border-yellow-500 ring-4 ring-yellow-400/20 animate-pulse' : 'border-gray-100 hover:border-brand-blue/30'}
                             ${isEven ? 'ml-auto' : 'mr-auto'}
                           `}
                           style={{ maxWidth: '500px' }}
-                          onClick={() => isStep4 && setIsBlueprintOpen(true)}
+                          onClick={() => handleStepClick(step.number)}
                         >
                           {/* Step Number Badge - Outside card */}
                           <div className={`absolute ${isEven ? '-right-6' : '-left-6'} top-8 z-20`}>
@@ -143,15 +180,21 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                               </div>
                             </div>
                             
-                            {isStep4 && (
-                              <div 
-                                className="mt-4 inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 px-5 py-3 rounded-full border-2 border-yellow-500"
-                                data-testid="badge-blueprint-example-desktop"
-                              >
-                                <Sparkles className="w-5 h-5 text-yellow-600" />
-                                <span className="text-luxury-charcoal font-bold text-sm">Click to see example →</span>
-                              </div>
-                            )}
+                            <div 
+                              className={`mt-4 inline-flex items-center space-x-2 px-5 py-3 rounded-full border-2 transition-all ${
+                                step.actionType === 'cta' 
+                                  ? 'bg-gradient-to-r from-blue-500/10 to-blue-600/10 border-blue-500 hover:from-blue-500/20 hover:to-blue-600/20' 
+                                  : 'bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border-yellow-500 hover:from-yellow-400/30 hover:to-orange-500/30'
+                              }`}
+                              data-testid={`badge-step-${step.number}-desktop`}
+                            >
+                              {step.actionType === 'cta' ? (
+                                <ExternalLink className="w-5 h-5 text-blue-600" />
+                              ) : (
+                                <Info className="w-5 h-5 text-yellow-600" />
+                              )}
+                              <span className="text-luxury-charcoal font-bold text-sm">{step.actionText} →</span>
+                            </div>
                           </div>
                           
                           {/* Hover Effect */}
@@ -168,10 +211,10 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                       <div 
                         className={`
                           group relative bg-white rounded-2xl shadow-xl active:shadow-2xl
-                          transition-all duration-300 overflow-hidden border-2
-                          ${isStep4 ? 'border-yellow-500 cursor-pointer active:scale-98 ring-4 ring-yellow-400/20' : 'border-gray-100 active:border-brand-blue/30'}
+                          transition-all duration-300 overflow-hidden border-2 cursor-pointer active:scale-98
+                          ${isStep4 ? 'border-yellow-500 ring-4 ring-yellow-400/20' : 'border-gray-100 active:border-brand-blue/30'}
                         `}
-                        onClick={() => isStep4 && setIsBlueprintOpen(true)}
+                        onClick={() => handleStepClick(step.number)}
                       >
                         {/* Step Number Badge */}
                         <div className="absolute -top-4 -left-4 z-20">
@@ -196,15 +239,21 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                             </div>
                           </div>
                           
-                          {isStep4 && (
-                            <div 
-                              className="mt-4 inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-400/30 to-orange-500/30 px-4 sm:px-5 py-3 sm:py-3.5 rounded-full border-2 border-yellow-500 shadow-md animate-pulse active:scale-95 transition-transform"
-                              data-testid="badge-blueprint-example-mobile"
-                            >
-                              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-600 flex-shrink-0" />
-                              <span className="text-luxury-charcoal font-bold text-sm sm:text-base whitespace-nowrap">Tap to see example →</span>
-                            </div>
-                          )}
+                          <div 
+                            className={`mt-4 inline-flex items-center space-x-2 px-4 sm:px-5 py-3 sm:py-3.5 rounded-full border-2 shadow-md active:scale-95 transition-transform ${
+                              step.actionType === 'cta' 
+                                ? 'bg-gradient-to-r from-blue-500/20 to-blue-600/20 border-blue-500' 
+                                : 'bg-gradient-to-r from-yellow-400/30 to-orange-500/30 border-yellow-500'
+                            } ${isStep4 ? 'animate-pulse' : ''}`}
+                            data-testid={`badge-step-${step.number}-mobile`}
+                          >
+                            {step.actionType === 'cta' ? (
+                              <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 flex-shrink-0" />
+                            ) : (
+                              <Info className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-600 flex-shrink-0" />
+                            )}
+                            <span className="text-luxury-charcoal font-bold text-sm sm:text-base whitespace-nowrap">{step.actionText} →</span>
+                          </div>
                         </div>
                       </div>
                       
@@ -419,6 +468,206 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                 data-testid="button-book-from-modal"
               >
                 Book Your Free Consultation
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Step 3: VO₂ Max + RMR Testing Modal */}
+      <Dialog open={isStep3ModalOpen} onOpenChange={setIsStep3ModalOpen}>
+        <DialogContent className="max-w-3xl max-h-[90vh] sm:max-h-[85vh] overflow-y-auto mx-3 sm:mx-auto">
+          <DialogHeader>
+            <DialogTitle className="text-xl sm:text-2xl md:text-3xl font-playfair font-bold text-luxury-charcoal mb-3 sm:mb-4 leading-tight">
+              VO₂ Max + RMR Testing
+            </DialogTitle>
+            <p className="text-brand-slate text-sm sm:text-base">
+              Precision performance assessment for optimal health
+            </p>
+          </DialogHeader>
+          
+          <div className="space-y-5 sm:space-y-6 mt-3 sm:mt-4">
+            <div>
+              <h3 className="text-lg sm:text-xl font-bold text-luxury-charcoal mb-3">What is VO₂ Max Testing?</h3>
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                VO₂ Max is the gold standard measurement of your body's ability to utilize oxygen during intense exercise. This test reveals your cardiovascular fitness, aerobic capacity, and overall metabolic health—key indicators that Dr. Peter Attia calls "the strongest predictor of longevity."
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-4 sm:p-6">
+              <h4 className="text-base sm:text-lg font-bold text-luxury-charcoal mb-3">What You'll Discover</h4>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-700">
+                <li className="flex items-start space-x-2">
+                  <span className="text-brand-blue font-bold mt-1">•</span>
+                  <span><strong>Your VO₂peak:</strong> Maximum oxygen uptake capacity</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-brand-blue font-bold mt-1">•</span>
+                  <span><strong>Metabolic age:</strong> How your body compares to your chronological age</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-brand-blue font-bold mt-1">•</span>
+                  <span><strong>Fat-burning zones:</strong> Optimize training for body composition</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-brand-blue font-bold mt-1">•</span>
+                  <span><strong>Ventilation efficiency:</strong> How well you breathe under stress</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-brand-blue font-bold mt-1">•</span>
+                  <span><strong>Heart rate variability:</strong> Measure of nervous system resilience</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg sm:text-xl font-bold text-luxury-charcoal mb-3">What is RMR Testing?</h3>
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-3">
+                Resting Metabolic Rate (RMR) measures how many calories your body burns at rest. This baseline metabolic data helps us create precise nutrition and training plans tailored to your unique physiology.
+              </p>
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                Combined with VO₂ Max results, RMR testing provides a complete picture of your metabolic health, allowing us to design personalized strategies for fat loss, muscle gain, energy optimization, and longevity.
+              </p>
+            </div>
+
+            <div className="bg-yellow-50 rounded-xl p-4 sm:p-6 border-2 border-yellow-200">
+              <h4 className="text-base sm:text-lg font-bold text-luxury-charcoal mb-2">The Testing Experience</h4>
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-3">
+                Our comprehensive assessment takes approximately 60-90 minutes and includes:
+              </p>
+              <ul className="space-y-2 text-sm sm:text-base text-gray-700">
+                <li>• Pre-test health consultation</li>
+                <li>• Graded exercise protocol on treadmill or bike</li>
+                <li>• Real-time monitoring with medical-grade equipment</li>
+                <li>• Immediate results review with our team</li>
+                <li>• Detailed report with actionable insights</li>
+              </ul>
+            </div>
+
+            <div className="bg-luxury-gradient text-white rounded-xl p-5 sm:p-6 text-center">
+              <h4 className="font-bold text-lg sm:text-xl mb-2">Ready to Measure Your Potential?</h4>
+              <p className="text-xs sm:text-sm text-white/90 mb-4 leading-relaxed">
+                Book your free consultation to learn more about VO₂ Max + RMR testing and how it fits into your wellness journey.
+              </p>
+              <Button
+                onClick={() => {
+                  setIsStep3ModalOpen(false);
+                  onOpenConsultation();
+                }}
+                className="bg-white text-brand-blue px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:shadow-lg transition-all text-sm sm:text-base w-full sm:w-auto min-h-[48px]"
+                data-testid="button-book-from-step3-modal"
+              >
+                Book Free Consultation
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Step 5: Coaching Services Modal */}
+      <Dialog open={isStep5ModalOpen} onOpenChange={setIsStep5ModalOpen}>
+        <DialogContent className="max-w-3xl max-h-[90vh] sm:max-h-[85vh] overflow-y-auto mx-3 sm:mx-auto">
+          <DialogHeader>
+            <DialogTitle className="text-xl sm:text-2xl md:text-3xl font-playfair font-bold text-luxury-charcoal mb-3 sm:mb-4 leading-tight">
+              Concierge Coaching Services
+            </DialogTitle>
+            <p className="text-brand-slate text-sm sm:text-base">
+              Personalized support for your health transformation
+            </p>
+          </DialogHeader>
+          
+          <div className="space-y-5 sm:space-y-6 mt-3 sm:mt-4">
+            <div>
+              <h3 className="text-lg sm:text-xl font-bold text-luxury-charcoal mb-3">What is Concierge Coaching?</h3>
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                Our concierge coaching service provides dedicated, one-on-one support from wellness experts who understand the demands of high-performance lifestyles. Think of us as your personal health team—available when you need us, guiding every step of your transformation.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-4 sm:p-6">
+              <h4 className="text-base sm:text-lg font-bold text-luxury-charcoal mb-3">Your Coaching Team Includes</h4>
+              <ul className="space-y-3 text-sm sm:text-base text-gray-700">
+                <li className="flex items-start space-x-2">
+                  <span className="text-purple-600 font-bold mt-1">✓</span>
+                  <span><strong>Wellness Concierge:</strong> Your primary point of contact for scheduling, coordination, and support</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-purple-600 font-bold mt-1">✓</span>
+                  <span><strong>Performance Coach:</strong> Expert guidance on fitness, training, and movement optimization</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-purple-600 font-bold mt-1">✓</span>
+                  <span><strong>Nutrition Specialist:</strong> Personalized meal planning and dietary strategies</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-purple-600 font-bold mt-1">✓</span>
+                  <span><strong>Adventure Planner:</strong> Curate transformative experiences aligned with your goals</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg sm:text-xl font-bold text-luxury-charcoal mb-3">How Coaching Works</h3>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold flex-shrink-0">1</div>
+                  <div>
+                    <h5 className="font-semibold text-gray-800 mb-1">Personalized Plan Review</h5>
+                    <p className="text-sm text-gray-600">We review your Live Bold Blueprint together and set clear, achievable goals</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold flex-shrink-0">2</div>
+                  <div>
+                    <h5 className="font-semibold text-gray-800 mb-1">Weekly Check-ins</h5>
+                    <p className="text-sm text-gray-600">Regular touchpoints to track progress, adjust strategies, and maintain accountability</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold flex-shrink-0">3</div>
+                  <div>
+                    <h5 className="font-semibold text-gray-800 mb-1">24/7 Access</h5>
+                    <p className="text-sm text-gray-600">Text, email, or call us anytime—your wellness concierge is always available</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold flex-shrink-0">4</div>
+                  <div>
+                    <h5 className="font-semibold text-gray-800 mb-1">Continuous Optimization</h5>
+                    <p className="text-sm text-gray-600">Monthly performance reviews with plan adjustments based on your progress</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-yellow-50 rounded-xl p-4 sm:p-6 border-2 border-yellow-200">
+              <h4 className="text-base sm:text-lg font-bold text-luxury-charcoal mb-2">What's Included</h4>
+              <ul className="grid sm:grid-cols-2 gap-2 text-sm sm:text-base text-gray-700">
+                <li>• Weekly 1-on-1 coaching calls</li>
+                <li>• Custom meal plans & recipes</li>
+                <li>• Training program adjustments</li>
+                <li>• Supplement recommendations</li>
+                <li>• Progress tracking & analytics</li>
+                <li>• Priority adventure booking</li>
+                <li>• Wellness resource library</li>
+                <li>• Community group access</li>
+              </ul>
+            </div>
+
+            <div className="bg-luxury-gradient text-white rounded-xl p-5 sm:p-6 text-center">
+              <h4 className="font-bold text-lg sm:text-xl mb-2">Start Your Coaching Journey</h4>
+              <p className="text-xs sm:text-sm text-white/90 mb-4 leading-relaxed">
+                Coaching is available through our Monthly A La Carte Menu. Book a consultation to explore which services are right for you.
+              </p>
+              <Button
+                onClick={() => {
+                  setIsStep5ModalOpen(false);
+                  onOpenConsultation();
+                }}
+                className="bg-white text-brand-blue px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:shadow-lg transition-all text-sm sm:text-base w-full sm:w-auto min-h-[48px]"
+                data-testid="button-book-from-step5-modal"
+              >
+                Book Free Consultation
               </Button>
             </div>
           </div>
