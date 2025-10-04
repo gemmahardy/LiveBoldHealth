@@ -281,7 +281,7 @@ export function HealthAssessment() {
                     Ready to review your personalized results with Sunshine?
                   </p>
                   
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div className="flex justify-center">
                     <Button 
                       onClick={() => {
                         handleSubmitAssessment();
@@ -294,14 +294,6 @@ export function HealthAssessment() {
                       data-testid="button-save-assessment"
                     >
                       {assessmentMutation.isPending ? "Saving..." : "Complete & Book Consultation"}
-                    </Button>
-                    
-                    <Button 
-                      onClick={() => window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank')}
-                      className="border-2 border-brand-blue text-brand-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-brand-blue hover:text-white transition-all"
-                      data-testid="button-book-consultation-assessment"
-                    >
-                      Book Consultation Now
                     </Button>
                   </div>
                 </div>
