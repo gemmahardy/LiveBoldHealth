@@ -29,7 +29,8 @@ export function Testimonials() {
   return (
     <section className="py-12 sm:py-16 md:py-20 bg-white relative overflow-hidden">
       {/* Decorative Background */}
-      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[600px] sm:w-[800px] h-[600px] sm:h-[800px] opacity-10">
+      {/* Large centered watermark behind testimonials */}
+      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[850px] sm:w-[1100px] h-[850px] sm:h-[1100px] opacity-45 rotate-6">
         <SunLogo className="w-full h-full text-brand-blue" />
       </div>
       

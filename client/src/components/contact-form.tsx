@@ -56,11 +56,9 @@ export function ContactForm() {
   return (
     <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-white via-luxury-gray to-blue-50/20 relative overflow-hidden">
       {/* Decorative Background */}
-      <div className="absolute top-1/2 -translate-y-1/2 right-0 w-96 sm:w-[500px] h-96 sm:h-[500px] opacity-15">
+      {/* Offset watermark behind contact form */}
+      <div className="absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/4 w-[700px] sm:w-[850px] h-[700px] sm:h-[850px] opacity-38 -rotate-12">
         <SunLogo className="w-full h-full text-brand-blue" />
-      </div>
-      <div className="absolute top-1/2 -translate-y-1/2 left-0 w-80 sm:w-[450px] h-80 sm:h-[450px] opacity-10">
-        <SunLogo className="w-full h-full text-brand-gold" />
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
