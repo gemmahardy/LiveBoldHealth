@@ -4,6 +4,7 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Mail, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { SunLogo } from "./ui/sun-logo";
 
 export function ContactForm() {
   const [name, setName] = useState("");
@@ -53,12 +54,20 @@ export function ContactForm() {
   };
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-gradient-to-br from-white via-luxury-gray to-blue-50/20 relative overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute top-1/2 right-0 w-64 h-64 opacity-5">
+        <SunLogo className="w-full h-full text-brand-blue" />
+      </div>
+      <div className="absolute bottom-0 left-0 w-48 h-48 opacity-5">
+        <SunLogo className="w-full h-full text-brand-gold" />
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
-            <div className="inline-flex w-16 h-16 rounded-full bg-luxury-gradient items-center justify-center mb-4">
-              <Mail className="w-8 h-8 text-white" />
+            <div className="inline-flex w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 via-blue-400 to-yellow-400 items-center justify-center mb-4 shadow-lg">
+              <Mail className="w-10 h-10 text-white" />
             </div>
             <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-luxury-charcoal mb-4">
               Get in Touch
@@ -68,64 +77,71 @@ export function ContactForm() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-luxury-charcoal mb-2">
-                Your Name
-              </label>
-              <Input
-                id="name"
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="John Smith"
-                className="w-full"
-                data-testid="input-name"
-                required
-              />
+          <form onSubmit={handleSubmit} className="space-y-6 bg-white rounded-2xl p-8 shadow-xl border-2 border-brand-blue/10 relative overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 opacity-5">
+              <SunLogo className="w-full h-full text-brand-gold" />
             </div>
+            
+            <div className="relative z-10 space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-luxury-charcoal mb-2">
+                  Your Name
+                </label>
+                <Input
+                  id="name"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="John Smith"
+                  className="w-full border-brand-blue/20 focus:border-brand-blue"
+                  data-testid="input-name"
+                  required
+                />
+              </div>
 
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-luxury-charcoal mb-2">
-                Email Address
-              </label>
-              <Input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="john@example.com"
-                className="w-full"
-                data-testid="input-email"
-                required
-              />
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-luxury-charcoal mb-2">
+                  Email Address
+                </label>
+                <Input
+                  id="email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="john@example.com"
+                  className="w-full border-brand-blue/20 focus:border-brand-blue"
+                  data-testid="input-email"
+                  required
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-luxury-charcoal mb-2">
+                  Message or Health Goals
+                </label>
+                <Textarea
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Tell us about your health goals or questions..."
+                  rows={6}
+                  className="w-full border-brand-blue/20 focus:border-brand-blue"
+                  data-testid="input-message"
+                  required
+                />
+              </div>
+
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white py-6 text-lg font-semibold hover:shadow-xl transition-all rounded-full hover:from-blue-700 hover:to-blue-600"
+                data-testid="button-submit-contact"
+              >
+                <Send className="mr-2 h-5 w-5" />
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </Button>
             </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-luxury-charcoal mb-2">
-                Message or Health Goals
-              </label>
-              <Textarea
-                id="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Tell us about your health goals or questions..."
-                rows={6}
-                className="w-full"
-                data-testid="input-message"
-                required
-              />
-            </div>
-
-            <Button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-luxury-gradient text-white py-6 text-lg font-semibold hover:shadow-xl transition-all rounded-full"
-              data-testid="button-submit-contact"
-            >
-              <Send className="mr-2 h-5 w-5" />
-              {isSubmitting ? "Sending..." : "Send Message"}
-            </Button>
           </form>
         </div>
       </div>

@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "./ui/accordion";
 import { HelpCircle } from "lucide-react";
+import { SunLogo } from "./ui/sun-logo";
 
 export function FAQSimple() {
   const faqs = [
@@ -43,12 +44,20 @@ export function FAQSimple() {
   ];
 
   return (
-    <section className="py-20 bg-luxury-gray">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-gradient-to-br from-luxury-gray via-blue-50/20 to-white relative overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute top-0 right-1/4 w-72 h-72 opacity-5">
+        <SunLogo className="w-full h-full text-brand-blue" />
+      </div>
+      <div className="absolute bottom-0 left-1/3 w-56 h-56 opacity-5">
+        <SunLogo className="w-full h-full text-brand-gold" />
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex w-16 h-16 rounded-full bg-luxury-gradient items-center justify-center mb-4">
-              <HelpCircle className="w-8 h-8 text-white" />
+            <div className="inline-flex w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 via-blue-400 to-yellow-400 items-center justify-center mb-4 shadow-lg">
+              <HelpCircle className="w-10 h-10 text-white" />
             </div>
             <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-luxury-charcoal mb-4">
               Frequently Asked Questions
@@ -58,8 +67,13 @@ export function FAQSimple() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <Accordion type="single" collapsible className="w-full">
+          <div className="bg-white rounded-2xl p-8 shadow-2xl border-2 border-brand-blue/10 relative overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute -top-10 -right-10 w-48 h-48 opacity-5">
+              <SunLogo className="w-full h-full text-brand-gold" />
+            </div>
+            
+            <Accordion type="single" collapsible className="w-full relative z-10">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
                   <AccordionTrigger 

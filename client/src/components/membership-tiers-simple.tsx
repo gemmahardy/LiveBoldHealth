@@ -1,5 +1,6 @@
 import { Check, Star, Crown, Users } from "lucide-react";
 import { Button } from "./ui/button";
+import { SunLogo } from "./ui/sun-logo";
 
 interface MembershipTiersProps {
   bookingUrl: string;
@@ -67,8 +68,16 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-gradient-to-br from-luxury-gray via-white to-blue-50/30 relative overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute top-10 right-10 w-64 h-64 opacity-5">
+        <SunLogo className="w-full h-full text-brand-gold" />
+      </div>
+      <div className="absolute bottom-10 left-10 w-48 h-48 opacity-5">
+        <SunLogo className="w-full h-full text-brand-blue" />
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-luxury-charcoal mb-4">
             Choose Your Membership
@@ -84,16 +93,21 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
             return (
               <div
                 key={tier.name}
-                className={`relative rounded-2xl p-8 ${
+                className={`relative rounded-2xl p-8 transition-all duration-300 hover:scale-105 ${
                   tier.highlight
                     ? 'bg-luxury-gradient text-white shadow-2xl scale-105 border-4 border-brand-gold'
-                    : 'bg-luxury-gray border-2 border-gray-200'
+                    : 'bg-white border-2 border-brand-blue/20 hover:border-brand-blue/50 shadow-lg hover:shadow-2xl'
                 }`}
                 data-testid={tier.testId}
               >
+                {/* Background Logo */}
+                <div className="absolute bottom-0 right-0 w-32 h-32 opacity-5 overflow-hidden">
+                  <SunLogo className={`w-full h-full ${tier.highlight ? 'text-white' : 'text-brand-blue'}`} />
+                </div>
+                
                 {tier.highlight && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-gold text-white px-6 py-1 rounded-full text-sm font-bold">
-                    MOST POPULAR
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-luxury-charcoal px-6 py-1 rounded-full text-sm font-bold shadow-lg">
+                    ⭐ MOST POPULAR
                   </div>
                 )}
 

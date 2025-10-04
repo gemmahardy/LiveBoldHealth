@@ -18,18 +18,28 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
   ];
 
   return (
-    <section className="relative pt-32 pb-20 bg-gradient-to-b from-white to-luxury-gray overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/3 h-full opacity-5">
-        <div className="absolute top-20 right-10">
-          <SunLogo className="w-96 h-96" />
+    <section className="relative pt-32 pb-20 overflow-hidden bg-white">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-20 -right-20 w-96 h-96 opacity-10">
+          <SunLogo className="w-full h-full text-brand-blue" />
+        </div>
+        <div className="absolute top-1/2 -left-20 w-72 h-72 opacity-5">
+          <SunLogo className="w-full h-full text-brand-gold" />
+        </div>
+        <div className="absolute -bottom-10 right-1/3 w-48 h-48 opacity-10">
+          <SunLogo className="w-full h-full text-brand-blue" />
         </div>
       </div>
+      
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-white to-yellow-50/30 pointer-events-none"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto text-center mb-16">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-bold text-luxury-charcoal mb-6 leading-tight">
             Concierge Health & Longevity,
-            <span className="block mt-2 bg-gradient-to-r from-brand-blue to-brand-gold bg-clip-text text-transparent">
+            <span className="block mt-2 bg-gradient-to-r from-brand-blue via-blue-400 to-yellow-500 bg-clip-text text-transparent">
               Elevated by Adventure
             </span>
           </h1>
@@ -48,18 +58,23 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
             {sixSteps.map((step) => (
               <div 
                 key={step.number}
-                className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-brand-blue/30 relative overflow-hidden group"
                 data-testid={`step-${step.number}`}
               >
-                <div className="flex items-center gap-4 mb-3">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-luxury-gradient flex items-center justify-center">
-                    <span className="text-white font-bold">{step.number}</span>
+                {/* Background sun logo on hover */}
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 opacity-0 group-hover:opacity-5 transition-opacity duration-300">
+                  <SunLogo className="w-full h-full text-brand-blue" />
+                </div>
+                
+                <div className="flex items-center gap-4 mb-3 relative z-10">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 via-blue-400 to-yellow-400 flex items-center justify-center shadow-md">
+                    <span className="text-white font-bold text-lg">{step.number}</span>
                   </div>
                   <h3 className="text-lg font-semibold text-luxury-charcoal">
                     {step.title}
                   </h3>
                 </div>
-                <p className="text-brand-slate text-sm">
+                <p className="text-brand-slate text-sm relative z-10">
                   {step.description}
                 </p>
               </div>
@@ -70,7 +85,7 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
           <Button
             onClick={onOpenConsultation}
-            className="bg-luxury-gradient text-white px-8 py-6 text-lg font-semibold hover:shadow-xl transition-all rounded-full w-full sm:w-auto"
+            className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-6 text-lg font-semibold hover:shadow-xl transition-all rounded-full w-full sm:w-auto hover:from-blue-700 hover:to-blue-600"
             data-testid="button-schedule-consultation"
           >
             <Calendar className="mr-2 h-5 w-5" />

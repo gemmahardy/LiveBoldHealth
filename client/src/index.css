@@ -46,6 +46,8 @@
   --brand-blue: hsl(215 100% 60%);
   --brand-blue-light: hsl(215 100% 70%);
   --brand-blue-dark: hsl(215 100% 50%);
+  --brand-gold: hsl(45 100% 55%);
+  --brand-gold-light: hsl(45 100% 65%);
   --brand-slate: hsl(215 15% 65%);
   --luxury-charcoal: hsl(215 15% 20%);
   --luxury-gray: hsl(215 10% 95%);
@@ -121,6 +123,26 @@
   
   .luxury-gradient {
     background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%);
+  }
+  
+  .gold-gradient {
+    background: linear-gradient(135deg, #FFC107 0%, #FFD54F 100%);
+  }
+  
+  .blue-gold-gradient {
+    background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 50%, #FFC107 100%);
+  }
+  
+  .text-brand-gold {
+    color: var(--brand-gold);
+  }
+  
+  .bg-brand-gold {
+    background-color: var(--brand-gold);
+  }
+  
+  .border-brand-gold {
+    border-color: var(--brand-gold);
   }
   
   .text-brand-blue {

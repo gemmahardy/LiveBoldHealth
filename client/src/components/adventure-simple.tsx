@@ -1,5 +1,6 @@
 import { Mountain, Waves, Snowflake, Compass, Calendar } from "lucide-react";
 import { Button } from "./ui/button";
+import { SunLogo } from "./ui/sun-logo";
 
 interface AdventureSimpleProps {
   bookingUrl: string;
@@ -34,8 +35,16 @@ export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
   ];
 
   return (
-    <section className="py-20 bg-luxury-gray">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-gradient-to-br from-blue-50/30 via-white to-luxury-gray relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 opacity-5">
+        <SunLogo className="w-full h-full text-brand-blue" />
+      </div>
+      <div className="absolute -bottom-20 -right-20 w-80 h-80 opacity-10">
+        <SunLogo className="w-full h-full text-brand-gold" />
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-luxury-charcoal mb-4">
             Adventure Experiences
@@ -46,10 +55,15 @@ export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
         </div>
 
         <div className="max-w-5xl mx-auto mb-12">
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="text-center mb-6">
-              <div className="inline-flex w-16 h-16 rounded-full bg-luxury-gradient items-center justify-center mb-4">
-                <Compass className="w-8 h-8 text-white" />
+          <div className="bg-white rounded-2xl p-8 shadow-2xl border-2 border-brand-blue/10 relative overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute -top-10 -right-10 w-48 h-48 opacity-5">
+              <SunLogo className="w-full h-full text-brand-gold" />
+            </div>
+            
+            <div className="text-center mb-6 relative z-10">
+              <div className="inline-flex w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 via-blue-400 to-yellow-400 items-center justify-center mb-4 shadow-lg">
+                <Compass className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-playfair font-bold text-luxury-charcoal mb-3">
                 Create Your Own Adventure
@@ -59,7 +73,7 @@ export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
               </p>
               <Button
                 onClick={() => window.open(bookingUrl, '_blank', 'noopener,noreferrer')}
-                className="bg-luxury-gradient text-white px-8 py-4 text-lg font-semibold hover:shadow-xl transition-all rounded-full"
+                className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-4 text-lg font-semibold hover:shadow-xl transition-all rounded-full hover:from-blue-700 hover:to-blue-600"
                 data-testid="button-start-planning"
               >
                 <Calendar className="mr-2 h-5 w-5" />
@@ -80,12 +94,17 @@ export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
               return (
                 <div
                   key={retreat.title}
-                  className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all"
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-brand-gold/50 relative overflow-hidden group"
                   data-testid={retreat.testId}
                 >
-                  <div className="flex justify-center mb-4">
-                    <div className="w-14 h-14 rounded-full bg-brand-blue/10 flex items-center justify-center">
-                      <IconComponent className="w-7 h-7 text-brand-blue" />
+                  {/* Background decoration */}
+                  <div className="absolute -bottom-4 -right-4 w-24 h-24 opacity-0 group-hover:opacity-10 transition-opacity duration-300">
+                    <SunLogo className="w-full h-full text-brand-gold" />
+                  </div>
+                  
+                  <div className="flex justify-center mb-4 relative z-10">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-md">
+                      <IconComponent className="w-8 h-8 text-white" />
                     </div>
                   </div>
                   
