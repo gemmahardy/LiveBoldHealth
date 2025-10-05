@@ -25,7 +25,7 @@ export default function Home() {
       <SEOHead 
         title="Live Bold Health — Concierge Health & Longevity, Elevated by Adventure"
         description="Luxury health and adventure concierge combining VO₂ Max testing, personalized plans, and transformative travel."
-        keywords="concierge health, longevity, VO2 max testing, health adventures, wellness travel, executive health"
+        keywords="The Energy Lifestyle Company, Live Bold, Bold, breathwork, energy, VO2 max testing, wellness retreats, concierge health, travel, vacation, longevity, health, adventure, personalized support, mind body soul, sunshine, Maine, RMR testing, biometrics, DNA testing, membership, meal plans, diet, fitness, coaching, lifestyle, wellness travel, executive health, health adventures"
       />
       
       <div className="min-h-screen">
