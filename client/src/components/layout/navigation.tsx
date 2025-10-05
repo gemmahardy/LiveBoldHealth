@@ -86,37 +86,40 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t">
+      </div>
+      
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden fixed inset-x-0 top-[72px] bg-white/98 backdrop-blur-md shadow-lg border-t z-40 animate-in slide-in-from-top-2 duration-200">
+          <div className="container mx-auto px-6 py-6">
             <div className="flex flex-col space-y-4">
               <button 
                 onClick={() => {
                   onOpenConsultation();
                   setIsMobileMenuOpen(false);
                 }}
-                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
+                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium py-2"
                 data-testid="nav-consultation-mobile"
               >
                 Consultation
               </button>
               <button 
                 onClick={() => handleNavigation('membership')}
-                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
+                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium py-2"
                 data-testid="nav-membership-mobile"
               >
                 Membership
               </button>
               <button 
                 onClick={() => handleNavigation('adventures')}
-                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
+                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium py-2"
                 data-testid="nav-adventures-mobile"
               >
                 Adventures
               </button>
               <button 
                 onClick={() => handleNavigation('faq')}
-                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium"
+                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium py-2"
                 data-testid="nav-faq-mobile"
               >
                 FAQ
@@ -126,15 +129,15 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
                   onOpenConsultation();
                   setIsMobileMenuOpen(false);
                 }}
-                className="bg-luxury-gradient text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all text-center"
+                className="bg-luxury-gradient text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all text-center mt-2"
                 data-testid="button-consultation-mobile"
               >
                 Book Consultation
               </button>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </nav>
   );
 }
