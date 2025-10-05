@@ -77,6 +77,12 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
       description: "Yoga, Pilates, or flexibility training"
     },
     {
+      emoji: "🌬️",
+      name: "Breathwork Coaching",
+      price: "$300/mo",
+      description: "Personalized breathwork sessions for stress & performance"
+    },
+    {
       emoji: "🧴",
       name: "Wellness Retreat Prep",
       price: "$1,000/retreat",
