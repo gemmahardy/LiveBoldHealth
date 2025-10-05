@@ -126,15 +126,11 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
             A clear, transformative path to optimal health and longevity
           </p>
           
-          {/* Vertical Timeline Design */}
-          <div className="relative max-w-6xl mx-auto px-2">
-            {/* Central Timeline Line */}
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-blue via-brand-gold to-brand-blue transform -translate-x-1/2"></div>
-            
-            <div className="space-y-6 sm:space-y-10 md:space-y-12">
+          {/* Column Layout Design */}
+          <div className="relative max-w-3xl mx-auto px-2">
+            <div className="space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-8">
               {sixSteps.map((step, index) => {
                 const Icon = step.icon;
-                const isEven = index % 2 === 0;
                 const isStep4 = step.number === 4;
                 
                 return (
@@ -143,67 +139,60 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                     className="relative"
                     data-testid={`step-${step.number}`}
                   >
-                    {/* Desktop Layout - Alternating */}
-                    <div className={`hidden lg:flex items-center ${isEven ? 'flex-row' : 'flex-row-reverse'} gap-6 xl:gap-8`}>
-                      {/* Content Card */}
-                      <div className="flex-1">
-                        <div 
-                          className={`
-                            group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl 
-                            transition-all duration-500 overflow-hidden border-2 cursor-pointer hover:scale-[1.02]
-                            ${isStep4 ? 'border-yellow-500 ring-4 ring-yellow-400/20 animate-pulse' : 'border-gray-100 hover:border-brand-blue/30'}
-                            ${isEven ? 'ml-auto' : 'mr-auto'}
-                          `}
-                          style={{ maxWidth: '520px' }}
-                          onClick={() => handleStepClick(step.number)}
-                        >
-                          {/* Step Number Badge - Outside card */}
-                          <div className={`absolute ${isEven ? '-right-5' : '-left-5'} top-6 z-20`}>
-                            <div className={`w-14 h-14 xl:w-16 xl:h-16 rounded-full bg-gradient-to-br ${step.gradient} flex items-center justify-center shadow-2xl border-4 border-white`}>
-                              <span className="text-white font-bold text-xl xl:text-2xl">{step.number}</span>
-                            </div>
+                    {/* Desktop & Laptop Layout - Centered Column */}
+                    <div className="hidden lg:block">
+                      <div 
+                        className={`
+                          group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl 
+                          transition-all duration-500 overflow-hidden border-2 cursor-pointer hover:scale-[1.02]
+                          ${isStep4 ? 'border-yellow-500 ring-4 ring-yellow-400/20 animate-pulse' : 'border-gray-100 hover:border-brand-blue/30'}
+                          mx-auto w-full
+                        `}
+                        onClick={() => handleStepClick(step.number)}
+                      >
+                        {/* Step Number Badge - Inside card top-left */}
+                        <div className="absolute -top-4 -left-4 z-20">
+                          <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${step.gradient} flex items-center justify-center shadow-2xl border-4 border-white`}>
+                            <span className="text-white font-bold text-2xl">{step.number}</span>
                           </div>
-                          
-                          {/* Card Content */}
-                          <div className="p-5 xl:p-7">
-                            <div className="flex items-start justify-between mb-3 xl:mb-4">
-                              <div className="flex-1">
-                                <h3 className="text-xl xl:text-2xl font-bold text-luxury-charcoal mb-2 font-playfair">
-                                  {step.title}
-                                </h3>
-                                <p className="text-brand-slate text-sm xl:text-base leading-relaxed">
-                                  {step.description}
-                                </p>
-                              </div>
-                              <div className={`ml-3 xl:ml-4 w-12 h-12 xl:w-14 xl:h-14 rounded-xl bg-gradient-to-br ${step.gradient} flex items-center justify-center flex-shrink-0`}>
-                                <Icon className="w-6 h-6 xl:w-7 xl:h-7 text-white" />
-                              </div>
-                            </div>
-                            
-                            <div 
-                              className={`mt-4 inline-flex items-center space-x-2 px-5 py-3 rounded-full border-2 transition-all ${
-                                step.actionType === 'cta' 
-                                  ? 'bg-gradient-to-r from-blue-500/10 to-blue-600/10 border-blue-500 hover:from-blue-500/20 hover:to-blue-600/20' 
-                                  : 'bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border-yellow-500 hover:from-yellow-400/30 hover:to-orange-500/30'
-                              }`}
-                              data-testid={`badge-step-${step.number}-desktop`}
-                            >
-                              {step.actionType === 'cta' ? (
-                                <ExternalLink className="w-5 h-5 text-blue-600" />
-                              ) : (
-                                <Info className="w-5 h-5 text-yellow-600" />
-                              )}
-                              <span className="text-luxury-charcoal font-bold text-sm">{step.actionText} →</span>
-                            </div>
-                          </div>
-                          
-                          {/* Hover Effect */}
-                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                         </div>
+                        
+                        {/* Card Content */}
+                        <div className="p-7 pt-10">
+                          <div className="flex items-start justify-between mb-4">
+                            <div className="flex-1 pr-4">
+                              <h3 className="text-2xl font-bold text-luxury-charcoal mb-2 font-playfair">
+                                {step.title}
+                              </h3>
+                              <p className="text-brand-slate text-base leading-relaxed">
+                                {step.description}
+                              </p>
+                            </div>
+                            <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${step.gradient} flex items-center justify-center flex-shrink-0`}>
+                              <Icon className="w-7 h-7 text-white" />
+                            </div>
+                          </div>
+                          
+                          <div 
+                            className={`mt-4 inline-flex items-center space-x-2 px-5 py-3 rounded-full border-2 transition-all ${
+                              step.actionType === 'cta' 
+                                ? 'bg-gradient-to-r from-blue-500/10 to-blue-600/10 border-blue-500 hover:from-blue-500/20 hover:to-blue-600/20' 
+                                : 'bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border-yellow-500 hover:from-yellow-400/30 hover:to-orange-500/30'
+                            }`}
+                            data-testid={`badge-step-${step.number}-desktop`}
+                          >
+                            {step.actionType === 'cta' ? (
+                              <ExternalLink className="w-5 h-5 text-blue-600" />
+                            ) : (
+                              <Info className="w-5 h-5 text-yellow-600" />
+                            )}
+                            <span className="text-luxury-charcoal font-bold text-sm">{step.actionText} →</span>
+                          </div>
+                        </div>
+                        
+                        {/* Hover Effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                       </div>
-                      
-                      {/* Spacer for other side */}
-                      <div className="flex-1"></div>
                     </div>
                     
                     {/* Mobile & Tablet Layout */}
@@ -263,11 +252,6 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
                           <div className="w-0.5 sm:w-1 h-6 sm:h-8 md:h-10 bg-gradient-to-b from-brand-blue to-brand-gold rounded-full"></div>
                         </div>
                       )}
-                    </div>
-                    
-                    {/* Center Connection Dot for Desktop */}
-                    <div className="hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                      <div className={`w-5 h-5 rounded-full bg-gradient-to-br ${step.gradient} border-4 border-white shadow-lg`}></div>
                     </div>
                   </div>
                 );
