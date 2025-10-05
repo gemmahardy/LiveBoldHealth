@@ -95,7 +95,7 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
   ];
 
   return (
-    <section className="relative pt-24 sm:pt-28 md:pt-36 lg:pt-40 pb-16 sm:pb-20 md:pb-24 overflow-hidden bg-white">
+    <section className="relative pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-16 sm:pb-20 md:pb-24 overflow-hidden bg-white">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Large centered watermark behind headline */}
