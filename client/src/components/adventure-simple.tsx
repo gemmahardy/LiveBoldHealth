@@ -43,7 +43,7 @@ export function AdventureSimple({ bookingUrl }: AdventureSimpleProps) {
     },
     {
       title: "Bali Soulshine Adventure Escape",
-      description: "Yoga, white-water rafting, and rock climbing paradise",
+      description: "Yoga, breathwork, energy work and surfing",
       price: "$22,500",
       dates: "Year-round availability",
       icon: Compass,

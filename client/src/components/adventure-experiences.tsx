@@ -58,10 +58,10 @@ export function AdventureExperiences() {
     {
       id: "bali-soulshine-adventure",
       title: "Bali Soulshine Resort Adventure Escape",
-      description: "10-day ultimate tropical paradise adventure at the exclusive Soulshine Resort! Experience sunrise yoga sessions overlooking emerald rice terraces, thrilling white-water rafting through Bali's jungle rivers, rock climbing on volcanic cliffs with ocean views, and paragliding over ancient temples and lush valleys. Enjoy private beach access with world-class surfing instruction, guided temple tours with spiritual ceremonies, traditional Balinese cooking classes with celebrity chefs, and healing spa treatments using sacred volcanic stones. Includes luxury villa accommodations, private guided volcano expeditions, swimming with dolphins, and magical sunset dinners on pristine beaches! Every adventure is a full-body reset — fueling your mind, body, and spirit through daily movement, vibrant real food, and exhilarating experiences that supercharge your health, ignite your energy, and keep you thriving until the next epic journey.",
+      description: "10-day ultimate tropical paradise adventure at the exclusive Soulshine Resort! Experience yoga, breathwork, energy work and surfing in this transformative wellness retreat. Includes luxury villa accommodations, private beach access, guided spiritual ceremonies, and healing spa treatments using sacred volcanic stones. Every adventure is a full-body reset — fueling your mind, body, and spirit through daily movement, vibrant real food, and exhilarating experiences that supercharge your health, ignite your energy, and keep you thriving until the next epic journey.",
       date: "Oct 20-30, 2026 | Private Adventure Dates Available",
       price: "$22,500",
-      highlights: ["Exclusive Soulshine Resort", "Guided volcano expeditions", "Temple spiritual ceremonies", "Private beach villa access"]
+      highlights: ["Exclusive Soulshine Resort", "Yoga & breathwork sessions", "Energy work & spiritual ceremonies", "World-class surfing instruction"]
     },
     {
       id: "appalachian-trail-autumn",
