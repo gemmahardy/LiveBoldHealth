@@ -29,13 +29,13 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             <SunLogo size="lg" />
             <div>
-              <h1 className="font-playfair font-bold text-xl text-luxury-charcoal"><span className="text-brand-blue">Live Bold</span> Health</h1>
-              <p className="text-xs font-montserrat text-brand-slate uppercase tracking-wider">Adventure Concierge</p>
+              <h1 className="font-playfair font-bold text-lg sm:text-xl text-luxury-charcoal"><span className="text-brand-blue">Live Bold</span> Health</h1>
+              <p className="text-[10px] sm:text-xs font-montserrat text-brand-slate uppercase tracking-wider">Adventure Concierge</p>
             </div>
           </div>
           
@@ -78,11 +78,12 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
           </div>
           
           <button 
-            className="md:hidden text-luxury-charcoal"
+            className="md:hidden text-luxury-charcoal p-2 -mr-2 touch-manipulation"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             data-testid="button-mobile-menu"
+            aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
           </button>
         </div>
 
@@ -90,36 +91,36 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
       
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[72px] bg-white/98 backdrop-blur-md shadow-lg border-t z-40 animate-in slide-in-from-top-2 duration-200">
-          <div className="container mx-auto px-6 py-6">
-            <div className="flex flex-col space-y-4">
+        <div className="md:hidden fixed inset-x-0 top-[64px] sm:top-[72px] bg-white/98 backdrop-blur-md shadow-lg border-t z-40 animate-in slide-in-from-top-2 duration-200">
+          <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6">
+            <div className="flex flex-col space-y-1">
               <button 
                 onClick={() => {
                   onOpenConsultation();
                   setIsMobileMenuOpen(false);
                 }}
-                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium py-2"
+                className="text-left text-luxury-charcoal hover:text-brand-blue active:text-brand-blue transition-colors font-medium py-3 px-2 rounded-lg hover:bg-blue-50 touch-manipulation"
                 data-testid="nav-consultation-mobile"
               >
                 Consultation
               </button>
               <button 
                 onClick={() => handleNavigation('membership')}
-                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium py-2"
+                className="text-left text-luxury-charcoal hover:text-brand-blue active:text-brand-blue transition-colors font-medium py-3 px-2 rounded-lg hover:bg-blue-50 touch-manipulation"
                 data-testid="nav-membership-mobile"
               >
                 Membership
               </button>
               <button 
                 onClick={() => handleNavigation('adventures')}
-                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium py-2"
+                className="text-left text-luxury-charcoal hover:text-brand-blue active:text-brand-blue transition-colors font-medium py-3 px-2 rounded-lg hover:bg-blue-50 touch-manipulation"
                 data-testid="nav-adventures-mobile"
               >
                 Adventures
               </button>
               <button 
                 onClick={() => handleNavigation('faq')}
-                className="text-left text-luxury-charcoal hover:text-brand-blue transition-colors font-medium py-2"
+                className="text-left text-luxury-charcoal hover:text-brand-blue active:text-brand-blue transition-colors font-medium py-3 px-2 rounded-lg hover:bg-blue-50 touch-manipulation"
                 data-testid="nav-faq-mobile"
               >
                 FAQ
@@ -129,7 +130,7 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
                   onOpenConsultation();
                   setIsMobileMenuOpen(false);
                 }}
-                className="bg-luxury-gradient text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all text-center mt-2"
+                className="bg-luxury-gradient text-white px-6 py-3.5 rounded-full font-medium hover:shadow-lg active:scale-95 transition-all text-center mt-3 touch-manipulation"
                 data-testid="button-consultation-mobile"
               >
                 Book Consultation
