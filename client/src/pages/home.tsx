@@ -12,7 +12,7 @@ import { SEOHead } from "@/components/seo-head";
 import { trackClick } from "@/lib/trackClick";
 
 export default function Home() {
-  const bookingUrl = import.meta.env.PUBLIC_BOOKING_URL || 'https://calendly.com/contact-sunryz/live-bold-consultation';
+  const bookingUrl = import.meta.env.PUBLIC_BOOKING_URL || 'https://calendly.com/live-bold-energy-health/consultation';
   const assessmentUrl = '/assessment';
 
   const handleOpenConsultation = async () => {

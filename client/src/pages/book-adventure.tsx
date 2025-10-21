@@ -5,7 +5,7 @@ import adventureCollageUrl from '@assets/Collage+sig+program+1384w_1756151724888
 
 export default function BookAdventure() {
   const handleBookNow = () => {
-    window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank', 'noopener,noreferrer');
+    window.open('https://calendly.com/live-bold-energy-health/consultation', '_blank', 'noopener,noreferrer');
   };
 
   const pageStructuredData = [

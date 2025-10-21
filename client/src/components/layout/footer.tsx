@@ -98,7 +98,7 @@ export function Footer() {
               </li>
               <li>
                 <a 
-                  href="https://calendly.com/contact-sunryz/live-bold-consultation"
+                  href="https://calendly.com/live-bold-energy-health/consultation"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-brand-blue transition-colors"
@@ -195,7 +195,7 @@ export function Footer() {
             </p>
             <div className="flex justify-center">
               <a 
-                href="https://calendly.com/contact-sunryz/live-bold-consultation"
+                href="https://calendly.com/live-bold-energy-health/consultation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-luxury-gradient text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all flex items-center space-x-2"
@@ -255,7 +255,7 @@ export function Footer() {
             <div className="bg-luxury-gradient text-white rounded-lg p-4 text-center">
               <p className="font-semibold mb-3">✨ <strong>Ready to work with Sunshine?</strong></p>
               <a 
-                href="https://calendly.com/contact-sunryz/live-bold-consultation"
+                href="https://calendly.com/live-bold-energy-health/consultation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-brand-blue px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all inline-block"
@@ -313,7 +313,7 @@ export function Footer() {
             <div className="bg-luxury-gradient text-white rounded-lg p-4 text-center">
               <p className="font-semibold mb-3">✨ <strong>Ready to begin your wellness journey with Janine?</strong></p>
               <a 
-                href="https://calendly.com/contact-sunryz/live-bold-consultation"
+                href="https://calendly.com/live-bold-energy-health/consultation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-brand-blue px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all inline-block"

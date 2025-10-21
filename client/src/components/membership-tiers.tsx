@@ -28,7 +28,7 @@ export function MembershipTiers() {
 
   const handleJoinCommunity = () => {
     // Open Calendly in a new tab for Live Bold consultation
-    window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank', 'noopener,noreferrer');
+    window.open('https://calendly.com/live-bold-energy-health/consultation', '_blank', 'noopener,noreferrer');
   };
 
   return (

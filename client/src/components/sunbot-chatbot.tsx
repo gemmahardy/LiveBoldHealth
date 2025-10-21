@@ -168,7 +168,7 @@ export function SunbotChatbot() {
                 Wellness Support
               </Button>
               <Button
-                onClick={() => window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank')}
+                onClick={() => window.open('https://calendly.com/live-bold-energy-health/consultation', '_blank')}
                 variant="outline"
                 size="sm"
                 className="text-xs bg-brand-blue text-white hover:bg-blue-600"

@@ -10,7 +10,7 @@ import {
 
 export default function FAQ() {
   const handleOpenConsultation = () => {
-    window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank', 'noopener,noreferrer');
+    window.open('https://calendly.com/live-bold-energy-health/consultation', '_blank', 'noopener,noreferrer');
   };
 
   const faqData = [

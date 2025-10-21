@@ -286,7 +286,7 @@ export function HealthAssessment() {
                       onClick={() => {
                         handleSubmitAssessment();
                         setTimeout(() => {
-                          window.open('https://calendly.com/contact-sunryz/live-bold-consultation', '_blank');
+                          window.open('https://calendly.com/live-bold-energy-health/consultation', '_blank');
                         }, 1500);
                       }}
                       className="bg-luxury-gradient text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-all"
