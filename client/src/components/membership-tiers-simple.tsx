@@ -17,6 +17,7 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
     additionalPrice: "+$500 / additional family member",
     description: "Perfect for individuals and families beginning their bold transformation.",
     features: [
+      "Concierge Welcome Kit — 30-minute call, personalized 'Live Bold Blueprint,' supplements, nutrition guides & adventure inspiration",
       "VO₂ Max & RMR Baseline Testing",
       "Personalized Health & Longevity Plan",
       "Custom Meal & Nutrition Guidance",
