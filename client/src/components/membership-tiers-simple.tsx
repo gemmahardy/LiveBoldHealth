@@ -188,6 +188,23 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
               ))}
             </ul>
 
+            {/* 90-Day Guarantee */}
+            <div className="mb-6 sm:mb-8 bg-gradient-to-br from-blue-50 to-yellow-50/40 border-2 border-brand-blue/30 rounded-lg p-4 sm:p-5">
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 text-2xl">
+                  ✨
+                </div>
+                <div>
+                  <h4 className="font-semibold text-luxury-charcoal mb-2 text-sm sm:text-base">
+                    90-Day Results Guarantee
+                  </h4>
+                  <p className="text-xs sm:text-sm text-brand-slate leading-relaxed">
+                    In your first 90 days, you'll see measurable improvements in energy, VO₂ Max, and recovery — or we'll rework your plan at no cost until you do.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <Button
               onClick={async () => {
                 await trackClick(`Join Now - ${communityTier.name}`);
