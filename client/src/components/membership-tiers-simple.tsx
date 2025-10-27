@@ -21,6 +21,7 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
       "Personalized Health & Longevity Plan",
       "Custom Meal & Nutrition Guidance",
       "Tailored Fitness Programming",
+      "Quarterly Performance Check-ins (Biometrics + Progress Call)",
       "20% Member Discount on Adventure Retreats"
     ],
     cta: "Join Now",
