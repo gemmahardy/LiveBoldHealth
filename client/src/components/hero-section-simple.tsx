@@ -114,7 +114,7 @@ export function HeroSection({ onOpenConsultation, bookingUrl }: HeroSectionProps
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-brand-slate mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto px-2">
-            Master your health with VO₂ Max testing, personalized coaching, and transformative wellness adventures for busy executives and families.
+            The easiest way to feel better, perform higher, and live longer. Live Bold Health Concierge delivers VO₂ Max testing, custom nutrition, and transformative adventure travel — designed to simplify your wellness and deliver measurable results that last.
           </p>
         </div>
 
