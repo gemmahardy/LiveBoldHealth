@@ -9,23 +9,23 @@ interface MembershipTiersProps {
 
 export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
   const communityTier = {
-    name: "Community Membership",
+    name: "The Live Bold Health Membership",
     emoji: "☀️",
     icon: Users,
     price: "$2,500",
     period: "/ year",
-    additionalPrice: "+$500 / additional family member",
-    description: "Perfect for individuals and families beginning their bold transformation.",
+    additionalPrice: "+$500 per family member",
+    description: "The simplest way to master your health, optimize your energy, and live boldly — guided by science, simplicity, and adventure.",
     features: [
-      "Concierge Welcome Kit — 30-minute call, personalized 'Live Bold Blueprint,' supplements, nutrition guides & adventure inspiration",
-      "VO₂ Max & RMR Baseline Testing",
-      "Personalized Health & Longevity Plan",
-      "Custom Meal & Nutrition Guidance",
-      "Tailored Fitness Programming",
-      "Quarterly Performance Check-ins (Biometrics + Progress Call)",
-      "$1,000 Adventure Credit — One-time credit toward any retreat experience",
-      "20% Member Discount on Adventure Retreats"
+      "VO₂ Max & RMR Testing (Quarterly Updates)",
+      "Personalized Longevity & Nutrition Blueprint",
+      "Fitness & Mindset Coaching Access",
+      "Quarterly Progress Review with Concierge",
+      "Member-Only Webinars & Adventure Community",
+      "20% Off Luxury Retreats + $1,000 Adventure Credit",
+      "Welcome Kit: Meal Guide, Supplements, & Live Bold Journal"
     ],
+    tagline: "We simplify health — you live the results.",
     cta: "Join Now",
     testId: "tier-community"
   };
@@ -211,6 +211,13 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
                 </li>
               ))}
             </ul>
+
+            {/* Tagline */}
+            <div className="text-center mb-6 sm:mb-8">
+              <p className="text-sm sm:text-base font-semibold text-luxury-charcoal italic">
+                "{communityTier.tagline}"
+              </p>
+            </div>
 
             {/* 90-Day Guarantee */}
             <div className="mb-6 sm:mb-8 bg-gradient-to-br from-blue-50 to-yellow-50/40 border-2 border-brand-blue/30 rounded-lg p-4 sm:p-5">
