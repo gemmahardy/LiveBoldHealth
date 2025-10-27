@@ -29,6 +29,27 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
     testId: "tier-community"
   };
 
+  const executiveTier = {
+    name: "Executive Team Package",
+    emoji: "💼",
+    icon: Sparkles,
+    price: "$7,500",
+    period: "/ year",
+    additionalPrice: "Includes 3 team members",
+    description: "Corporate Health Concierge for small teams or leadership groups.",
+    features: [
+      "VO₂ Max Testing for 3 Team Members",
+      "Quarterly Health Reports & Analytics",
+      "Personalized Health Plans for Each Member",
+      "Group Performance Benchmarking",
+      "Executive Wellness Dashboard",
+      "Priority Scheduling & Support",
+      "Team Adventure Retreat Discounts"
+    ],
+    cta: "Book Team Consultation",
+    testId: "tier-executive"
+  };
+
   const aLaCarteServices = [
     {
       emoji: "🧠",
@@ -140,7 +161,7 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
           {/* Community Membership */}
           <div
             className="relative rounded-xl sm:rounded-2xl p-6 sm:p-8 bg-white border-2 border-brand-blue/20 hover:border-brand-blue/50 shadow-lg hover:shadow-2xl transition-all duration-300"
@@ -216,6 +237,71 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
               data-testid={`button-${communityTier.testId}`}
             >
               {communityTier.cta}
+            </Button>
+          </div>
+
+          {/* Executive Team Package */}
+          <div
+            className="relative rounded-xl sm:rounded-2xl p-6 sm:p-8 bg-white border-2 border-purple-500/30 hover:border-purple-500/60 shadow-lg hover:shadow-2xl transition-all duration-300"
+            data-testid={executiveTier.testId}
+          >
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-6 py-1 rounded-full text-sm font-bold shadow-lg">
+              💼 TEAMS
+            </div>
+
+            {/* Background Logo */}
+            <div className="absolute bottom-0 right-0 w-32 h-32 opacity-5 overflow-hidden">
+              <SunLogo className="w-full h-full text-purple-500" />
+            </div>
+
+            <div className="text-center mb-4 sm:mb-6">
+              <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">
+                {executiveTier.emoji}
+              </div>
+              
+              <h3 className="text-xl sm:text-2xl font-playfair font-bold mb-2 sm:mb-3 text-luxury-charcoal">
+                {executiveTier.name}
+              </h3>
+              
+              <p className="text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed text-brand-slate">
+                {executiveTier.description}
+              </p>
+              
+              <div className="mb-2">
+                <div className="flex items-baseline justify-center gap-1">
+                  <span className="text-3xl sm:text-4xl font-bold text-luxury-charcoal">
+                    {executiveTier.price}
+                  </span>
+                  <span className="text-base sm:text-lg text-brand-slate">
+                    {executiveTier.period}
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm mt-1 text-brand-slate">
+                  {executiveTier.additionalPrice}
+                </p>
+              </div>
+            </div>
+
+            <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+              {executiveTier.features.map((feature, index) => (
+                <li key={index} className="flex items-start gap-2 sm:gap-3">
+                  <Check className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 text-purple-500" />
+                  <span className="text-sm sm:text-base text-brand-slate">
+                    {feature}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <Button
+              onClick={async () => {
+                await trackClick(`Join Now - ${executiveTier.name}`);
+                window.open(bookingUrl, '_blank', 'noopener,noreferrer');
+              }}
+              className="w-full py-4 sm:py-5 md:py-6 text-base sm:text-lg font-semibold rounded-full transition-all active:scale-95 bg-gradient-to-r from-purple-500 to-indigo-600 text-white hover:shadow-lg"
+              data-testid={`button-${executiveTier.testId}`}
+            >
+              {executiveTier.cta}
             </Button>
           </div>
 
