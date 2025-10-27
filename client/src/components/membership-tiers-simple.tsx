@@ -23,6 +23,7 @@ export function MembershipTiersSimple({ bookingUrl }: MembershipTiersProps) {
       "Custom Meal & Nutrition Guidance",
       "Tailored Fitness Programming",
       "Quarterly Performance Check-ins (Biometrics + Progress Call)",
+      "$1,000 Adventure Credit — One-time credit toward any retreat experience",
       "20% Member Discount on Adventure Retreats"
     ],
     cta: "Join Now",
