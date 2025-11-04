@@ -4,6 +4,73 @@ import { storage } from "./storage";
 import { insertConsultationSchema, insertAssessmentSchema } from "@shared/schema";
 import { z } from "zod";
 import { getUncachableResendClient } from "./resend-client";
+import OpenAI from "openai";
+
+// Initialize OpenAI client
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+// SunBot system prompt
+const SUNBOT_SYSTEM_PROMPT = `You are SunBot™, the wellness concierge assistant for Live Bold Health and The Energy Lifestyle Company™.
+
+**Your Personality:**
+- Warm, motivational, adventurous, and supportive
+- Enthusiastic about health transformation and outdoor experiences
+- Professional yet personable—like a trusted wellness guide
+- Always emphasize measurable results and simplified wellness
+
+**Brand Voice:**
+- Primary mantra: "We simplify health — you live the results."
+- Value proposition: "The easiest way to feel better, perform higher, and live longer."
+- Focus on: VO₂ Max testing, custom nutrition, transformative adventure travel, and measurable outcomes
+
+**Key Offerings to Mention When Relevant:**
+
+1. **Community Membership** ($2,500/year, +$500 per additional family member)
+   - VO₂ Max & RMR testing with quarterly updates
+   - Personalized longevity & nutrition blueprint
+   - Fitness & mindset coaching access
+   - Quarterly progress review with concierge
+   - Member-only webinars & adventure community
+   - 20% off luxury retreats + $1,000 adventure credit
+   - Welcome kit with meal guide, supplements, and Live Bold journal
+   - **90-Day Results Guarantee**: Measurable improvements in energy, VO₂ Max, and recovery within 90 days—or we rework your plan at no cost
+
+2. **Executive Team Package** ($7,500/year for 3 members)
+   - All Community Membership benefits
+   - Perfect for teams and families transforming together
+
+3. **Monthly À La Carte Menu**
+   - Mix and match premium services from $250/month
+   - Options: private coaching, meal delivery, wellness concierge, performance tracking, adventure planning, recovery suites, movement coaching, longevity testing, executive programs
+
+4. **Adventure Experiences**
+   - Maine Coastal Adventure ($8,400)
+   - New Hampshire Mountain Experience ($11,200)
+   - Bali Wellness Escape ($15,000)
+   - All fully customizable from relaxation to high-intensity
+
+**6-Step Journey:**
+1. Book Consult — Free consultation
+2. Join Membership — Choose your tier
+3. VO₂ Max + RMR — Get baseline testing
+4. Personal Plan — Receive custom wellness Live Bold Blueprint
+5. Activate Coaching — Begin concierge support
+6. Book Adventure — Experience transformation
+
+**Important Guidelines:**
+- Always encourage booking a free consultation: https://calendly.com/live-bold-energy-health/consultation
+- Mention the 90-day guarantee when discussing results or commitment concerns
+- Emphasize that VO₂ Max testing provides precise, science-backed data (not guesswork)
+- Highlight adventure as a health tool that builds resilience, energy, and joy
+- Keep responses conversational, warm, and action-oriented
+- Use emojis sparingly but appropriately (☀️ 🌟 🎯 🏔️ ✨ 💪 📅)
+
+**Who is Sunshine:**
+Sunshine is the Executive Concierge for health, wellness, and adventure. With over 25 years of expertise in health optimization, performance coaching, and executive consulting, she helps busy professionals and entrepreneurs live happier, healthier, and longer lives. Author of Live Bold! and Feel Good & Shine On®, CEO & Founder of The Energy Lifestyle Company™, creator of the Feel Good & Adventure On® Method, global speaker, passionate ultra-runner, paddleboarder, and adventurer living on the Maine coast.
+
+Keep your responses concise (2-4 paragraphs max), actionable, and always invite next steps.`;
 
 export async function registerRoutes(app: Express): Promise<Server> {
   
@@ -97,11 +164,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Chatbot message handling
+  // SunBot chatbot with OpenAI integration
   app.post("/api/chat", async (req, res) => {
     try {
       const { sessionId, message, messages } = req.body;
       
+      if (!message || typeof message !== 'string') {
+        return res.status(400).json({ message: "Message is required" });
+      }
+
       // Get or create chat session
       let session = await storage.getChatSession(sessionId);
       if (!session) {
@@ -111,88 +182,75 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
 
-      // Add user message
-      const updatedMessages = [...(messages || []), { type: 'user', content: message, timestamp: new Date() }];
+      // Build conversation history (keep last 4 exchanges = 8 messages)
+      const recentMessages = (messages || []).slice(-8);
       
-      // Generate bot response
-      const botResponse = generateBotResponse(message);
-      updatedMessages.push({ type: 'bot', content: botResponse, timestamp: new Date() });
+      // Convert to OpenAI format
+      const conversationHistory: Array<{ role: 'user' | 'assistant', content: string }> = recentMessages
+        .map((msg: any) => ({
+          role: msg.type === 'user' ? 'user' : 'assistant',
+          content: msg.content
+        }));
+
+      // Add current user message
+      conversationHistory.push({
+        role: 'user',
+        content: message
+      });
+
+      // Call OpenAI API
+      const completion = await openai.chat.completions.create({
+        model: "gpt-4o-mini", // Using GPT-4o-mini for cost efficiency - can upgrade to "gpt-4o" if needed
+        messages: [
+          { role: 'system', content: SUNBOT_SYSTEM_PROMPT },
+          ...conversationHistory
+        ],
+        temperature: 0.8,
+        max_tokens: 500,
+      });
+
+      const botResponse = completion.choices[0]?.message?.content || "I'm having trouble connecting right now. Please try again!";
+
+      // Update messages array
+      const updatedMessages = [...(messages || []), 
+        { type: 'user', content: message, timestamp: new Date() },
+        { type: 'bot', content: botResponse, timestamp: new Date() }
+      ];
       
-      // Update session
+      // Update session in storage
       await storage.updateChatSession(sessionId, updatedMessages);
+
+      // Optional: Trigger Zapier webhook for specific keywords
+      const lowerMessage = message.toLowerCase();
+      if (process.env.ZAPIER_WEBHOOK_URL && 
+          (lowerMessage.includes('book consultation') || 
+           lowerMessage.includes('energy blueprint') ||
+           lowerMessage.includes('schedule consultation'))) {
+        try {
+          await fetch(process.env.ZAPIER_WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              sessionId,
+              userMessage: message,
+              botResponse,
+              timestamp: new Date().toISOString(),
+              trigger: 'consultation_interest'
+            })
+          });
+        } catch (webhookError) {
+          console.error('Zapier webhook failed:', webhookError);
+          // Don't fail the request if webhook fails
+        }
+      }
       
       res.json({ response: botResponse, messages: updatedMessages });
     } catch (error) {
+      console.error('Chat API error:', error);
       res.status(500).json({ message: "Failed to process chat message" });
     }
   });
 
   const httpServer = createServer(app);
   return httpServer;
-}
-
-function generateBotResponse(message: string): string {
-  const lowerMessage = message.toLowerCase();
-  
-  if (lowerMessage.includes('energy') || lowerMessage.includes('tired') || lowerMessage.includes('fatigue')) {
-    return "I hear you! Low energy impacts everything you want to do. 🌟 Our approach combines VO₂ Max testing, personalized nutrition, and adventure experiences to deliver measurable energy improvements. In fact, we guarantee you'll see results in energy, VO₂ Max, and recovery within your first 90 days — or we'll rework your plan at no cost. What does your ideal energy level look like? Let's explore it in a free consultation! 📅\n\n**Ready to boost your energy?** [Book Your Free Consultation](https://calendly.com/live-bold-energy-health/consultation)";
-  }
-  
-  if (lowerMessage.includes('coaching') || lowerMessage.includes('wellness') || lowerMessage.includes('support') || lowerMessage.includes('help')) {
-    return "That's wonderful that you're prioritizing your wellness! 🎯 Our concierge approach simplifies health — you just live the results. We handle the complexity with personalized fitness & mindset coaching, quarterly progress reviews, and ongoing concierge support. What's your biggest wellness challenge right now? A consultation with Sunshine could give you the clarity you need! 💪\n\n**Get personalized wellness support** [Schedule Your Consultation](https://calendly.com/live-bold-energy-health/consultation)";
-  }
-  
-  if (lowerMessage.includes('membership') || lowerMessage.includes('tier') || lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('how much')) {
-    return "Great question! ☀️ We offer two main options:\n\n**Community Membership** ($2,500/year + $500 per family member) — Includes VO₂ Max & RMR testing with quarterly updates, personalized nutrition blueprint, fitness & mindset coaching, 20% off retreats, plus a $1,000 adventure credit. You also get our 90-day results guarantee!\n\n**Executive Team Package** ($7,500/year for 3 members) — Perfect for teams and families who want to transform together.\n\n**Monthly A La Carte Menu** — Mix and match premium services from $250/month.\n\nThe best fit depends on your goals! Want to explore which option works for you? 🎯\n\n**Find your perfect membership** [Book Free Strategy Call](https://calendly.com/live-bold-energy-health/consultation)";
-  }
-  
-  if (lowerMessage.includes('guarantee') || lowerMessage.includes('results') || lowerMessage.includes('90 day')) {
-    return "Love that you're asking about results! 🎯 We're so confident in our approach that we offer a 90-Day Results Guarantee: In your first 90 days, you'll see measurable improvements in energy, VO₂ Max, and recovery — or we'll rework your plan at no cost until you do. We simplify health, you live the results. That's our promise! ✨\n\n**Experience guaranteed results** [Book Your Consultation](https://calendly.com/live-bold-energy-health/consultation)";
-  }
-  
-  if (lowerMessage.includes('vo2') || lowerMessage.includes('vo₂') || lowerMessage.includes('testing') || lowerMessage.includes('rmr')) {
-    return "Excellent question! 🧬 VO₂ Max & RMR testing is the foundation of our approach. It measures your aerobic capacity, metabolic rate, and biological age — giving us precise data to create your personalized blueprint. Community Members get quarterly VO₂ Max updates to track your progress and optimize your plan. It's science-backed wellness, not guesswork! 📊\n\n**Learn more about testing** [Schedule Your Consultation](https://calendly.com/live-bold-energy-health/consultation)";
-  }
-  
-  if (lowerMessage.includes('longevity') || lowerMessage.includes('biohacking') || lowerMessage.includes('optimize') || lowerMessage.includes('health')) {
-    return "I love that you're thinking about long-term health! 🧬 We combine cutting-edge VO₂ Max testing, custom nutrition, and longevity science with the transformative power of adventure. You'll get a personalized blueprint, quarterly progress tracking, and concierge support to make it all achievable. The easiest way to feel better, perform higher, and live longer — that's our mission! 🚀\n\n**Start your longevity journey** [Book Health Consultation](https://calendly.com/live-bold-energy-health/consultation)";
-  }
-  
-  if (lowerMessage.includes('adventure') || lowerMessage.includes('expedition') || lowerMessage.includes('retreat') || lowerMessage.includes('experience') || lowerMessage.includes('travel')) {
-    return "How exciting! 🏔️ Our adventure experiences range from Maine Coastal ($8,400) to New Hampshire Mountain ($11,200) to Bali Wellness Escape ($15,000) — all fully customizable from relaxation to high-intensity. Community Members get 20% off plus a $1,000 adventure credit! Adventure isn't just fun — it builds resilience, energy, and joy. What kind of experience speaks to you? ✨\n\n**Plan your next adventure** [Explore Experiences](https://calendly.com/live-bold-energy-health/consultation)";
-  }
-  
-  if (lowerMessage.includes('journey') || lowerMessage.includes('process') || lowerMessage.includes('steps') || lowerMessage.includes('how it works')) {
-    return "Great question! Our journey has 6 simple steps: 📋\n\n1️⃣ **Book Consult** — Free consultation\n2️⃣ **Join Membership** — Choose your tier\n3️⃣ **VO₂ Max + RMR** — Get baseline testing\n4️⃣ **Personal Plan** — Receive your custom blueprint\n5️⃣ **Activate Coaching** — Begin concierge support\n6️⃣ **Book Adventure** — Experience transformation\n\nWe simplify health — you live the results! Ready to start? ✨\n\n**Begin your journey** [Schedule Consultation](https://calendly.com/live-bold-energy-health/consultation)";
-  }
-  
-  if (lowerMessage.includes('yes') || lowerMessage.includes('schedule') || lowerMessage.includes('book') || lowerMessage.includes('consultation') || lowerMessage.includes('interested')) {
-    return "Fantastic! 🎉 I'm excited for you to connect with Sunshine. This free consultation will give you clarity on your goals and the perfect path forward. You'll discover how VO₂ Max testing, custom nutrition, and adventure experiences can transform your energy and longevity. Ready to book? Here's the link: https://calendly.com/live-bold-energy-health/consultation ☀️";
-  }
-  
-  if (lowerMessage.includes('goals') || lowerMessage.includes('want') || lowerMessage.includes('hope') || lowerMessage.includes('dream')) {
-    return "I love talking about goals! 🎯 Whether it's more energy for your family, better performance at work, tackling new adventures, or simply feeling amazing every day — there's a clear path to get there. With our 90-day guarantee, you'll see measurable improvements or we'll adjust until you do. What would success look like for you? 💫\n\n**Turn your goals into reality** [Book Goal-Setting Session](https://calendly.com/live-bold-energy-health/consultation)";
-  }
-  
-  if (lowerMessage.includes('busy') || lowerMessage.includes('time') || lowerMessage.includes('no time')) {
-    return "I totally get it — life can be demanding! ⏰ That's exactly why our concierge approach works so well. We simplify the complexity, handle the details, and create systems that fit your real life. Many clients are amazed at how achievable wellness becomes with the right support. What if optimizing your health actually gave you more time and energy? Let's explore that! 🌟\n\n**Save time with concierge wellness** [Book Time-Saving Consultation](https://calendly.com/live-bold-energy-health/consultation)";
-  }
-  
-  if (lowerMessage.includes('family') || lowerMessage.includes('team') || lowerMessage.includes('group') || lowerMessage.includes('executive')) {
-    return "Love that you're thinking about your team or family! 👥 Our Executive Team Package ($7,500/year for 3 members) is perfect for transforming together. Families and teams who optimize their health together see better results, stronger accountability, and shared adventure experiences. Plus, additional family members can join Community Membership for just $500/year! 🌟\n\n**Transform together** [Book Team Consultation](https://calendly.com/live-bold-energy-health/consultation)";
-  }
-  
-  if (lowerMessage.includes('sunshine') || lowerMessage.includes('who is sunshine') || lowerMessage.includes('about sunshine')) {
-    return "👋 **Who is Sunshine?**\n\nI'm your Executive Concierge for health, wellness, and adventure. With over 25 years of expertise in health optimization, performance coaching, and executive consulting, I specialize in helping busy professionals and entrepreneurs live happier, healthier, and longer lives.\n\n• Author of Live Bold! and Feel Good & Shine On®\n• CEO & Founder of The Energy Lifestyle Company™\n• Creator of the Feel Good & Adventure On® Method — combining adventure, longevity science, and data-driven biometrics\n• Global Speaker & Consultant for health, wellness, and sustainable living\n• Background in executive leadership & startup consulting\n• Passionate ultra-runner, paddleboarder, and adventurer living on the Maine coast\n\nAs your concierge, I deliver personalized strategies, advanced biometrics, and curated adventure experiences designed to elevate energy, expand resilience, and unlock longevity — so you can perform at your highest level in business and life. ☀️\n\n**Ready to work with Sunshine?** [Schedule Your Consultation](https://calendly.com/live-bold-energy-health/consultation)";
-  }
-  
-  // Default responses with more questions and encouragement
-  const responses = [
-    "I'm here to help you feel better, perform higher, and live longer! ☀️ Whether you're curious about VO₂ Max testing, membership options, or our adventure experiences, I'm happy to guide you. What interests you most?",
-    "That's great that you're here! 💪 We simplify health — you live the results. Are you looking to boost energy, optimize your health, explore adventures, or learn about membership options?",
-    "How wonderful that you're prioritizing yourself! ✨ Our approach combines science-backed testing, custom nutrition, and transformative adventures. What would feeling your absolute best look like to you?",
-    "I'm excited to help you on your wellness journey! 🎯 From our 90-day guarantee to quarterly VO₂ Max updates to $1,000 adventure credits — we're all about measurable results. What brings you here today?"
-  ];
-  
-  return responses[Math.floor(Math.random() * responses.length)];
 }
