@@ -4,14 +4,21 @@ Live Bold Health is a premium wellness concierge platform designed exclusively f
 
 ## Simplified User Journey (6 Steps)
 1. **Book Consult** - Schedule free consultation
-2. **Join Membership** - Choose membership tier (Community, Essential Concierge, or VIP Concierge)
+2. **Join Membership** - Choose membership tier (Community Membership, Executive Team Package, or Monthly A La Carte)
 3. **VO₂ Max + RMR** - Get baseline performance testing
-4. **Personal Plan** - Receive custom health blueprint
+4. **Personal Plan** - Receive custom wellness Live Bold Blueprint
 5. **Activate Coaching** - Begin concierge-managed support
 6. **Book Adventure** - Experience transformative travel
 
+## Brand Messaging
+- **Primary Tagline**: "We simplify health — you live the results."
+- **Value Proposition**: "The easiest way to feel better, perform higher, and live longer."
+- **Hero Description**: "Live Bold Health Concierge delivers VO₂ Max testing, custom nutrition, and transformative adventure travel — designed to simplify your wellness and deliver measurable results that last."
+- **90-Day Results Guarantee**: "In your first 90 days, you'll see measurable improvements in energy, VO₂ Max, and recovery — or we'll rework your plan at no cost until you do."
+
 ## Membership Structure
-- **Community Membership**: $2,500/year + $500 per additional family member - Perfect for individuals and families beginning their bold transformation. Includes VO₂ Max testing, personalized health plan, custom meal guidance, fitness programming, and 20% discount on adventures.
+- **Community Membership**: $2,500/year + $500 per additional family member - Includes VO₂ Max & RMR testing with quarterly updates, personalized longevity & nutrition blueprint, fitness & mindset coaching access, quarterly progress review with concierge, member-only webinars & adventure community, 20% off luxury retreats + $1,000 adventure credit, and welcome kit with meal guide, supplements, and Live Bold journal. Features the tagline "We simplify health — you live the results" and includes a 90-day results guarantee: measurable improvements in energy, VO₂ Max, and recovery within 90 days or plan rework at no cost.
+- **Executive Team Package**: $7,500/year for 3 members - Perfect for teams and families who want to transform together with all Community Membership benefits.
 - **Monthly A La Carte Menu**: Premium add-on services that can be mixed and matched to build a custom concierge experience. Services range from $250/month (weekly meal menus) to $5,000+/month (master membership), including private coaching, meal delivery, wellness concierge, performance tracking, adventure planning, recovery suites, movement coaching, longevity testing, and executive programs.
 
 ## Adventure Experiences
@@ -85,4 +92,4 @@ The application includes user management schemas and session handling infrastruc
 
 ## Communication Services
 - **Resend**: Transactional email service for automated click tracking notifications
-- **Custom chatbot implementation**: SunBot wellness concierge with session management and contextual responses
+- **Custom chatbot implementation**: SunBot wellness concierge with session management and contextual keyword-based responses. The chatbot provides information about membership tiers (Community Membership, Executive Team Package, Monthly A La Carte Menu), VO₂ Max testing, 90-day results guarantee, adventure experiences, the 6-step journey, and can answer questions about energy, wellness support, goals, scheduling, and Sunshine's background. All responses emphasize the brand messaging: "We simplify health — you live the results" and "The easiest way to feel better, perform higher, and live longer."

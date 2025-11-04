@@ -16,7 +16,7 @@ export function SunbotChatbot() {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       type: 'bot',
-      content: "Hi there! 👋 I'm SunBot, your friendly wellness companion. Whether you're a busy professional, entrepreneur, or someone ready to prioritize your health and adventures, I'm here to help you discover your path to feeling amazing! What brings you here today?",
+      content: "Hi there! ☀️ I'm SunBot, your wellness concierge assistant. I'm here to help you discover the easiest way to feel better, perform higher, and live longer through VO₂ Max testing, custom nutrition, and transformative adventures. What would you like to know?",
       timestamp: new Date()
     }
   ]);
