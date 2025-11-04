@@ -92,4 +92,14 @@ The application includes user management schemas and session handling infrastruc
 
 ## Communication Services
 - **Resend**: Transactional email service for automated click tracking notifications
-- **Custom chatbot implementation**: SunBot wellness concierge with session management and contextual keyword-based responses. The chatbot provides information about membership tiers (Community Membership, Executive Team Package, Monthly A La Carte Menu), VO₂ Max testing, 90-day results guarantee, adventure experiences, the 6-step journey, and can answer questions about energy, wellness support, goals, scheduling, and Sunshine's background. All responses emphasize the brand messaging: "We simplify health — you live the results" and "The easiest way to feel better, perform higher, and live longer."
+- **OpenAI GPT-4o-mini**: Powers SunBot with intelligent, context-aware conversational AI
+- **Replit DB**: Key-value database for persistent SunBot conversation history
+- **SunBot Architecture**: 
+  - AI-powered chatbot using OpenAI GPT-4o-mini for natural, context-aware conversations
+  - Persistent memory using Replit DB (stores last 15 exchanges per session)
+  - Session management via localStorage (unique sessionId per user persists across visits)
+  - Short-term context window (last 8 messages sent to GPT-4 for optimal response quality)
+  - Automatic fallback to in-memory storage if Replit DB is temporarily unavailable
+  - Optional Zapier webhook integration for consultation interest tracking
+  - Comprehensive system prompt covering all membership tiers, pricing, 90-day guarantee, adventure experiences, 6-step journey, and Sunshine's bio
+  - Brand voice emphasis: "We simplify health — you live the results" and "The easiest way to feel better, perform higher, and live longer"

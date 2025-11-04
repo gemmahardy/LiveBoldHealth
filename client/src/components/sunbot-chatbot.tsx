@@ -4,40 +4,98 @@ import { apiRequest } from "@/lib/queryClient";
 import { SunLogo } from "./ui/sun-logo";
 import { MessageCircle, X, Send } from "lucide-react";
 import { Button } from "./ui/button";
+import { nanoid } from "nanoid";
 
 interface ChatMessage {
   type: 'user' | 'bot';
   content: string;
-  timestamp: Date;
+  timestamp: string;
+}
+
+// Helper function to get or create sessionId in localStorage
+function getSessionId(): string {
+  const storageKey = 'sunbot_session_id';
+  let sessionId = localStorage.getItem(storageKey);
+  
+  if (!sessionId) {
+    // Generate new unique session ID
+    sessionId = `session_${nanoid(16)}`;
+    localStorage.setItem(storageKey, sessionId);
+  }
+  
+  return sessionId;
 }
 
 export function SunbotChatbot() {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([
-    {
-      type: 'bot',
-      content: "Hi there! ☀️ I'm SunBot, your wellness concierge assistant. I'm here to help you discover the easiest way to feel better, perform higher, and live longer through VO₂ Max testing, custom nutrition, and transformative adventures. What would you like to know?",
-      timestamp: new Date()
-    }
-  ]);
+  const [isLoadingHistory, setIsLoadingHistory] = useState(false);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const sessionId = useRef(`session-${Date.now()}`);
+  const sessionIdRef = useRef(getSessionId());
+  const hasLoadedHistory = useRef(false);
+
+  // Load conversation history when chatbot opens
+  useEffect(() => {
+    if (isOpen && !hasLoadedHistory.current) {
+      loadConversationHistory();
+      hasLoadedHistory.current = true;
+    }
+  }, [isOpen]);
+
+  const loadConversationHistory = async () => {
+    try {
+      setIsLoadingHistory(true);
+      const response = await apiRequest('POST', '/api/chat', {
+        sessionId: sessionIdRef.current,
+        message: '__LOAD_HISTORY__',
+      });
+      const data = await response.json();
+      
+      // If we have existing messages, load them
+      if (data.messages && data.messages.length > 0) {
+        setMessages(data.messages);
+      } else {
+        // Show welcome message for new users
+        setMessages([{
+          type: 'bot',
+          content: "Hi there! ☀️ I'm SunBot, your wellness concierge assistant. I'm here to help you discover the easiest way to feel better, perform higher, and live longer through VO₂ Max testing, custom nutrition, and transformative adventures. What would you like to know?",
+          timestamp: new Date().toISOString()
+        }]);
+      }
+    } catch (error) {
+      console.error('Error loading conversation history:', error);
+      // Show welcome message on error
+      setMessages([{
+        type: 'bot',
+        content: "Hi there! ☀️ I'm SunBot, your wellness concierge assistant. I'm here to help you discover the easiest way to feel better, perform higher, and live longer through VO₂ Max testing, custom nutrition, and transformative adventures. What would you like to know?",
+        timestamp: new Date().toISOString()
+      }]);
+    } finally {
+      setIsLoadingHistory(false);
+    }
+  };
 
   const chatMutation = useMutation({
     mutationFn: async (message: string) => {
       const response = await apiRequest('POST', '/api/chat', {
-        sessionId: sessionId.current,
-        message,
-        messages
+        sessionId: sessionIdRef.current,
+        message
       });
       return response.json();
     },
     onSuccess: (data) => {
-      setMessages(data.messages || [...messages, {
+      if (data.messages) {
+        setMessages(data.messages);
+      }
+    },
+    onError: (error) => {
+      console.error('Chat error:', error);
+      // Add error message to chat
+      setMessages(prev => [...prev, {
         type: 'bot',
-        content: data.response,
-        timestamp: new Date()
+        content: "I'm sorry, I'm having trouble connecting right now. Please try again in a moment!",
+        timestamp: new Date().toISOString()
       }]);
     }
   });

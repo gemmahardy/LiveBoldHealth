@@ -5,11 +5,56 @@ import { insertConsultationSchema, insertAssessmentSchema } from "@shared/schema
 import { z } from "zod";
 import { getUncachableResendClient } from "./resend-client";
 import OpenAI from "openai";
+import Database from "@replit/database";
 
 // Initialize OpenAI client
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
+
+// Initialize Replit DB for persistent session storage
+const db = new Database();
+
+// In-memory fallback for when Replit DB is unavailable
+const inMemorySessionStore = new Map<string, any[]>();
+
+// Helper functions for session management
+async function getSessionHistory(sessionId: string): Promise<any[]> {
+  try {
+    // Try to get from Replit DB first
+    const dbKey = `session_${sessionId}`;
+    const history = await db.get(dbKey);
+    
+    if (history && Array.isArray(history)) {
+      return history;
+    }
+    
+    // Check in-memory fallback
+    return inMemorySessionStore.get(sessionId) || [];
+  } catch (error) {
+    console.error('Error loading session from Replit DB, using in-memory fallback:', error);
+    return inMemorySessionStore.get(sessionId) || [];
+  }
+}
+
+async function saveSessionHistory(sessionId: string, messages: any[]): Promise<void> {
+  try {
+    // Keep only last 15 exchanges (30 messages) to save storage
+    const trimmedMessages = messages.slice(-30);
+    
+    // Save to Replit DB
+    const dbKey = `session_${sessionId}`;
+    await db.set(dbKey, trimmedMessages);
+    
+    // Also update in-memory fallback
+    inMemorySessionStore.set(sessionId, trimmedMessages);
+  } catch (error) {
+    console.error('Error saving session to Replit DB, using in-memory only:', error);
+    // Fall back to in-memory storage only
+    const trimmedMessages = messages.slice(-30);
+    inMemorySessionStore.set(sessionId, trimmedMessages);
+  }
+}
 
 // SunBot system prompt
 const SUNBOT_SYSTEM_PROMPT = `You are SunBot™, the wellness concierge assistant for Live Bold Health and The Energy Lifestyle Company™.
@@ -164,26 +209,29 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // SunBot chatbot with OpenAI integration
+  // SunBot chatbot with OpenAI integration and persistent memory
   app.post("/api/chat", async (req, res) => {
     try {
-      const { sessionId, message, messages } = req.body;
+      const { sessionId, message } = req.body;
       
       if (!message || typeof message !== 'string') {
         return res.status(400).json({ message: "Message is required" });
       }
 
-      // Get or create chat session
-      let session = await storage.getChatSession(sessionId);
-      if (!session) {
-        session = await storage.createChatSession({
-          sessionId,
-          messages: []
-        });
+      if (!sessionId || typeof sessionId !== 'string') {
+        return res.status(400).json({ message: "Session ID is required" });
       }
 
-      // Build conversation history (keep last 4 exchanges = 8 messages)
-      const recentMessages = (messages || []).slice(-8);
+      // Load existing conversation history from Replit DB
+      const sessionHistory = await getSessionHistory(sessionId);
+
+      // Special case: Just load history without generating response
+      if (message === '__LOAD_HISTORY__') {
+        return res.json({ messages: sessionHistory });
+      }
+
+      // Build conversation history for OpenAI (keep last 4 exchanges = 8 messages)
+      const recentMessages = sessionHistory.slice(-8);
       
       // Convert to OpenAI format
       const conversationHistory: Array<{ role: 'user' | 'assistant', content: string }> = recentMessages
@@ -192,7 +240,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           content: msg.content
         }));
 
-      // Add current user message
+      // Add current user message to conversation
       conversationHistory.push({
         role: 'user',
         content: message
@@ -211,14 +259,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const botResponse = completion.choices[0]?.message?.content || "I'm having trouble connecting right now. Please try again!";
 
-      // Update messages array
-      const updatedMessages = [...(messages || []), 
-        { type: 'user', content: message, timestamp: new Date() },
-        { type: 'bot', content: botResponse, timestamp: new Date() }
+      // Build updated messages array with new exchange
+      const updatedMessages = [
+        ...sessionHistory,
+        { type: 'user', content: message, timestamp: new Date().toISOString() },
+        { type: 'bot', content: botResponse, timestamp: new Date().toISOString() }
       ];
       
-      // Update session in storage
-      await storage.updateChatSession(sessionId, updatedMessages);
+      // Save to Replit DB (keeps last 15 exchanges = 30 messages)
+      await saveSessionHistory(sessionId, updatedMessages);
 
       // Optional: Trigger Zapier webhook for specific keywords
       const lowerMessage = message.toLowerCase();
